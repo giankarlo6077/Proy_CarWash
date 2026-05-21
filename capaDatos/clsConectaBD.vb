@@ -108,4 +108,50 @@ Public Class clsConectaBD
         'End Try
     End Sub
 
+    Public Function consultarBD(ByVal strSQL As String) As DataTable
+        Dim dt As New DataTable()
+        Try
+            conectar()
+            Dim cmd As New SqlCommand(strSQL, cn)
+            Dim da As New SqlDataAdapter(cmd)
+            da.Fill(dt)
+            Return dt
+        Catch ex As Exception
+            Throw New Exception("Error al ejecutar consulta -> " & ex.Message)
+        Finally
+            desconectar()
+        End Try
+    End Function
+
+    Public Sub ejecutarBD(ByVal strSQL As String)
+        Try
+            conectar()
+            Dim cmd As New SqlCommand(strSQL, cn)
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+            Throw New Exception("Error al ejecutar BD -> " & ex.Message)
+        Finally
+            desconectar()
+        End Try
+    End Sub
+
+    Public Sub ejecutarBDTransacciones(ByVal str() As String)
+        If str.Length < 1 Then Return
+        Dim tran As SqlTransaction = Nothing
+        Try
+            conectar()
+            tran = cn.BeginTransaction()
+            For i As Integer = 0 To str.Length - 1
+                Dim cmd As New SqlCommand(str(i), cn, tran)
+                cmd.ExecuteNonQuery()
+            Next
+            tran.Commit()
+        Catch ex As Exception
+            If tran IsNot Nothing Then tran.Rollback()
+            Throw New Exception("Error al ejecutar Transaccion " & ex.Message)
+        Finally
+            desconectar()
+        End Try
+    End Sub
+
 End Class

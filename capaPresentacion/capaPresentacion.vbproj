@@ -82,6 +82,24 @@
     <Compile Include="frmPruebaConexion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="jdGestionarPersona.Designer.vb">
+      <DependentUpon>jdGestionarPersona.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jdGestionarPersona.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JdGestionarCliente.Designer.vb">
+      <DependentUpon>JdGestionarCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="JdGestionarCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JdMantenimientoCliente.Designer.vb">
+      <DependentUpon>JdMantenimientoCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="JdMantenimientoCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -102,6 +120,15 @@
   <ItemGroup>
     <EmbeddedResource Include="frmPruebaConexion.resx">
       <DependentUpon>frmPruebaConexion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jdGestionarPersona.resx">
+      <DependentUpon>jdGestionarPersona.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JdGestionarCliente.resx">
+      <DependentUpon>JdGestionarCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JdMantenimientoCliente.resx">
+      <DependentUpon>JdMantenimientoCliente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -126,6 +153,10 @@
     <ProjectReference Include="..\capaDatos\capaDatos.vbproj">
       <Project>{acb2c901-91a2-49a1-bb28-4f0d55276e94}</Project>
       <Name>capaDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\capaNegocio\capaNegocio.vbproj">
+      <Project>{5d143581-9303-429f-86a6-18d812b890fe}</Project>
+      <Name>capaNegocio</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
