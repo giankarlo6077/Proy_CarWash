@@ -184,6 +184,7 @@ Partial Class FrmMenuPrincipalModificado
         Me.ClientSize = New System.Drawing.Size(1277, 450)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "FrmMenuPrincipalModificado"
         Me.Text = "Menu Principal"
