@@ -88,6 +88,12 @@
     <Compile Include="frmPruebaConexion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="jdAcercaDe.Designer.vb">
+      <DependentUpon>jdAcercaDe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jdAcercaDe.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="jdInicioSesion.Designer.vb">
       <DependentUpon>jdInicioSesion.vb</DependentUpon>
     </Compile>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPruebaConexion.resx">
       <DependentUpon>frmPruebaConexion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jdAcercaDe.resx">
+      <DependentUpon>jdAcercaDe.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="jdInicioSesion.resx">
       <DependentUpon>jdInicioSesion.vb</DependentUpon>
