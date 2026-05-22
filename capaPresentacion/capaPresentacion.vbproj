@@ -76,6 +76,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmMenuPrincipalModificado.Designer.vb">
+      <DependentUpon>FrmMenuPrincipalModificado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenuPrincipalModificado.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmPruebaConexion.Designer.vb">
       <DependentUpon>frmPruebaConexion.vb</DependentUpon>
     </Compile>
@@ -100,6 +106,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmMenuPrincipalModificado.resx">
+      <DependentUpon>FrmMenuPrincipalModificado.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPruebaConexion.resx">
       <DependentUpon>frmPruebaConexion.vb</DependentUpon>
     </EmbeddedResource>
