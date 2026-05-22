@@ -94,6 +94,12 @@
     <Compile Include="jdInicioSesion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="jdRecuperarContrasena.Designer.vb">
+      <DependentUpon>jdRecuperarContrasena.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jdRecuperarContrasena.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="jdInicioSesion.resx">
       <DependentUpon>jdInicioSesion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jdRecuperarContrasena.resx">
+      <DependentUpon>jdRecuperarContrasena.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

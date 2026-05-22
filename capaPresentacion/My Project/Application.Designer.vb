@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.capaPresentacion.jdInicioSesion
+            Me.MainForm = Global.capaPresentacion.jdRecuperarContrasena
         End Sub
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
