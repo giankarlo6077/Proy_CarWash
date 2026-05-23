@@ -1,0 +1,3 @@
+﻿Public Class jdMantenimientoTrabajador
+
+End Class
