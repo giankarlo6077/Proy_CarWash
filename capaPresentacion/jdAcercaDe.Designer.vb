@@ -1141,7 +1141,7 @@ Partial Class jdAcercaDe
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.LightGray
-        Me.ClientSize = New System.Drawing.Size(820, 940)
+        Me.ClientSize = New System.Drawing.Size(794, 940)
         Me.Controls.Add(Me.Label82)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Panel3)

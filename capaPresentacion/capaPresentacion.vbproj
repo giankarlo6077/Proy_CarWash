@@ -131,6 +131,12 @@
     <Compile Include="jdGestionarServicio.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="jdGestionarUsuario.Designer.vb">
+      <DependentUpon>jdGestionarUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jdGestionarUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="jdGestionarVehiculo.Designer.vb">
       <DependentUpon>jdGestionarVehiculo.vb</DependentUpon>
     </Compile>
@@ -319,6 +325,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="jdGestionarServicio.resx">
       <DependentUpon>jdGestionarServicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jdGestionarUsuario.resx">
+      <DependentUpon>jdGestionarUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="jdGestionarVehiculo.resx">
       <DependentUpon>jdGestionarVehiculo.vb</DependentUpon>

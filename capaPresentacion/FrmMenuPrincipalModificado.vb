@@ -1,6 +1,8 @@
 ﻿Public Class FrmMenuPrincipalModificado
     Private Sub ACERCADEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ACERCADEToolStripMenuItem.Click
-
+        Dim obj As New jdAcercaDe()
+        obj.StartPosition = FormStartPosition.CenterParent
+        obj.ShowDialog(Me)
     End Sub
 
     Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked

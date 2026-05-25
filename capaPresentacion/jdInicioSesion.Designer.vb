@@ -27,14 +27,14 @@ Partial Class jdInicioSesion
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtUsuario = New System.Windows.Forms.TextBox()
+        Me.psdContrasena = New System.Windows.Forms.TextBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnRecuperarContra = New System.Windows.Forms.LinkLabel()
+        Me.btnIngresar = New System.Windows.Forms.Button()
+        Me.btnSalir = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -78,20 +78,20 @@ Partial Class jdInicioSesion
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Contraseña:"
         '
-        'TextBox1
+        'txtUsuario
         '
-        Me.TextBox1.Location = New System.Drawing.Point(257, 367)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(223, 22)
-        Me.TextBox1.TabIndex = 4
+        Me.txtUsuario.Location = New System.Drawing.Point(257, 367)
+        Me.txtUsuario.Name = "txtUsuario"
+        Me.txtUsuario.Size = New System.Drawing.Size(223, 22)
+        Me.txtUsuario.TabIndex = 4
         '
-        'TextBox2
+        'psdContrasena
         '
-        Me.TextBox2.Location = New System.Drawing.Point(257, 404)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox2.Size = New System.Drawing.Size(223, 22)
-        Me.TextBox2.TabIndex = 5
+        Me.psdContrasena.Location = New System.Drawing.Point(257, 404)
+        Me.psdContrasena.Name = "psdContrasena"
+        Me.psdContrasena.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.psdContrasena.Size = New System.Drawing.Size(223, 22)
+        Me.psdContrasena.TabIndex = 5
         '
         'PictureBox2
         '
@@ -123,43 +123,43 @@ Partial Class jdInicioSesion
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "¿Olvidaste tu contraseña?"
         '
-        'LinkLabel1
+        'btnRecuperarContra
         '
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(353, 454)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(96, 16)
-        Me.LinkLabel1.TabIndex = 9
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "¡Haz click aquí!"
+        Me.btnRecuperarContra.AutoSize = True
+        Me.btnRecuperarContra.Location = New System.Drawing.Point(353, 454)
+        Me.btnRecuperarContra.Name = "btnRecuperarContra"
+        Me.btnRecuperarContra.Size = New System.Drawing.Size(96, 16)
+        Me.btnRecuperarContra.TabIndex = 9
+        Me.btnRecuperarContra.TabStop = True
+        Me.btnRecuperarContra.Text = "¡Haz click aquí!"
         '
-        'Button1
+        'btnIngresar
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(189, 513)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(151, 36)
-        Me.Button1.TabIndex = 10
-        Me.Button1.Text = "Ingresar"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnIngresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnIngresar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnIngresar.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnIngresar.ForeColor = System.Drawing.Color.White
+        Me.btnIngresar.Location = New System.Drawing.Point(189, 513)
+        Me.btnIngresar.Name = "btnIngresar"
+        Me.btnIngresar.Size = New System.Drawing.Size(151, 36)
+        Me.btnIngresar.TabIndex = 10
+        Me.btnIngresar.Text = "Ingresar"
+        Me.btnIngresar.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnSalir
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(357, 513)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(151, 36)
-        Me.Button2.TabIndex = 11
-        Me.Button2.Text = "Salir"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSalir.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalir.ForeColor = System.Drawing.Color.White
+        Me.btnSalir.Location = New System.Drawing.Point(357, 513)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(151, 36)
+        Me.btnSalir.TabIndex = 11
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.UseVisualStyleBackColor = False
         '
         'jdInicioSesion
         '
@@ -167,14 +167,14 @@ Partial Class jdInicioSesion
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(688, 559)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.LinkLabel1)
+        Me.Controls.Add(Me.btnSalir)
+        Me.Controls.Add(Me.btnIngresar)
+        Me.Controls.Add(Me.btnRecuperarContra)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.psdContrasena)
+        Me.Controls.Add(Me.txtUsuario)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -196,12 +196,12 @@ Partial Class jdInicioSesion
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtUsuario As TextBox
+    Friend WithEvents psdContrasena As TextBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents LinkLabel1 As LinkLabel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnRecuperarContra As LinkLabel
+    Friend WithEvents btnIngresar As Button
+    Friend WithEvents btnSalir As Button
 End Class

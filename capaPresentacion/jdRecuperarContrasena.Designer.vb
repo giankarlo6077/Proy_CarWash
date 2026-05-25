@@ -27,21 +27,21 @@ Partial Class jdRecuperarContrasena
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.fake = New System.Windows.Forms.Label()
+        Me.lblPregunta = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtRespuesta = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.lblCaptcha = New System.Windows.Forms.Label()
+        Me.txtRptaCaptcha = New System.Windows.Forms.TextBox()
+        Me.btnConfirmar = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.psdNvaContrasena = New System.Windows.Forms.TextBox()
+        Me.psdConfirmNvaContrasena = New System.Windows.Forms.TextBox()
+        Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.btnRecargarCaptcha = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -82,23 +82,23 @@ Partial Class jdRecuperarContrasena
         Me.Label3.Size = New System.Drawing.Size(613, 11)
         Me.Label3.TabIndex = 3
         '
-        'Label4
+        'fake
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Verdana", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(40, 199)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(78, 16)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Pregunta:"
+        Me.fake.AutoSize = True
+        Me.fake.Font = New System.Drawing.Font("Verdana", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.fake.Location = New System.Drawing.Point(42, 181)
+        Me.fake.Name = "fake"
+        Me.fake.Size = New System.Drawing.Size(78, 16)
+        Me.fake.TabIndex = 4
+        Me.fake.Text = "Pregunta:"
         '
-        'Label5
+        'lblPregunta
         '
-        Me.Label5.Location = New System.Drawing.Point(148, 199)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(335, 23)
-        Me.Label5.TabIndex = 5
-        Me.Label5.Text = "¿Nombre de tu primer perro?"
+        Me.lblPregunta.Location = New System.Drawing.Point(148, 181)
+        Me.lblPregunta.Name = "lblPregunta"
+        Me.lblPregunta.Size = New System.Drawing.Size(335, 61)
+        Me.lblPregunta.TabIndex = 5
+        Me.lblPregunta.Text = "¿Nombre de tu primer perro?"
         '
         'Label6
         '
@@ -110,12 +110,12 @@ Partial Class jdRecuperarContrasena
         Me.Label6.TabIndex = 6
         Me.Label6.Text = "Respuesta:"
         '
-        'TextBox1
+        'txtRespuesta
         '
-        Me.TextBox1.Location = New System.Drawing.Point(151, 245)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(332, 22)
-        Me.TextBox1.TabIndex = 1
+        Me.txtRespuesta.Location = New System.Drawing.Point(151, 245)
+        Me.txtRespuesta.Name = "txtRespuesta"
+        Me.txtRespuesta.Size = New System.Drawing.Size(332, 22)
+        Me.txtRespuesta.TabIndex = 1
         '
         'Label7
         '
@@ -127,32 +127,32 @@ Partial Class jdRecuperarContrasena
         Me.Label7.TabIndex = 8
         Me.Label7.Text = "Captcha:"
         '
-        'Label8
+        'lblCaptcha
         '
-        Me.Label8.BackColor = System.Drawing.Color.LightGray
-        Me.Label8.Location = New System.Drawing.Point(148, 289)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(175, 36)
-        Me.Label8.TabIndex = 2
+        Me.lblCaptcha.BackColor = System.Drawing.Color.LightGray
+        Me.lblCaptcha.Location = New System.Drawing.Point(148, 289)
+        Me.lblCaptcha.Name = "lblCaptcha"
+        Me.lblCaptcha.Size = New System.Drawing.Size(175, 36)
+        Me.lblCaptcha.TabIndex = 2
         '
-        'TextBox2
+        'txtRptaCaptcha
         '
-        Me.TextBox2.Location = New System.Drawing.Point(151, 350)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(215, 22)
-        Me.TextBox2.TabIndex = 4
+        Me.txtRptaCaptcha.Location = New System.Drawing.Point(151, 350)
+        Me.txtRptaCaptcha.Name = "txtRptaCaptcha"
+        Me.txtRptaCaptcha.Size = New System.Drawing.Size(215, 22)
+        Me.txtRptaCaptcha.TabIndex = 4
         '
-        'Button1
+        'btnConfirmar
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button1.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(243, 402)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(164, 34)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "CONFIRMAR"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnConfirmar.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnConfirmar.ForeColor = System.Drawing.Color.White
+        Me.btnConfirmar.Location = New System.Drawing.Point(243, 402)
+        Me.btnConfirmar.Name = "btnConfirmar"
+        Me.btnConfirmar.Size = New System.Drawing.Size(164, 34)
+        Me.btnConfirmar.TabIndex = 5
+        Me.btnConfirmar.Text = "CONFIRMAR"
+        Me.btnConfirmar.UseVisualStyleBackColor = False
         '
         'Label9
         '
@@ -182,66 +182,66 @@ Partial Class jdRecuperarContrasena
         Me.Label11.TabIndex = 15
         Me.Label11.Text = "Confirmar Contraseña:"
         '
-        'TextBox3
+        'psdNvaContrasena
         '
-        Me.TextBox3.Location = New System.Drawing.Point(243, 500)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox3.Size = New System.Drawing.Size(331, 22)
-        Me.TextBox3.TabIndex = 6
+        Me.psdNvaContrasena.Location = New System.Drawing.Point(243, 500)
+        Me.psdNvaContrasena.Name = "psdNvaContrasena"
+        Me.psdNvaContrasena.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.psdNvaContrasena.Size = New System.Drawing.Size(331, 22)
+        Me.psdNvaContrasena.TabIndex = 6
         '
-        'TextBox4
+        'psdConfirmNvaContrasena
         '
-        Me.TextBox4.Location = New System.Drawing.Point(243, 537)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox4.Size = New System.Drawing.Size(331, 22)
-        Me.TextBox4.TabIndex = 7
+        Me.psdConfirmNvaContrasena.Location = New System.Drawing.Point(243, 537)
+        Me.psdConfirmNvaContrasena.Name = "psdConfirmNvaContrasena"
+        Me.psdConfirmNvaContrasena.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.psdConfirmNvaContrasena.Size = New System.Drawing.Size(331, 22)
+        Me.psdConfirmNvaContrasena.TabIndex = 7
         '
-        'Button2
+        'btnGuardar
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button2.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(243, 603)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(152, 34)
-        Me.Button2.TabIndex = 18
-        Me.Button2.Text = "GUARDAR"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnGuardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnGuardar.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardar.ForeColor = System.Drawing.Color.White
+        Me.btnGuardar.Location = New System.Drawing.Point(243, 603)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(164, 44)
+        Me.btnGuardar.TabIndex = 18
+        Me.btnGuardar.Text = "GUARDAR"
+        Me.btnGuardar.UseVisualStyleBackColor = False
         '
-        'Button3
+        'btnRecargarCaptcha
         '
-        Me.Button3.BackgroundImage = CType(resources.GetObject("Button3.BackgroundImage"), System.Drawing.Image)
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button3.Location = New System.Drawing.Point(332, 289)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 45)
-        Me.Button3.TabIndex = 3
-        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnRecargarCaptcha.BackgroundImage = CType(resources.GetObject("btnRecargarCaptcha.BackgroundImage"), System.Drawing.Image)
+        Me.btnRecargarCaptcha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnRecargarCaptcha.Location = New System.Drawing.Point(332, 289)
+        Me.btnRecargarCaptcha.Name = "btnRecargarCaptcha"
+        Me.btnRecargarCaptcha.Size = New System.Drawing.Size(75, 45)
+        Me.btnRecargarCaptcha.TabIndex = 3
+        Me.btnRecargarCaptcha.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnRecargarCaptcha.UseVisualStyleBackColor = True
         '
         'jdRecuperarContrasena
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(702, 672)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
+        Me.ClientSize = New System.Drawing.Size(721, 698)
+        Me.Controls.Add(Me.btnRecargarCaptcha)
+        Me.Controls.Add(Me.btnGuardar)
+        Me.Controls.Add(Me.psdConfirmNvaContrasena)
+        Me.Controls.Add(Me.psdNvaContrasena)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.btnConfirmar)
+        Me.Controls.Add(Me.txtRptaCaptcha)
+        Me.Controls.Add(Me.lblCaptcha)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtRespuesta)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.lblPregunta)
+        Me.Controls.Add(Me.fake)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox1)
@@ -261,19 +261,19 @@ Partial Class jdRecuperarContrasena
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
+    Friend WithEvents fake As Label
+    Friend WithEvents lblPregunta As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtRespuesta As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents lblCaptcha As Label
+    Friend WithEvents txtRptaCaptcha As TextBox
+    Friend WithEvents btnConfirmar As Button
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents psdNvaContrasena As TextBox
+    Friend WithEvents psdConfirmNvaContrasena As TextBox
+    Friend WithEvents btnGuardar As Button
+    Friend WithEvents btnRecargarCaptcha As Button
 End Class
