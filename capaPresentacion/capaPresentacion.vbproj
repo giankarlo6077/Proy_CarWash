@@ -94,6 +94,18 @@
     <Compile Include="jdAcercaDe.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="JdDetalleOrdenTrabajo.Designer.vb">
+      <DependentUpon>JdDetalleOrdenTrabajo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="JdDetalleOrdenTrabajo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jdGestionarCitas.Designer.vb">
+      <DependentUpon>jdGestionarCitas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jdGestionarCitas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="jdGestionarClientes.Designer.vb">
       <DependentUpon>jdGestionarClientes.vb</DependentUpon>
     </Compile>
@@ -116,6 +128,18 @@
       <DependentUpon>jdGestionCliente.vb</DependentUpon>
     </Compile>
     <Compile Include="jdGestionCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jdHistorialMantenimiento.Designer.vb">
+      <DependentUpon>jdHistorialMantenimiento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jdHistorialMantenimiento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jdMantenimientoCitas.Designer.vb">
+      <DependentUpon>jdMantenimientoCitas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jdMantenimientoCitas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="jdMantenimientoCliente.Designer.vb">
@@ -214,6 +238,12 @@
     <Compile Include="JdSeleccionarProductoVenta.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="jdSeleccionarServicio.Designer.vb">
+      <DependentUpon>jdSeleccionarServicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jdSeleccionarServicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="JdVentas.Designer.vb">
       <DependentUpon>JdVentas.vb</DependentUpon>
     </Compile>
@@ -247,6 +277,12 @@
     <EmbeddedResource Include="jdAcercaDe.resx">
       <DependentUpon>jdAcercaDe.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="JdDetalleOrdenTrabajo.resx">
+      <DependentUpon>JdDetalleOrdenTrabajo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jdGestionarCitas.resx">
+      <DependentUpon>jdGestionarCitas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="jdGestionarClientes.resx">
       <DependentUpon>jdGestionarClientes.vb</DependentUpon>
     </EmbeddedResource>
@@ -258,6 +294,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="jdGestionCliente.resx">
       <DependentUpon>jdGestionCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jdHistorialMantenimiento.resx">
+      <DependentUpon>jdHistorialMantenimiento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jdMantenimientoCitas.resx">
+      <DependentUpon>jdMantenimientoCitas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="jdMantenimientoCliente.resx">
       <DependentUpon>jdMantenimientoCliente.vb</DependentUpon>
@@ -306,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="JdSeleccionarProductoVenta.resx">
       <DependentUpon>JdSeleccionarProductoVenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jdSeleccionarServicio.resx">
+      <DependentUpon>jdSeleccionarServicio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JdVentas.resx">
       <DependentUpon>JdVentas.vb</DependentUpon>
