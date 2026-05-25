@@ -100,6 +100,12 @@
     <Compile Include="JdComprobanteVenta.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="JdGestionarCategoria.Designer.vb">
+      <DependentUpon>JdGestionarCategoria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="JdGestionarCategoria.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="JdMantenimientoProducto.Designer.vb">
       <DependentUpon>JdMantenimientoProducto.vb</DependentUpon>
     </Compile>
@@ -152,6 +158,12 @@
       <DependentUpon>jdInicioSesion.vb</DependentUpon>
     </Compile>
     <Compile Include="jdInicioSesion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JdMantenimientoProveedor.Designer.vb">
+      <DependentUpon>JdMantenimientoProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="JdMantenimientoProveedor.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="jdMantenimientoTrabajador.Designer.vb">
@@ -208,6 +220,9 @@
     <EmbeddedResource Include="JdComprobanteVenta.resx">
       <DependentUpon>JdComprobanteVenta.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="JdGestionarCategoria.resx">
+      <DependentUpon>JdGestionarCategoria.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="JdMantenimientoProducto.resx">
       <DependentUpon>JdMantenimientoProducto.vb</DependentUpon>
     </EmbeddedResource>
@@ -235,11 +250,20 @@
     <EmbeddedResource Include="jdInicioSesion.resx">
       <DependentUpon>jdInicioSesion.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="JdMantenimientoProveedor.resx">
+      <DependentUpon>JdMantenimientoProveedor.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="jdMantenimientoTrabajador.resx">
       <DependentUpon>jdMantenimientoTrabajador.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="jdRecuperarContrasena.resx">
       <DependentUpon>jdRecuperarContrasena.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JdSeleccionarProductoVenta.resx">
+      <DependentUpon>JdSeleccionarProductoVenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JdVentas.resx">
+      <DependentUpon>JdVentas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

@@ -1,3 +1,3 @@
-﻿Public Class JdComprobanteVenta
+﻿Public Class ComprobanteVenta
 
 End Class
