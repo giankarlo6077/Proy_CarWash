@@ -54,6 +54,7 @@
       <HintPath>..\packages\System.Data.SqlClient.4.9.1\lib\net462\System.Data.SqlClient.dll</HintPath>
     </Reference>
     <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -106,6 +107,12 @@
     <Compile Include="jdGestionarClientes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="jdGestionarDescuento.Designer.vb">
+      <DependentUpon>jdGestionarDescuento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jdGestionarDescuento.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="jdGestionarPersona.Designer.vb">
       <DependentUpon>jdGestionarPersona.vb</DependentUpon>
     </Compile>
@@ -116,6 +123,18 @@
       <DependentUpon>jdGestionarRol.vb</DependentUpon>
     </Compile>
     <Compile Include="jdGestionarRol.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jdGestionarServicio.Designer.vb">
+      <DependentUpon>jdGestionarServicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jdGestionarServicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jdGestionarVehiculo.Designer.vb">
+      <DependentUpon>jdGestionarVehiculo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jdGestionarVehiculo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="jdGestionCliente.Designer.vb">
@@ -214,10 +233,22 @@
     <Compile Include="JdMantenimientoProveedor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="jdMantenimientoServicio.Designer.vb">
+      <DependentUpon>jdMantenimientoServicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jdMantenimientoServicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="jdMantenimientoTrabajador.Designer.vb">
       <DependentUpon>jdMantenimientoTrabajador.vb</DependentUpon>
     </Compile>
     <Compile Include="jdMantenimientoTrabajador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jdMantenimientoVehiculo.Designer.vb">
+      <DependentUpon>jdMantenimientoVehiculo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jdMantenimientoVehiculo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="jdRecuperarContrasena.Designer.vb">
@@ -277,11 +308,20 @@
     <EmbeddedResource Include="jdGestionarClientes.resx">
       <DependentUpon>jdGestionarClientes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="jdGestionarDescuento.resx">
+      <DependentUpon>jdGestionarDescuento.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="jdGestionarPersona.resx">
       <DependentUpon>jdGestionarPersona.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="jdGestionarRol.resx">
       <DependentUpon>jdGestionarRol.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jdGestionarServicio.resx">
+      <DependentUpon>jdGestionarServicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jdGestionarVehiculo.resx">
+      <DependentUpon>jdGestionarVehiculo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="jdGestionCliente.resx">
       <DependentUpon>jdGestionCliente.vb</DependentUpon>
@@ -331,8 +371,14 @@
     <EmbeddedResource Include="JdMantenimientoProveedor.resx">
       <DependentUpon>JdMantenimientoProveedor.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="jdMantenimientoServicio.resx">
+      <DependentUpon>jdMantenimientoServicio.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="jdMantenimientoTrabajador.resx">
       <DependentUpon>jdMantenimientoTrabajador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jdMantenimientoVehiculo.resx">
+      <DependentUpon>jdMantenimientoVehiculo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="jdRecuperarContrasena.resx">
       <DependentUpon>jdRecuperarContrasena.vb</DependentUpon>
