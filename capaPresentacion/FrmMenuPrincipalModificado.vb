@@ -15,6 +15,12 @@
         MenuStrip1.Renderer = New ToolStripProfessionalRenderer(New MiTemaMenu())
     End Sub
 
+    Private Sub ProductoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductoToolStripMenuItem.Click
+        Dim obj As New JdMantenimientoProducto()
+        obj.StartPosition = FormStartPosition.CenterParent
+        obj.ShowDialog(Me)
+    End Sub
+
     Public Class MiTemaMenu
         Inherits ProfessionalColorTable
 

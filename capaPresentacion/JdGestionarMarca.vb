@@ -23,7 +23,16 @@ Public Class JdGestionarMarca
     End Sub
 
     Public Sub lista()
-        ' TODO: integrar con la capa de negocio (listarMarca) en una siguiente etapa
+        Try
+            Dim obj As New capaNegocio.clsMarca()
+            Dim dt As DataTable = obj.listarMarca()
+            tblMarca.Rows.Clear()
+            For Each fila As DataRow In dt.Rows
+                tblMarca.Rows.Add(fila("idmarcaproducto"), fila("marcaproducto"))
+            Next
+        Catch ex As Exception
+            MessageBox.Show("Error al listar marcas: " & ex.Message)
+        End Try
     End Sub
 
     Public Sub limpiar()
@@ -36,7 +45,17 @@ Public Class JdGestionarMarca
             MessageBox.Show("Ingresa por favor el id para buscar")
             Return
         End If
-        ' TODO: integrar con la capa de negocio (buscarXid) en una siguiente etapa
+        Try
+            Dim obj As New capaNegocio.clsMarca()
+            Dim fila As DataRow = obj.buscarXid(Convert.ToInt32(txtIdMarca.Text))
+            If fila IsNot Nothing Then
+                txtNombre.Text = Convert.ToString(fila("marcaproducto"))
+            Else
+                MessageBox.Show("No se encontró la marca con ese ID")
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Error al buscar: " & ex.Message)
+        End Try
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
@@ -45,7 +64,15 @@ Public Class JdGestionarMarca
             limpiar()
         Else
             btnNuevo.Text = "Nuevo"
-            ' TODO: registrar marca mediante la capa de negocio en una siguiente etapa
+            Try
+                Dim obj As New capaNegocio.clsMarca()
+                Dim id As Integer = obj.generarCodigoMarca()
+                obj.registrarMarca(id, txtNombre.Text)
+                MessageBox.Show("MARCA REGISTRADA")
+                lista()
+            Catch ex As Exception
+                MessageBox.Show("Error al registrar: " & ex.Message)
+            End Try
             limpiar()
         End If
     End Sub
@@ -55,7 +82,15 @@ Public Class JdGestionarMarca
             MessageBox.Show("Seleccina una marca para modificar")
             Return
         End If
-        ' TODO: modificar marca mediante la capa de negocio en una siguiente etapa
+        Try
+            Dim obj As New capaNegocio.clsMarca()
+            obj.modificarMarca(Convert.ToInt32(txtIdMarca.Text), txtNombre.Text)
+            MessageBox.Show("MARCA MODIFICADA")
+            lista()
+            limpiar()
+        Catch ex As Exception
+            MessageBox.Show("Error al modificar: " & ex.Message)
+        End Try
     End Sub
 
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
@@ -67,7 +102,15 @@ Public Class JdGestionarMarca
             MessageBox.Show("Seleccinoa una marca para eliminar")
             Return
         End If
-        ' TODO: eliminar marca mediante la capa de negocio en una siguiente etapa
+        Try
+            Dim obj As New capaNegocio.clsMarca()
+            obj.eliminarMarca(Convert.ToInt32(txtIdMarca.Text))
+            MessageBox.Show("MARCA ELIMINADA")
+            lista()
+            limpiar()
+        Catch ex As Exception
+            MessageBox.Show("Error al eliminar: " & ex.Message)
+        End Try
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click

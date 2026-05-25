@@ -334,6 +334,10 @@
       <Project>{acb2c901-91a2-49a1-bb28-4f0d55276e94}</Project>
       <Name>capaDatos</Name>
     </ProjectReference>
+    <ProjectReference Include="..\capaNegocio\capaNegocio.vbproj">
+      <Project>{5d143581-9303-429f-86a6-18d812b890fe}</Project>
+      <Name>capaNegocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
