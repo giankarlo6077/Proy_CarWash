@@ -37,15 +37,15 @@ Partial Class jdGestionarPersona
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.ListView1 = New System.Windows.Forms.ListView()
@@ -200,57 +200,6 @@ Partial Class jdGestionarPersona
         Me.Panel1.Size = New System.Drawing.Size(602, 249)
         Me.Panel1.TabIndex = 13
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 49)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(119, 13)
-        Me.Label1.TabIndex = 7
-        Me.Label1.Text = "Registrar Nuevo Cliente"
-        '
-        'DateTimePicker2
-        '
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(156, 148)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(126, 20)
-        Me.DateTimePicker2.TabIndex = 17
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(334, 96)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox2.TabIndex = 19
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(331, 80)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(39, 13)
-        Me.Label12.TabIndex = 18
-        Me.Label12.Text = "Distrito"
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(459, 96)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox3.TabIndex = 21
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(456, 80)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(51, 13)
-        Me.Label13.TabIndex = 20
-        Me.Label13.Text = "Provincia"
-        '
         'CheckBox2
         '
         Me.CheckBox2.AutoSize = True
@@ -279,6 +228,57 @@ Partial Class jdGestionarPersona
         Me.Label14.Size = New System.Drawing.Size(31, 13)
         Me.Label14.TabIndex = 26
         Me.Label14.Text = "Sexo"
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(459, 96)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox3.TabIndex = 21
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(456, 80)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(51, 13)
+        Me.Label13.TabIndex = 20
+        Me.Label13.Text = "Provincia"
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(334, 96)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox2.TabIndex = 19
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(331, 80)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(39, 13)
+        Me.Label12.TabIndex = 18
+        Me.Label12.Text = "Distrito"
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker2.Location = New System.Drawing.Point(156, 148)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(126, 20)
+        Me.DateTimePicker2.TabIndex = 17
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(12, 49)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(119, 13)
+        Me.Label1.TabIndex = 7
+        Me.Label1.Text = "Registrar Nuevo Cliente"
         '
         'Button4
         '
@@ -311,7 +311,7 @@ Partial Class jdGestionarPersona
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(471, 33)
+        Me.Label2.Location = New System.Drawing.Point(511, 33)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(51, 13)
         Me.Label2.TabIndex = 14
@@ -320,7 +320,7 @@ Partial Class jdGestionarPersona
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(343, 33)
+        Me.Label11.Location = New System.Drawing.Point(366, 33)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(37, 13)
         Me.Label11.TabIndex = 15
@@ -329,14 +329,14 @@ Partial Class jdGestionarPersona
         'DateTimePicker1
         '
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(344, 49)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(369, 49)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(101, 20)
         Me.DateTimePicker1.TabIndex = 16
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(474, 49)
+        Me.TextBox7.Location = New System.Drawing.Point(514, 49)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(100, 20)
         Me.TextBox7.TabIndex = 17

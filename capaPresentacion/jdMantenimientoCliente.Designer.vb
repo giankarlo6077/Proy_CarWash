@@ -39,16 +39,16 @@ Partial Class jdMantenimientoCliente
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -209,15 +209,6 @@ Partial Class jdMantenimientoCliente
         Me.Panel1.Size = New System.Drawing.Size(312, 231)
         Me.Panel1.TabIndex = 13
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 48)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(77, 13)
-        Me.Label2.TabIndex = 8
-        Me.Label2.Text = "Tipo de cliente"
-        '
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
@@ -226,10 +217,19 @@ Partial Class jdMantenimientoCliente
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 5
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(12, 39)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(77, 13)
+        Me.Label2.TabIndex = 8
+        Me.Label2.Text = "Tipo de cliente"
+        '
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(12, 64)
+        Me.ComboBox2.Location = New System.Drawing.Point(15, 55)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox2.TabIndex = 14
@@ -247,6 +247,15 @@ Partial Class jdMantenimientoCliente
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(309, 231)
         Me.Panel2.TabIndex = 15
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(21, 11)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(93, 13)
+        Me.Label11.TabIndex = 22
+        Me.Label11.Text = "EMPRESA / RUC"
         '
         'Button5
         '
@@ -288,15 +297,6 @@ Partial Class jdMantenimientoCliente
         Me.Label9.Size = New System.Drawing.Size(30, 13)
         Me.Label9.TabIndex = 17
         Me.Label9.Text = "RUC"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(21, 11)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(93, 13)
-        Me.Label11.TabIndex = 22
-        Me.Label11.Text = "EMPRESA / RUC"
         '
         'jdMantenimientoCliente
         '

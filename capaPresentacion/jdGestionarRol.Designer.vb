@@ -181,7 +181,7 @@ Partial Class jdGestionarRol
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(457, 37)
+        Me.Button1.Location = New System.Drawing.Point(473, 37)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(115, 23)
         Me.Button1.TabIndex = 33

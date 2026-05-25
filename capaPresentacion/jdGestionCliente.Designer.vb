@@ -38,6 +38,10 @@ Partial Class jdGestionCliente
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -49,10 +53,6 @@ Partial Class jdGestionCliente
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -212,6 +212,44 @@ Partial Class jdGestionCliente
         Me.Panel1.Size = New System.Drawing.Size(312, 245)
         Me.Panel1.TabIndex = 20
         '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(116, 169)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(72, 17)
+        Me.CheckBox2.TabIndex = 25
+        Me.CheckBox2.Text = "Femenino"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(18, 169)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(74, 17)
+        Me.CheckBox1.TabIndex = 24
+        Me.CheckBox1.Text = "Masculino"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(15, 142)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(31, 13)
+        Me.Label13.TabIndex = 23
+        Me.Label13.Text = "Sexo"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(238, 51)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(56, 23)
+        Me.Button1.TabIndex = 22
+        Me.Button1.Text = "Buscar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'TextBox4
         '
         Me.TextBox4.Location = New System.Drawing.Point(175, 213)
@@ -302,44 +340,6 @@ Partial Class jdGestionCliente
         Me.Button8.TabIndex = 24
         Me.Button8.Text = "Nuevo Cliente"
         Me.Button8.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(238, 51)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(56, 23)
-        Me.Button1.TabIndex = 22
-        Me.Button1.Text = "Buscar"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(15, 142)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(31, 13)
-        Me.Label13.TabIndex = 23
-        Me.Label13.Text = "Sexo"
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(18, 169)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(74, 17)
-        Me.CheckBox1.TabIndex = 24
-        Me.CheckBox1.Text = "Masculino"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(116, 169)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(72, 17)
-        Me.CheckBox2.TabIndex = 25
-        Me.CheckBox2.Text = "Femenino"
-        Me.CheckBox2.UseVisualStyleBackColor = True
         '
         'jdGestionCliente
         '
