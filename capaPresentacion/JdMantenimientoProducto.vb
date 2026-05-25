@@ -17,7 +17,16 @@ Public Class JdMantenimientoProducto
     End Sub
 
     Public Sub listar(ByVal dato As String)
-        ' TODO: integrar con la capa de negocio (listarIdNombre) en una siguiente etapa
+        Try
+            Dim obj As New capaNegocio.clsProducto()
+            Dim dt As DataTable = obj.listarIdNombre(dato)
+            tblProducto.Rows.Clear()
+            For Each fila As DataRow In dt.Rows
+                tblProducto.Rows.Add(fila("idproducto"), fila("producto"), fila("stock"), fila("vigencia"), fila("precioactual"), fila("tipoproducto"), fila("marcaproducto"))
+            Next
+        Catch ex As Exception
+            MessageBox.Show("Error al listar productos: " & ex.Message)
+        End Try
     End Sub
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click

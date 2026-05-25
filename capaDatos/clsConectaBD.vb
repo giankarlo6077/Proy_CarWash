@@ -1,6 +1,7 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
 
+
 Public Class clsConectaBD
     Private cn As SqlConnection
 

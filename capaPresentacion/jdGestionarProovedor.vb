@@ -2,7 +2,7 @@
     Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
 
     End Sub
- ClassPrivate Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
     End Sub
 
@@ -13,3 +13,5 @@
     Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles txtNombre.TextChanged, txtTelefono.TextChanged, txtRUC.TextChanged, txtContacto.TextChanged, txtDireccion.TextChanged, txtCorreo.TextChanged
 
     End Sub
+
+End Class

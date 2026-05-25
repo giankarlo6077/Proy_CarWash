@@ -23,7 +23,16 @@ Public Class JdGestionarTipoDeProducto
     End Sub
 
     Public Sub listar()
-        ' TODO: integrar con la capa de negocio (listarTipoProducto) en una siguiente etapa
+        Try
+            Dim obj As New capaNegocio.clsTipoProducto()
+            Dim dt As DataTable = obj.listarTipoProducto()
+            tblTipoProducto.Rows.Clear()
+            For Each fila As DataRow In dt.Rows
+                tblTipoProducto.Rows.Add(fila("idtipoproducto"), fila("tipoproducto"))
+            Next
+        Catch ex As Exception
+            MessageBox.Show("Error al listar tipos de producto: " & ex.Message)
+        End Try
     End Sub
 
     Public Sub limpiar()
@@ -32,7 +41,21 @@ Public Class JdGestionarTipoDeProducto
     End Sub
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
-        ' TODO: integrar con la capa de negocio (buscarXid) en una siguiente etapa
+        If txtIdTipoProducto.Text = "" Then
+            MessageBox.Show("Ingrese el ID para buscar")
+            Return
+        End If
+        Try
+            Dim obj As New capaNegocio.clsTipoProducto()
+            Dim fila As DataRow = obj.buscarXid(Convert.ToInt32(txtIdTipoProducto.Text))
+            If fila IsNot Nothing Then
+                txtNombre.Text = Convert.ToString(fila("tipoproducto"))
+            Else
+                MessageBox.Show("No se encontró el tipo de producto con ese ID")
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Error al buscar: " & ex.Message)
+        End Try
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
@@ -41,7 +64,14 @@ Public Class JdGestionarTipoDeProducto
             limpiar()
         Else
             btnNuevo.Text = "Nuevo"
-            ' TODO: registrar tipo de producto mediante la capa de negocio en una siguiente etapa
+            Try
+                Dim obj As New capaNegocio.clsTipoProducto()
+                Dim id As Integer = obj.generarCodigoTipoProducto()
+                obj.registrarTipoProducto(id, txtNombre.Text)
+                MessageBox.Show("TIPO DE PRODUCTO REGISTRADO")
+            Catch ex As Exception
+                MessageBox.Show("Error al registrar: " & ex.Message)
+            End Try
         End If
         limpiar()
         listar()
@@ -52,7 +82,13 @@ Public Class JdGestionarTipoDeProducto
             MessageBox.Show("Porfavor Seleccione un Producto para Modificar")
             Return
         End If
-        ' TODO: modificar tipo de producto mediante la capa de negocio en una siguiente etapa
+        Try
+            Dim obj As New capaNegocio.clsTipoProducto()
+            obj.modificarTipoProducto(Convert.ToInt32(txtIdTipoProducto.Text), txtNombre.Text)
+            MessageBox.Show("TIPO DE PRODUCTO MODIFICADO")
+        Catch ex As Exception
+            MessageBox.Show("Error al modificar: " & ex.Message)
+        End Try
         limpiar()
         listar()
     End Sub
@@ -66,7 +102,13 @@ Public Class JdGestionarTipoDeProducto
             MessageBox.Show("Porfavor Seleccione un Producto para Eliminar")
             Return
         End If
-        ' TODO: eliminar tipo de producto mediante la capa de negocio en una siguiente etapa
+        Try
+            Dim obj As New capaNegocio.clsTipoProducto()
+            obj.eliminarTipoProducto(Convert.ToInt32(txtIdTipoProducto.Text))
+            MessageBox.Show("TIPO DE PRODUCTO ELIMINADO")
+        Catch ex As Exception
+            MessageBox.Show("Error al eliminar: " & ex.Message)
+        End Try
         limpiar()
         listar()
     End Sub
