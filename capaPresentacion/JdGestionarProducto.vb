@@ -183,6 +183,12 @@ Public Class JdGestionarProducto
         obj.ShowDialog(Me)
     End Sub
 
+    Private Sub btnPapelera_Click(sender As Object, e As EventArgs) Handles btnPapelera.Click
+        Dim obj As New JdPapeleraProducto(Me)
+        obj.StartPosition = FormStartPosition.CenterParent
+        obj.ShowDialog(Me)
+    End Sub
+
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Me.Close()
     End Sub

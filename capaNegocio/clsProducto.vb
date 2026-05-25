@@ -35,6 +35,29 @@ Public Class clsProducto
         End Try
     End Function
 
+    Public Function listarDadosDeBaja() As DataTable
+        Dim strSQL As String =
+            "SELECT pr.idproducto, pr.producto, pr.stock, pr.vigencia, pr.precioactual," &
+            " pm.marcaproducto, tp.tipoproducto" &
+            " FROM producto pr" &
+            " INNER JOIN marca_producto pm ON pm.idmarcaproducto = pr.idmarcaproducto" &
+            " INNER JOIN tipo_producto tp ON tp.idtipoproducto = pr.idtipoproducto" &
+            " WHERE pr.vigencia = 0" &
+            " ORDER BY 1"
+        Dim objConectar As New clsConectaBD()
+        Try
+            objConectar.conectar()
+            Dim da As New SqlDataAdapter(strSQL, objConectar.miConexion)
+            Dim dt As New DataTable()
+            da.Fill(dt)
+            Return dt
+        Catch ex As Exception
+            Throw New Exception("Error al listar productos dados de baja: " & ex.Message)
+        Finally
+            objConectar.desconectar()
+        End Try
+    End Function
+
     Public Function buscarXid(ByVal id As Integer) As DataRow
         Dim strSQL As String =
             "SELECT pr.idproducto, pr.producto, pr.stock, pr.vigencia, pr.precioactual," &

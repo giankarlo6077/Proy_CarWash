@@ -197,6 +197,12 @@
     <Compile Include="JdGestionarMarca.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="JdPapeleraProducto.Designer.vb">
+      <DependentUpon>JdPapeleraProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="JdPapeleraProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="JdGestionarTipoDeProducto.Designer.vb">
       <DependentUpon>JdGestionarTipoDeProducto.vb</DependentUpon>
     </Compile>
@@ -388,6 +394,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="jdMantenimientoVehiculo.resx">
       <DependentUpon>jdMantenimientoVehiculo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JdPapeleraProducto.resx">
+      <DependentUpon>JdPapeleraProducto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="jdRecuperarContrasena.resx">
       <DependentUpon>jdRecuperarContrasena.vb</DependentUpon>
