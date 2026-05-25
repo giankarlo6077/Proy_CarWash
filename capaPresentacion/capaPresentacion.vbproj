@@ -76,36 +76,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="jdAdministrarCliente.Designer.vb">
-      <DependentUpon>jdAdministrarCliente.vb</DependentUpon>
-    </Compile>
-    <Compile Include="jdAdministrarCliente.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="jdGestionarCliente.Designer.vb">
-      <DependentUpon>jdGestionarCliente.vb</DependentUpon>
-    </Compile>
-    <Compile Include="jdGestionarCliente.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="jdGestionarPersona.Designer.vb">
-      <DependentUpon>jdGestionarPersona.vb</DependentUpon>
-    </Compile>
-    <Compile Include="jdGestionarPersona.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="jdGestionarRol.Designer.vb">
-      <DependentUpon>jdGestionarRol.vb</DependentUpon>
-    </Compile>
-    <Compile Include="jdGestionarRol.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="jdMantenimientoCliente.Designer.vb">
-      <DependentUpon>jdMantenimientoCliente.vb</DependentUpon>
-    </Compile>
-    <Compile Include="jdMantenimientoCliente.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FrmMenuPrincipalModificado.Designer.vb">
       <DependentUpon>FrmMenuPrincipalModificado.vb</DependentUpon>
     </Compile>
@@ -193,12 +163,6 @@
     <EmbeddedResource Include="jdAcercaDe.resx">
       <DependentUpon>jdAcercaDe.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="jdAdministrarCliente.resx">
-      <DependentUpon>jdAdministrarCliente.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="jdGestionarCliente.resx">
-      <DependentUpon>jdGestionarCliente.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="jdGestionarEmpresa.resx">
       <DependentUpon>jdGestionarEmpresa.vb</DependentUpon>
     </EmbeddedResource>
@@ -213,9 +177,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="jdInicioSesion.resx">
       <DependentUpon>jdInicioSesion.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="jdMantenimientoCliente.resx">
-      <DependentUpon>jdMantenimientoCliente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="jdMantenimientoTrabajador.resx">
       <DependentUpon>jdMantenimientoTrabajador.vb</DependentUpon>

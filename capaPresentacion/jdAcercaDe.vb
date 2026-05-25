@@ -54,8 +54,4 @@
     Private Sub Label82_Click(sender As Object, e As EventArgs)
 
     End Sub
-
-    Private Sub Label72_Click(sender As Object, e As EventArgs) Handles Label72.Click
-
-    End Sub
 End Class

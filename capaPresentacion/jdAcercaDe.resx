@@ -117,16 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Label12.Text" xml:space="preserve">
-    <value>Ser la solución de software líder en el sector automotriz, reconocida por impulsar la transformación digital de los talleres y facilitar la toma de decisiones mediante el control preciso de la información</value>
-  </data>
-  <data name="Label14.Text" xml:space="preserve">
+  <data name="Label9.Text" xml:space="preserve">
     <value>Proveer una herramienta tecnológica robusta y eficiente que automatice los procesos administrativos y operativos de los talleres mecánicos, permitiendo a nuestros usuarios enfocarse en la calidad del servicio y la satisfacción de sus clientes</value>
   </data>
   <data name="Label11.Text" xml:space="preserve">
     <value>Ser la solución de software líder en el sector automotriz, reconocida por impulsar la transformación digital de los talleres y facilitar la toma de decisiones mediante el control preciso de la información</value>
   </data>
-  <data name="Label9.Text" xml:space="preserve">
+  <data name="Label12.Text" xml:space="preserve">
+    <value>Ser la solución de software líder en el sector automotriz, reconocida por impulsar la transformación digital de los talleres y facilitar la toma de decisiones mediante el control preciso de la información</value>
+  </data>
+  <data name="Label14.Text" xml:space="preserve">
     <value>Proveer una herramienta tecnológica robusta y eficiente que automatice los procesos administrativos y operativos de los talleres mecánicos, permitiendo a nuestros usuarios enfocarse en la calidad del servicio y la satisfacción de sus clientes</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
