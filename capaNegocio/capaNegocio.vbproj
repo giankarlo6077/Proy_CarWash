@@ -74,10 +74,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.vb" />
+    <Compile Include="clsCliente.vb" />
     <Compile Include="clsMarca.vb" />
+    <Compile Include="clsModeloVehiculo.vb" />
     <Compile Include="clsTipoProducto.vb" />
     <Compile Include="clsProducto.vb" />
+    <Compile Include="clsTipoVehiculo.vb" />
     <Compile Include="clsTrabajador.vb" />
+    <Compile Include="clsVehiculo.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

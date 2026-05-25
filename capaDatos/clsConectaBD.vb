@@ -66,7 +66,7 @@ Public Class clsConectaBD
         Try
             If cn.State = Data.ConnectionState.Open Then
                 cn.Close()
-                cn.Dispose()
+                'cn.Dispose()
             End If
         Catch Ex As Exception
             Err.Raise(Err.Number, Err.Source, Err.Description)

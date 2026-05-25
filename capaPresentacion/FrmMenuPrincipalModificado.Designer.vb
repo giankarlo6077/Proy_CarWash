@@ -163,7 +163,7 @@ Partial Class FrmMenuPrincipalModificado
         '
         Me.ReportesToolStripMenuItem1.Image = CType(resources.GetObject("ReportesToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.ReportesToolStripMenuItem1.Name = "ReportesToolStripMenuItem1"
-        Me.ReportesToolStripMenuItem1.Size = New System.Drawing.Size(224, 32)
+        Me.ReportesToolStripMenuItem1.Size = New System.Drawing.Size(213, 32)
         Me.ReportesToolStripMenuItem1.Text = "Reportes"
         '
         'PictureBox1

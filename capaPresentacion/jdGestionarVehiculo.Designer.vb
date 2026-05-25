@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class jdGestionarVehiculo
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,37 +20,32 @@ Partial Class jdGestionarVehiculo
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(jdGestionarVehiculo))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtdoc = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtfabricacion = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.cboMarcaProducto = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.btnDarsebaja = New System.Windows.Forms.Button()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.btnModificar = New System.Windows.Forms.Button()
+        Me.btnNuevo = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Placa = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DNI = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.tblVehiculo = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tblVehiculo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -73,21 +68,21 @@ Partial Class jdGestionarVehiculo
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Placa:"
         '
-        'TextBox1
+        'txtNombre
         '
-        Me.TextBox1.Location = New System.Drawing.Point(82, 20)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(200, 22)
-        Me.TextBox1.TabIndex = 2
+        Me.txtNombre.Location = New System.Drawing.Point(82, 20)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(200, 22)
+        Me.txtNombre.TabIndex = 2
         '
-        'Button1
+        'btnBuscar
         '
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(288, 15)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(38, 32)
-        Me.Button1.TabIndex = 3
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
+        Me.btnBuscar.Location = New System.Drawing.Point(288, 10)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(47, 43)
+        Me.btnBuscar.TabIndex = 3
+        Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'Label3
         '
@@ -99,12 +94,12 @@ Partial Class jdGestionarVehiculo
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "nro. doc. Dueño:"
         '
-        'TextBox2
+        'txtdoc
         '
-        Me.TextBox2.Location = New System.Drawing.Point(176, 64)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(150, 22)
-        Me.TextBox2.TabIndex = 5
+        Me.txtdoc.Location = New System.Drawing.Point(176, 64)
+        Me.txtdoc.Name = "txtdoc"
+        Me.txtdoc.Size = New System.Drawing.Size(150, 22)
+        Me.txtdoc.TabIndex = 5
         '
         'Label4
         '
@@ -116,28 +111,36 @@ Partial Class jdGestionarVehiculo
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Año de fabricación:"
         '
-        'TextBox3
+        'txtfabricacion
         '
-        Me.TextBox3.Location = New System.Drawing.Point(669, 20)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(198, 22)
-        Me.TextBox3.TabIndex = 7
+        Me.txtfabricacion.Location = New System.Drawing.Point(669, 20)
+        Me.txtfabricacion.Name = "txtfabricacion"
+        Me.txtfabricacion.Size = New System.Drawing.Size(198, 22)
+        Me.txtfabricacion.TabIndex = 7
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.ComboBox1)
+        Me.Panel1.Controls.Add(Me.cboMarcaProducto)
         Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.TextBox1)
-        Me.Panel1.Controls.Add(Me.TextBox3)
+        Me.Panel1.Controls.Add(Me.txtNombre)
+        Me.Panel1.Controls.Add(Me.txtfabricacion)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.TextBox2)
+        Me.Panel1.Controls.Add(Me.btnBuscar)
+        Me.Panel1.Controls.Add(Me.txtdoc)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Location = New System.Drawing.Point(46, 140)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(949, 129)
         Me.Panel1.TabIndex = 8
+        '
+        'cboMarcaProducto
+        '
+        Me.cboMarcaProducto.FormattingEnabled = True
+        Me.cboMarcaProducto.Location = New System.Drawing.Point(669, 67)
+        Me.cboMarcaProducto.Name = "cboMarcaProducto"
+        Me.cboMarcaProducto.Size = New System.Drawing.Size(198, 24)
+        Me.cboMarcaProducto.TabIndex = 9
         '
         'Label5
         '
@@ -149,142 +152,101 @@ Partial Class jdGestionarVehiculo
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Modelo:"
         '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(669, 67)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(198, 24)
-        Me.ComboBox1.TabIndex = 9
-        '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.Button6)
-        Me.Panel2.Controls.Add(Me.Button5)
-        Me.Panel2.Controls.Add(Me.Button4)
-        Me.Panel2.Controls.Add(Me.Button3)
-        Me.Panel2.Controls.Add(Me.Button2)
+        Me.Panel2.Controls.Add(Me.btnEliminar)
+        Me.Panel2.Controls.Add(Me.btnDarsebaja)
+        Me.Panel2.Controls.Add(Me.btnLimpiar)
+        Me.Panel2.Controls.Add(Me.btnModificar)
+        Me.Panel2.Controls.Add(Me.btnNuevo)
         Me.Panel2.Location = New System.Drawing.Point(46, 284)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(949, 79)
         Me.Panel2.TabIndex = 9
         '
-        'Button2
+        'btnEliminar
         '
-        Me.Button2.AutoSize = True
-        Me.Button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(117, 26)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(77, 32)
-        Me.Button2.TabIndex = 0
-        Me.Button2.Text = "Nuevo"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnEliminar.AutoSize = True
+        Me.btnEliminar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminar.Location = New System.Drawing.Point(689, 26)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(92, 32)
+        Me.btnEliminar.TabIndex = 4
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnDarsebaja
         '
-        Me.Button3.AutoSize = True
-        Me.Button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(234, 26)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(101, 32)
-        Me.Button3.TabIndex = 1
-        Me.Button3.Text = "Modificar"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnDarsebaja.AutoSize = True
+        Me.btnDarsebaja.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnDarsebaja.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDarsebaja.Location = New System.Drawing.Point(516, 26)
+        Me.btnDarsebaja.Name = "btnDarsebaja"
+        Me.btnDarsebaja.Size = New System.Drawing.Size(124, 32)
+        Me.btnDarsebaja.TabIndex = 3
+        Me.btnDarsebaja.Text = "Dar de baja"
+        Me.btnDarsebaja.UseVisualStyleBackColor = True
         '
-        'Button4
+        'btnLimpiar
         '
-        Me.Button4.AutoSize = True
-        Me.Button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(382, 26)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(85, 32)
-        Me.Button4.TabIndex = 2
-        Me.Button4.Text = "Limpiar"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnLimpiar.AutoSize = True
+        Me.btnLimpiar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLimpiar.Location = New System.Drawing.Point(382, 26)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(85, 32)
+        Me.btnLimpiar.TabIndex = 2
+        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = True
         '
-        'Button5
+        'btnModificar
         '
-        Me.Button5.AutoSize = True
-        Me.Button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(516, 26)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(124, 32)
-        Me.Button5.TabIndex = 3
-        Me.Button5.Text = "Dar de baja"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.btnModificar.AutoSize = True
+        Me.btnModificar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModificar.Location = New System.Drawing.Point(234, 26)
+        Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.Size = New System.Drawing.Size(101, 32)
+        Me.btnModificar.TabIndex = 1
+        Me.btnModificar.Text = "Modificar"
+        Me.btnModificar.UseVisualStyleBackColor = True
         '
-        'Button6
+        'btnNuevo
         '
-        Me.Button6.AutoSize = True
-        Me.Button6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(689, 26)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(85, 32)
-        Me.Button6.TabIndex = 4
-        Me.Button6.Text = "Limpiar"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.btnNuevo.AutoSize = True
+        Me.btnNuevo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNuevo.Location = New System.Drawing.Point(117, 26)
+        Me.btnNuevo.Name = "btnNuevo"
+        Me.btnNuevo.Size = New System.Drawing.Size(77, 32)
+        Me.btnNuevo.TabIndex = 0
+        Me.btnNuevo.Text = "Nuevo"
+        Me.btnNuevo.UseVisualStyleBackColor = True
         '
         'Panel3
         '
-        Me.Panel3.Controls.Add(Me.DataGridView1)
+        Me.Panel3.Controls.Add(Me.tblVehiculo)
         Me.Panel3.Location = New System.Drawing.Point(46, 386)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(949, 313)
         Me.Panel3.TabIndex = 10
         '
-        'DataGridView1
+        'tblVehiculo
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.Placa, Me.DNI, Me.Column3, Me.Column4})
-        Me.DataGridView1.Location = New System.Drawing.Point(14, 16)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersVisible = False
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(904, 275)
-        Me.DataGridView1.TabIndex = 0
-        '
-        'id
-        '
-        Me.id.HeaderText = "ID"
-        Me.id.MinimumWidth = 6
-        Me.id.Name = "id"
-        Me.id.Width = 125
-        '
-        'Placa
-        '
-        Me.Placa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Placa.HeaderText = "Placa"
-        Me.Placa.MinimumWidth = 6
-        Me.Placa.Name = "Placa"
-        '
-        'DNI
-        '
-        Me.DNI.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DNI.HeaderText = "DNI"
-        Me.DNI.MinimumWidth = 6
-        Me.DNI.Name = "DNI"
-        '
-        'Column3
-        '
-        Me.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column3.HeaderText = "Año de fabricacion"
-        Me.Column3.MinimumWidth = 6
-        Me.Column3.Name = "Column3"
-        '
-        'Column4
-        '
-        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column4.HeaderText = "Modelo"
-        Me.Column4.MinimumWidth = 6
-        Me.Column4.Name = "Column4"
+        Me.tblVehiculo.AllowUserToAddRows = False
+        Me.tblVehiculo.AllowUserToDeleteRows = False
+        Me.tblVehiculo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.tblVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.tblVehiculo.Location = New System.Drawing.Point(14, 16)
+        Me.tblVehiculo.Name = "tblVehiculo"
+        Me.tblVehiculo.ReadOnly = True
+        Me.tblVehiculo.RowHeadersVisible = False
+        Me.tblVehiculo.RowHeadersWidth = 51
+        Me.tblVehiculo.RowTemplate.Height = 24
+        Me.tblVehiculo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.tblVehiculo.Size = New System.Drawing.Size(904, 275)
+        Me.tblVehiculo.TabIndex = 0
         '
         'jdGestionarVehiculo
         '
@@ -303,7 +265,7 @@ Partial Class jdGestionarVehiculo
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tblVehiculo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -311,26 +273,21 @@ Partial Class jdGestionarVehiculo
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents txtNombre As TextBox
+    Friend WithEvents btnBuscar As Button
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtdoc As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtfabricacion As TextBox
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cboMarcaProducto As ComboBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnEliminar As Button
+    Friend WithEvents btnDarsebaja As Button
+    Friend WithEvents btnLimpiar As Button
+    Friend WithEvents btnModificar As Button
+    Friend WithEvents btnNuevo As Button
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents id As DataGridViewTextBoxColumn
-    Friend WithEvents Placa As DataGridViewTextBoxColumn
-    Friend WithEvents DNI As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents tblVehiculo As DataGridView
 End Class

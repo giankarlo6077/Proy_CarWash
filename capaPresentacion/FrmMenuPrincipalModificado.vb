@@ -52,4 +52,9 @@
         End Property
 
     End Class
+
+    Private Sub VehiculoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VehiculoToolStripMenuItem.Click
+        Dim frmVehiculo As New jdMantenimientoVehiculo()
+        frmVehiculo.ShowDialog()
+    End Sub
 End Class

@@ -24,18 +24,13 @@ Partial Class jdMantenimientoVehiculo
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(jdMantenimientoVehiculo))
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.txtbuscador = New System.Windows.Forms.TextBox()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.btnGestionarPersona = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Placa = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DNI = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.tblVehiculo = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tblVehiculo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -48,91 +43,58 @@ Partial Class jdMantenimientoVehiculo
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Mantenimiento Vehiculo"
         '
-        'TextBox1
+        'txtbuscador
         '
-        Me.TextBox1.Location = New System.Drawing.Point(73, 131)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(288, 22)
-        Me.TextBox1.TabIndex = 1
+        Me.txtbuscador.Location = New System.Drawing.Point(73, 131)
+        Me.txtbuscador.Name = "txtbuscador"
+        Me.txtbuscador.Size = New System.Drawing.Size(288, 22)
+        Me.txtbuscador.TabIndex = 1
         '
-        'Button1
+        'btnBuscar
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(381, 130)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(202, 28)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Buscar por placa"
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
+        Me.btnBuscar.Location = New System.Drawing.Point(367, 124)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(276, 40)
+        Me.btnBuscar.TabIndex = 2
+        Me.btnBuscar.Text = "Buscar por placa"
+        Me.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnBuscar.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnGestionarPersona
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(737, 130)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(220, 28)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Administrar Vehiculo"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnGestionarPersona.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGestionarPersona.Location = New System.Drawing.Point(701, 130)
+        Me.btnGestionarPersona.Name = "btnGestionarPersona"
+        Me.btnGestionarPersona.Size = New System.Drawing.Size(274, 28)
+        Me.btnGestionarPersona.TabIndex = 3
+        Me.btnGestionarPersona.Text = "Administrar Vehiculo"
+        Me.btnGestionarPersona.UseVisualStyleBackColor = True
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.DataGridView1)
+        Me.Panel1.Controls.Add(Me.tblVehiculo)
         Me.Panel1.Location = New System.Drawing.Point(73, 193)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(902, 404)
         Me.Panel1.TabIndex = 4
         '
-        'DataGridView1
+        'tblVehiculo
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.Placa, Me.DNI, Me.Column3, Me.Column4})
-        Me.DataGridView1.Location = New System.Drawing.Point(19, 20)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersVisible = False
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(865, 370)
-        Me.DataGridView1.TabIndex = 1
-        '
-        'id
-        '
-        Me.id.HeaderText = "ID"
-        Me.id.MinimumWidth = 6
-        Me.id.Name = "id"
-        Me.id.Width = 125
-        '
-        'Placa
-        '
-        Me.Placa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Placa.HeaderText = "Placa"
-        Me.Placa.MinimumWidth = 6
-        Me.Placa.Name = "Placa"
-        '
-        'DNI
-        '
-        Me.DNI.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DNI.HeaderText = "DNI"
-        Me.DNI.MinimumWidth = 6
-        Me.DNI.Name = "DNI"
-        '
-        'Column3
-        '
-        Me.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column3.HeaderText = "Año de fabricacion"
-        Me.Column3.MinimumWidth = 6
-        Me.Column3.Name = "Column3"
-        '
-        'Column4
-        '
-        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column4.HeaderText = "Modelo"
-        Me.Column4.MinimumWidth = 6
-        Me.Column4.Name = "Column4"
+        Me.tblVehiculo.AllowUserToAddRows = False
+        Me.tblVehiculo.AllowUserToDeleteRows = False
+        Me.tblVehiculo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.tblVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.tblVehiculo.Location = New System.Drawing.Point(19, 20)
+        Me.tblVehiculo.Name = "tblVehiculo"
+        Me.tblVehiculo.ReadOnly = True
+        Me.tblVehiculo.RowHeadersVisible = False
+        Me.tblVehiculo.RowHeadersWidth = 51
+        Me.tblVehiculo.RowTemplate.Height = 24
+        Me.tblVehiculo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.tblVehiculo.Size = New System.Drawing.Size(865, 370)
+        Me.tblVehiculo.TabIndex = 1
         '
         'jdMantenimientoVehiculo
         '
@@ -140,29 +102,24 @@ Partial Class jdMantenimientoVehiculo
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1044, 662)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.btnGestionarPersona)
+        Me.Controls.Add(Me.btnBuscar)
+        Me.Controls.Add(Me.txtbuscador)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "jdMantenimientoVehiculo"
         Me.Text = "jdMantenimientoVehiculo"
         Me.Panel1.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tblVehiculo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents txtbuscador As TextBox
+    Friend WithEvents btnBuscar As Button
+    Friend WithEvents btnGestionarPersona As Button
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents id As DataGridViewTextBoxColumn
-    Friend WithEvents Placa As DataGridViewTextBoxColumn
-    Friend WithEvents DNI As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents tblVehiculo As DataGridView
 End Class
