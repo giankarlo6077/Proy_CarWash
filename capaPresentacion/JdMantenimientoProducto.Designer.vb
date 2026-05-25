@@ -22,6 +22,7 @@ Partial Class JdMantenimientoProducto
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(JdMantenimientoProducto))
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.txtbuscador = New System.Windows.Forms.TextBox()
         Me.btnBuscar = New System.Windows.Forms.Button()
@@ -33,19 +34,20 @@ Partial Class JdMantenimientoProducto
         'lblTitulo
         '
         Me.lblTitulo.Font = New System.Drawing.Font("Verdana", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitulo.Location = New System.Drawing.Point(22, 21)
+        Me.lblTitulo.Location = New System.Drawing.Point(15, 14)
+        Me.lblTitulo.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(530, 52)
+        Me.lblTitulo.Size = New System.Drawing.Size(362, 34)
         Me.lblTitulo.TabIndex = 0
         Me.lblTitulo.Text = "Mantenimiento de Producto"
         '
         'txtbuscador
         '
         Me.txtbuscador.Font = New System.Drawing.Font("Verdana", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtbuscador.Location = New System.Drawing.Point(22, 94)
-        Me.txtbuscador.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtbuscador.Location = New System.Drawing.Point(15, 61)
+        Me.txtbuscador.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.txtbuscador.Name = "txtbuscador"
-        Me.txtbuscador.Size = New System.Drawing.Size(343, 34)
+        Me.txtbuscador.Size = New System.Drawing.Size(230, 25)
         Me.txtbuscador.TabIndex = 1
         '
         'btnBuscar
@@ -53,10 +55,10 @@ Partial Class JdMantenimientoProducto
         Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.ForeColor = System.Drawing.Color.White
-        Me.btnBuscar.Location = New System.Drawing.Point(382, 91)
-        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnBuscar.Location = New System.Drawing.Point(255, 59)
+        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(170, 40)
+        Me.btnBuscar.Size = New System.Drawing.Size(113, 26)
         Me.btnBuscar.TabIndex = 2
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = False
@@ -66,10 +68,10 @@ Partial Class JdMantenimientoProducto
         Me.btnGestionarPersona.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnGestionarPersona.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGestionarPersona.ForeColor = System.Drawing.Color.White
-        Me.btnGestionarPersona.Location = New System.Drawing.Point(630, 91)
-        Me.btnGestionarPersona.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnGestionarPersona.Location = New System.Drawing.Point(420, 59)
+        Me.btnGestionarPersona.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btnGestionarPersona.Name = "btnGestionarPersona"
-        Me.btnGestionarPersona.Size = New System.Drawing.Size(248, 40)
+        Me.btnGestionarPersona.Size = New System.Drawing.Size(165, 26)
         Me.btnGestionarPersona.TabIndex = 3
         Me.btnGestionarPersona.Text = "Administrar Producto"
         Me.btnGestionarPersona.UseVisualStyleBackColor = False
@@ -79,29 +81,30 @@ Partial Class JdMantenimientoProducto
         Me.tblProducto.AllowUserToAddRows = False
         Me.tblProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.tblProducto.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tblProducto.Location = New System.Drawing.Point(22, 150)
-        Me.tblProducto.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.tblProducto.Location = New System.Drawing.Point(15, 98)
+        Me.tblProducto.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.tblProducto.Name = "tblProducto"
         Me.tblProducto.ReadOnly = True
         Me.tblProducto.RowHeadersWidth = 51
-        Me.tblProducto.Size = New System.Drawing.Size(878, 475)
+        Me.tblProducto.Size = New System.Drawing.Size(585, 309)
         Me.tblProducto.TabIndex = 4
         '
         'JdMantenimientoProducto
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(922, 656)
+        Me.ClientSize = New System.Drawing.Size(615, 426)
         Me.Controls.Add(Me.tblProducto)
         Me.Controls.Add(Me.btnGestionarPersona)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.txtbuscador)
         Me.Controls.Add(Me.lblTitulo)
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Name = "JdMantenimientoProducto"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "JdMantenimientoProducto"
+        Me.Text = "Mantenimiento de Producto"
         CType(Me.tblProducto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
