@@ -94,6 +94,36 @@
     <Compile Include="jdAcercaDe.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="jdGestionarClientes.Designer.vb">
+      <DependentUpon>jdGestionarClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jdGestionarClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jdGestionarPersona.Designer.vb">
+      <DependentUpon>jdGestionarPersona.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jdGestionarPersona.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jdGestionarRol.Designer.vb">
+      <DependentUpon>jdGestionarRol.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jdGestionarRol.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jdGestionCliente.Designer.vb">
+      <DependentUpon>jdGestionCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jdGestionCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jdMantenimientoCliente.Designer.vb">
+      <DependentUpon>jdMantenimientoCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jdMantenimientoCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="JdMantenimientoProducto.Designer.vb">
       <DependentUpon>JdMantenimientoProducto.vb</DependentUpon>
     </Compile>
@@ -186,6 +216,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="jdAcercaDe.resx">
       <DependentUpon>jdAcercaDe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jdGestionarClientes.resx">
+      <DependentUpon>jdGestionarClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jdGestionarPersona.resx">
+      <DependentUpon>jdGestionarPersona.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jdGestionarRol.resx">
+      <DependentUpon>jdGestionarRol.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jdGestionCliente.resx">
+      <DependentUpon>jdGestionCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jdMantenimientoCliente.resx">
+      <DependentUpon>jdMantenimientoCliente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JdMantenimientoProducto.resx">
       <DependentUpon>JdMantenimientoProducto.vb</DependentUpon>
