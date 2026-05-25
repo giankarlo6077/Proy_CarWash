@@ -514,9 +514,9 @@ Partial Class jdAcercaDe
         Me.Label58.BackColor = System.Drawing.Color.White
         Me.Label58.Location = New System.Drawing.Point(527, 243)
         Me.Label58.Name = "Label58"
-        Me.Label58.Size = New System.Drawing.Size(87, 16)
+        Me.Label58.Size = New System.Drawing.Size(131, 16)
         Me.Label58.TabIndex = 36
-        Me.Label58.Text = "Jorge Pizarro"
+        Me.Label58.Text = "Jorge Pizarro Uceda"
         Me.Label58.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Label59
