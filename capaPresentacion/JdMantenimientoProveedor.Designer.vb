@@ -122,7 +122,7 @@ Partial Class JdMantenimientoProveedor
         Me.Controls.Add(Me.Label8)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "JdMantenimientoProveedor"
-        Me.Text = "MantenimientoProveedor"
+        Me.Text = "Mantenimiento Proveedor"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

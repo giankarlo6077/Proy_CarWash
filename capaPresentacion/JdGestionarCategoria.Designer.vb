@@ -28,11 +28,11 @@ Partial Class JdGestionarCategoria
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.txtCodCategoria = New System.Windows.Forms.TextBox()
+        Me.txtNomCategoria = New System.Windows.Forms.TextBox()
+        Me.cobxVigencia = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtDescripcion = New System.Windows.Forms.TextBox()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnLimpiar = New System.Windows.Forms.Button()
@@ -89,27 +89,27 @@ Partial Class JdGestionarCategoria
         Me.Label3.TabIndex = 59
         Me.Label3.Text = "Vigencia:"
         '
-        'TextBox1
+        'txtCodCategoria
         '
-        Me.TextBox1.Location = New System.Drawing.Point(66, 114)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(216, 22)
-        Me.TextBox1.TabIndex = 60
+        Me.txtCodCategoria.Location = New System.Drawing.Point(66, 114)
+        Me.txtCodCategoria.Name = "txtCodCategoria"
+        Me.txtCodCategoria.Size = New System.Drawing.Size(216, 22)
+        Me.txtCodCategoria.TabIndex = 60
         '
-        'TextBox2
+        'txtNomCategoria
         '
-        Me.TextBox2.Location = New System.Drawing.Point(329, 114)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(216, 22)
-        Me.TextBox2.TabIndex = 61
+        Me.txtNomCategoria.Location = New System.Drawing.Point(329, 114)
+        Me.txtNomCategoria.Name = "txtNomCategoria"
+        Me.txtNomCategoria.Size = New System.Drawing.Size(216, 22)
+        Me.txtNomCategoria.TabIndex = 61
         '
-        'ComboBox1
+        'cobxVigencia
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(586, 112)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(145, 24)
-        Me.ComboBox1.TabIndex = 62
+        Me.cobxVigencia.FormattingEnabled = True
+        Me.cobxVigencia.Location = New System.Drawing.Point(586, 112)
+        Me.cobxVigencia.Name = "cobxVigencia"
+        Me.cobxVigencia.Size = New System.Drawing.Size(145, 24)
+        Me.cobxVigencia.TabIndex = 62
         '
         'Label4
         '
@@ -121,13 +121,13 @@ Partial Class JdGestionarCategoria
         Me.Label4.TabIndex = 63
         Me.Label4.Text = "Descripción:"
         '
-        'TextBox3
+        'txtDescripcion
         '
-        Me.TextBox3.Location = New System.Drawing.Point(66, 189)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(665, 121)
-        Me.TextBox3.TabIndex = 64
+        Me.txtDescripcion.Location = New System.Drawing.Point(66, 189)
+        Me.txtDescripcion.Multiline = True
+        Me.txtDescripcion.Name = "txtDescripcion"
+        Me.txtDescripcion.Size = New System.Drawing.Size(665, 121)
+        Me.txtDescripcion.TabIndex = 64
         '
         'btnNuevo
         '
@@ -210,11 +210,11 @@ Partial Class JdGestionarCategoria
         Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnSalir)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.txtDescripcion)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.cobxVigencia)
+        Me.Controls.Add(Me.txtNomCategoria)
+        Me.Controls.Add(Me.txtCodCategoria)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
@@ -222,7 +222,7 @@ Partial Class JdGestionarCategoria
         Me.Controls.Add(Me.Label8)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "JdGestionarCategoria"
-        Me.Text = "JdGestionarCategoria"
+        Me.Text = "Gestionar Categoria"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -234,11 +234,11 @@ Partial Class JdGestionarCategoria
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents txtCodCategoria As TextBox
+    Friend WithEvents txtNomCategoria As TextBox
+    Friend WithEvents cobxVigencia As ComboBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtDescripcion As TextBox
     Friend WithEvents btnNuevo As Button
     Friend WithEvents btnModificar As Button
     Friend WithEvents btnLimpiar As Button

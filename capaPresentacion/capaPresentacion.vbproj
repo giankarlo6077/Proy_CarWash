@@ -85,7 +85,9 @@
     <Compile Include="jdAcercaDe.Designer.vb">
       <DependentUpon>jdAcercaDe.vb</DependentUpon>
     </Compile>
-    <Compile Include="jdAcercaDe.vb" />
+    <Compile Include="jdAcercaDe.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="JdDetalleOrdenTrabajo.Designer.vb">
       <DependentUpon>JdDetalleOrdenTrabajo.vb</DependentUpon>
     </Compile>

@@ -26,14 +26,14 @@ Partial Class JdSeleccionarProductoVenta
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.cbxTipoProducto = New System.Windows.Forms.ComboBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Cantidad = New System.Windows.Forms.NumericUpDown()
+        Me.btnSeleccionar = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Cantidad, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label8
@@ -62,26 +62,26 @@ Partial Class JdSeleccionarProductoVenta
         Me.Label1.TabIndex = 55
         Me.Label1.Text = "Tipo de Producto:"
         '
-        'Button1
+        'btnBuscar
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button1.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(632, 73)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(130, 34)
-        Me.Button1.TabIndex = 69
-        Me.Button1.Text = "BUSCAR"
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscar.ForeColor = System.Drawing.Color.White
+        Me.btnBuscar.Location = New System.Drawing.Point(632, 73)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(130, 34)
+        Me.btnBuscar.TabIndex = 69
+        Me.btnBuscar.Text = "BUSCAR"
+        Me.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
+        Me.btnBuscar.UseVisualStyleBackColor = False
         '
-        'ComboBox1
+        'cbxTipoProducto
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(179, 81)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(447, 24)
-        Me.ComboBox1.TabIndex = 70
+        Me.cbxTipoProducto.FormattingEnabled = True
+        Me.cbxTipoProducto.Location = New System.Drawing.Point(179, 81)
+        Me.cbxTipoProducto.Name = "cbxTipoProducto"
+        Me.cbxTipoProducto.Size = New System.Drawing.Size(447, 24)
+        Me.cbxTipoProducto.TabIndex = 70
         '
         'DataGridView1
         '
@@ -102,36 +102,36 @@ Partial Class JdSeleccionarProductoVenta
         Me.Label2.TabIndex = 72
         Me.Label2.Text = "CANTIDAD:"
         '
-        'NumericUpDown1
+        'Cantidad
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(143, 400)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(120, 22)
-        Me.NumericUpDown1.TabIndex = 73
+        Me.Cantidad.Location = New System.Drawing.Point(143, 400)
+        Me.Cantidad.Name = "Cantidad"
+        Me.Cantidad.Size = New System.Drawing.Size(120, 22)
+        Me.Cantidad.TabIndex = 73
         '
-        'Button2
+        'btnSeleccionar
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button2.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(591, 388)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(171, 34)
-        Me.Button2.TabIndex = 74
-        Me.Button2.Text = "SELECCIONAR"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnSeleccionar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnSeleccionar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSeleccionar.ForeColor = System.Drawing.Color.White
+        Me.btnSeleccionar.Location = New System.Drawing.Point(591, 388)
+        Me.btnSeleccionar.Name = "btnSeleccionar"
+        Me.btnSeleccionar.Size = New System.Drawing.Size(171, 34)
+        Me.btnSeleccionar.TabIndex = 74
+        Me.btnSeleccionar.Text = "SELECCIONAR"
+        Me.btnSeleccionar.UseVisualStyleBackColor = False
         '
         'JdSeleccionarProductoVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.NumericUpDown1)
+        Me.Controls.Add(Me.btnSeleccionar)
+        Me.Controls.Add(Me.Cantidad)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.cbxTipoProducto)
+        Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
@@ -139,7 +139,7 @@ Partial Class JdSeleccionarProductoVenta
         Me.Name = "JdSeleccionarProductoVenta"
         Me.Text = "Seleccionar Productos"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Cantidad, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -148,10 +148,10 @@ Partial Class JdSeleccionarProductoVenta
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents btnBuscar As Button
+    Friend WithEvents cbxTipoProducto As ComboBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label2 As Label
-    Friend WithEvents NumericUpDown1 As NumericUpDown
-    Friend WithEvents Button2 As Button
+    Friend WithEvents Cantidad As NumericUpDown
+    Friend WithEvents btnSeleccionar As Button
 End Class

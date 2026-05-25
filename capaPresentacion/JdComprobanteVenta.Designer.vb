@@ -29,20 +29,20 @@ Partial Class ComprobanteVenta
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.txtVuelto = New System.Windows.Forms.TextBox()
+        Me.txtMonto = New System.Windows.Forms.TextBox()
+        Me.txtTotal = New System.Windows.Forms.TextBox()
+        Me.txtIgv = New System.Windows.Forms.TextBox()
+        Me.txtSubTotal = New System.Windows.Forms.TextBox()
+        Me.txtSon = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtDniRuc = New System.Windows.Forms.TextBox()
+        Me.txtFecha = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtSeñor = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtTrabajador = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -52,20 +52,20 @@ Partial Class ComprobanteVenta
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.txtNumComprobante = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtRuc = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.btnExporJPG = New System.Windows.Forms.Button()
+        Me.btnExportarPdf = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.cbxTipoServicio = New System.Windows.Forms.ComboBox()
         Me.Label22 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.cbxMedioPago = New System.Windows.Forms.ComboBox()
         Me.Label21 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cbxEstado = New System.Windows.Forms.ComboBox()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -83,20 +83,20 @@ Partial Class ComprobanteVenta
         Me.Panel1.Controls.Add(Me.Label15)
         Me.Panel1.Controls.Add(Me.Label14)
         Me.Panel1.Controls.Add(Me.Label13)
-        Me.Panel1.Controls.Add(Me.TextBox12)
-        Me.Panel1.Controls.Add(Me.TextBox11)
-        Me.Panel1.Controls.Add(Me.TextBox10)
-        Me.Panel1.Controls.Add(Me.TextBox9)
-        Me.Panel1.Controls.Add(Me.TextBox8)
-        Me.Panel1.Controls.Add(Me.TextBox7)
+        Me.Panel1.Controls.Add(Me.txtVuelto)
+        Me.Panel1.Controls.Add(Me.txtMonto)
+        Me.Panel1.Controls.Add(Me.txtTotal)
+        Me.Panel1.Controls.Add(Me.txtIgv)
+        Me.Panel1.Controls.Add(Me.txtSubTotal)
+        Me.Panel1.Controls.Add(Me.txtSon)
         Me.Panel1.Controls.Add(Me.Label12)
         Me.Panel1.Controls.Add(Me.DataGridView1)
-        Me.Panel1.Controls.Add(Me.TextBox4)
-        Me.Panel1.Controls.Add(Me.TextBox3)
+        Me.Panel1.Controls.Add(Me.txtDniRuc)
+        Me.Panel1.Controls.Add(Me.txtFecha)
         Me.Panel1.Controls.Add(Me.Label9)
-        Me.Panel1.Controls.Add(Me.TextBox2)
+        Me.Panel1.Controls.Add(Me.txtSeñor)
         Me.Panel1.Controls.Add(Me.Label8)
-        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.txtTrabajador)
         Me.Panel1.Controls.Add(Me.Label7)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.Label5)
@@ -160,47 +160,47 @@ Partial Class ComprobanteVenta
         Me.Label13.TabIndex = 38
         Me.Label13.Text = "SubTotal:"
         '
-        'TextBox12
+        'txtVuelto
         '
-        Me.TextBox12.Location = New System.Drawing.Point(678, 604)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(119, 22)
-        Me.TextBox12.TabIndex = 37
+        Me.txtVuelto.Location = New System.Drawing.Point(678, 604)
+        Me.txtVuelto.Name = "txtVuelto"
+        Me.txtVuelto.Size = New System.Drawing.Size(119, 22)
+        Me.txtVuelto.TabIndex = 37
         '
-        'TextBox11
+        'txtMonto
         '
-        Me.TextBox11.Location = New System.Drawing.Point(678, 577)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(119, 22)
-        Me.TextBox11.TabIndex = 36
+        Me.txtMonto.Location = New System.Drawing.Point(678, 577)
+        Me.txtMonto.Name = "txtMonto"
+        Me.txtMonto.Size = New System.Drawing.Size(119, 22)
+        Me.txtMonto.TabIndex = 36
         '
-        'TextBox10
+        'txtTotal
         '
-        Me.TextBox10.Location = New System.Drawing.Point(678, 549)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(119, 22)
-        Me.TextBox10.TabIndex = 35
+        Me.txtTotal.Location = New System.Drawing.Point(678, 549)
+        Me.txtTotal.Name = "txtTotal"
+        Me.txtTotal.Size = New System.Drawing.Size(119, 22)
+        Me.txtTotal.TabIndex = 35
         '
-        'TextBox9
+        'txtIgv
         '
-        Me.TextBox9.Location = New System.Drawing.Point(678, 521)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(119, 22)
-        Me.TextBox9.TabIndex = 34
+        Me.txtIgv.Location = New System.Drawing.Point(678, 521)
+        Me.txtIgv.Name = "txtIgv"
+        Me.txtIgv.Size = New System.Drawing.Size(119, 22)
+        Me.txtIgv.TabIndex = 34
         '
-        'TextBox8
+        'txtSubTotal
         '
-        Me.TextBox8.Location = New System.Drawing.Point(678, 493)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(119, 22)
-        Me.TextBox8.TabIndex = 33
+        Me.txtSubTotal.Location = New System.Drawing.Point(678, 493)
+        Me.txtSubTotal.Name = "txtSubTotal"
+        Me.txtSubTotal.Size = New System.Drawing.Size(119, 22)
+        Me.txtSubTotal.TabIndex = 33
         '
-        'TextBox7
+        'txtSon
         '
-        Me.TextBox7.Location = New System.Drawing.Point(53, 509)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(360, 22)
-        Me.TextBox7.TabIndex = 32
+        Me.txtSon.Location = New System.Drawing.Point(53, 509)
+        Me.txtSon.Name = "txtSon"
+        Me.txtSon.Size = New System.Drawing.Size(360, 22)
+        Me.txtSon.TabIndex = 32
         '
         'Label12
         '
@@ -222,19 +222,19 @@ Partial Class ComprobanteVenta
         Me.DataGridView1.Size = New System.Drawing.Size(797, 265)
         Me.DataGridView1.TabIndex = 30
         '
-        'TextBox4
+        'txtDniRuc
         '
-        Me.TextBox4.Location = New System.Drawing.Point(525, 194)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(237, 22)
-        Me.TextBox4.TabIndex = 29
+        Me.txtDniRuc.Location = New System.Drawing.Point(525, 194)
+        Me.txtDniRuc.Name = "txtDniRuc"
+        Me.txtDniRuc.Size = New System.Drawing.Size(237, 22)
+        Me.txtDniRuc.TabIndex = 29
         '
-        'TextBox3
+        'txtFecha
         '
-        Me.TextBox3.Location = New System.Drawing.Point(524, 167)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(238, 22)
-        Me.TextBox3.TabIndex = 28
+        Me.txtFecha.Location = New System.Drawing.Point(524, 167)
+        Me.txtFecha.Name = "txtFecha"
+        Me.txtFecha.Size = New System.Drawing.Size(238, 22)
+        Me.txtFecha.TabIndex = 28
         '
         'Label9
         '
@@ -246,12 +246,12 @@ Partial Class ComprobanteVenta
         Me.Label9.TabIndex = 27
         Me.Label9.Text = "DNI / RUC:"
         '
-        'TextBox2
+        'txtSeñor
         '
-        Me.TextBox2.Location = New System.Drawing.Point(88, 194)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(325, 22)
-        Me.TextBox2.TabIndex = 26
+        Me.txtSeñor.Location = New System.Drawing.Point(88, 194)
+        Me.txtSeñor.Name = "txtSeñor"
+        Me.txtSeñor.Size = New System.Drawing.Size(325, 22)
+        Me.txtSeñor.TabIndex = 26
         '
         'Label8
         '
@@ -263,12 +263,12 @@ Partial Class ComprobanteVenta
         Me.Label8.TabIndex = 25
         Me.Label8.Text = "Fecha Emisión:"
         '
-        'TextBox1
+        'txtTrabajador
         '
-        Me.TextBox1.Location = New System.Drawing.Point(88, 167)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(325, 22)
-        Me.TextBox1.TabIndex = 24
+        Me.txtTrabajador.Location = New System.Drawing.Point(88, 167)
+        Me.txtTrabajador.Name = "txtTrabajador"
+        Me.txtTrabajador.Size = New System.Drawing.Size(325, 22)
+        Me.txtTrabajador.TabIndex = 24
         '
         'Label7
         '
@@ -353,21 +353,21 @@ Partial Class ComprobanteVenta
         '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.TextBox6)
+        Me.Panel2.Controls.Add(Me.txtNumComprobante)
         Me.Panel2.Controls.Add(Me.Label11)
-        Me.Panel2.Controls.Add(Me.Label10)
+        Me.Panel2.Controls.Add(Me.txtRuc)
         Me.Panel2.Controls.Add(Me.TextBox5)
         Me.Panel2.Location = New System.Drawing.Point(606, 12)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(203, 145)
         Me.Panel2.TabIndex = 30
         '
-        'TextBox6
+        'txtNumComprobante
         '
-        Me.TextBox6.Location = New System.Drawing.Point(59, 108)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(126, 22)
-        Me.TextBox6.TabIndex = 3
+        Me.txtNumComprobante.Location = New System.Drawing.Point(59, 108)
+        Me.txtNumComprobante.Name = "txtNumComprobante"
+        Me.txtNumComprobante.Size = New System.Drawing.Size(126, 22)
+        Me.txtNumComprobante.TabIndex = 3
         '
         'Label11
         '
@@ -379,15 +379,15 @@ Partial Class ComprobanteVenta
         Me.Label11.TabIndex = 2
         Me.Label11.Text = "N°"
         '
-        'Label10
+        'txtRuc
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(24, 16)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(161, 20)
-        Me.Label10.TabIndex = 1
-        Me.Label10.Text = "R.U.C. 10268574236"
+        Me.txtRuc.AutoSize = True
+        Me.txtRuc.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRuc.Location = New System.Drawing.Point(24, 16)
+        Me.txtRuc.Name = "txtRuc"
+        Me.txtRuc.Size = New System.Drawing.Size(161, 20)
+        Me.txtRuc.TabIndex = 1
+        Me.txtRuc.Text = "R.U.C. 10268574236"
         '
         'TextBox5
         '
@@ -409,14 +409,14 @@ Partial Class ComprobanteVenta
         '
         'Panel4
         '
-        Me.Panel4.Controls.Add(Me.Button3)
-        Me.Panel4.Controls.Add(Me.Button2)
-        Me.Panel4.Controls.Add(Me.Button1)
-        Me.Panel4.Controls.Add(Me.ComboBox3)
+        Me.Panel4.Controls.Add(Me.btnExporJPG)
+        Me.Panel4.Controls.Add(Me.btnExportarPdf)
+        Me.Panel4.Controls.Add(Me.btnGuardar)
+        Me.Panel4.Controls.Add(Me.cbxTipoServicio)
         Me.Panel4.Controls.Add(Me.Label22)
-        Me.Panel4.Controls.Add(Me.ComboBox2)
+        Me.Panel4.Controls.Add(Me.cbxMedioPago)
         Me.Panel4.Controls.Add(Me.Label21)
-        Me.Panel4.Controls.Add(Me.ComboBox1)
+        Me.Panel4.Controls.Add(Me.cbxEstado)
         Me.Panel4.Controls.Add(Me.Label20)
         Me.Panel4.Controls.Add(Me.Label19)
         Me.Panel4.Controls.Add(Me.Label18)
@@ -425,49 +425,49 @@ Partial Class ComprobanteVenta
         Me.Panel4.Size = New System.Drawing.Size(197, 643)
         Me.Panel4.TabIndex = 32
         '
-        'Button3
+        'btnExporJPG
         '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button3.Font = New System.Drawing.Font("Verdana", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(0, 598)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(194, 34)
-        Me.Button3.TabIndex = 72
-        Me.Button3.Text = "Exportar a JPG/PNG"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.btnExporJPG.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnExporJPG.Font = New System.Drawing.Font("Verdana", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExporJPG.ForeColor = System.Drawing.Color.White
+        Me.btnExporJPG.Location = New System.Drawing.Point(0, 598)
+        Me.btnExporJPG.Name = "btnExporJPG"
+        Me.btnExporJPG.Size = New System.Drawing.Size(194, 34)
+        Me.btnExporJPG.TabIndex = 72
+        Me.btnExporJPG.Text = "Exportar a JPG/PNG"
+        Me.btnExporJPG.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnExportarPdf
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button2.Font = New System.Drawing.Font("Verdana", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(0, 549)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(194, 34)
-        Me.Button2.TabIndex = 71
-        Me.Button2.Text = "Exportar a PDF"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnExportarPdf.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnExportarPdf.Font = New System.Drawing.Font("Verdana", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExportarPdf.ForeColor = System.Drawing.Color.White
+        Me.btnExportarPdf.Location = New System.Drawing.Point(0, 549)
+        Me.btnExportarPdf.Name = "btnExportarPdf"
+        Me.btnExportarPdf.Size = New System.Drawing.Size(194, 34)
+        Me.btnExportarPdf.TabIndex = 71
+        Me.btnExportarPdf.Text = "Exportar a PDF"
+        Me.btnExportarPdf.UseVisualStyleBackColor = False
         '
-        'Button1
+        'btnGuardar
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button1.Font = New System.Drawing.Font("Verdana", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(0, 503)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(194, 34)
-        Me.Button1.TabIndex = 70
-        Me.Button1.Text = "Guardar Comprobante"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnGuardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnGuardar.Font = New System.Drawing.Font("Verdana", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardar.ForeColor = System.Drawing.Color.White
+        Me.btnGuardar.Location = New System.Drawing.Point(0, 503)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(194, 34)
+        Me.btnGuardar.TabIndex = 70
+        Me.btnGuardar.Text = "Guardar Comprobante"
+        Me.btnGuardar.UseVisualStyleBackColor = False
         '
-        'ComboBox3
+        'cbxTipoServicio
         '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(6, 282)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(183, 24)
-        Me.ComboBox3.TabIndex = 7
+        Me.cbxTipoServicio.FormattingEnabled = True
+        Me.cbxTipoServicio.Location = New System.Drawing.Point(6, 282)
+        Me.cbxTipoServicio.Name = "cbxTipoServicio"
+        Me.cbxTipoServicio.Size = New System.Drawing.Size(183, 24)
+        Me.cbxTipoServicio.TabIndex = 7
         '
         'Label22
         '
@@ -479,13 +479,13 @@ Partial Class ComprobanteVenta
         Me.Label22.TabIndex = 6
         Me.Label22.Text = "Tipo de Servicio:"
         '
-        'ComboBox2
+        'cbxMedioPago
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(4, 199)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(185, 24)
-        Me.ComboBox2.TabIndex = 5
+        Me.cbxMedioPago.FormattingEnabled = True
+        Me.cbxMedioPago.Location = New System.Drawing.Point(4, 199)
+        Me.cbxMedioPago.Name = "cbxMedioPago"
+        Me.cbxMedioPago.Size = New System.Drawing.Size(185, 24)
+        Me.cbxMedioPago.TabIndex = 5
         '
         'Label21
         '
@@ -497,13 +497,13 @@ Partial Class ComprobanteVenta
         Me.Label21.TabIndex = 4
         Me.Label21.Text = "Medio de Pago:"
         '
-        'ComboBox1
+        'cbxEstado
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(68, 121)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 24)
-        Me.ComboBox1.TabIndex = 3
+        Me.cbxEstado.FormattingEnabled = True
+        Me.cbxEstado.Location = New System.Drawing.Point(68, 121)
+        Me.cbxEstado.Name = "cbxEstado"
+        Me.cbxEstado.Size = New System.Drawing.Size(121, 24)
+        Me.cbxEstado.TabIndex = 3
         '
         'Label20
         '
@@ -546,7 +546,7 @@ Partial Class ComprobanteVenta
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ComprobanteVenta"
-        Me.Text = "JdComprobanteVenta"
+        Me.Text = "Comprobante Venta"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -560,11 +560,11 @@ Partial Class ComprobanteVenta
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtFecha As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtSeñor As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtTrabajador As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
@@ -574,19 +574,19 @@ Partial Class ComprobanteVenta
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtDniRuc As TextBox
     Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents TextBox11 As TextBox
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents txtVuelto As TextBox
+    Friend WithEvents txtMonto As TextBox
+    Friend WithEvents txtTotal As TextBox
+    Friend WithEvents txtIgv As TextBox
+    Friend WithEvents txtSubTotal As TextBox
+    Friend WithEvents txtSon As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents txtNumComprobante As TextBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents Label10 As Label
+    Friend WithEvents txtRuc As Label
     Friend WithEvents Label17 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Label15 As Label
@@ -594,15 +594,15 @@ Partial Class ComprobanteVenta
     Friend WithEvents Label13 As Label
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbxEstado As ComboBox
     Friend WithEvents Label20 As Label
     Friend WithEvents Label19 As Label
     Friend WithEvents Label18 As Label
-    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents cbxTipoServicio As ComboBox
     Friend WithEvents Label22 As Label
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents cbxMedioPago As ComboBox
     Friend WithEvents Label21 As Label
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents btnExportarPdf As Button
+    Friend WithEvents btnGuardar As Button
+    Friend WithEvents btnExporJPG As Button
 End Class
