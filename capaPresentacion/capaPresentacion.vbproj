@@ -94,6 +94,12 @@
     <Compile Include="jdAcercaDe.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="JdComprobanteVenta.Designer.vb">
+      <DependentUpon>JdComprobanteVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="JdComprobanteVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="JdMantenimientoProducto.Designer.vb">
       <DependentUpon>JdMantenimientoProducto.vb</DependentUpon>
     </Compile>
@@ -160,6 +166,18 @@
     <Compile Include="jdRecuperarContrasena.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="JdSeleccionarProductoVenta.Designer.vb">
+      <DependentUpon>JdSeleccionarProductoVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="JdSeleccionarProductoVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JdVentas.Designer.vb">
+      <DependentUpon>JdVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="JdVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -186,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="jdAcercaDe.resx">
       <DependentUpon>jdAcercaDe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JdComprobanteVenta.resx">
+      <DependentUpon>JdComprobanteVenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JdMantenimientoProducto.resx">
       <DependentUpon>JdMantenimientoProducto.vb</DependentUpon>
