@@ -107,6 +107,12 @@
     <Compile Include="jdGestionarClientes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="jdGestionarDescuento.Designer.vb">
+      <DependentUpon>jdGestionarDescuento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jdGestionarDescuento.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="jdGestionarPersona.Designer.vb">
       <DependentUpon>jdGestionarPersona.vb</DependentUpon>
     </Compile>
@@ -301,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="jdGestionarClientes.resx">
       <DependentUpon>jdGestionarClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jdGestionarDescuento.resx">
+      <DependentUpon>jdGestionarDescuento.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="jdGestionarPersona.resx">
       <DependentUpon>jdGestionarPersona.vb</DependentUpon>

@@ -58,11 +58,13 @@ Partial Class jdMantenimientoVehiculo
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.Location = New System.Drawing.Point(381, 130)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(183, 28)
+        Me.Button1.Size = New System.Drawing.Size(202, 28)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Buscar por placa"
+        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
@@ -85,6 +87,7 @@ Partial Class jdMantenimientoVehiculo
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.Placa, Me.DNI, Me.Column3, Me.Column4})
         Me.DataGridView1.Location = New System.Drawing.Point(19, 20)

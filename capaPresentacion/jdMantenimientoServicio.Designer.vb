@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class jdMantenimientoServicio
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class jdMantenimientoServicio
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(jdMantenimientoServicio))
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -94,11 +94,13 @@ Partial Class jdMantenimientoServicio
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.Location = New System.Drawing.Point(807, 357)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(182, 30)
+        Me.Button2.Size = New System.Drawing.Size(182, 36)
         Me.Button2.TabIndex = 37
         Me.Button2.Text = "Nuevo Servicio"
+        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
@@ -149,14 +151,15 @@ Partial Class jdMantenimientoServicio
         'Button5
         '
         Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
-        Me.Button5.Location = New System.Drawing.Point(673, 183)
+        Me.Button5.Location = New System.Drawing.Point(663, 183)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(38, 32)
+        Me.Button5.Size = New System.Drawing.Size(34, 33)
         Me.Button5.TabIndex = 43
         Me.Button5.UseVisualStyleBackColor = True
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.Placa, Me.DNI, Me.Column3, Me.Column4, Me.Column5})
         Me.DataGridView1.Location = New System.Drawing.Point(31, 231)
