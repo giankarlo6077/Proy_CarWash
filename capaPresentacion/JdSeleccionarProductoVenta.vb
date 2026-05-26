@@ -68,26 +68,31 @@ Public Class JdSeleccionarProductoVenta
         dgvProductos.Columns.Clear()
 
         dgvProductos.Columns.Add(New DataGridViewTextBoxColumn With {
+            .Name = "idproducto",
             .HeaderText = "ID",
             .DataPropertyName = "idproducto",
             .Visible = False
         })
         dgvProductos.Columns.Add(New DataGridViewTextBoxColumn With {
+            .Name = "producto",
             .HeaderText = "Producto",
             .DataPropertyName = "producto",
             .Width = 240
         })
         dgvProductos.Columns.Add(New DataGridViewTextBoxColumn With {
+            .Name = "marcaproducto",
             .HeaderText = "Marca",
             .DataPropertyName = "marcaproducto",
             .Width = 120
         })
         dgvProductos.Columns.Add(New DataGridViewTextBoxColumn With {
+            .Name = "tipoproducto",
             .HeaderText = "Tipo",
             .DataPropertyName = "tipoproducto",
             .Width = 110
         })
         dgvProductos.Columns.Add(New DataGridViewTextBoxColumn With {
+            .Name = "precioactual",
             .HeaderText = "Precio (S/)",
             .DataPropertyName = "precioactual",
             .Width = 90,
@@ -97,6 +102,7 @@ Public Class JdSeleccionarProductoVenta
             }
         })
         dgvProductos.Columns.Add(New DataGridViewTextBoxColumn With {
+            .Name = "stock",
             .HeaderText = "Stock",
             .DataPropertyName = "stock",
             .Width = 60,
@@ -132,32 +138,15 @@ Public Class JdSeleccionarProductoVenta
             cargarTodosLosProductos()
         Else
             ' Filtrar por tipo usando clsProducto
-            Dim strSQL As String =
-                "SELECT p.idproducto, p.producto, " &
-                "pm.marcaproducto, tp.tipoproducto, " &
-                "p.precioactual, p.stock " &
-                "FROM producto p " &
-                "INNER JOIN marca_producto pm ON pm.idmarcaproducto = p.idmarcaproducto " &
-                "INNER JOIN tipo_producto tp  ON tp.idtipoproducto  = p.idtipoproducto " &
-                "WHERE p.vigencia = 1 " &
-                "AND p.idtipoproducto = " & idTipo & " " &
-                "ORDER BY p.producto ASC"
-
-            Dim objC As New capaDatos.clsConectaBD()
             Try
-                objC.conectar()
-                Dim da As New SqlClient.SqlDataAdapter(strSQL, objC.miConexion)
-                Dim dt As New DataTable()
-                da.Fill(dt)
-                dgvProductos.DataSource = dt
+                Dim tipoSeleccionado As String = cboTipoProducto.Text
+                dgvProductos.DataSource = objProducto.listarProductosPorTipoProducto(tipoSeleccionado)
             Catch ex As Exception
                 MessageBox.Show(
                     "Error al buscar: " & ex.Message,
                     "Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error)
-            Finally
-                objC.desconectar()
             End Try
         End If
 
@@ -206,13 +195,42 @@ Public Class JdSeleccionarProductoVenta
             Exit Sub
         End If
 
-        ' Pasar datos al form padre
-        Me.NombreProducto = fila.Cells("producto").Value.ToString()
-        Me.PrecioProducto = Convert.ToDecimal(fila.Cells("precioactual").Value)
-        Me.CantidadSeleccionada = cantidad
-        Me.Confirmado = True
+        Try
+            Dim codigo As Integer = Convert.ToInt32(fila.Cells("idproducto").Value)
 
-        Me.Close()
+            ' Pasar datos al form padre
+            Me.NombreProducto = fila.Cells("producto").Value.ToString()
+            Me.PrecioProducto = Convert.ToDecimal(fila.Cells("precioactual").Value)
+            Me.CantidadSeleccionada = cantidad
+            Me.Confirmado = True
+
+            ' Disminuir stock en la BD
+            objProducto.Aumentar_DisminuirStock(cantidad, codigo, "DISMINUIR")
+
+            ' Refrescar tabla con el stock actualizado
+            cargarTodosLosProductos()
+
+            ' Preguntar si desea agregar otro producto
+            Dim opcion As DialogResult = MessageBox.Show(
+                "Producto añadido con éxito, ¿Desea agregar otro producto?",
+                "Sistema",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question)
+
+            If opcion = DialogResult.Yes Then
+                nudCantidad.Value = 1
+                Me.Confirmado = False
+            Else
+                Me.Close()
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(
+                "Error al seleccionar el producto: " & ex.Message,
+                "Error",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error)
+        End Try
 
     End Sub
 
