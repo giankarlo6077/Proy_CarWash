@@ -272,4 +272,19 @@ Public Class clsEmpresa
 
     End Sub
 
+    Public Function buscarEmpresaRUC(ruc As String) As DataTable
+        Dim strSQL As String = "SELECT * FROM empresa WHERE idempresa = '" & ruc & "'"
+        Dim objConectar As New clsConectaBD()
+        Try
+            objConectar.conectar()
+            Dim da As New SqlDataAdapter(strSQL, objConectar.miConexion)
+            Dim dt As New DataTable()
+            da.Fill(dt)
+            Return dt
+        Catch ex As Exception
+            Throw New Exception("Error al buscar Empresa: " & ex.Message)
+        Finally
+            objConectar.desconectar()
+        End Try
+    End Function
 End Class

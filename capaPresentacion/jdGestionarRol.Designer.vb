@@ -22,133 +22,141 @@ Partial Class jdGestionarRol
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(jdGestionarRol))
+        Me.lvRoles = New System.Windows.Forms.ListView()
+        Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.cboEstado = New System.Windows.Forms.ComboBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.txtIdRol = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtDescripcion = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtNombreRol = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnNuevoRol = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
-        'ListView1
+        'lvRoles
         '
-        Me.ListView1.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(15, 255)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(573, 134)
-        Me.ListView1.TabIndex = 31
-        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.lvRoles.BackColor = System.Drawing.SystemColors.MenuBar
+        Me.lvRoles.HideSelection = False
+        Me.lvRoles.Location = New System.Drawing.Point(15, 255)
+        Me.lvRoles.Name = "lvRoles"
+        Me.lvRoles.Size = New System.Drawing.Size(573, 134)
+        Me.lvRoles.TabIndex = 31
+        Me.lvRoles.UseCompatibleStateImageBehavior = False
         '
-        'Button4
+        'btnGuardar
         '
-        Me.Button4.Location = New System.Drawing.Point(442, 122)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(115, 23)
-        Me.Button4.TabIndex = 30
-        Me.Button4.Text = "Guardar"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnGuardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnGuardar.ForeColor = System.Drawing.Color.White
+        Me.btnGuardar.Location = New System.Drawing.Point(442, 122)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(115, 23)
+        Me.btnGuardar.TabIndex = 30
+        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.UseVisualStyleBackColor = False
         '
-        'ComboBox2
+        'cboEstado
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(406, 51)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(151, 21)
-        Me.ComboBox2.TabIndex = 19
+        Me.cboEstado.FormattingEnabled = True
+        Me.cboEstado.Location = New System.Drawing.Point(406, 51)
+        Me.cboEstado.Name = "cboEstado"
+        Me.cboEstado.Size = New System.Drawing.Size(151, 21)
+        Me.cboEstado.TabIndex = 19
         '
         'Label12
         '
         Me.Label12.AutoSize = True
         Me.Label12.Location = New System.Drawing.Point(403, 36)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(40, 13)
+        Me.Label12.Size = New System.Drawing.Size(51, 13)
         Me.Label12.TabIndex = 18
         Me.Label12.Text = "Estado"
         '
-        'Button2
+        'btnCancelar
         '
-        Me.Button2.Location = New System.Drawing.Point(332, 122)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(104, 23)
-        Me.Button2.TabIndex = 29
-        Me.Button2.Text = "Cancelar "
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnCancelar.ForeColor = System.Drawing.Color.White
+        Me.btnCancelar.Location = New System.Drawing.Point(332, 122)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(104, 23)
+        Me.btnCancelar.TabIndex = 29
+        Me.btnCancelar.Text = "Cancelar "
+        Me.btnCancelar.UseVisualStyleBackColor = False
         '
-        'TextBox7
+        'txtIdRol
         '
-        Me.TextBox7.Location = New System.Drawing.Point(8, 52)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox7.TabIndex = 28
+        Me.txtIdRol.Location = New System.Drawing.Point(8, 52)
+        Me.txtIdRol.Name = "txtIdRol"
+        Me.txtIdRol.Size = New System.Drawing.Size(100, 21)
+        Me.txtIdRol.TabIndex = 28
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(5, 36)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(35, 13)
+        Me.Label2.Size = New System.Drawing.Size(45, 13)
         Me.Label2.TabIndex = 25
         Me.Label2.Text = "Id Rol"
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.ComboBox2)
-        Me.Panel1.Controls.Add(Me.Button4)
-        Me.Panel1.Controls.Add(Me.Button2)
+        Me.Panel1.Controls.Add(Me.cboEstado)
+        Me.Panel1.Controls.Add(Me.btnGuardar)
+        Me.Panel1.Controls.Add(Me.btnCancelar)
         Me.Panel1.Controls.Add(Me.Label12)
-        Me.Panel1.Controls.Add(Me.TextBox7)
+        Me.Panel1.Controls.Add(Me.txtIdRol)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.TextBox3)
+        Me.Panel1.Controls.Add(Me.txtDescripcion)
         Me.Panel1.Controls.Add(Me.Label7)
-        Me.Panel1.Controls.Add(Me.TextBox2)
+        Me.Panel1.Controls.Add(Me.txtNombreRol)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.Location = New System.Drawing.Point(15, 74)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(573, 161)
         Me.Panel1.TabIndex = 24
         '
-        'TextBox3
+        'txtDescripcion
         '
-        Me.TextBox3.Location = New System.Drawing.Point(8, 96)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(549, 20)
-        Me.TextBox3.TabIndex = 10
+        Me.txtDescripcion.Location = New System.Drawing.Point(8, 96)
+        Me.txtDescripcion.Name = "txtDescripcion"
+        Me.txtDescripcion.Size = New System.Drawing.Size(549, 21)
+        Me.txtDescripcion.TabIndex = 10
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(5, 80)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(63, 13)
+        Me.Label7.Size = New System.Drawing.Size(83, 13)
         Me.Label7.TabIndex = 8
         Me.Label7.Text = "Descripción"
         '
-        'TextBox2
+        'txtNombreRol
         '
-        Me.TextBox2.Location = New System.Drawing.Point(114, 52)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(276, 20)
-        Me.TextBox2.TabIndex = 7
+        Me.txtNombreRol.Location = New System.Drawing.Point(114, 52)
+        Me.txtNombreRol.Name = "txtNombreRol"
+        Me.txtNombreRol.Size = New System.Drawing.Size(276, 21)
+        Me.txtNombreRol.TabIndex = 7
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(111, 36)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(80, 13)
+        Me.Label6.Size = New System.Drawing.Size(106, 13)
         Me.Label6.TabIndex = 6
         Me.Label6.Text = "Nombre del Rol"
         '
@@ -157,36 +165,58 @@ Partial Class jdGestionarRol
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(3, 11)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(93, 13)
+        Me.Label3.Size = New System.Drawing.Size(106, 13)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "DATOS DEL ROL"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 24)
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(11, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(88, 13)
+        Me.Label1.Size = New System.Drawing.Size(191, 23)
         Me.Label1.TabIndex = 23
         Me.Label1.Text = "Gestión de Roles"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label4.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(12, 37)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(151, 13)
+        Me.Label4.Size = New System.Drawing.Size(281, 18)
         Me.Label4.TabIndex = 32
         Me.Label4.Text = "Administra los roles del sistema"
         '
-        'Button1
+        'btnNuevoRol
         '
-        Me.Button1.Location = New System.Drawing.Point(473, 37)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(115, 23)
-        Me.Button1.TabIndex = 33
-        Me.Button1.Text = "Nuevo Rol"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnNuevoRol.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNuevoRol.ForeColor = System.Drawing.Color.Black
+        Me.btnNuevoRol.Location = New System.Drawing.Point(457, 32)
+        Me.btnNuevoRol.Name = "btnNuevoRol"
+        Me.btnNuevoRol.Size = New System.Drawing.Size(115, 23)
+        Me.btnNuevoRol.TabIndex = 33
+        Me.btnNuevoRol.Text = "Nuevo Rol"
+        Me.btnNuevoRol.UseVisualStyleBackColor = True
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.Label4)
+        Me.Panel2.Controls.Add(Me.btnNuevoRol)
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.ForeColor = System.Drawing.Color.White
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(604, 69)
+        Me.Panel2.TabIndex = 81
         '
         'jdGestionarRol
         '
@@ -194,34 +224,36 @@ Partial Class jdGestionarRol
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(604, 401)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.ListView1)
+        Me.Controls.Add(Me.lvRoles)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Panel2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "jdGestionarRol"
-        Me.Text = "jdGestionarRol"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.Text = "Gestionar Rol"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents ListView1 As ListView
-    Friend WithEvents Button4 As Button
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents lvRoles As ListView
+    Friend WithEvents btnGuardar As Button
+    Friend WithEvents cboEstado As ComboBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents Button2 As Button
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents btnCancelar As Button
+    Friend WithEvents txtIdRol As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtDescripcion As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtNombreRol As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnNuevoRol As Button
+    Friend WithEvents Panel2 As Panel
 End Class

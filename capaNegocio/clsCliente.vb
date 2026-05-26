@@ -229,4 +229,68 @@ Public Class clsCliente
         End Try
         Return nroDocumento
     End Function
+
+    Public Function listarTiposDocumento() As DataTable
+        Dim strSQL As String = "SELECT idtipodocumento, tipodocumento FROM tipo_documento"
+        Dim objConectar As New clsConectaBD()
+        Try
+            objConectar.conectar()
+            Dim da As New SqlDataAdapter(strSQL, objConectar.miConexion)
+            Dim dt As New DataTable()
+            da.Fill(dt)
+            Return dt
+        Catch ex As Exception
+            Throw New Exception("Error al listar tipos de documento: " & ex.Message)
+        Finally
+            objConectar.desconectar()
+        End Try
+    End Function
+
+    Public Function listarDepartamentos() As DataTable
+        Dim strSQL As String = "SELECT iddepartamento, departamento FROM departamento ORDER BY departamento"
+        Dim objConectar As New clsConectaBD()
+        Try
+            objConectar.conectar()
+            Dim da As New SqlDataAdapter(strSQL, objConectar.miConexion)
+            Dim dt As New DataTable()
+            da.Fill(dt)
+            Return dt
+        Catch ex As Exception
+            Throw New Exception("Error al listar departamentos: " & ex.Message)
+        Finally
+            objConectar.desconectar()
+        End Try
+    End Function
+
+    Public Function listarProvincias(idDepto As Integer) As DataTable
+        Dim strSQL As String = "SELECT idprovincia, provincia FROM provincia WHERE iddepartamento = " & idDepto & " ORDER BY provincia"
+        Dim objConectar As New clsConectaBD()
+        Try
+            objConectar.conectar()
+            Dim da As New SqlDataAdapter(strSQL, objConectar.miConexion)
+            Dim dt As New DataTable()
+            da.Fill(dt)
+            Return dt
+        Catch ex As Exception
+            Throw New Exception("Error al listar provincias: " & ex.Message)
+        Finally
+            objConectar.desconectar()
+        End Try
+    End Function
+
+    Public Function listarDistritos(idProvincia As Integer) As DataTable
+        Dim strSQL As String = "SELECT iddistrito, distrito FROM distrito WHERE idprovincia = " & idProvincia & " ORDER BY distrito"
+        Dim objConectar As New clsConectaBD()
+        Try
+            objConectar.conectar()
+            Dim da As New SqlDataAdapter(strSQL, objConectar.miConexion)
+            Dim dt As New DataTable()
+            da.Fill(dt)
+            Return dt
+        Catch ex As Exception
+            Throw New Exception("Error al listar distritos: " & ex.Message)
+        Finally
+            objConectar.desconectar()
+        End Try
+    End Function
 End Class

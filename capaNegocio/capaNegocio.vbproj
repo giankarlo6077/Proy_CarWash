@@ -81,7 +81,9 @@
     <Compile Include="clsEmpresa.vb" />
     <Compile Include="clsMarca.vb" />
     <Compile Include="clsModeloVehiculo.vb" />
+    <Compile Include="clsPersona.vb" />
     <Compile Include="clsProveedor.vb" />
+    <Compile Include="clsRol.vb" />
     <Compile Include="clsServicio.vb" />
     <Compile Include="clsTipoDescuento.vb" />
     <Compile Include="clsTipoProducto.vb" />

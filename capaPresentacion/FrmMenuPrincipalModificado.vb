@@ -62,4 +62,14 @@
         Dim frmGestionarUsuario As New jdGestionarUsuario()
         frmGestionarUsuario.ShowDialog()
     End Sub
+
+    Private Sub ClienteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClienteToolStripMenuItem.Click
+        Dim frmGestionarCliente As New jdGestionarClientes()
+        frmGestionarCliente.ShowDialog()
+    End Sub
+
+    Private Sub RolToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RolToolStripMenuItem.Click
+        Dim frmGestionarRol As New jdGestionarRol()
+        frmGestionarRol.ShowDialog()
+    End Sub
 End Class
