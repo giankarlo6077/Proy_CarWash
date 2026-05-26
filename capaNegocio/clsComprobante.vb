@@ -279,9 +279,11 @@ Public Class clsComprobante
         Dim con As SqlConnection = objConectar.miConexion
         Dim trans As SqlTransaction = con.BeginTransaction()
 
+        Dim idComprobante As Integer
+
         Try
-            ' — INSERT comprobante —
-            Using cmdComp As New SqlCommand(sqlComprobante, con, trans)
+            ' — INSERT comprobante (devuelve el id generado con SCOPE_IDENTITY) —
+            Using cmdComp As New SqlCommand(sqlComprobante & "; SELECT CAST(SCOPE_IDENTITY() AS INT);", con, trans)
                 cmdComp.Parameters.AddWithValue("@fecha", fechaVenta.Date)
                 cmdComp.Parameters.AddWithValue("@hora", horaVenta)
                 cmdComp.Parameters.AddWithValue("@numComp", numComprobante)
@@ -290,10 +292,8 @@ Public Class clsComprobante
                 cmdComp.Parameters.AddWithValue("@idMedio", idMedioPago)
                 cmdComp.Parameters.AddWithValue("@idTrab", idTrabajador)
                 cmdComp.Parameters.AddWithValue("@idCliente", idCliente)
-                cmdComp.ExecuteNonQuery()
+                idComprobante = Convert.ToInt32(cmdComp.ExecuteScalar())
             End Using
-
-            Dim idComprobante As Integer = obtenerNuevoNumComprobante()
 
             ' — INSERT detalles —
             Using cmdDet As New SqlCommand(sqlDetalle, con, trans)
