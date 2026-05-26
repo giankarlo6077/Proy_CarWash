@@ -86,4 +86,6 @@ Public Class jdGestionarDescuento
     Private Sub dgvDescuentos_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDescuentos.CellClick
         If e.RowIndex >= 0 Then CargarDatosFila(dgvDescuentos.Rows(e.RowIndex))
     End Sub
+
+
 End Class
