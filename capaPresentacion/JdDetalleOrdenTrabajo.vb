@@ -1,4 +1,5 @@
-﻿Imports capaNegocio
+﻿Imports System.Globalization
+Imports capaNegocio
 
 Public Class JdDetalleOrdenTrabajo
     Dim objCita As New clsCita
@@ -12,6 +13,10 @@ Public Class JdDetalleOrdenTrabajo
     Private Sub JdDetalleOrden_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Dim fila As DataRow = objCita.cargarDatosCita(_idCita)
+
+        cmbTrabajador.DataSource = objCita.listarTrabajadores
+        cmbTrabajador.DisplayMember = "trabajador"
+        cmbTrabajador.ValueMember = "idTrabajador"
 
         If fila IsNot Nothing Then
             lblidCita.Text = fila("idCita").ToString()
@@ -27,13 +32,45 @@ Public Class JdDetalleOrdenTrabajo
             lblAno.Text = fila("anoFabricacion").ToString()
             lblCliente.Text = fila("cliente").ToString()
             lblTelefono.Text = fila("telefono").ToString()
+            dgvProductos.DataSource = objCita.cargarProductosdelaCita(_idCita)
+            dgvServicios.DataSource = objCita.cargarServiciosdelaCita(_idCita)
         Else
             MessageBox.Show("No se encontró la cita.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
 
     End Sub
 
-    Private Sub JdDetalleOrdenTrabajo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+        Try
+            ' Validación básica
+            If cmbEstado.SelectedIndex = -1 Then
+                MessageBox.Show("Seleccione un estado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Return
+            End If
+            If cmbTrabajador.SelectedValue Is Nothing Then
+                MessageBox.Show("Seleccione un técnico responsable.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Return
+            End If
+
+            ' Recoger datos del formulario
+            Dim id As Integer = CInt(txtidCita.Text)
+            Dim fec As Date = Date.ParseExact(lblFecha.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture)
+            Dim hor As Date = Date.ParseExact(lblHora.Text, "HH:mm:ss", CultureInfo.InvariantCulture)
+            Dim estado As String = cmbEstado.SelectedItem.ToString()
+            Dim coment As String = txtComentario.Text.Trim()
+            Dim fechRec As Date = dtpFechaRecojo.Value
+            Dim idVeh As Integer = objCita.buscarIDVehporPlaca(lblPlaca.Text)       ' guarda el idVehiculo en el .Tag
+            Dim idTrab As Integer = CInt(cmbTrabajador.SelectedValue)
+
+            ' Llamar al método
+            objCita.modificarCita(id, fec, hor, estado, coment, fechRec, idVeh, idTrab)
+
+            MessageBox.Show("Cita actualizada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Me.Close()
+
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
 
     End Sub
 End Class

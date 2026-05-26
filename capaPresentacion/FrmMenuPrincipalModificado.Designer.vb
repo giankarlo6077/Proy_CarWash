@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmMenuPrincipalModificado
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmMenuPrincipalModificado
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMenuPrincipalModificado))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -40,6 +40,7 @@ Partial Class FrmMenuPrincipalModificado
         Me.REPORTESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.DescuentosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RolToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -84,6 +85,7 @@ Partial Class FrmMenuPrincipalModificado
         '
         'MANTENIMIENTOToolStripMenuItem
         '
+        Me.MANTENIMIENTOToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClienteToolStripMenuItem, Me.TrabajadorToolStripMenuItem, Me.VehiculoToolStripMenuItem, Me.ServicioToolStripMenuItem, Me.ProductoToolStripMenuItem, Me.UsuarioToolStripMenuItem, Me.DescuentosToolStripMenuItem})
         Me.MANTENIMIENTOToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClienteToolStripMenuItem, Me.TrabajadorToolStripMenuItem, Me.VehiculoToolStripMenuItem, Me.ServicioToolStripMenuItem, Me.ProductoToolStripMenuItem, Me.UsuarioToolStripMenuItem, Me.RolToolStripMenuItem})
         Me.MANTENIMIENTOToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.MANTENIMIENTOToolStripMenuItem.Image = CType(resources.GetObject("MANTENIMIENTOToolStripMenuItem.Image"), System.Drawing.Image)
@@ -96,6 +98,7 @@ Partial Class FrmMenuPrincipalModificado
         '
         Me.ClienteToolStripMenuItem.Image = CType(resources.GetObject("ClienteToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ClienteToolStripMenuItem.Name = "ClienteToolStripMenuItem"
+        Me.ClienteToolStripMenuItem.Size = New System.Drawing.Size(247, 32)
         Me.ClienteToolStripMenuItem.Size = New System.Drawing.Size(201, 28)
         Me.ClienteToolStripMenuItem.Text = "Cliente"
         '
@@ -103,6 +106,7 @@ Partial Class FrmMenuPrincipalModificado
         '
         Me.TrabajadorToolStripMenuItem.Image = CType(resources.GetObject("TrabajadorToolStripMenuItem.Image"), System.Drawing.Image)
         Me.TrabajadorToolStripMenuItem.Name = "TrabajadorToolStripMenuItem"
+        Me.TrabajadorToolStripMenuItem.Size = New System.Drawing.Size(247, 32)
         Me.TrabajadorToolStripMenuItem.Size = New System.Drawing.Size(201, 28)
         Me.TrabajadorToolStripMenuItem.Text = "Trabajador"
         '
@@ -110,6 +114,7 @@ Partial Class FrmMenuPrincipalModificado
         '
         Me.VehiculoToolStripMenuItem.Image = CType(resources.GetObject("VehiculoToolStripMenuItem.Image"), System.Drawing.Image)
         Me.VehiculoToolStripMenuItem.Name = "VehiculoToolStripMenuItem"
+        Me.VehiculoToolStripMenuItem.Size = New System.Drawing.Size(247, 32)
         Me.VehiculoToolStripMenuItem.Size = New System.Drawing.Size(201, 28)
         Me.VehiculoToolStripMenuItem.Text = "Vehiculo"
         '
@@ -117,6 +122,7 @@ Partial Class FrmMenuPrincipalModificado
         '
         Me.ServicioToolStripMenuItem.Image = CType(resources.GetObject("ServicioToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ServicioToolStripMenuItem.Name = "ServicioToolStripMenuItem"
+        Me.ServicioToolStripMenuItem.Size = New System.Drawing.Size(247, 32)
         Me.ServicioToolStripMenuItem.Size = New System.Drawing.Size(201, 28)
         Me.ServicioToolStripMenuItem.Text = "Servicio"
         '
@@ -124,8 +130,16 @@ Partial Class FrmMenuPrincipalModificado
         '
         Me.ProductoToolStripMenuItem.Image = CType(resources.GetObject("ProductoToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ProductoToolStripMenuItem.Name = "ProductoToolStripMenuItem"
+        Me.ProductoToolStripMenuItem.Size = New System.Drawing.Size(247, 32)
         Me.ProductoToolStripMenuItem.Size = New System.Drawing.Size(201, 28)
         Me.ProductoToolStripMenuItem.Text = "Producto"
+        '
+        'UsuarioToolStripMenuItem
+        '
+        Me.UsuarioToolStripMenuItem.Image = CType(resources.GetObject("UsuarioToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.UsuarioToolStripMenuItem.Name = "UsuarioToolStripMenuItem"
+        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(247, 32)
+        Me.UsuarioToolStripMenuItem.Text = "Usuario"
         '
         'UsuarioToolStripMenuItem
         '
@@ -188,8 +202,13 @@ Partial Class FrmMenuPrincipalModificado
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
+        'DescuentosToolStripMenuItem
         'RolToolStripMenuItem
         '
+        Me.DescuentosToolStripMenuItem.Image = CType(resources.GetObject("DescuentosToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.DescuentosToolStripMenuItem.Name = "DescuentosToolStripMenuItem"
+        Me.DescuentosToolStripMenuItem.Size = New System.Drawing.Size(247, 32)
+        Me.DescuentosToolStripMenuItem.Text = "Descuentos"
         Me.RolToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.rol
         Me.RolToolStripMenuItem.Name = "RolToolStripMenuItem"
         Me.RolToolStripMenuItem.Size = New System.Drawing.Size(201, 28)
@@ -233,5 +252,6 @@ Partial Class FrmMenuPrincipalModificado
     Friend WithEvents ReportesToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents UsuarioToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DescuentosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RolToolStripMenuItem As ToolStripMenuItem
 End Class

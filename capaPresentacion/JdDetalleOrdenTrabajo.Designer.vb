@@ -56,17 +56,19 @@ Partial Class JdDetalleOrdenTrabajo
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
-        Me.tblServicios = New System.Windows.Forms.TableLayoutPanel()
         Me.btnAgregarServicio = New System.Windows.Forms.Button()
         Me.btnAgregarProducto = New System.Windows.Forms.Button()
-        Me.tblProductos = New System.Windows.Forms.TableLayoutPanel()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.dgvServicios = New System.Windows.Forms.DataGridView()
+        Me.dgvProductos = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        CType(Me.dgvServicios, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -158,6 +160,7 @@ Partial Class JdDetalleOrdenTrabajo
         'cmbEstado
         '
         Me.cmbEstado.FormattingEnabled = True
+        Me.cmbEstado.Items.AddRange(New Object() {"Pendiente", "En Proceso", "Realizado"})
         Me.cmbEstado.Location = New System.Drawing.Point(633, 118)
         Me.cmbEstado.Name = "cmbEstado"
         Me.cmbEstado.Size = New System.Drawing.Size(178, 24)
@@ -386,19 +389,6 @@ Partial Class JdDetalleOrdenTrabajo
         Me.Label26.Text = "Servicios Realizados:"
         Me.Label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'tblServicios
-        '
-        Me.tblServicios.ColumnCount = 2
-        Me.tblServicios.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.tblServicios.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.tblServicios.Location = New System.Drawing.Point(12, 540)
-        Me.tblServicios.Name = "tblServicios"
-        Me.tblServicios.RowCount = 2
-        Me.tblServicios.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.tblServicios.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.tblServicios.Size = New System.Drawing.Size(847, 148)
-        Me.tblServicios.TabIndex = 73
-        '
         'btnAgregarServicio
         '
         Me.btnAgregarServicio.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -422,19 +412,6 @@ Partial Class JdDetalleOrdenTrabajo
         Me.btnAgregarProducto.TabIndex = 77
         Me.btnAgregarProducto.Text = "Agregar Producto"
         Me.btnAgregarProducto.UseVisualStyleBackColor = False
-        '
-        'tblProductos
-        '
-        Me.tblProductos.ColumnCount = 2
-        Me.tblProductos.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.tblProductos.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.tblProductos.Location = New System.Drawing.Point(12, 764)
-        Me.tblProductos.Name = "tblProductos"
-        Me.tblProductos.RowCount = 2
-        Me.tblProductos.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.tblProductos.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.tblProductos.Size = New System.Drawing.Size(847, 150)
-        Me.tblProductos.TabIndex = 76
         '
         'Label27
         '
@@ -479,17 +456,38 @@ Partial Class JdDetalleOrdenTrabajo
         Me.btnCancelar.Text = "Cancelar Cita"
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
+        'dgvServicios
+        '
+        Me.dgvServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvServicios.Location = New System.Drawing.Point(12, 540)
+        Me.dgvServicios.Name = "dgvServicios"
+        Me.dgvServicios.RowHeadersWidth = 51
+        Me.dgvServicios.RowTemplate.Height = 24
+        Me.dgvServicios.Size = New System.Drawing.Size(847, 148)
+        Me.dgvServicios.TabIndex = 79
+        '
+        'dgvProductos
+        '
+        Me.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvProductos.Location = New System.Drawing.Point(12, 766)
+        Me.dgvProductos.Name = "dgvProductos"
+        Me.dgvProductos.RowHeadersWidth = 51
+        Me.dgvProductos.RowTemplate.Height = 24
+        Me.dgvProductos.Size = New System.Drawing.Size(847, 148)
+        Me.dgvProductos.TabIndex = 80
+        '
         'JdDetalleOrdenTrabajo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(875, 1055)
+        Me.Controls.Add(Me.dgvProductos)
+        Me.Controls.Add(Me.dgvServicios)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.btnAgregarProducto)
         Me.Controls.Add(Me.btnAgregarServicio)
-        Me.Controls.Add(Me.tblProductos)
         Me.Controls.Add(Me.Label27)
-        Me.Controls.Add(Me.tblServicios)
         Me.Controls.Add(Me.Label26)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -502,6 +500,8 @@ Partial Class JdDetalleOrdenTrabajo
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
+        CType(Me.dgvServicios, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -540,12 +540,12 @@ Partial Class JdDetalleOrdenTrabajo
     Friend WithEvents lblCliente As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Label26 As Label
-    Friend WithEvents tblServicios As TableLayoutPanel
     Friend WithEvents btnAgregarServicio As Button
     Friend WithEvents btnAgregarProducto As Button
-    Friend WithEvents tblProductos As TableLayoutPanel
     Friend WithEvents Label27 As Label
     Friend WithEvents Panel3 As Panel
     Friend WithEvents btnGuardar As Button
     Friend WithEvents btnCancelar As Button
+    Friend WithEvents dgvServicios As DataGridView
+    Friend WithEvents dgvProductos As DataGridView
 End Class

@@ -5,7 +5,10 @@ Imports capaDatos
 Public Class clsCita
 
     Public Function listarCitas() As DataTable
-        Dim strSQL As String = "SELECT * FROM cita ORDER BY 1 ASC"
+        Dim strSQL As String = "select c.idCita,c.fecha,c.hora,c.estado,c.comentario,c.fechaRecojo,v.placa,trab.trabajador from CITA AS c
+                                INNER JOIN VEHICULO AS v ON c.idVehiculo=v.idVehiculo
+                                INNER JOIN TRABAJADOR AS trab ON c.idTrabajador=trab.idTrabajador
+                                ORDER BY 1 ASC"
         Dim objConectar As New clsConectaBD()
         Try
             objConectar.conectar()
@@ -20,7 +23,7 @@ Public Class clsCita
         End Try
     End Function
 
-    Public Function buscarporID(id As Integer) As DataRow
+    Public Function buscarporID(id As Integer) As DataTable
         Dim strSQL As String = "SELECT * FROM cita WHERE idCita = " & id
         Dim objConectar As New clsConectaBD()
         Try
@@ -28,16 +31,15 @@ Public Class clsCita
             Dim da As New SqlDataAdapter(strSQL, objConectar.miConexion)
             Dim dt As New DataTable()
             da.Fill(dt)
-            If dt.Rows.Count > 0 Then Return dt.Rows(0)
+            Return dt
         Catch ex As Exception
-            Throw New Exception("Error al buscar Citas por ID: " & ex.Message)
+            Throw New Exception("Error al listar Citas por ID: " & ex.Message)
         Finally
             objConectar.desconectar()
         End Try
-        Return Nothing
     End Function
 
-    Public Function buscarporEstado(estado As String) As DataRow
+    Public Function buscarporEstado(estado As String) As DataTable
         Dim strSQL As String = "select * from cita where estado='" & estado & "'"
         Dim objConectar As New clsConectaBD()
         Try
@@ -45,13 +47,12 @@ Public Class clsCita
             Dim da As New SqlDataAdapter(strSQL, objConectar.miConexion)
             Dim dt As New DataTable()
             da.Fill(dt)
-            If dt.Rows.Count > 0 Then Return dt.Rows(0)
+            Return dt
         Catch ex As Exception
-            Throw New Exception("Error al buscar Citas por Estado: " & ex.Message)
+            Throw New Exception("Error al listar Citas por Estado: " & ex.Message)
         Finally
             objConectar.desconectar()
         End Try
-        Return Nothing
     End Function
 
     Public Function generarCodigoCita() As Integer
@@ -92,17 +93,25 @@ Public Class clsCita
 
     Public Sub modificarCita(id As Integer, fec As Date, hor As Date, estado As String, coment As String, fechRecoj As Date, idVeh As Integer, idTrab As Integer)
         Dim strSQL As String = "UPDATE CITA SET 
-                                fecha = '" & fec & "', 
-                                hora = '" & hor & "', 
-                                estado = '" & estado & "', 
-                                comentario = '" & coment & "', 
-                                fechaRecojo = '" & fechRecoj & "', 
-                                idVehiculo = " & idVeh & ", 
-                                idTrabajador = " & idTrab & "  WHERE idCita = " & id
+                                fecha = @fecha, 
+                                hora = @hora, 
+                                estado = @estado, 
+                                comentario = @comentario, 
+                                fechaRecojo = @fechaRecojo, 
+                                idVehiculo = @idVehiculo, 
+                                idTrabajador = @idTrabajador  WHERE idCita = @id"
         Dim objConectar As New clsConectaBD()
         Try
             objConectar.conectar()
             Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
+            cmd.Parameters.AddWithValue("@id", id)
+            cmd.Parameters.AddWithValue("@fecha", fec.Date)
+            cmd.Parameters.AddWithValue("@hora", hor.TimeOfDay)
+            cmd.Parameters.AddWithValue("@estado", estado)
+            cmd.Parameters.AddWithValue("@comentario", coment)
+            cmd.Parameters.AddWithValue("@fechaRecojo", fechRecoj.Date)
+            cmd.Parameters.AddWithValue("@idVehiculo", idVeh)
+            cmd.Parameters.AddWithValue("@idTrabajador", idTrab)
             cmd.ExecuteNonQuery()
         Catch ex As Exception
             Throw New Exception("Error al modificar Cita: " & ex.Message)
@@ -187,21 +196,18 @@ Public Class clsCita
     End Function
 
     'obtener idVehiculo por placa
-    Public Function buscarIDVehporPlaca(placa As String) As DataRow
+    Public Function buscarIDVehporPlaca(placa As String) As Integer
         Dim strSQL As String = "select idvehiculo from VEHICULO where placa='" & placa & "'"
         Dim objConectar As New clsConectaBD()
         Try
             objConectar.conectar()
-            Dim da As New SqlDataAdapter(strSQL, objConectar.miConexion)
-            Dim dt As New DataTable()
-            da.Fill(dt)
-            If dt.Rows.Count > 0 Then Return dt.Rows(0)
+            Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
+            Return Convert.ToInt32(cmd.ExecuteScalar())
         Catch ex As Exception
-            Throw New Exception("Error al buscar Citas por Estado: " & ex.Message)
+            Throw New Exception("Error al consular código de vehículo: " & ex.Message)
         Finally
             objConectar.desconectar()
         End Try
-        Return Nothing
     End Function
 
     'obtener idTrabajador por trabajador
@@ -256,5 +262,55 @@ Public Class clsCita
             Return Nothing
         End If
     End Function
+
+    Public Function cargarProductosdelaCita(idCita As Integer) As DataTable
+        Dim strSQL As String = "
+        SELECT c.idCita, pr.producto, pm.cantidad, pm.precio
+        FROM CITA AS c  
+        INNER JOIN PRODUCTO_MANTENIMIENTO AS pm ON c.idCita = pm.idCita
+        INNER JOIN PRODUCTO AS pr ON pm.idProducto = pr.idProducto
+        WHERE c.idCita = @idCita"
+
+        Dim objConectar As New clsConectaBD()
+        Dim dt As New DataTable()
+        Try
+            objConectar.conectar()
+            Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
+            cmd.Parameters.AddWithValue("@idCita", idCita)
+            Dim da As New SqlDataAdapter(cmd)
+            da.Fill(dt)
+        Catch ex As Exception
+            Throw New Exception("Error al cargar los productos de la cita: " & ex.Message)
+        Finally
+            objConectar.desconectar()
+        End Try
+
+        Return dt
+    End Function
+
+    Public Function cargarServiciosdelaCita(idCita As Integer) As DataTable
+        Dim strSQL As String = "
+            select c.idCita,ser.Servicio from CITA AS c  
+            INNER JOIN DETALLE_CITA AS dc ON c.idCita=dc.idCita
+            INNER JOIN SERVICIO AS ser ON dc.idServicio=ser.idServicio
+            where c.idCita = @idCita"
+
+        Dim objConectar As New clsConectaBD()
+        Dim dt As New DataTable()
+        Try
+            objConectar.conectar()
+            Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
+            cmd.Parameters.AddWithValue("@idCita", idCita)
+            Dim da As New SqlDataAdapter(cmd)
+            da.Fill(dt)
+        Catch ex As Exception
+            Throw New Exception("Error al cargar los servicios de la cita: " & ex.Message)
+        Finally
+            objConectar.desconectar()
+        End Try
+
+        Return dt
+    End Function
+
 
 End Class

@@ -182,4 +182,92 @@ Public Class clsProducto
         End Try
     End Sub
 
+
+    ' ══════════════════════════════════════════════
+    '  SECCIÓN VENTAS
+    ' ══════════════════════════════════════════════
+    ' Listar solo los nombres de tipo de producto (para llenar ComboBox)
+    Public Function listarTipoProducto() As DataTable
+        Dim strSQL As String = "SELECT tipoproducto FROM tipo_producto"
+        Dim objConectar As New clsConectaBD()
+        Try
+            objConectar.conectar()
+            Dim da As New SqlDataAdapter(strSQL, objConectar.miConexion)
+            Dim dt As New DataTable()
+            da.Fill(dt)
+            Return dt
+        Catch ex As Exception
+            Throw New Exception("Error al listar tipos de producto: " & ex.Message)
+        Finally
+            objConectar.desconectar()
+        End Try
+    End Function
+
+    ' Listar productos filtrados por un tipo de producto específico
+    Public Function listarProductosPorTipoProducto(ByVal tipoProducto As String) As DataTable
+        Dim strSQL As String =
+            "SELECT p.idproducto, p.producto, tp.tipoproducto, mp.marcaproducto, p.precioactual, p.stock" &
+            " FROM producto p" &
+            " INNER JOIN tipo_producto tp ON p.idtipoproducto = tp.idtipoproducto" &
+            " INNER JOIN marca_producto mp ON p.idmarcaproducto = mp.idmarcaproducto" &
+            " WHERE tp.tipoproducto = '" & tipoProducto & "'" &
+            " ORDER BY p.idproducto"
+        Dim objConectar As New clsConectaBD()
+        Try
+            objConectar.conectar()
+            Dim da As New SqlDataAdapter(strSQL, objConectar.miConexion)
+            Dim dt As New DataTable()
+            da.Fill(dt)
+            Return dt
+        Catch ex As Exception
+            Throw New Exception("Error al listar productos por tipo: " & ex.Message)
+        Finally
+            objConectar.desconectar()
+        End Try
+    End Function
+
+    ' Listar todos los productos con tipo y marca (para tabla general de ventas)
+    Public Function listarProductosGeneralesPorTipoProducto() As DataTable
+        Dim strSQL As String =
+            "SELECT p.idproducto, p.producto, tp.tipoproducto, mp.marcaproducto, p.precioactual, p.stock" &
+            " FROM producto p" &
+            " INNER JOIN tipo_producto tp ON p.idtipoproducto = tp.idtipoproducto" &
+            " INNER JOIN marca_producto mp ON p.idmarcaproducto = mp.idmarcaproducto" &
+            " ORDER BY p.idproducto"
+        Dim objConectar As New clsConectaBD()
+        Try
+            objConectar.conectar()
+            Dim da As New SqlDataAdapter(strSQL, objConectar.miConexion)
+            Dim dt As New DataTable()
+            da.Fill(dt)
+            Return dt
+        Catch ex As Exception
+            Throw New Exception("Error al listar productos generales: " & ex.Message)
+        Finally
+            objConectar.desconectar()
+        End Try
+    End Function
+
+    ' Aumentar o disminuir stock ("AUMENTAR" / "DISMINUIR")
+    Public Sub Aumentar_DisminuirStock(ByVal cantidad As Integer, ByVal codProducto As Integer, ByVal valor As String)
+        Dim strSQL As String
+        If valor.ToUpper() = "AUMENTAR" Then
+            strSQL = "UPDATE producto SET stock = stock + " & cantidad & " WHERE idproducto = " & codProducto
+        ElseIf valor.ToUpper() = "DISMINUIR" Then
+            strSQL = "UPDATE producto SET stock = stock - " & cantidad & " WHERE idproducto = " & codProducto
+        Else
+            Throw New Exception("Valor no válido. Use 'AUMENTAR' o 'DISMINUIR'.")
+        End If
+        Dim objConectar As New clsConectaBD()
+        Try
+            objConectar.conectar()
+            Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+            Throw New Exception("Error al modificar stock: " & ex.Message)
+        Finally
+            objConectar.desconectar()
+        End Try
+    End Sub
+
 End Class

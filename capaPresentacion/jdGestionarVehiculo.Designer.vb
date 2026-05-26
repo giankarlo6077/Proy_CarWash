@@ -51,10 +51,10 @@ Partial Class jdGestionarVehiculo
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(40, 60)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(274, 32)
+        Me.Label1.Size = New System.Drawing.Size(314, 34)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Gestionar Vehiculo"
         '
@@ -161,7 +161,7 @@ Partial Class jdGestionarVehiculo
         Me.Panel2.Controls.Add(Me.btnNuevo)
         Me.Panel2.Location = New System.Drawing.Point(46, 284)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(949, 79)
+        Me.Panel2.Size = New System.Drawing.Size(949, 86)
         Me.Panel2.TabIndex = 9
         '
         'btnEliminar
@@ -169,11 +169,13 @@ Partial Class jdGestionarVehiculo
         Me.btnEliminar.AutoSize = True
         Me.btnEliminar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEliminar.Location = New System.Drawing.Point(689, 26)
+        Me.btnEliminar.Image = CType(resources.GetObject("btnEliminar.Image"), System.Drawing.Image)
+        Me.btnEliminar.Location = New System.Drawing.Point(763, 15)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(92, 32)
+        Me.btnEliminar.Size = New System.Drawing.Size(140, 54)
         Me.btnEliminar.TabIndex = 4
         Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'btnDarsebaja
@@ -181,11 +183,13 @@ Partial Class jdGestionarVehiculo
         Me.btnDarsebaja.AutoSize = True
         Me.btnDarsebaja.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btnDarsebaja.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDarsebaja.Location = New System.Drawing.Point(516, 26)
+        Me.btnDarsebaja.Image = CType(resources.GetObject("btnDarsebaja.Image"), System.Drawing.Image)
+        Me.btnDarsebaja.Location = New System.Drawing.Point(556, 15)
         Me.btnDarsebaja.Name = "btnDarsebaja"
-        Me.btnDarsebaja.Size = New System.Drawing.Size(124, 32)
+        Me.btnDarsebaja.Size = New System.Drawing.Size(172, 54)
         Me.btnDarsebaja.TabIndex = 3
         Me.btnDarsebaja.Text = "Dar de baja"
+        Me.btnDarsebaja.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnDarsebaja.UseVisualStyleBackColor = True
         '
         'btnLimpiar
@@ -193,11 +197,13 @@ Partial Class jdGestionarVehiculo
         Me.btnLimpiar.AutoSize = True
         Me.btnLimpiar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLimpiar.Location = New System.Drawing.Point(382, 26)
+        Me.btnLimpiar.Image = CType(resources.GetObject("btnLimpiar.Image"), System.Drawing.Image)
+        Me.btnLimpiar.Location = New System.Drawing.Point(373, 15)
         Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(85, 32)
+        Me.btnLimpiar.Size = New System.Drawing.Size(133, 54)
         Me.btnLimpiar.TabIndex = 2
         Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnLimpiar.UseVisualStyleBackColor = True
         '
         'btnModificar
@@ -205,11 +211,13 @@ Partial Class jdGestionarVehiculo
         Me.btnModificar.AutoSize = True
         Me.btnModificar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModificar.Location = New System.Drawing.Point(234, 26)
+        Me.btnModificar.Image = CType(resources.GetObject("btnModificar.Image"), System.Drawing.Image)
+        Me.btnModificar.Location = New System.Drawing.Point(186, 15)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(101, 32)
+        Me.btnModificar.Size = New System.Drawing.Size(149, 54)
         Me.btnModificar.TabIndex = 1
         Me.btnModificar.Text = "Modificar"
+        Me.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnModificar.UseVisualStyleBackColor = True
         '
         'btnNuevo
@@ -217,11 +225,13 @@ Partial Class jdGestionarVehiculo
         Me.btnNuevo.AutoSize = True
         Me.btnNuevo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNuevo.Location = New System.Drawing.Point(117, 26)
+        Me.btnNuevo.Image = CType(resources.GetObject("btnNuevo.Image"), System.Drawing.Image)
+        Me.btnNuevo.Location = New System.Drawing.Point(14, 15)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(77, 32)
+        Me.btnNuevo.Size = New System.Drawing.Size(125, 54)
         Me.btnNuevo.TabIndex = 0
         Me.btnNuevo.Text = "Nuevo"
+        Me.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnNuevo.UseVisualStyleBackColor = True
         '
         'Panel3

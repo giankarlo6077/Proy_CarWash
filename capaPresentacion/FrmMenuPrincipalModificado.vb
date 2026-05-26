@@ -63,6 +63,16 @@
         frmGestionarUsuario.ShowDialog()
     End Sub
 
+    Private Sub ServicioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ServicioToolStripMenuItem.Click
+        Dim frmMantenimiento As New jdMantenimientoServicio()
+        frmMantenimiento.ShowDialog()
+    End Sub
+
+    Private Sub DescuentosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DescuentosToolStripMenuItem.Click
+        Dim frmDescuento As New jdGestionarDescuento()
+        frmDescuento.ShowDialog()
+    End Sub
+
     Private Sub ClienteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClienteToolStripMenuItem.Click
         Dim frmGestionarCliente As New jdGestionarClientes()
         frmGestionarCliente.ShowDialog()
