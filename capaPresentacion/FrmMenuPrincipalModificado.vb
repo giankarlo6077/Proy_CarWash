@@ -82,4 +82,9 @@
         Dim frmGestionarRol As New jdGestionarRol()
         frmGestionarRol.ShowDialog()
     End Sub
+
+    Private Sub TrabajadorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TrabajadorToolStripMenuItem.Click
+        Dim frmMantenimientoTrabajador As New jdMantenimientoTrabajador()
+        frmMantenimientoTrabajador.ShowDialog()
+    End Sub
 End Class
