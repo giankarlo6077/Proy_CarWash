@@ -28,6 +28,7 @@ Public Class JdMantenimientoProveedor
         dgvProveedores.Columns.Clear()
 
         dgvProveedores.Columns.Add(New DataGridViewTextBoxColumn With {
+            .Name = "idProveedor",
             .HeaderText = "ID",
             .DataPropertyName = "idProveedor",
             .Visible = False

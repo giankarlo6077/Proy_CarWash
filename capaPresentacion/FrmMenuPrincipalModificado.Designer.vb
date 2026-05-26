@@ -27,12 +27,7 @@ Partial Class FrmMenuPrincipalModificado
         Me.InicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ACERCADEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CITASVENTASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RegistrarCitasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RegistrarVentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.REPORTESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.MANTENIMIENTOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DescuentosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TrabajadorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -41,7 +36,12 @@ Partial Class FrmMenuPrincipalModificado
         Me.ProductoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RolToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MANTENIMIENTOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CITASVENTASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegistrarCitasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegistrarVentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.REPORTESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ProveedorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -83,6 +83,72 @@ Partial Class FrmMenuPrincipalModificado
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
         Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(227, 32)
         Me.SalirToolStripMenuItem.Text = "Salir"
+        '
+        'MANTENIMIENTOToolStripMenuItem
+        '
+        Me.MANTENIMIENTOToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DescuentosToolStripMenuItem, Me.ClienteToolStripMenuItem, Me.TrabajadorToolStripMenuItem, Me.VehiculoToolStripMenuItem, Me.ServicioToolStripMenuItem, Me.ProductoToolStripMenuItem, Me.UsuarioToolStripMenuItem, Me.RolToolStripMenuItem, Me.ProveedorToolStripMenuItem})
+        Me.MANTENIMIENTOToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.MANTENIMIENTOToolStripMenuItem.Image = CType(resources.GetObject("MANTENIMIENTOToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.MANTENIMIENTOToolStripMenuItem.Name = "MANTENIMIENTOToolStripMenuItem"
+        Me.MANTENIMIENTOToolStripMenuItem.Padding = New System.Windows.Forms.Padding(5, 0, 100, 0)
+        Me.MANTENIMIENTOToolStripMenuItem.Size = New System.Drawing.Size(370, 32)
+        Me.MANTENIMIENTOToolStripMenuItem.Text = "MANTENIMIENTO"
+        '
+        'DescuentosToolStripMenuItem
+        '
+        Me.DescuentosToolStripMenuItem.Image = CType(resources.GetObject("DescuentosToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.DescuentosToolStripMenuItem.Name = "DescuentosToolStripMenuItem"
+        Me.DescuentosToolStripMenuItem.Size = New System.Drawing.Size(247, 32)
+        Me.DescuentosToolStripMenuItem.Text = "Descuentos"
+        '
+        'ClienteToolStripMenuItem
+        '
+        Me.ClienteToolStripMenuItem.Image = CType(resources.GetObject("ClienteToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ClienteToolStripMenuItem.Name = "ClienteToolStripMenuItem"
+        Me.ClienteToolStripMenuItem.Size = New System.Drawing.Size(247, 32)
+        Me.ClienteToolStripMenuItem.Text = "Cliente"
+        '
+        'TrabajadorToolStripMenuItem
+        '
+        Me.TrabajadorToolStripMenuItem.Image = CType(resources.GetObject("TrabajadorToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.TrabajadorToolStripMenuItem.Name = "TrabajadorToolStripMenuItem"
+        Me.TrabajadorToolStripMenuItem.Size = New System.Drawing.Size(247, 32)
+        Me.TrabajadorToolStripMenuItem.Text = "Trabajador"
+        '
+        'VehiculoToolStripMenuItem
+        '
+        Me.VehiculoToolStripMenuItem.Image = CType(resources.GetObject("VehiculoToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.VehiculoToolStripMenuItem.Name = "VehiculoToolStripMenuItem"
+        Me.VehiculoToolStripMenuItem.Size = New System.Drawing.Size(247, 32)
+        Me.VehiculoToolStripMenuItem.Text = "Vehiculo"
+        '
+        'ServicioToolStripMenuItem
+        '
+        Me.ServicioToolStripMenuItem.Image = CType(resources.GetObject("ServicioToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ServicioToolStripMenuItem.Name = "ServicioToolStripMenuItem"
+        Me.ServicioToolStripMenuItem.Size = New System.Drawing.Size(247, 32)
+        Me.ServicioToolStripMenuItem.Text = "Servicio"
+        '
+        'ProductoToolStripMenuItem
+        '
+        Me.ProductoToolStripMenuItem.Image = CType(resources.GetObject("ProductoToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ProductoToolStripMenuItem.Name = "ProductoToolStripMenuItem"
+        Me.ProductoToolStripMenuItem.Size = New System.Drawing.Size(247, 32)
+        Me.ProductoToolStripMenuItem.Text = "Producto"
+        '
+        'UsuarioToolStripMenuItem
+        '
+        Me.UsuarioToolStripMenuItem.Image = CType(resources.GetObject("UsuarioToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.UsuarioToolStripMenuItem.Name = "UsuarioToolStripMenuItem"
+        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(247, 32)
+        Me.UsuarioToolStripMenuItem.Text = "Usuario"
+        '
+        'RolToolStripMenuItem
+        '
+        Me.RolToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.rol
+        Me.RolToolStripMenuItem.Name = "RolToolStripMenuItem"
+        Me.RolToolStripMenuItem.Size = New System.Drawing.Size(247, 32)
+        Me.RolToolStripMenuItem.Text = "Rol"
         '
         'CITASVENTASToolStripMenuItem
         '
@@ -138,75 +204,8 @@ Partial Class FrmMenuPrincipalModificado
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
-        'DescuentosToolStripMenuItem
-        '
-        Me.DescuentosToolStripMenuItem.Image = CType(resources.GetObject("DescuentosToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.DescuentosToolStripMenuItem.Name = "DescuentosToolStripMenuItem"
-        Me.DescuentosToolStripMenuItem.Size = New System.Drawing.Size(335, 32)
-        Me.DescuentosToolStripMenuItem.Text = "Descuentos"
-        '
-        'ClienteToolStripMenuItem
-        '
-        Me.ClienteToolStripMenuItem.Image = CType(resources.GetObject("ClienteToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.ClienteToolStripMenuItem.Name = "ClienteToolStripMenuItem"
-        Me.ClienteToolStripMenuItem.Size = New System.Drawing.Size(335, 32)
-        Me.ClienteToolStripMenuItem.Text = "Cliente"
-        '
-        'TrabajadorToolStripMenuItem
-        '
-        Me.TrabajadorToolStripMenuItem.Image = CType(resources.GetObject("TrabajadorToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.TrabajadorToolStripMenuItem.Name = "TrabajadorToolStripMenuItem"
-        Me.TrabajadorToolStripMenuItem.Size = New System.Drawing.Size(335, 32)
-        Me.TrabajadorToolStripMenuItem.Text = "Trabajador"
-        '
-        'VehiculoToolStripMenuItem
-        '
-        Me.VehiculoToolStripMenuItem.Image = CType(resources.GetObject("VehiculoToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.VehiculoToolStripMenuItem.Name = "VehiculoToolStripMenuItem"
-        Me.VehiculoToolStripMenuItem.Size = New System.Drawing.Size(335, 32)
-        Me.VehiculoToolStripMenuItem.Text = "Vehiculo"
-        '
-        'ServicioToolStripMenuItem
-        '
-        Me.ServicioToolStripMenuItem.Image = CType(resources.GetObject("ServicioToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.ServicioToolStripMenuItem.Name = "ServicioToolStripMenuItem"
-        Me.ServicioToolStripMenuItem.Size = New System.Drawing.Size(335, 32)
-        Me.ServicioToolStripMenuItem.Text = "Servicio"
-        '
-        'ProductoToolStripMenuItem
-        '
-        Me.ProductoToolStripMenuItem.Image = CType(resources.GetObject("ProductoToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.ProductoToolStripMenuItem.Name = "ProductoToolStripMenuItem"
-        Me.ProductoToolStripMenuItem.Size = New System.Drawing.Size(335, 32)
-        Me.ProductoToolStripMenuItem.Text = "Producto"
-        '
-        'UsuarioToolStripMenuItem
-        '
-        Me.UsuarioToolStripMenuItem.Image = CType(resources.GetObject("UsuarioToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.UsuarioToolStripMenuItem.Name = "UsuarioToolStripMenuItem"
-        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(335, 32)
-        Me.UsuarioToolStripMenuItem.Text = "Usuario"
-        '
-        'RolToolStripMenuItem
-        '
-        Me.RolToolStripMenuItem.Image = Global.capaPresentacion.My.Resources.Resources.rol
-        Me.RolToolStripMenuItem.Name = "RolToolStripMenuItem"
-        Me.RolToolStripMenuItem.Size = New System.Drawing.Size(335, 32)
-        Me.RolToolStripMenuItem.Text = "Rol"
-        '
-        'MANTENIMIENTOToolStripMenuItem
-        '
-        Me.MANTENIMIENTOToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DescuentosToolStripMenuItem, Me.ClienteToolStripMenuItem, Me.TrabajadorToolStripMenuItem, Me.VehiculoToolStripMenuItem, Me.ServicioToolStripMenuItem, Me.ProductoToolStripMenuItem, Me.UsuarioToolStripMenuItem, Me.RolToolStripMenuItem, Me.ProveedorToolStripMenuItem})
-        Me.MANTENIMIENTOToolStripMenuItem.ForeColor = System.Drawing.Color.White
-        Me.MANTENIMIENTOToolStripMenuItem.Image = CType(resources.GetObject("MANTENIMIENTOToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.MANTENIMIENTOToolStripMenuItem.Name = "MANTENIMIENTOToolStripMenuItem"
-        Me.MANTENIMIENTOToolStripMenuItem.Padding = New System.Windows.Forms.Padding(5, 0, 100, 0)
-        Me.MANTENIMIENTOToolStripMenuItem.Size = New System.Drawing.Size(370, 32)
-        Me.MANTENIMIENTOToolStripMenuItem.Text = "MANTENIMIENTO"
-        '
         'ProveedorToolStripMenuItem
         '
-        Me.ProveedorToolStripMenuItem.Image = CType(resources.GetObject("ProveedorToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ProveedorToolStripMenuItem.Name = "ProveedorToolStripMenuItem"
         Me.ProveedorToolStripMenuItem.Size = New System.Drawing.Size(247, 32)
         Me.ProveedorToolStripMenuItem.Text = "Proveedor"

@@ -182,7 +182,7 @@ Public Class clsComprobante
         strSQL = "SELECT cli.idcliente " &
                  "FROM cliente cli " &
                  "LEFT JOIN persona per ON cli.idcliente = per.idcliente " &
-                 "LEFT JOIN empresa emp ON cli.idcliente = emp.idcliente " &
+                 "LEFT JOIN empresa emp ON cli.idrepresentante = emp.idempresa " &
                  "WHERE per.persona = @cliente OR emp.razonsocial = @cliente"
         Try
             objConectar.conectar()
@@ -257,6 +257,16 @@ Public Class clsComprobante
         Dim idTrabajador As Integer = obteneridTrabajador(trabajador)
         Dim idCliente As Integer = obteneridCliente(cliente)
 
+        If idTrabajador = 0 Then
+            Throw New Exception("No se encontró al trabajador '" & trabajador & "'.")
+        End If
+        If idCliente = 0 Then
+            Throw New Exception("No se encontró al cliente '" & cliente & "'.")
+        End If
+        If idMedioPago = 0 Then
+            Throw New Exception("No se encontró el medio de pago '" & medioPago & "'.")
+        End If
+
         Dim fechaVenta As Date = Date.ParseExact(fecha, "yyyy-MM-dd", Nothing)
         Dim horaVenta As TimeSpan = TimeSpan.Parse(hora)
 
@@ -274,6 +284,18 @@ Public Class clsComprobante
         Dim sqlDetalle As String =
             "INSERT INTO detalle_venta (precioventa, cantidad, idcomprobante, idproducto) " &
             "VALUES (@precio, @cantidad, @idComp, @idProd)"
+
+        ' Resolver los id de producto ANTES de iniciar la transacción.
+        ' obteneridProducto abre y cierra la conexión compartida; si se llamara
+        ' dentro de la transacción la invalidaría ("SqlTransaction se completó").
+        Dim idsProducto As New List(Of Integer)
+        For Each detalle As Object() In listaDetalles
+            Dim idProd As Integer = obteneridProducto(CStr(detalle(0)))
+            If idProd = 0 Then
+                Throw New Exception("No se encontró el producto '" & CStr(detalle(0)) & "'.")
+            End If
+            idsProducto.Add(idProd)
+        Next
 
         objConectar.conectar()
         Dim con As SqlConnection = objConectar.miConexion
@@ -297,11 +319,11 @@ Public Class clsComprobante
 
             ' — INSERT detalles —
             Using cmdDet As New SqlCommand(sqlDetalle, con, trans)
-                For Each detalle As Object() In listaDetalles
-                    Dim nombreProducto As String = CStr(detalle(0))
+                For i As Integer = 0 To listaDetalles.Count - 1
+                    Dim detalle As Object() = listaDetalles(i)
                     Dim cantidad As Integer = CInt(detalle(1))
                     Dim precioVenta As Single = CSng(detalle(2))
-                    Dim idProducto As Integer = obteneridProducto(nombreProducto)
+                    Dim idProducto As Integer = idsProducto(i)
 
                     cmdDet.Parameters.Clear()
                     cmdDet.Parameters.AddWithValue("@precio", precioVenta)

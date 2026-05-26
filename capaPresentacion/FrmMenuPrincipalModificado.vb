@@ -1,4 +1,6 @@
 ﻿Public Class FrmMenuPrincipalModificado
+    Public Property trabajadorSesion As String = ""
+
     Private Sub ACERCADEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ACERCADEToolStripMenuItem.Click
         Dim obj As New jdAcercaDe()
         obj.StartPosition = FormStartPosition.CenterParent
@@ -89,29 +91,7 @@
     End Sub
 
     Private Sub ProveedorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProveedorToolStripMenuItem.Click
-        Dim frmMantenimientoTrabajador As New jdGestionarProovedor()
-        frmMantenimientoTrabajador.ShowDialog()
-    End Sub
-
-    Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
-        Dim resultado As DialogResult = MessageBox.Show("¿Está seguro que desea salir del sistema?",
-                                                "Confirmar Salida",
-                                                MessageBoxButtons.YesNo,
-                                                MessageBoxIcon.Question)
-
-        ' Validamos la respuesta del usuario
-        If resultado = DialogResult.Yes Then
-            Application.Exit() ' Cierra todos los formularios y finaliza el programa
-        End If
-    End Sub
-
-    Private Sub RegistrarCitasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrarCitasToolStripMenuItem.Click
-        Dim frmGestionarCitas As New jdGestionarCitas()
-        frmGestionarCitas.ShowDialog()
-    End Sub
-
-    Private Sub ReportesToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ReportesToolStripMenuItem1.Click
-        Dim frmHistorialMant As New jdHistorialMantenimiento()
-        frmHistorialMant.ShowDialog()
+        Dim frmMantenimientoproveedor As New JdMantenimientoProveedor()
+        frmMantenimientoproveedor.ShowDialog()
     End Sub
 End Class
