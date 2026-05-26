@@ -26,23 +26,23 @@ Partial Class JdVentas
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtNumVenta = New System.Windows.Forms.TextBox()
+        Me.txtNumeroVenta = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtFecha = New System.Windows.Forms.TextBox()
         Me.txtHora = New System.Windows.Forms.TextBox()
-        Me.cbxCliente = New System.Windows.Forms.ComboBox()
+        Me.cboCliente = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.cbxTipoComprobante = New System.Windows.Forms.ComboBox()
+        Me.cboTipoComprobante = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnAgregar = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvDetalle = New System.Windows.Forms.DataGridView()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtTotal = New System.Windows.Forms.TextBox()
-        Me.btnGenComprobante = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.btnGenerarComprobante = New System.Windows.Forms.Button()
+        CType(Me.dgvDetalle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label8
@@ -71,12 +71,12 @@ Partial Class JdVentas
         Me.Label1.TabIndex = 54
         Me.Label1.Text = "NÚMERO DE VENTA:"
         '
-        'txtNumVenta
+        'txtNumeroVenta
         '
-        Me.txtNumVenta.Location = New System.Drawing.Point(219, 90)
-        Me.txtNumVenta.Name = "txtNumVenta"
-        Me.txtNumVenta.Size = New System.Drawing.Size(177, 22)
-        Me.txtNumVenta.TabIndex = 55
+        Me.txtNumeroVenta.Location = New System.Drawing.Point(219, 90)
+        Me.txtNumeroVenta.Name = "txtNumeroVenta"
+        Me.txtNumeroVenta.Size = New System.Drawing.Size(177, 22)
+        Me.txtNumeroVenta.TabIndex = 55
         '
         'Label2
         '
@@ -119,13 +119,13 @@ Partial Class JdVentas
         Me.txtHora.Size = New System.Drawing.Size(100, 22)
         Me.txtHora.TabIndex = 60
         '
-        'cbxCliente
+        'cboCliente
         '
-        Me.cbxCliente.FormattingEnabled = True
-        Me.cbxCliente.Location = New System.Drawing.Point(146, 126)
-        Me.cbxCliente.Name = "cbxCliente"
-        Me.cbxCliente.Size = New System.Drawing.Size(250, 24)
-        Me.cbxCliente.TabIndex = 61
+        Me.cboCliente.FormattingEnabled = True
+        Me.cboCliente.Location = New System.Drawing.Point(146, 126)
+        Me.cboCliente.Name = "cboCliente"
+        Me.cboCliente.Size = New System.Drawing.Size(250, 24)
+        Me.cboCliente.TabIndex = 61
         '
         'Label5
         '
@@ -136,13 +136,13 @@ Partial Class JdVentas
         Me.Label5.TabIndex = 62
         Me.Label5.Text = "TIPO DE COMPROBANTE:"
         '
-        'cbxTipoComprobante
+        'cboTipoComprobante
         '
-        Me.cbxTipoComprobante.FormattingEnabled = True
-        Me.cbxTipoComprobante.Location = New System.Drawing.Point(586, 121)
-        Me.cbxTipoComprobante.Name = "cbxTipoComprobante"
-        Me.cbxTipoComprobante.Size = New System.Drawing.Size(164, 24)
-        Me.cbxTipoComprobante.TabIndex = 63
+        Me.cboTipoComprobante.FormattingEnabled = True
+        Me.cboTipoComprobante.Location = New System.Drawing.Point(586, 121)
+        Me.cboTipoComprobante.Name = "cboTipoComprobante"
+        Me.cboTipoComprobante.Size = New System.Drawing.Size(164, 24)
+        Me.cboTipoComprobante.TabIndex = 63
         '
         'Label6
         '
@@ -176,15 +176,15 @@ Partial Class JdVentas
         Me.btnAgregar.Text = "AGREGAR"
         Me.btnAgregar.UseVisualStyleBackColor = False
         '
-        'DataGridView1
+        'dgvDetalle
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(62, 238)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(704, 209)
-        Me.DataGridView1.TabIndex = 70
+        Me.dgvDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvDetalle.Location = New System.Drawing.Point(62, 238)
+        Me.dgvDetalle.Name = "dgvDetalle"
+        Me.dgvDetalle.RowHeadersWidth = 51
+        Me.dgvDetalle.RowTemplate.Height = 24
+        Me.dgvDetalle.Size = New System.Drawing.Size(704, 209)
+        Me.dgvDetalle.TabIndex = 70
         '
         'Label7
         '
@@ -201,46 +201,46 @@ Partial Class JdVentas
         Me.txtTotal.Size = New System.Drawing.Size(100, 22)
         Me.txtTotal.TabIndex = 72
         '
-        'btnGenComprobante
+        'btnGenerarComprobante
         '
-        Me.btnGenComprobante.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnGenComprobante.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGenComprobante.ForeColor = System.Drawing.Color.White
-        Me.btnGenComprobante.Location = New System.Drawing.Point(266, 519)
-        Me.btnGenComprobante.Name = "btnGenComprobante"
-        Me.btnGenComprobante.Size = New System.Drawing.Size(292, 34)
-        Me.btnGenComprobante.TabIndex = 73
-        Me.btnGenComprobante.Text = "GENERAR COMPROBANTE"
-        Me.btnGenComprobante.UseVisualStyleBackColor = False
+        Me.btnGenerarComprobante.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnGenerarComprobante.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGenerarComprobante.ForeColor = System.Drawing.Color.White
+        Me.btnGenerarComprobante.Location = New System.Drawing.Point(266, 519)
+        Me.btnGenerarComprobante.Name = "btnGenerarComprobante"
+        Me.btnGenerarComprobante.Size = New System.Drawing.Size(292, 34)
+        Me.btnGenerarComprobante.TabIndex = 73
+        Me.btnGenerarComprobante.Text = "GENERAR COMPROBANTE"
+        Me.btnGenerarComprobante.UseVisualStyleBackColor = False
         '
         'JdVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(794, 565)
-        Me.Controls.Add(Me.btnGenComprobante)
+        Me.Controls.Add(Me.btnGenerarComprobante)
         Me.Controls.Add(Me.txtTotal)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgvDetalle)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.cbxTipoComprobante)
+        Me.Controls.Add(Me.cboTipoComprobante)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.cbxCliente)
+        Me.Controls.Add(Me.cboCliente)
         Me.Controls.Add(Me.txtHora)
         Me.Controls.Add(Me.txtFecha)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.txtNumVenta)
+        Me.Controls.Add(Me.txtNumeroVenta)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "JdVentas"
         Me.Text = "Gestion de Ventas"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvDetalle, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -249,20 +249,20 @@ Partial Class JdVentas
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents txtNumVenta As TextBox
+    Friend WithEvents txtNumeroVenta As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents txtFecha As TextBox
     Friend WithEvents txtHora As TextBox
-    Friend WithEvents cbxCliente As ComboBox
+    Friend WithEvents cboCliente As ComboBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents cbxTipoComprobante As ComboBox
+    Friend WithEvents cboTipoComprobante As ComboBox
     Friend WithEvents Label6 As Label
     Friend WithEvents btnEliminar As Button
     Friend WithEvents btnAgregar As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvDetalle As DataGridView
     Friend WithEvents Label7 As Label
     Friend WithEvents txtTotal As TextBox
-    Friend WithEvents btnGenComprobante As Button
+    Friend WithEvents btnGenerarComprobante As Button
 End Class

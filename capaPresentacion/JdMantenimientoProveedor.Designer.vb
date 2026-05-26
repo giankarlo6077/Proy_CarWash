@@ -25,12 +25,12 @@ Partial Class JdMantenimientoProveedor
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(JdMantenimientoProveedor))
         Me.Label8 = New System.Windows.Forms.Label()
         Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.txtbuscador = New System.Windows.Forms.TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.txtBuscar = New System.Windows.Forms.TextBox()
+        Me.dgvProveedores = New System.Windows.Forms.DataGridView()
         Me.btnEditar = New System.Windows.Forms.Button()
-        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.btnDarDeBaja = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvProveedores, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label8
@@ -57,23 +57,23 @@ Partial Class JdMantenimientoProveedor
         Me.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnBuscar.UseVisualStyleBackColor = False
         '
-        'txtbuscador
+        'txtBuscar
         '
-        Me.txtbuscador.Font = New System.Drawing.Font("Verdana", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtbuscador.Location = New System.Drawing.Point(55, 73)
-        Me.txtbuscador.Name = "txtbuscador"
-        Me.txtbuscador.Size = New System.Drawing.Size(370, 30)
-        Me.txtbuscador.TabIndex = 56
+        Me.txtBuscar.Font = New System.Drawing.Font("Verdana", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBuscar.Location = New System.Drawing.Point(55, 73)
+        Me.txtBuscar.Name = "txtBuscar"
+        Me.txtBuscar.Size = New System.Drawing.Size(370, 30)
+        Me.txtBuscar.TabIndex = 56
         '
-        'DataGridView1
+        'dgvProveedores
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(55, 163)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(689, 264)
-        Me.DataGridView1.TabIndex = 58
+        Me.dgvProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvProveedores.Location = New System.Drawing.Point(55, 163)
+        Me.dgvProveedores.Name = "dgvProveedores"
+        Me.dgvProveedores.RowHeadersWidth = 51
+        Me.dgvProveedores.RowTemplate.Height = 24
+        Me.dgvProveedores.Size = New System.Drawing.Size(689, 264)
+        Me.dgvProveedores.TabIndex = 58
         '
         'btnEditar
         '
@@ -87,17 +87,17 @@ Partial Class JdMantenimientoProveedor
         Me.btnEditar.Text = "Editar"
         Me.btnEditar.UseVisualStyleBackColor = False
         '
-        'btnCancelar
+        'btnDarDeBaja
         '
-        Me.btnCancelar.BackColor = System.Drawing.Color.White
-        Me.btnCancelar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnCancelar.Location = New System.Drawing.Point(285, 120)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(118, 37)
-        Me.btnCancelar.TabIndex = 74
-        Me.btnCancelar.Text = "Dar de baja"
-        Me.btnCancelar.UseVisualStyleBackColor = False
+        Me.btnDarDeBaja.BackColor = System.Drawing.Color.White
+        Me.btnDarDeBaja.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDarDeBaja.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnDarDeBaja.Location = New System.Drawing.Point(285, 120)
+        Me.btnDarDeBaja.Name = "btnDarDeBaja"
+        Me.btnDarDeBaja.Size = New System.Drawing.Size(118, 37)
+        Me.btnDarDeBaja.TabIndex = 74
+        Me.btnDarDeBaja.Text = "Dar de baja"
+        Me.btnDarDeBaja.UseVisualStyleBackColor = False
         '
         'btnNuevo
         '
@@ -119,25 +119,25 @@ Partial Class JdMantenimientoProveedor
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.btnEditar)
-        Me.Controls.Add(Me.btnCancelar)
+        Me.Controls.Add(Me.btnDarDeBaja)
         Me.Controls.Add(Me.btnNuevo)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgvProveedores)
         Me.Controls.Add(Me.btnBuscar)
-        Me.Controls.Add(Me.txtbuscador)
+        Me.Controls.Add(Me.txtBuscar)
         Me.Controls.Add(Me.Label8)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "JdMantenimientoProveedor"
         Me.Text = "Mantenimiento Proveedor"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvProveedores, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label8 As Label
     Friend WithEvents btnBuscar As Button
-    Friend WithEvents txtbuscador As TextBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents txtBuscar As TextBox
+    Friend WithEvents dgvProveedores As DataGridView
     Friend WithEvents btnEditar As Button
-    Friend WithEvents btnCancelar As Button
+    Friend WithEvents btnDarDeBaja As Button
     Friend WithEvents btnNuevo As Button
 End Class

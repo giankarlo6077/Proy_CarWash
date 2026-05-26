@@ -27,13 +27,13 @@ Partial Class JdSeleccionarProductoVenta
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.cbxTipoProducto = New System.Windows.Forms.ComboBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.cboTipoProducto = New System.Windows.Forms.ComboBox()
+        Me.dgvProductos = New System.Windows.Forms.DataGridView()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Cantidad = New System.Windows.Forms.NumericUpDown()
+        Me.nudCantidad = New System.Windows.Forms.NumericUpDown()
         Me.btnSeleccionar = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Cantidad, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudCantidad, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label8
@@ -75,23 +75,23 @@ Partial Class JdSeleccionarProductoVenta
         Me.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         Me.btnBuscar.UseVisualStyleBackColor = False
         '
-        'cbxTipoProducto
+        'cboTipoProducto
         '
-        Me.cbxTipoProducto.FormattingEnabled = True
-        Me.cbxTipoProducto.Location = New System.Drawing.Point(179, 81)
-        Me.cbxTipoProducto.Name = "cbxTipoProducto"
-        Me.cbxTipoProducto.Size = New System.Drawing.Size(447, 24)
-        Me.cbxTipoProducto.TabIndex = 70
+        Me.cboTipoProducto.FormattingEnabled = True
+        Me.cboTipoProducto.Location = New System.Drawing.Point(179, 81)
+        Me.cboTipoProducto.Name = "cboTipoProducto"
+        Me.cboTipoProducto.Size = New System.Drawing.Size(447, 24)
+        Me.cboTipoProducto.TabIndex = 70
         '
-        'DataGridView1
+        'dgvProductos
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(58, 122)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(704, 239)
-        Me.DataGridView1.TabIndex = 71
+        Me.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvProductos.Location = New System.Drawing.Point(58, 122)
+        Me.dgvProductos.Name = "dgvProductos"
+        Me.dgvProductos.RowHeadersWidth = 51
+        Me.dgvProductos.RowTemplate.Height = 24
+        Me.dgvProductos.Size = New System.Drawing.Size(704, 239)
+        Me.dgvProductos.TabIndex = 71
         '
         'Label2
         '
@@ -102,12 +102,12 @@ Partial Class JdSeleccionarProductoVenta
         Me.Label2.TabIndex = 72
         Me.Label2.Text = "CANTIDAD:"
         '
-        'Cantidad
+        'nudCantidad
         '
-        Me.Cantidad.Location = New System.Drawing.Point(143, 400)
-        Me.Cantidad.Name = "Cantidad"
-        Me.Cantidad.Size = New System.Drawing.Size(120, 22)
-        Me.Cantidad.TabIndex = 73
+        Me.nudCantidad.Location = New System.Drawing.Point(143, 400)
+        Me.nudCantidad.Name = "nudCantidad"
+        Me.nudCantidad.Size = New System.Drawing.Size(120, 22)
+        Me.nudCantidad.TabIndex = 73
         '
         'btnSeleccionar
         '
@@ -127,10 +127,10 @@ Partial Class JdSeleccionarProductoVenta
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.btnSeleccionar)
-        Me.Controls.Add(Me.Cantidad)
+        Me.Controls.Add(Me.nudCantidad)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.cbxTipoProducto)
+        Me.Controls.Add(Me.dgvProductos)
+        Me.Controls.Add(Me.cboTipoProducto)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label9)
@@ -138,8 +138,8 @@ Partial Class JdSeleccionarProductoVenta
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "JdSeleccionarProductoVenta"
         Me.Text = "Seleccionar Productos"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Cantidad, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudCantidad, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -149,9 +149,9 @@ Partial Class JdSeleccionarProductoVenta
     Friend WithEvents Label9 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents btnBuscar As Button
-    Friend WithEvents cbxTipoProducto As ComboBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents cboTipoProducto As ComboBox
+    Friend WithEvents dgvProductos As DataGridView
     Friend WithEvents Label2 As Label
-    Friend WithEvents Cantidad As NumericUpDown
+    Friend WithEvents nudCantidad As NumericUpDown
     Friend WithEvents btnSeleccionar As Button
 End Class
