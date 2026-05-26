@@ -114,11 +114,15 @@ Partial Class jdHistorialMantenimiento
         '
         'dgvMantenimientos
         '
+        Me.dgvMantenimientos.AllowUserToAddRows = False
+        Me.dgvMantenimientos.AllowUserToDeleteRows = False
         Me.dgvMantenimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvMantenimientos.Location = New System.Drawing.Point(12, 244)
         Me.dgvMantenimientos.Name = "dgvMantenimientos"
+        Me.dgvMantenimientos.ReadOnly = True
         Me.dgvMantenimientos.RowHeadersWidth = 51
         Me.dgvMantenimientos.RowTemplate.Height = 24
+        Me.dgvMantenimientos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvMantenimientos.Size = New System.Drawing.Size(975, 354)
         Me.dgvMantenimientos.TabIndex = 83
         '
@@ -133,6 +137,7 @@ Partial Class jdHistorialMantenimiento
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "jdHistorialMantenimiento"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = ".: HISTORIAL MANTENIMIENTO :."
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

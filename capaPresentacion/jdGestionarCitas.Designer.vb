@@ -83,11 +83,15 @@ Partial Class jdGestionarCitas
         '
         'dgvCitas
         '
+        Me.dgvCitas.AllowUserToAddRows = False
+        Me.dgvCitas.AllowUserToDeleteRows = False
         Me.dgvCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvCitas.Location = New System.Drawing.Point(37, 433)
         Me.dgvCitas.Name = "dgvCitas"
+        Me.dgvCitas.ReadOnly = True
         Me.dgvCitas.RowHeadersWidth = 51
         Me.dgvCitas.RowTemplate.Height = 24
+        Me.dgvCitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvCitas.Size = New System.Drawing.Size(1176, 305)
         Me.dgvCitas.TabIndex = 80
         '
@@ -300,6 +304,7 @@ Partial Class jdGestionarCitas
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "jdGestionarCitas"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = ".: GESTIONAR CITAS :."
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

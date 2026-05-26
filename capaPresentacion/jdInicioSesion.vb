@@ -30,6 +30,7 @@ Public Class jdInicioSesion
 
                     ' Abrimos el menú principal
                     Dim objMnuPrincipal As New FrmMenuPrincipalModificado()
+                    objMnuPrincipal.trabajadorSesion = nombreTrabajador
                     objMnuPrincipal.Show()
 
                     ' Cerramos el login actual

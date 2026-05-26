@@ -92,7 +92,7 @@ Partial Class JdMantenimientoProveedor
         Me.btnDarDeBaja.BackColor = System.Drawing.Color.White
         Me.btnDarDeBaja.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDarDeBaja.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnDarDeBaja.Location = New System.Drawing.Point(317, 120)
+        Me.btnDarDeBaja.Location = New System.Drawing.Point(329, 120)
         Me.btnDarDeBaja.Name = "btnDarDeBaja"
         Me.btnDarDeBaja.Size = New System.Drawing.Size(118, 37)
         Me.btnDarDeBaja.TabIndex = 74
@@ -109,7 +109,7 @@ Partial Class JdMantenimientoProveedor
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(124, 37)
         Me.btnNuevo.TabIndex = 75
-        Me.btnNuevo.Text = "Nuevo"
+        Me.btnNuevo.Text = "  Nuevo"
         Me.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnNuevo.UseVisualStyleBackColor = False
         '
@@ -127,6 +127,7 @@ Partial Class JdMantenimientoProveedor
         Me.Controls.Add(Me.Label8)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "JdMantenimientoProveedor"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Mantenimiento Proveedor"
         CType(Me.dgvProveedores, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

@@ -194,6 +194,7 @@ Partial Class jdGestionarTipoTrabajador
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "jdGestionarTipoTrabajador"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = " Gestión Tipo Trabajador"
         CType(Me.dgvTipoTrabajador, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
