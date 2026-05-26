@@ -22,34 +22,35 @@ Partial Class JdDetalleOrdenTrabajo
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(JdDetalleOrdenTrabajo))
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblidCita = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtComentario = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cmbTrabajador = New System.Windows.Forms.ComboBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.cmbEstado = New System.Windows.Forms.ComboBox()
+        Me.dtpFechaRecojo = New System.Windows.Forms.DateTimePicker()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.lblHora = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.lblFecha = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtidCita = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label16 = New System.Windows.Forms.Label()
+        Me.lblTelefono = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
+        Me.lblCliente = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
+        Me.lblPlaca = New System.Windows.Forms.Label()
+        Me.lblAno = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
+        Me.lblModelo = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
@@ -72,36 +73,37 @@ Partial Class JdDetalleOrdenTrabajo
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Verdana", 16.2!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(12, 13)
+        Me.Label1.Location = New System.Drawing.Point(202, 13)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(353, 34)
+        Me.Label1.Size = New System.Drawing.Size(152, 34)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Orden de Trabajo N°:"
+        Me.Label1.Text = "CITA N°:"
         '
-        'Label2
+        'lblidCita
         '
-        Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label2.Font = New System.Drawing.Font("Verdana", 16.2!, System.Drawing.FontStyle.Bold)
-        Me.Label2.Location = New System.Drawing.Point(371, 13)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(197, 34)
-        Me.Label2.TabIndex = 2
+        Me.lblidCita.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblidCita.Font = New System.Drawing.Font("Verdana", 16.2!, System.Drawing.FontStyle.Bold)
+        Me.lblidCita.Location = New System.Drawing.Point(371, 13)
+        Me.lblidCita.Name = "lblidCita"
+        Me.lblidCita.Size = New System.Drawing.Size(197, 34)
+        Me.lblidCita.TabIndex = 2
+        Me.lblidCita.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.TextBox2)
+        Me.Panel1.Controls.Add(Me.txtComentario)
         Me.Panel1.Controls.Add(Me.Label11)
         Me.Panel1.Controls.Add(Me.Label12)
-        Me.Panel1.Controls.Add(Me.ComboBox1)
+        Me.Panel1.Controls.Add(Me.cmbTrabajador)
         Me.Panel1.Controls.Add(Me.Label10)
-        Me.Panel1.Controls.Add(Me.ComboBox3)
-        Me.Panel1.Controls.Add(Me.DateTimePicker1)
+        Me.Panel1.Controls.Add(Me.cmbEstado)
+        Me.Panel1.Controls.Add(Me.dtpFechaRecojo)
         Me.Panel1.Controls.Add(Me.Label9)
-        Me.Panel1.Controls.Add(Me.Label7)
+        Me.Panel1.Controls.Add(Me.lblHora)
         Me.Panel1.Controls.Add(Me.Label8)
-        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Controls.Add(Me.lblFecha)
         Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.txtidCita)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label14)
         Me.Panel1.Controls.Add(Me.Label3)
@@ -110,13 +112,13 @@ Partial Class JdDetalleOrdenTrabajo
         Me.Panel1.Size = New System.Drawing.Size(847, 261)
         Me.Panel1.TabIndex = 3
         '
-        'TextBox2
+        'txtComentario
         '
-        Me.TextBox2.Location = New System.Drawing.Point(475, 165)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(336, 75)
-        Me.TextBox2.TabIndex = 93
+        Me.txtComentario.Location = New System.Drawing.Point(475, 165)
+        Me.txtComentario.Multiline = True
+        Me.txtComentario.Name = "txtComentario"
+        Me.txtComentario.Size = New System.Drawing.Size(336, 75)
+        Me.txtComentario.TabIndex = 93
         '
         'Label11
         '
@@ -136,13 +138,13 @@ Partial Class JdDetalleOrdenTrabajo
         Me.Label12.Text = "TÉCNICO RESPONSABLE:"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'ComboBox1
+        'cmbTrabajador
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(206, 165)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(136, 24)
-        Me.ComboBox1.TabIndex = 90
+        Me.cmbTrabajador.FormattingEnabled = True
+        Me.cmbTrabajador.Location = New System.Drawing.Point(206, 165)
+        Me.cmbTrabajador.Name = "cmbTrabajador"
+        Me.cmbTrabajador.Size = New System.Drawing.Size(136, 24)
+        Me.cmbTrabajador.TabIndex = 90
         '
         'Label10
         '
@@ -153,20 +155,20 @@ Partial Class JdDetalleOrdenTrabajo
         Me.Label10.Text = "ESTADO:"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'ComboBox3
+        'cmbEstado
         '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(633, 118)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(178, 24)
-        Me.ComboBox3.TabIndex = 88
+        Me.cmbEstado.FormattingEnabled = True
+        Me.cmbEstado.Location = New System.Drawing.Point(633, 118)
+        Me.cmbEstado.Name = "cmbEstado"
+        Me.cmbEstado.Size = New System.Drawing.Size(178, 24)
+        Me.cmbEstado.TabIndex = 88
         '
-        'DateTimePicker1
+        'dtpFechaRecojo
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(166, 121)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(176, 22)
-        Me.DateTimePicker1.TabIndex = 87
+        Me.dtpFechaRecojo.Location = New System.Drawing.Point(166, 121)
+        Me.dtpFechaRecojo.Name = "dtpFechaRecojo"
+        Me.dtpFechaRecojo.Size = New System.Drawing.Size(176, 22)
+        Me.dtpFechaRecojo.TabIndex = 87
         '
         'Label9
         '
@@ -177,14 +179,14 @@ Partial Class JdDetalleOrdenTrabajo
         Me.Label9.Text = "FECHA DE RECOJO:"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label7
+        'lblHora
         '
-        Me.Label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label7.Location = New System.Drawing.Point(675, 68)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(136, 21)
-        Me.Label7.TabIndex = 84
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblHora.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblHora.Location = New System.Drawing.Point(675, 68)
+        Me.lblHora.Name = "lblHora"
+        Me.lblHora.Size = New System.Drawing.Size(136, 21)
+        Me.lblHora.TabIndex = 84
+        Me.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label8
         '
@@ -195,14 +197,14 @@ Partial Class JdDetalleOrdenTrabajo
         Me.Label8.Text = "HORA:"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label6
+        'lblFecha
         '
-        Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label6.Location = New System.Drawing.Point(420, 69)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(136, 21)
-        Me.Label6.TabIndex = 82
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblFecha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblFecha.Location = New System.Drawing.Point(420, 69)
+        Me.lblFecha.Name = "lblFecha"
+        Me.lblFecha.Size = New System.Drawing.Size(136, 21)
+        Me.lblFecha.TabIndex = 82
+        Me.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label5
         '
@@ -213,12 +215,12 @@ Partial Class JdDetalleOrdenTrabajo
         Me.Label5.Text = "FECHA:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'TextBox1
+        'txtidCita
         '
-        Me.TextBox1.Location = New System.Drawing.Point(93, 68)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(249, 22)
-        Me.TextBox1.TabIndex = 80
+        Me.txtidCita.Location = New System.Drawing.Point(93, 68)
+        Me.txtidCita.Name = "txtidCita"
+        Me.txtidCita.Size = New System.Drawing.Size(249, 22)
+        Me.txtidCita.TabIndex = 80
         '
         'Label4
         '
@@ -249,14 +251,14 @@ Partial Class JdDetalleOrdenTrabajo
         '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.Label16)
+        Me.Panel2.Controls.Add(Me.lblTelefono)
         Me.Panel2.Controls.Add(Me.Label17)
-        Me.Panel2.Controls.Add(Me.Label13)
+        Me.Panel2.Controls.Add(Me.lblCliente)
         Me.Panel2.Controls.Add(Me.Label15)
-        Me.Panel2.Controls.Add(Me.Label25)
-        Me.Panel2.Controls.Add(Me.Label18)
+        Me.Panel2.Controls.Add(Me.lblPlaca)
+        Me.Panel2.Controls.Add(Me.lblAno)
         Me.Panel2.Controls.Add(Me.Label19)
-        Me.Panel2.Controls.Add(Me.Label20)
+        Me.Panel2.Controls.Add(Me.lblModelo)
         Me.Panel2.Controls.Add(Me.Label21)
         Me.Panel2.Controls.Add(Me.Label22)
         Me.Panel2.Controls.Add(Me.Label23)
@@ -266,14 +268,14 @@ Partial Class JdDetalleOrdenTrabajo
         Me.Panel2.Size = New System.Drawing.Size(847, 168)
         Me.Panel2.TabIndex = 4
         '
-        'Label16
+        'lblTelefono
         '
-        Me.Label16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label16.Location = New System.Drawing.Point(516, 122)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(164, 21)
-        Me.Label16.TabIndex = 98
-        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblTelefono.Location = New System.Drawing.Point(516, 122)
+        Me.lblTelefono.Name = "lblTelefono"
+        Me.lblTelefono.Size = New System.Drawing.Size(164, 21)
+        Me.lblTelefono.TabIndex = 98
+        Me.lblTelefono.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label17
         '
@@ -284,14 +286,14 @@ Partial Class JdDetalleOrdenTrabajo
         Me.Label17.Text = "TELEFONO:"
         Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label13
+        'lblCliente
         '
-        Me.Label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label13.Location = New System.Drawing.Point(149, 122)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(236, 21)
-        Me.Label13.TabIndex = 96
-        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblCliente.Location = New System.Drawing.Point(149, 122)
+        Me.lblCliente.Name = "lblCliente"
+        Me.lblCliente.Size = New System.Drawing.Size(236, 21)
+        Me.lblCliente.TabIndex = 96
+        Me.lblCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label15
         '
@@ -302,23 +304,23 @@ Partial Class JdDetalleOrdenTrabajo
         Me.Label15.Text = "CLIENTE:"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label25
+        'lblPlaca
         '
-        Me.Label25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label25.Location = New System.Drawing.Point(93, 68)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(164, 21)
-        Me.Label25.TabIndex = 94
-        Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblPlaca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblPlaca.Location = New System.Drawing.Point(93, 68)
+        Me.lblPlaca.Name = "lblPlaca"
+        Me.lblPlaca.Size = New System.Drawing.Size(164, 21)
+        Me.lblPlaca.TabIndex = 94
+        Me.lblPlaca.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label18
+        'lblAno
         '
-        Me.Label18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label18.Location = New System.Drawing.Point(658, 68)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(153, 21)
-        Me.Label18.TabIndex = 84
-        Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblAno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblAno.Location = New System.Drawing.Point(658, 68)
+        Me.lblAno.Name = "lblAno"
+        Me.lblAno.Size = New System.Drawing.Size(153, 21)
+        Me.lblAno.TabIndex = 84
+        Me.lblAno.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label19
         '
@@ -329,14 +331,14 @@ Partial Class JdDetalleOrdenTrabajo
         Me.Label19.Text = "AÑO FAB:"
         Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label20
+        'lblModelo
         '
-        Me.Label20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label20.Location = New System.Drawing.Point(420, 69)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(136, 21)
-        Me.Label20.TabIndex = 82
-        Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblModelo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblModelo.Location = New System.Drawing.Point(420, 69)
+        Me.lblModelo.Name = "lblModelo"
+        Me.lblModelo.Size = New System.Drawing.Size(136, 21)
+        Me.lblModelo.TabIndex = 82
+        Me.lblModelo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label21
         '
@@ -491,10 +493,11 @@ Partial Class JdDetalleOrdenTrabajo
         Me.Controls.Add(Me.Label26)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.lblidCita)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "JdDetalleOrdenTrabajo"
-        Me.Text = "JdDetalleOrdenTrabajo"
+        Me.Text = ".: DETALLE ORDEN DE TRABAJO :."
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
@@ -505,36 +508,36 @@ Partial Class JdDetalleOrdenTrabajo
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lblidCita As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label3 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label7 As Label
+    Friend WithEvents txtidCita As TextBox
+    Friend WithEvents lblHora As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label6 As Label
+    Friend WithEvents lblFecha As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents dtpFechaRecojo As DateTimePicker
     Friend WithEvents Label10 As Label
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents cmbEstado As ComboBox
+    Friend WithEvents txtComentario As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cmbTrabajador As ComboBox
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Label25 As Label
-    Friend WithEvents Label18 As Label
+    Friend WithEvents lblPlaca As Label
+    Friend WithEvents lblAno As Label
     Friend WithEvents Label19 As Label
-    Friend WithEvents Label20 As Label
+    Friend WithEvents lblModelo As Label
     Friend WithEvents Label21 As Label
     Friend WithEvents Label22 As Label
     Friend WithEvents Label23 As Label
     Friend WithEvents Label24 As Label
-    Friend WithEvents Label16 As Label
+    Friend WithEvents lblTelefono As Label
     Friend WithEvents Label17 As Label
-    Friend WithEvents Label13 As Label
+    Friend WithEvents lblCliente As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Label26 As Label
     Friend WithEvents tblServicios As TableLayoutPanel

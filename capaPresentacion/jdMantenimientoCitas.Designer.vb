@@ -22,17 +22,18 @@ Partial Class jdMantenimientoCitas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(jdMantenimientoCitas))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.panelServicios = New System.Windows.Forms.Panel()
-        Me.btnNuevaCita = New System.Windows.Forms.Button()
-        Me.btnListar = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.btnListar = New System.Windows.Forms.Button()
+        Me.btnNuevaCita = New System.Windows.Forms.Button()
+        Me.panelServicios = New System.Windows.Forms.Panel()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -53,73 +54,22 @@ Partial Class jdMantenimientoCitas
         Me.Panel1.Size = New System.Drawing.Size(1350, 762)
         Me.Panel1.TabIndex = 0
         '
-        'Label1
+        'Label4
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Verdana", 16.2!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(30, 33)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(274, 34)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Gestión de Citas"
+        Me.Label4.Location = New System.Drawing.Point(890, 144)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(238, 21)
+        Me.Label4.TabIndex = 77
+        Me.Label4.Text = "Listar Por Estado:"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label2
+        'ComboBox1
         '
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(33, 91)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(271, 21)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Administra las citas"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label3
-        '
-        Me.Label3.Location = New System.Drawing.Point(33, 144)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(271, 21)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Buscar Por Código (ID):"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'btnBuscar
-        '
-        Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscar.ForeColor = System.Drawing.Color.White
-        Me.btnBuscar.Location = New System.Drawing.Point(491, 174)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(142, 37)
-        Me.btnBuscar.TabIndex = 71
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = False
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(36, 174)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(433, 37)
-        Me.TextBox1.TabIndex = 72
-        '
-        'panelServicios
-        '
-        Me.panelServicios.Location = New System.Drawing.Point(23, 240)
-        Me.panelServicios.Name = "panelServicios"
-        Me.panelServicios.Size = New System.Drawing.Size(1309, 506)
-        Me.panelServicios.TabIndex = 73
-        '
-        'btnNuevaCita
-        '
-        Me.btnNuevaCita.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnNuevaCita.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNuevaCita.ForeColor = System.Drawing.Color.White
-        Me.btnNuevaCita.Location = New System.Drawing.Point(1181, 84)
-        Me.btnNuevaCita.Name = "btnNuevaCita"
-        Me.btnNuevaCita.Size = New System.Drawing.Size(142, 37)
-        Me.btnNuevaCita.TabIndex = 74
-        Me.btnNuevaCita.Text = "Nueva Cita"
-        Me.btnNuevaCita.UseVisualStyleBackColor = False
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(893, 182)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(267, 24)
+        Me.ComboBox1.TabIndex = 76
         '
         'btnListar
         '
@@ -133,22 +83,73 @@ Partial Class jdMantenimientoCitas
         Me.btnListar.Text = "Listar"
         Me.btnListar.UseVisualStyleBackColor = False
         '
-        'ComboBox1
+        'btnNuevaCita
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(893, 182)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(267, 24)
-        Me.ComboBox1.TabIndex = 76
+        Me.btnNuevaCita.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnNuevaCita.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNuevaCita.ForeColor = System.Drawing.Color.White
+        Me.btnNuevaCita.Location = New System.Drawing.Point(1181, 84)
+        Me.btnNuevaCita.Name = "btnNuevaCita"
+        Me.btnNuevaCita.Size = New System.Drawing.Size(142, 37)
+        Me.btnNuevaCita.TabIndex = 74
+        Me.btnNuevaCita.Text = "Nueva Cita"
+        Me.btnNuevaCita.UseVisualStyleBackColor = False
         '
-        'Label4
+        'panelServicios
         '
-        Me.Label4.Location = New System.Drawing.Point(890, 144)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(238, 21)
-        Me.Label4.TabIndex = 77
-        Me.Label4.Text = "Listar Por Estado:"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.panelServicios.Location = New System.Drawing.Point(23, 240)
+        Me.panelServicios.Name = "panelServicios"
+        Me.panelServicios.Size = New System.Drawing.Size(1309, 506)
+        Me.panelServicios.TabIndex = 73
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(36, 174)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(433, 37)
+        Me.TextBox1.TabIndex = 72
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscar.ForeColor = System.Drawing.Color.White
+        Me.btnBuscar.Location = New System.Drawing.Point(491, 174)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(142, 37)
+        Me.btnBuscar.TabIndex = 71
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = False
+        '
+        'Label3
+        '
+        Me.Label3.Location = New System.Drawing.Point(33, 144)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(271, 21)
+        Me.Label3.TabIndex = 4
+        Me.Label3.Text = "Buscar Por Código (ID):"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label2
+        '
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(33, 91)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(271, 21)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Administra las citas"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 16.2!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Location = New System.Drawing.Point(30, 33)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(274, 34)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Gestión de Citas"
         '
         'jdMantenimientoCitas
         '
@@ -156,8 +157,9 @@ Partial Class jdMantenimientoCitas
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1374, 786)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "jdMantenimientoCitas"
-        Me.Text = "jdMantenimientoCitas"
+        Me.Text = ".: MANTENIMIENTO CITAS :."
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
