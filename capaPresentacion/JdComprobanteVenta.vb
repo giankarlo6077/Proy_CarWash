@@ -48,6 +48,9 @@ Public Class ComprobanteVenta
         generarNumComprobante()
 
         If datosPendientes Then
+            ' La venta ya fue registrada por el formulario de origen:
+            ' este comprobante es solo para visualizar/exportar.
+            btnGuardar.Enabled = False
             txtSeñor.Text = clientePend
             txtDniRuc.Text = dniRucPend
             txtTrabajador.Text = trabajadorPend

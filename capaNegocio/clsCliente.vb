@@ -107,7 +107,7 @@ Public Class clsCliente
             objConectar.abrirconexion()
 
             ' Primera consulta: Empresa
-            Dim strSQL As String = "SELECT E.idcliente FROM CLIENTE C INNER JOIN EMPRESA E ON E.IDCLIENTE = C.IDCLIENTE WHERE E.RAZONSOCIAL = @nombre"
+            Dim strSQL As String = "SELECT C.idcliente FROM CLIENTE C INNER JOIN EMPRESA E ON E.idempresa = C.idrepresentante WHERE E.RAZONSOCIAL = @nombre"
             Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
             cmd.Parameters.AddWithValue("@nombre", nombre)
 
@@ -192,7 +192,7 @@ Public Class clsCliente
             objConectar.abrirconexion()
             Dim strSQL As String = "SELECT p.persona AS cliente FROM cliente c INNER JOIN persona p ON p.idcliente = c.idcliente " &
                                    "UNION ALL " &
-                                   "SELECT e.razonsocial FROM cliente c INNER JOIN empresa e ON e.idcliente = c.idcliente"
+                                   "SELECT e.razonsocial FROM cliente c INNER JOIN empresa e ON e.idempresa = c.idrepresentante"
             Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
             Dim da As New SqlDataAdapter(cmd)
             da.Fill(dt)
@@ -212,7 +212,7 @@ Public Class clsCliente
                                    "FROM cliente cli " &
                                    "INNER JOIN tipo_documento tp ON tp.idtipodocumento = cli.idtipodocumento " &
                                    "LEFT JOIN persona per ON cli.idcliente = per.idcliente " &
-                                   "LEFT JOIN empresa emp ON cli.idcliente = emp.idcliente " &
+                                   "LEFT JOIN empresa emp ON emp.idempresa = cli.idrepresentante " &
                                    "WHERE per.persona = @nombre OR emp.razonsocial = @nombre"
 
             Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)

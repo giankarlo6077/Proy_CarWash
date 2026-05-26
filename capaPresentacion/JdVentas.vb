@@ -9,7 +9,7 @@ Public Class JdVentas
     Dim objComprobante As New clsComprobante()
 
     Dim dtDetalle As New DataTable()
-    Dim _trabajadorSesion As String = "Admin"
+    Public Property trabajadorSesion As String = ""
 
     ' ══════════════════════════════════════════════
     '  CARGA DEL FORMULARIO
@@ -227,6 +227,15 @@ Public Class JdVentas
             Exit Sub
         End If
 
+        If String.IsNullOrWhiteSpace(trabajadorSesion) Then
+            MessageBox.Show(
+                "No se identificó al trabajador de la sesión. Inicie sesión nuevamente.",
+                "Aviso",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
         Dim filasActivas As Integer = 0
         For Each fila As DataRow In dtDetalle.Rows
             If fila.RowState <> DataRowState.Deleted Then filasActivas += 1
@@ -246,7 +255,7 @@ Public Class JdVentas
         Dim hora As String = Date.Now.ToString("HH:mm:ss")
         Dim numComprobante As String = txtNumeroVenta.Text.Trim()
         Dim tipoComprobante As String = cboTipoComprobante.SelectedItem.ToString()
-        Dim nombreCliente As String = cboCliente.SelectedItem.ToString()
+        Dim nombreCliente As String = cboCliente.GetItemText(cboCliente.SelectedItem)
 
         ' Medio de pago fijo — no hay combo en el form
         Dim medioPago As String = "Efectivo"
@@ -284,7 +293,7 @@ Public Class JdVentas
                 tipoComprobante,
                 0,
                 medioPago,
-                _trabajadorSesion,
+                trabajadorSesion,
                 nombreCliente,
                 listaDetalles)
 
@@ -294,6 +303,18 @@ Public Class JdVentas
                 "Éxito",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information)
+
+            ' Mostrar el comprobante generado
+            Dim dniRuc As String = ""
+            Try
+                dniRuc = objCliente.obtenerNumeroDocumento(nombreCliente)
+            Catch
+            End Try
+
+            Dim frmComp As New ComprobanteVenta()
+            frmComp.CargarVenta(nombreCliente, dniRuc, trabajadorSesion, listaDetalles)
+            frmComp.StartPosition = FormStartPosition.CenterParent
+            frmComp.ShowDialog(Me)
 
             limpiarFormulario()
 

@@ -1,4 +1,6 @@
 ﻿Public Class FrmMenuPrincipalModificado
+    Public Property trabajadorSesion As String = ""
+
     Private Sub ACERCADEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ACERCADEToolStripMenuItem.Click
         Dim obj As New jdAcercaDe()
         obj.StartPosition = FormStartPosition.CenterParent
@@ -86,5 +88,12 @@
     Private Sub TrabajadorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TrabajadorToolStripMenuItem.Click
         Dim frmMantenimientoTrabajador As New jdMantenimientoTrabajador()
         frmMantenimientoTrabajador.ShowDialog()
+    End Sub
+
+    Private Sub RegistrarVentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrarVentasToolStripMenuItem.Click
+        Dim frmVentas As New JdVentas()
+        frmVentas.trabajadorSesion = trabajadorSesion
+        frmVentas.StartPosition = FormStartPosition.CenterParent
+        frmVentas.ShowDialog(Me)
     End Sub
 End Class
