@@ -89,15 +89,15 @@ Partial Class jdGestionarDescuento
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Location = New System.Drawing.Point(28, 74)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(325, 115)
+        Me.Panel1.Size = New System.Drawing.Size(338, 115)
         Me.Panel1.TabIndex = 3
         '
         'btnBuscarCodigo
         '
         Me.btnBuscarCodigo.Image = CType(resources.GetObject("btnBuscarCodigo.Image"), System.Drawing.Image)
-        Me.btnBuscarCodigo.Location = New System.Drawing.Point(169, 46)
+        Me.btnBuscarCodigo.Location = New System.Drawing.Point(169, 41)
         Me.btnBuscarCodigo.Name = "btnBuscarCodigo"
-        Me.btnBuscarCodigo.Size = New System.Drawing.Size(60, 35)
+        Me.btnBuscarCodigo.Size = New System.Drawing.Size(60, 40)
         Me.btnBuscarCodigo.TabIndex = 5
         Me.btnBuscarCodigo.UseVisualStyleBackColor = True
         '
@@ -141,14 +141,14 @@ Partial Class jdGestionarDescuento
         Me.Panel2.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Panel2.Location = New System.Drawing.Point(28, 231)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(325, 551)
+        Me.Panel2.Size = New System.Drawing.Size(338, 551)
         Me.Panel2.TabIndex = 4
         '
         'chkActivo
         '
         Me.chkActivo.AutoSize = True
         Me.chkActivo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkActivo.Location = New System.Drawing.Point(18, 513)
+        Me.chkActivo.Location = New System.Drawing.Point(18, 511)
         Me.chkActivo.Name = "chkActivo"
         Me.chkActivo.Size = New System.Drawing.Size(87, 26)
         Me.chkActivo.TabIndex = 19
@@ -158,9 +158,9 @@ Partial Class jdGestionarDescuento
         'dtpFechaFin
         '
         Me.dtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaFin.Location = New System.Drawing.Point(125, 469)
+        Me.dtpFechaFin.Location = New System.Drawing.Point(159, 469)
         Me.dtpFechaFin.Name = "dtpFechaFin"
-        Me.dtpFechaFin.Size = New System.Drawing.Size(114, 22)
+        Me.dtpFechaFin.Size = New System.Drawing.Size(135, 22)
         Me.dtpFechaFin.TabIndex = 18
         Me.dtpFechaFin.Value = New Date(2026, 5, 25, 0, 0, 0, 0)
         '
@@ -178,7 +178,7 @@ Partial Class jdGestionarDescuento
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(14, 421)
+        Me.Label10.Location = New System.Drawing.Point(11, 430)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(124, 22)
         Me.Label10.TabIndex = 16
@@ -187,16 +187,16 @@ Partial Class jdGestionarDescuento
         'dtpFechaInicio
         '
         Me.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaInicio.Location = New System.Drawing.Point(144, 421)
+        Me.dtpFechaInicio.Location = New System.Drawing.Point(159, 430)
         Me.dtpFechaInicio.Name = "dtpFechaInicio"
-        Me.dtpFechaInicio.Size = New System.Drawing.Size(112, 22)
+        Me.dtpFechaInicio.Size = New System.Drawing.Size(133, 22)
         Me.dtpFechaInicio.TabIndex = 15
         Me.dtpFechaInicio.Value = New Date(2026, 5, 25, 0, 0, 0, 0)
         '
         'cboAplicaA
         '
         Me.cboAplicaA.FormattingEnabled = True
-        Me.cboAplicaA.Location = New System.Drawing.Point(108, 134)
+        Me.cboAplicaA.Location = New System.Drawing.Point(105, 138)
         Me.cboAplicaA.Name = "cboAplicaA"
         Me.cboAplicaA.Size = New System.Drawing.Size(148, 24)
         Me.cboAplicaA.TabIndex = 14
@@ -205,7 +205,7 @@ Partial Class jdGestionarDescuento
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(14, 136)
+        Me.Label9.Location = New System.Drawing.Point(11, 136)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(88, 22)
         Me.Label9.TabIndex = 13
@@ -214,16 +214,16 @@ Partial Class jdGestionarDescuento
         'cboTipoDescuento
         '
         Me.cboTipoDescuento.FormattingEnabled = True
-        Me.cboTipoDescuento.Location = New System.Drawing.Point(158, 371)
+        Me.cboTipoDescuento.Location = New System.Drawing.Point(188, 373)
         Me.cboTipoDescuento.Name = "cboTipoDescuento"
-        Me.cboTipoDescuento.Size = New System.Drawing.Size(159, 24)
+        Me.cboTipoDescuento.Size = New System.Drawing.Size(131, 24)
         Me.cboTipoDescuento.TabIndex = 12
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(9, 371)
+        Me.Label8.Location = New System.Drawing.Point(11, 373)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(154, 22)
         Me.Label8.TabIndex = 11
@@ -231,7 +231,7 @@ Partial Class jdGestionarDescuento
         '
         'txtValor
         '
-        Me.txtValor.Location = New System.Drawing.Point(79, 322)
+        Me.txtValor.Location = New System.Drawing.Point(83, 320)
         Me.txtValor.Name = "txtValor"
         Me.txtValor.Size = New System.Drawing.Size(160, 22)
         Me.txtValor.TabIndex = 10
@@ -240,7 +240,7 @@ Partial Class jdGestionarDescuento
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(14, 322)
+        Me.Label7.Location = New System.Drawing.Point(14, 320)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(63, 22)
         Me.Label7.TabIndex = 9
@@ -248,7 +248,7 @@ Partial Class jdGestionarDescuento
         '
         'txtDescripcion
         '
-        Me.txtDescripcion.Location = New System.Drawing.Point(18, 214)
+        Me.txtDescripcion.Location = New System.Drawing.Point(15, 202)
         Me.txtDescripcion.Multiline = True
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(281, 81)
@@ -258,7 +258,7 @@ Partial Class jdGestionarDescuento
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(14, 180)
+        Me.Label6.Location = New System.Drawing.Point(11, 177)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(121, 22)
         Me.Label6.TabIndex = 7
@@ -266,7 +266,7 @@ Partial Class jdGestionarDescuento
         '
         'txtCodigo
         '
-        Me.txtCodigo.Location = New System.Drawing.Point(108, 82)
+        Me.txtCodigo.Location = New System.Drawing.Point(105, 82)
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.Size = New System.Drawing.Size(148, 22)
         Me.txtCodigo.TabIndex = 6
@@ -275,7 +275,7 @@ Partial Class jdGestionarDescuento
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(14, 84)
+        Me.Label5.Location = New System.Drawing.Point(11, 82)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(79, 22)
         Me.Label5.TabIndex = 5
@@ -283,17 +283,17 @@ Partial Class jdGestionarDescuento
         '
         'txtID
         '
-        Me.txtID.Location = New System.Drawing.Point(65, 33)
+        Me.txtID.Location = New System.Drawing.Point(49, 33)
         Me.txtID.Name = "txtID"
         Me.txtID.ReadOnly = True
-        Me.txtID.Size = New System.Drawing.Size(131, 22)
+        Me.txtID.Size = New System.Drawing.Size(70, 22)
         Me.txtID.TabIndex = 4
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(24, 33)
+        Me.Label4.Location = New System.Drawing.Point(11, 31)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(35, 22)
         Me.Label4.TabIndex = 3
@@ -313,6 +313,7 @@ Partial Class jdGestionarDescuento
         '
         Me.dgvDescuentos.AllowUserToAddRows = False
         Me.dgvDescuentos.AllowUserToDeleteRows = False
+        Me.dgvDescuentos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgvDescuentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvDescuentos.Location = New System.Drawing.Point(372, 99)
         Me.dgvDescuentos.Name = "dgvDescuentos"
