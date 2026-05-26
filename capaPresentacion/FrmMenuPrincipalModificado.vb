@@ -87,4 +87,9 @@
         Dim frmMantenimientoTrabajador As New jdMantenimientoTrabajador()
         frmMantenimientoTrabajador.ShowDialog()
     End Sub
+
+    Private Sub ProveedorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProveedorToolStripMenuItem.Click
+        Dim frmMantenimientoproveedor As New JdMantenimientoProveedor()
+        frmMantenimientoproveedor.ShowDialog()
+    End Sub
 End Class
