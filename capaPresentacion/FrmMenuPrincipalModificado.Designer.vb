@@ -36,13 +36,13 @@ Partial Class FrmMenuPrincipalModificado
         Me.ProductoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RolToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProveedorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CITASVENTASToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrarCitasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrarVentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.REPORTESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.ProveedorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -150,6 +150,13 @@ Partial Class FrmMenuPrincipalModificado
         Me.RolToolStripMenuItem.Size = New System.Drawing.Size(247, 32)
         Me.RolToolStripMenuItem.Text = "Rol"
         '
+        'ProveedorToolStripMenuItem
+        '
+        Me.ProveedorToolStripMenuItem.Image = CType(resources.GetObject("ProveedorToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ProveedorToolStripMenuItem.Name = "ProveedorToolStripMenuItem"
+        Me.ProveedorToolStripMenuItem.Size = New System.Drawing.Size(247, 32)
+        Me.ProveedorToolStripMenuItem.Text = "Proveedor"
+        '
         'CITASVENTASToolStripMenuItem
         '
         Me.CITASVENTASToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrarCitasToolStripMenuItem, Me.RegistrarVentasToolStripMenuItem})
@@ -203,12 +210,6 @@ Partial Class FrmMenuPrincipalModificado
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
-        '
-        'ProveedorToolStripMenuItem
-        '
-        Me.ProveedorToolStripMenuItem.Name = "ProveedorToolStripMenuItem"
-        Me.ProveedorToolStripMenuItem.Size = New System.Drawing.Size(247, 32)
-        Me.ProveedorToolStripMenuItem.Text = "Proveedor"
         '
         'FrmMenuPrincipalModificado
         '
