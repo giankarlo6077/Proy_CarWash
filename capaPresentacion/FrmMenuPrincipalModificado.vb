@@ -90,10 +90,8 @@
         frmMantenimientoTrabajador.ShowDialog()
     End Sub
 
-    Private Sub RegistrarVentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrarVentasToolStripMenuItem.Click
-        Dim frmVentas As New JdVentas()
-        frmVentas.trabajadorSesion = trabajadorSesion
-        frmVentas.StartPosition = FormStartPosition.CenterParent
-        frmVentas.ShowDialog(Me)
+    Private Sub ProveedorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProveedorToolStripMenuItem.Click
+        Dim frmMantenimientoproveedor As New JdMantenimientoProveedor()
+        frmMantenimientoproveedor.ShowDialog()
     End Sub
 End Class

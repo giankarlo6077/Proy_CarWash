@@ -56,7 +56,7 @@ Partial Class JdGestionarProveedorProducto
         Me.Label8.Font = New System.Drawing.Font("Verdana", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(51, 9)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(517, 42)
+        Me.Label8.Size = New System.Drawing.Size(561, 42)
         Me.Label8.TabIndex = 53
         Me.Label8.Text = "Gestionar Proveedor-Producto"
         '

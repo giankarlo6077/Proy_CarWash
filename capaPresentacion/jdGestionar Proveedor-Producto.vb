@@ -43,16 +43,19 @@ Public Class JdGestionarProveedorProducto
         dgvProductos.Columns.Clear()
 
         dgvProductos.Columns.Add(New DataGridViewTextBoxColumn With {
+            .Name = "idProveedorProducto",
             .HeaderText = "ID",
             .DataPropertyName = "idProveedorProducto",
             .Visible = False
         })
         dgvProductos.Columns.Add(New DataGridViewTextBoxColumn With {
+            .Name = "idproducto",
             .HeaderText = "ID Producto",
             .DataPropertyName = "idproducto",
             .Visible = False
         })
         dgvProductos.Columns.Add(New DataGridViewTextBoxColumn With {
+            .Name = "producto",
             .HeaderText = "Producto",
             .DataPropertyName = "producto",
             .Width = 200
@@ -77,6 +80,7 @@ Public Class JdGestionarProveedorProducto
             }
         })
         dgvProductos.Columns.Add(New DataGridViewTextBoxColumn With {
+            .Name = "precioCompra",
             .HeaderText = "P. Compra (S/)",
             .DataPropertyName = "precioCompra",
             .Width = 110,
@@ -113,7 +117,7 @@ Public Class JdGestionarProveedorProducto
         If cboProveedor.SelectedIndex = -1 Then Exit Sub
 
         Dim idProveedor As Integer =
-            Convert.ToInt32(cboProveedor.SelectedValue)
+            Convert.ToInt32(DirectCast(cboProveedor.SelectedItem, DataRowView)("idProveedor"))
 
         ' Rellenar RUC y Contacto
         Dim fila As DataRow = objProveedor.buscarXid(idProveedor)
@@ -186,9 +190,9 @@ Public Class JdGestionarProveedorProducto
 
         Try
             Dim idProveedor As Integer =
-                Convert.ToInt32(cboProveedor.SelectedValue)
+                Convert.ToInt32(DirectCast(cboProveedor.SelectedItem, DataRowView)("idProveedor"))
             Dim idProducto As Integer =
-                Convert.ToInt32(cboProducto.SelectedValue)
+                Convert.ToInt32(DirectCast(cboProducto.SelectedItem, DataRowView)("idproducto"))
 
             objProveedor.vincularProducto(idProveedor, idProducto, precio)
 
@@ -259,7 +263,7 @@ Public Class JdGestionarProveedorProducto
         End If
 
         Dim idProveedor As Integer =
-            Convert.ToInt32(cboProveedor.SelectedValue)
+            Convert.ToInt32(DirectCast(cboProveedor.SelectedItem, DataRowView)("idProveedor"))
         Dim criterio As String = txtBuscar.Text.Trim()
 
         If criterio = "" Then
@@ -304,7 +308,7 @@ Public Class JdGestionarProveedorProducto
                 MessageBoxIcon.Information)
 
             Dim idProveedor As Integer =
-                Convert.ToInt32(cboProveedor.SelectedValue)
+                Convert.ToInt32(DirectCast(cboProveedor.SelectedItem, DataRowView)("idProveedor"))
 
             cargarGrilla(idProveedor)
             limpiarFormulario()
@@ -375,7 +379,7 @@ Public Class JdGestionarProveedorProducto
                     MessageBoxIcon.Information)
 
                 Dim idProveedor As Integer =
-                    Convert.ToInt32(cboProveedor.SelectedValue)
+                    Convert.ToInt32(DirectCast(cboProveedor.SelectedItem, DataRowView)("idProveedor"))
 
                 cargarProductosParaVincular(idProveedor)
                 cargarGrilla(idProveedor)

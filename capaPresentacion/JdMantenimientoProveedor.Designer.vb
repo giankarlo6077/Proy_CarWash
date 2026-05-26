@@ -68,11 +68,11 @@ Partial Class JdMantenimientoProveedor
         'dgvProveedores
         '
         Me.dgvProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvProveedores.Location = New System.Drawing.Point(55, 163)
+        Me.dgvProveedores.Location = New System.Drawing.Point(29, 163)
         Me.dgvProveedores.Name = "dgvProveedores"
         Me.dgvProveedores.RowHeadersWidth = 51
         Me.dgvProveedores.RowTemplate.Height = 24
-        Me.dgvProveedores.Size = New System.Drawing.Size(689, 264)
+        Me.dgvProveedores.Size = New System.Drawing.Size(745, 264)
         Me.dgvProveedores.TabIndex = 58
         '
         'btnEditar
@@ -80,7 +80,7 @@ Partial Class JdMantenimientoProveedor
         Me.btnEditar.BackColor = System.Drawing.Color.White
         Me.btnEditar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEditar.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnEditar.Location = New System.Drawing.Point(172, 120)
+        Me.btnEditar.Location = New System.Drawing.Point(213, 120)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(98, 37)
         Me.btnEditar.TabIndex = 73
@@ -92,7 +92,7 @@ Partial Class JdMantenimientoProveedor
         Me.btnDarDeBaja.BackColor = System.Drawing.Color.White
         Me.btnDarDeBaja.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDarDeBaja.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnDarDeBaja.Location = New System.Drawing.Point(285, 120)
+        Me.btnDarDeBaja.Location = New System.Drawing.Point(317, 120)
         Me.btnDarDeBaja.Name = "btnDarDeBaja"
         Me.btnDarDeBaja.Size = New System.Drawing.Size(118, 37)
         Me.btnDarDeBaja.TabIndex = 74
@@ -107,7 +107,7 @@ Partial Class JdMantenimientoProveedor
         Me.btnNuevo.Image = CType(resources.GetObject("btnNuevo.Image"), System.Drawing.Image)
         Me.btnNuevo.Location = New System.Drawing.Point(68, 120)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(98, 37)
+        Me.btnNuevo.Size = New System.Drawing.Size(124, 37)
         Me.btnNuevo.TabIndex = 75
         Me.btnNuevo.Text = "Nuevo"
         Me.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
