@@ -39,7 +39,6 @@ Partial Class jdGestionarTrabajador
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtCodigo = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnGestionarTipo = New System.Windows.Forms.Button()
         Me.btnRegistrar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -181,18 +180,6 @@ Partial Class jdGestionarTrabajador
         Me.Label2.TabIndex = 14
         Me.Label2.Text = "Código"
         '
-        'btnGestionarTipo
-        '
-        Me.btnGestionarTipo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnGestionarTipo.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGestionarTipo.ForeColor = System.Drawing.Color.White
-        Me.btnGestionarTipo.Location = New System.Drawing.Point(250, 215)
-        Me.btnGestionarTipo.Name = "btnGestionarTipo"
-        Me.btnGestionarTipo.Size = New System.Drawing.Size(113, 37)
-        Me.btnGestionarTipo.TabIndex = 71
-        Me.btnGestionarTipo.Text = "Gestionar"
-        Me.btnGestionarTipo.UseVisualStyleBackColor = False
-        '
         'btnRegistrar
         '
         Me.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -259,7 +246,6 @@ Partial Class jdGestionarTrabajador
         Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnRegistrar)
-        Me.Controls.Add(Me.btnGestionarTipo)
         Me.Controls.Add(Me.cboSexo)
         Me.Controls.Add(Me.cboTipoTrabajador)
         Me.Controls.Add(Me.chkActivo)
@@ -301,7 +287,6 @@ Partial Class jdGestionarTrabajador
     Friend WithEvents Label9 As Label
     Friend WithEvents txtCodigo As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents btnGestionarTipo As Button
     Friend WithEvents btnRegistrar As Button
     Friend WithEvents btnCancelar As Button
     Friend WithEvents Panel1 As Panel

@@ -366,7 +366,7 @@ Public Class jdGestionarTrabajador
     Private Sub btnGestionarTipo_Click(
         sender As Object,
         e As EventArgs
-    ) Handles btnGestionarTipo.Click
+    ) 
 
         Dim frm As New jdGestionarTipoTrabajador()
 
