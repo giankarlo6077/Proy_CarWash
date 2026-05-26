@@ -322,7 +322,7 @@ Partial Class jdGestionarDescuento
         Me.dgvDescuentos.RowHeadersWidth = 51
         Me.dgvDescuentos.RowTemplate.Height = 24
         Me.dgvDescuentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvDescuentos.Size = New System.Drawing.Size(740, 510)
+        Me.dgvDescuentos.Size = New System.Drawing.Size(753, 510)
         Me.dgvDescuentos.TabIndex = 6
         '
         'Label13
@@ -338,41 +338,49 @@ Partial Class jdGestionarDescuento
         'btnNuevo
         '
         Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNuevo.Location = New System.Drawing.Point(46, 38)
+        Me.btnNuevo.Image = CType(resources.GetObject("btnNuevo.Image"), System.Drawing.Image)
+        Me.btnNuevo.Location = New System.Drawing.Point(15, 27)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(105, 47)
+        Me.btnNuevo.Size = New System.Drawing.Size(170, 68)
         Me.btnNuevo.TabIndex = 8
         Me.btnNuevo.Text = "Nuevo"
+        Me.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnNuevo.UseVisualStyleBackColor = True
         '
         'btnModificar
         '
         Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModificar.Location = New System.Drawing.Point(197, 38)
+        Me.btnModificar.Image = CType(resources.GetObject("btnModificar.Image"), System.Drawing.Image)
+        Me.btnModificar.Location = New System.Drawing.Point(200, 27)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(118, 47)
+        Me.btnModificar.Size = New System.Drawing.Size(186, 68)
         Me.btnModificar.TabIndex = 9
         Me.btnModificar.Text = "Modificar"
+        Me.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnModificar.UseVisualStyleBackColor = True
         '
         'btnLimpiar
         '
         Me.btnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLimpiar.Location = New System.Drawing.Point(355, 38)
+        Me.btnLimpiar.Image = CType(resources.GetObject("btnLimpiar.Image"), System.Drawing.Image)
+        Me.btnLimpiar.Location = New System.Drawing.Point(406, 27)
         Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(123, 47)
+        Me.btnLimpiar.Size = New System.Drawing.Size(159, 68)
         Me.btnLimpiar.TabIndex = 10
         Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnLimpiar.UseVisualStyleBackColor = True
         '
         'btnDarDeBaja
         '
         Me.btnDarDeBaja.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDarDeBaja.Location = New System.Drawing.Point(533, 38)
+        Me.btnDarDeBaja.Image = CType(resources.GetObject("btnDarDeBaja.Image"), System.Drawing.Image)
+        Me.btnDarDeBaja.Location = New System.Drawing.Point(580, 27)
         Me.btnDarDeBaja.Name = "btnDarDeBaja"
-        Me.btnDarDeBaja.Size = New System.Drawing.Size(155, 47)
+        Me.btnDarDeBaja.Size = New System.Drawing.Size(159, 68)
         Me.btnDarDeBaja.TabIndex = 11
         Me.btnDarDeBaja.Text = "Dar de baja"
+        Me.btnDarDeBaja.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnDarDeBaja.UseVisualStyleBackColor = True
         '
         'Panel3
@@ -383,7 +391,7 @@ Partial Class jdGestionarDescuento
         Me.Panel3.Controls.Add(Me.btnModificar)
         Me.Panel3.Location = New System.Drawing.Point(372, 637)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(740, 145)
+        Me.Panel3.Size = New System.Drawing.Size(753, 145)
         Me.Panel3.TabIndex = 12
         '
         'jdGestionarDescuento
@@ -392,7 +400,7 @@ Partial Class jdGestionarDescuento
         Me.AccessibleName = ""
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1124, 807)
+        Me.ClientSize = New System.Drawing.Size(1149, 807)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.dgvDescuentos)
