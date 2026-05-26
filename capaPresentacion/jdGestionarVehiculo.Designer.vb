@@ -96,7 +96,7 @@ Partial Class jdGestionarVehiculo
         '
         'txtdoc
         '
-        Me.txtdoc.Location = New System.Drawing.Point(176, 64)
+        Me.txtdoc.Location = New System.Drawing.Point(185, 65)
         Me.txtdoc.Name = "txtdoc"
         Me.txtdoc.Size = New System.Drawing.Size(150, 22)
         Me.txtdoc.TabIndex = 5
@@ -105,7 +105,7 @@ Partial Class jdGestionarVehiculo
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(480, 20)
+        Me.Label4.Location = New System.Drawing.Point(469, 20)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(183, 22)
         Me.Label4.TabIndex = 6
@@ -146,7 +146,7 @@ Partial Class jdGestionarVehiculo
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(583, 65)
+        Me.Label5.Location = New System.Drawing.Point(572, 67)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(80, 22)
         Me.Label5.TabIndex = 8
@@ -238,14 +238,14 @@ Partial Class jdGestionarVehiculo
         Me.tblVehiculo.AllowUserToDeleteRows = False
         Me.tblVehiculo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.tblVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.tblVehiculo.Location = New System.Drawing.Point(14, 16)
+        Me.tblVehiculo.Location = New System.Drawing.Point(14, 14)
         Me.tblVehiculo.Name = "tblVehiculo"
         Me.tblVehiculo.ReadOnly = True
         Me.tblVehiculo.RowHeadersVisible = False
         Me.tblVehiculo.RowHeadersWidth = 51
         Me.tblVehiculo.RowTemplate.Height = 24
         Me.tblVehiculo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.tblVehiculo.Size = New System.Drawing.Size(904, 275)
+        Me.tblVehiculo.Size = New System.Drawing.Size(915, 275)
         Me.tblVehiculo.TabIndex = 0
         '
         'jdGestionarVehiculo

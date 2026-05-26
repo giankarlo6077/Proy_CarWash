@@ -54,9 +54,9 @@ Partial Class jdMantenimientoVehiculo
         '
         Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
-        Me.btnBuscar.Location = New System.Drawing.Point(367, 117)
+        Me.btnBuscar.Location = New System.Drawing.Point(367, 105)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(211, 55)
+        Me.btnBuscar.Size = New System.Drawing.Size(211, 70)
         Me.btnBuscar.TabIndex = 2
         Me.btnBuscar.Text = "Buscar por placa"
         Me.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -66,9 +66,9 @@ Partial Class jdMantenimientoVehiculo
         '
         Me.btnGestionarPersona.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGestionarPersona.Image = CType(resources.GetObject("btnGestionarPersona.Image"), System.Drawing.Image)
-        Me.btnGestionarPersona.Location = New System.Drawing.Point(751, 117)
+        Me.btnGestionarPersona.Location = New System.Drawing.Point(751, 105)
         Me.btnGestionarPersona.Name = "btnGestionarPersona"
-        Me.btnGestionarPersona.Size = New System.Drawing.Size(224, 55)
+        Me.btnGestionarPersona.Size = New System.Drawing.Size(224, 70)
         Me.btnGestionarPersona.TabIndex = 3
         Me.btnGestionarPersona.Text = "Administrar Vehiculo"
         Me.btnGestionarPersona.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -79,7 +79,7 @@ Partial Class jdMantenimientoVehiculo
         Me.Panel1.Controls.Add(Me.tblVehiculo)
         Me.Panel1.Location = New System.Drawing.Point(73, 193)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(902, 404)
+        Me.Panel1.Size = New System.Drawing.Size(902, 409)
         Me.Panel1.TabIndex = 4
         '
         'tblVehiculo
@@ -88,7 +88,7 @@ Partial Class jdMantenimientoVehiculo
         Me.tblVehiculo.AllowUserToDeleteRows = False
         Me.tblVehiculo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.tblVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.tblVehiculo.Location = New System.Drawing.Point(19, 20)
+        Me.tblVehiculo.Location = New System.Drawing.Point(20, 15)
         Me.tblVehiculo.Name = "tblVehiculo"
         Me.tblVehiculo.ReadOnly = True
         Me.tblVehiculo.RowHeadersVisible = False

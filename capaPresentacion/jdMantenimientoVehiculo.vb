@@ -27,30 +27,37 @@ Public Class jdMantenimientoVehiculo
     End Sub
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        ' 1. Validamos que la caja no esté vacía ni tenga puros espacios en blanco
         If String.IsNullOrWhiteSpace(txtbuscador.Text) Then
-            Listar()
-        Else
-            Try
-                Dim dt As DataTable = objVehiculo.buscarPLacaTotal(txtbuscador.Text)
-
-                If dt.Rows.Count > 0 Then
-                    tblVehiculo.DataSource = dt
-                Else
-                    MessageBox.Show("No se encontró ninguna coincidencia.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                End If
-            Catch ex As Exception
-                MessageBox.Show("Error al buscar:" & vbCrLf & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End Try
+            MessageBox.Show("Por favor, ingrese un número de placa para realizar la búsqueda.", "Falta información", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            txtbuscador.Focus() ' Ponemos el cursor en la cajita para que escriba
+            Return
         End If
+
+        Try
+            ' Usamos Trim() por si el empleado dejó un espacio al final de la placa sin querer
+            Dim placaBuscar As String = txtbuscador.Text.Trim()
+            Dim dt As DataTable = objVehiculo.buscarPLacaTotal(placaBuscar)
+
+            ' 2. Verificamos si la base de datos devolvió algún resultado
+            If dt.Rows.Count > 0 Then
+                tblVehiculo.DataSource = dt
+            Else
+                ' 3. Si no hay resultados, mostramos el mensaje de placa incorrecta
+                MessageBox.Show("La placa ingresada es incorrecta o no está registrada en el sistema. Por favor, ingrese una placa válida.", "Vehículo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                txtbuscador.SelectAll() ' Seleccionamos el texto malo para que al teclear se borre solo
+                txtbuscador.Focus()
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Error al buscar:" & vbCrLf & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
     Private Sub btnGestionarPersona_Click(sender As Object, e As EventArgs) Handles btnGestionarPersona.Click
-        ' Ojo aquí: asegúrate de tener creado el formulario JdGestionarVehiculo en VB.NET
         Dim frm As New jdGestionarVehiculo()
         frm.ShowDialog()
 
         Listar()
     End Sub
-
-
 End Class

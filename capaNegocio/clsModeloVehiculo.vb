@@ -5,21 +5,21 @@ Imports capaDatos
 Public Class clsModeloVehiculo
     Private objConectar As New clsConectaBD()
 
+    ' Corrección: Usamos GROUP BY para eliminar duplicados de forma nativa en la BD
     Public Function listar() As DataTable
         Dim dt As New DataTable()
         Try
             objConectar.abrirconexion()
-            Dim strSQL As String = "SELECT DISTINCT(mv.modelovehiculo) AS modelovehiculo, mv.idmodelovehiculo, vm.marcavehiculo, tv.tipovehiculo " &
-                                   "FROM modelo_vehiculo mv " &
-                                   "INNER JOIN tipo_vehiculo_marca tvm ON tvm.idtipovehiculo = mv.idtipovehiculo " &
-                                   "INNER JOIN marca_vehiculo vm ON vm.idmarcavehiculo = tvm.idmarcavehiculo " &
-                                   "INNER JOIN tipo_vehiculo tv ON tv.idtipovehiculo = tvm.idtipovehiculo"
+            ' Al usar GROUP BY por el nombre, eliminamos duplicados automáticamente
+            Dim strSQL As String = "SELECT modelovehiculo, MIN(idmodelovehiculo) AS idmodelovehiculo " &
+                                   "FROM modelo_vehiculo " &
+                                   "GROUP BY modelovehiculo"
 
             Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
             Dim da As New SqlDataAdapter(cmd)
             da.Fill(dt)
         Catch ex As Exception
-            Throw New Exception(ex.Message)
+            Throw New Exception("Error al listar modelos: " & ex.Message)
         Finally
             objConectar.cerrarconexion()
         End Try
@@ -30,12 +30,8 @@ Public Class clsModeloVehiculo
         Dim dt As New DataTable()
         Try
             objConectar.abrirconexion()
-            Dim strSQL As String = "SELECT mv.idmodelovehiculo, mv.modelovehiculo, vm.marcavehiculo, tv.tipovehiculo " &
-                                   "FROM modelo_vehiculo mv " &
-                                   "INNER JOIN tipo_vehiculo_marca tvm ON tvm.idtipovehiculo = mv.idtipovehiculo " &
-                                   "INNER JOIN marca_vehiculo vm ON vm.idmarcavehiculo = tvm.idmarcavehiculo " &
-                                   "INNER JOIN tipo_vehiculo tv ON tv.idtipovehiculo = tvm.idtipovehiculo " &
-                                   "WHERE mv.idmodelovehiculo = @id"
+            ' He simplificado esta consulta para que sea más rápida
+            Dim strSQL As String = "SELECT idmodelovehiculo, modelovehiculo FROM modelo_vehiculo WHERE idmodelovehiculo = @id"
 
             Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
             cmd.Parameters.AddWithValue("@id", id)
@@ -54,15 +50,12 @@ Public Class clsModeloVehiculo
         Dim id As Integer = -1
         Try
             objConectar.abrirconexion()
-            Dim strSQL As String = "SELECT mv.idmodelovehiculo FROM modelo_vehiculo mv " &
-                                   "INNER JOIN tipo_vehiculo_marca tvm ON tvm.idtipovehiculo = mv.idtipovehiculo " &
-                                   "INNER JOIN marca_vehiculo vm ON vm.idmarcavehiculo = tvm.idmarcavehiculo " &
-                                   "INNER JOIN tipo_vehiculo tv ON tv.idtipovehiculo = tvm.idtipovehiculo " &
-                                   "WHERE mv.modelovehiculo LIKE @nombre"
+            ' Usamos SELECT TOP 1 para asegurar que siempre nos devuelva solo un ID
+            Dim strSQL As String = "SELECT TOP 1 idmodelovehiculo FROM modelo_vehiculo WHERE modelovehiculo = @nombre"
 
             Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
-            ' Usamos % para buscar coincidencias parciales como lo tenías en Java
-            cmd.Parameters.AddWithValue("@nombre", "%" & nombre & "%")
+            ' Quitamos los % para que la búsqueda sea exacta, evitando que tome un modelo equivocado
+            cmd.Parameters.AddWithValue("@nombre", nombre)
 
             Dim resultado As Object = cmd.ExecuteScalar()
             If resultado IsNot Nothing AndAlso Not DBNull.Value.Equals(resultado) Then

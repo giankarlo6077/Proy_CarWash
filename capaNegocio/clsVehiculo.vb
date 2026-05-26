@@ -139,7 +139,11 @@ Public Class clsVehiculo
     Public Sub registrar(idvehiculo As Integer, placa As String, anofabricacion As Integer, idmodelovehiculo As Integer, idcliente As Integer)
         Try
             objConectar.abrirconexion()
-            Dim strSQL As String = "INSERT INTO vehiculo (idvehiculo, placa, anofabricacion, idmodelovehiculo, idcliente) VALUES (@id, @placa, @anio, @idmodelo, @idcliente)"
+            ' Aquí aplicamos la solución para permitir insertar el ID manualmente
+            Dim strSQL As String = "SET IDENTITY_INSERT vehiculo ON; " &
+                                   "INSERT INTO vehiculo (idvehiculo, placa, anofabricacion, idmodelovehiculo, idcliente) VALUES (@id, @placa, @anio, @idmodelo, @idcliente); " &
+                                   "SET IDENTITY_INSERT vehiculo OFF;"
+
             Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
             cmd.Parameters.AddWithValue("@id", idvehiculo)
             cmd.Parameters.AddWithValue("@placa", placa)
@@ -178,14 +182,14 @@ Public Class clsVehiculo
         Dim dt As New DataTable()
         Try
             objConectar.abrirconexion()
-            Dim strSQL As String = "SELECT v.idvehiculo AS ID, v.placa AS Placa, c.numdocumento AS DNI, v.anofabricacion AS [Año de fabricacion], mv.modelovehiculo AS Modelo " &
-                                   "FROM vehiculo v " &
-                                   "INNER JOIN modelo_vehiculo mv ON mv.idmodelovehiculo = v.idmodelovehiculo " &
-                                   "INNER JOIN cliente c ON c.idcliente = v.idcliente " &
-                                   "WHERE v.placa = @placa"
+            ' Agregamos "v.estado" a la consulta
+            Dim strSQL As String = "SELECT v.idvehiculo AS ID, v.placa AS Placa, c.numdocumento AS DNI, v.anofabricacion AS [Año de fabricacion], mv.modelovehiculo AS Modelo, v.estado " &
+                               "FROM vehiculo v " &
+                               "INNER JOIN modelo_vehiculo mv ON mv.idmodelovehiculo = v.idmodelovehiculo " &
+                               "INNER JOIN cliente c ON c.idcliente = v.idcliente " &
+                               "WHERE v.placa = @placa"
             Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
             cmd.Parameters.AddWithValue("@placa", placa)
-
             Dim da As New SqlDataAdapter(cmd)
             da.Fill(dt)
         Catch ex As Exception
@@ -195,4 +199,56 @@ Public Class clsVehiculo
         End Try
         Return dt
     End Function
+
+    Public Function obtenerIdClientePorDNI(dni As String) As Integer
+        Dim id As Integer = -1
+        Try
+            objConectar.abrirconexion()
+            ' Buscamos el ID interno usando el número de documento
+            Dim strSQL As String = "SELECT idcliente FROM cliente WHERE numdocumento = @dni"
+            Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
+            cmd.Parameters.AddWithValue("@dni", dni)
+
+            Dim resultado = cmd.ExecuteScalar()
+            If resultado IsNot Nothing AndAlso Not DBNull.Value.Equals(resultado) Then
+                id = Convert.ToInt32(resultado)
+            End If
+        Catch ex As Exception
+            Throw New Exception("Error al buscar el DNI del cliente: " & ex.Message)
+        Finally
+            objConectar.cerrarconexion()
+        End Try
+        Return id
+    End Function
+
+    Public Sub darDeBajaVehiculo(id As Integer)
+        Try
+            objConectar.abrirconexion()
+            ' Suponiendo que tienes una columna 'estado' en tu tabla Vehiculo
+            ' Si tu columna se llama diferente, ajústala aquí (ej. activo, estado, etc.)
+            Dim strSQL As String = "UPDATE vehiculo SET estado = 0 WHERE idvehiculo = @id"
+            Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
+            cmd.Parameters.AddWithValue("@id", id)
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+            Throw New Exception("Error al dar de baja: " & ex.Message)
+        Finally
+            objConectar.cerrarconexion()
+        End Try
+    End Sub
+
+    Public Sub cambiarEstadoVehiculo(id As Integer, nuevoEstado As Integer)
+        Try
+            objConectar.abrirconexion()
+            Dim strSQL As String = "UPDATE vehiculo SET estado = @estado WHERE idvehiculo = @id"
+            Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
+            cmd.Parameters.AddWithValue("@estado", nuevoEstado)
+            cmd.Parameters.AddWithValue("@id", id)
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        Finally
+            objConectar.cerrarconexion()
+        End Try
+    End Sub
 End Class
