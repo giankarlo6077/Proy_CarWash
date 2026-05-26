@@ -78,6 +78,7 @@
     <Compile Include="clsComprobante.vb" />
     <Compile Include="clsMarca.vb" />
     <Compile Include="clsModeloVehiculo.vb" />
+    <Compile Include="clsProveedor.vb" />
     <Compile Include="clsServicio.vb" />
     <Compile Include="clsTipoProducto.vb" />
     <Compile Include="clsProducto.vb" />
