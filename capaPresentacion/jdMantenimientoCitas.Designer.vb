@@ -25,26 +25,27 @@ Partial Class jdMantenimientoCitas
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(jdMantenimientoCitas))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cmbEstado = New System.Windows.Forms.ComboBox()
         Me.btnListar = New System.Windows.Forms.Button()
         Me.btnNuevaCita = New System.Windows.Forms.Button()
-        Me.panelServicios = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtID = New System.Windows.Forms.TextBox()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.dgvGestion = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
+        CType(Me.dgvGestion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.dgvGestion)
         Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.ComboBox1)
+        Me.Panel1.Controls.Add(Me.cmbEstado)
         Me.Panel1.Controls.Add(Me.btnListar)
         Me.Panel1.Controls.Add(Me.btnNuevaCita)
-        Me.Panel1.Controls.Add(Me.panelServicios)
-        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.txtID)
         Me.Panel1.Controls.Add(Me.btnBuscar)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
@@ -63,13 +64,14 @@ Partial Class jdMantenimientoCitas
         Me.Label4.Text = "Listar Por Estado:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'ComboBox1
+        'cmbEstado
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(893, 182)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(267, 24)
-        Me.ComboBox1.TabIndex = 76
+        Me.cmbEstado.FormattingEnabled = True
+        Me.cmbEstado.Items.AddRange(New Object() {"Pendiente", "En Proceso", "Realizado"})
+        Me.cmbEstado.Location = New System.Drawing.Point(893, 182)
+        Me.cmbEstado.Name = "cmbEstado"
+        Me.cmbEstado.Size = New System.Drawing.Size(267, 24)
+        Me.cmbEstado.TabIndex = 76
         '
         'btnListar
         '
@@ -95,20 +97,13 @@ Partial Class jdMantenimientoCitas
         Me.btnNuevaCita.Text = "Nueva Cita"
         Me.btnNuevaCita.UseVisualStyleBackColor = False
         '
-        'panelServicios
+        'txtID
         '
-        Me.panelServicios.Location = New System.Drawing.Point(23, 240)
-        Me.panelServicios.Name = "panelServicios"
-        Me.panelServicios.Size = New System.Drawing.Size(1309, 506)
-        Me.panelServicios.TabIndex = 73
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(36, 174)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(433, 37)
-        Me.TextBox1.TabIndex = 72
+        Me.txtID.Location = New System.Drawing.Point(36, 174)
+        Me.txtID.Multiline = True
+        Me.txtID.Name = "txtID"
+        Me.txtID.Size = New System.Drawing.Size(433, 37)
+        Me.txtID.TabIndex = 72
         '
         'btnBuscar
         '
@@ -147,9 +142,19 @@ Partial Class jdMantenimientoCitas
         Me.Label1.Font = New System.Drawing.Font("Verdana", 16.2!, System.Drawing.FontStyle.Bold)
         Me.Label1.Location = New System.Drawing.Point(30, 33)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(274, 34)
+        Me.Label1.Size = New System.Drawing.Size(392, 34)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Gestión de Citas"
+        Me.Label1.Text = "Mantenimiento de Citas"
+        '
+        'dgvGestion
+        '
+        Me.dgvGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvGestion.Location = New System.Drawing.Point(14, 227)
+        Me.dgvGestion.Name = "dgvGestion"
+        Me.dgvGestion.RowHeadersWidth = 51
+        Me.dgvGestion.RowTemplate.Height = 24
+        Me.dgvGestion.Size = New System.Drawing.Size(1309, 506)
+        Me.dgvGestion.TabIndex = 78
         '
         'jdMantenimientoCitas
         '
@@ -162,6 +167,7 @@ Partial Class jdMantenimientoCitas
         Me.Text = ".: MANTENIMIENTO CITAS :."
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.dgvGestion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -172,9 +178,9 @@ Partial Class jdMantenimientoCitas
     Friend WithEvents Label2 As Label
     Friend WithEvents btnBuscar As Button
     Friend WithEvents Label4 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cmbEstado As ComboBox
     Friend WithEvents btnListar As Button
     Friend WithEvents btnNuevaCita As Button
-    Friend WithEvents panelServicios As Panel
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtID As TextBox
+    Friend WithEvents dgvGestion As DataGridView
 End Class

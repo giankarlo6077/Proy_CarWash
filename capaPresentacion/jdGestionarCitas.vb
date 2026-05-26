@@ -27,9 +27,9 @@ Public Class jdGestionarCitas
 
     Private Sub btnGenerarCita_Click(sender As Object, e As EventArgs) Handles btnGenerarCita.Click
         Try
-            If btnGenerarCita.Text = "Generar Cita" Then 'Generar idCita
+            If btnGenerarCita.Text = "Generar Cita" Then
                 btnGenerarCita.Text = "Registrar Cita"
-            Else 'Guardar empleado
+            Else
                 btnGenerarCita.Text = "Generar Cita"
                 Dim fecha As Date = Date.ParseExact(lblFecha.Text, "MM-dd-yyyy", System.Globalization.CultureInfo.InvariantCulture)
                 Dim hora As Date = Date.ParseExact(lblHora.Text, "HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture)
@@ -44,11 +44,15 @@ Public Class jdGestionarCitas
                                         CInt(cmbTrabajador.SelectedValue)
                                     )
                 dgvCitas.DataSource = objCita.listarCitas
-                'limpiarControles()
+                limpiarControles()
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Public Sub limpiarControles()
+        txtComentario.Clear()
     End Sub
 
     Private Sub dgvCitas_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCitas.CellClick
@@ -56,7 +60,7 @@ Public Class jdGestionarCitas
             Dim idCita As Integer = CInt(dgvCitas.Rows(e.RowIndex).Cells("idCita").Value)
             Dim frmDetalle As New JdDetalleOrdenTrabajo(idCita)
             frmDetalle.ShowDialog()
-
+            dgvCitas.DataSource = objCita.listarCitas()
         End If
     End Sub
 
