@@ -315,6 +315,7 @@ Partial Class jdGestionarUsuario
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "jdGestionarUsuario"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Gestión de Usuarios"
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)

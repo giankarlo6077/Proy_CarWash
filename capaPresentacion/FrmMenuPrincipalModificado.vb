@@ -57,4 +57,9 @@
         Dim frmVehiculo As New jdMantenimientoVehiculo()
         frmVehiculo.ShowDialog()
     End Sub
+
+    Private Sub UsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UsuarioToolStripMenuItem.Click
+        Dim frmGestionarUsuario As New jdGestionarUsuario()
+        frmGestionarUsuario.ShowDialog()
+    End Sub
 End Class
