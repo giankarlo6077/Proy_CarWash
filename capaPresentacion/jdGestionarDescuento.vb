@@ -25,10 +25,18 @@ Public Class jdGestionarDescuento
     End Sub
 
     Private Sub Limpiar()
-        txtID.Clear() : txtCodigo.Clear() : txtDescripcion.Clear() : txtValor.Clear()
-        cboTipoDescuento.SelectedIndex = -1 : cboAplicaA.SelectedIndex = -1
-        dtpFechaInicio.Value = DateTime.Now : dtpFechaFin.Value = DateTime.Now
-        chkActivo.Checked = False : idDescuentoSeleccionado = -1 : btnNuevo.Text = "Nuevo"
+        txtID.Clear()
+        txtCodigo.Clear()
+        txtBuscador.Clear() ' Asegúrate de tener esta línea
+        txtDescripcion.Clear()
+        txtValor.Clear()
+        cboTipoDescuento.SelectedIndex = -1
+        cboAplicaA.SelectedIndex = -1
+        dtpFechaInicio.Value = DateTime.Now
+        dtpFechaFin.Value = DateTime.Now
+        chkActivo.Checked = False
+        idDescuentoSeleccionado = -1
+        btnNuevo.Text = "Nuevo"
     End Sub
 
     Private Sub CargarDatosFila(row As DataGridViewRow)
@@ -87,5 +95,11 @@ Public Class jdGestionarDescuento
         If e.RowIndex >= 0 Then CargarDatosFila(dgvDescuentos.Rows(e.RowIndex))
     End Sub
 
+    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+        ' Llamamos al método Limpiar que ya tienes definido en tu formulario
+        Limpiar()
 
+        ' Opcional: Si quieres enfocar el cursor en el primer campo después de limpiar
+        txtCodigo.Focus()
+    End Sub
 End Class
