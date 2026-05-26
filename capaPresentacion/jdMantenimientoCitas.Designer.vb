@@ -24,6 +24,7 @@ Partial Class jdMantenimientoCitas
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(jdMantenimientoCitas))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.dgvGestion = New System.Windows.Forms.DataGridView()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.cmbEstado = New System.Windows.Forms.ComboBox()
         Me.btnListar = New System.Windows.Forms.Button()
@@ -33,7 +34,6 @@ Partial Class jdMantenimientoCitas
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.dgvGestion = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
         CType(Me.dgvGestion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -54,6 +54,20 @@ Partial Class jdMantenimientoCitas
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1350, 762)
         Me.Panel1.TabIndex = 0
+        '
+        'dgvGestion
+        '
+        Me.dgvGestion.AllowUserToAddRows = False
+        Me.dgvGestion.AllowUserToDeleteRows = False
+        Me.dgvGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvGestion.Location = New System.Drawing.Point(14, 227)
+        Me.dgvGestion.Name = "dgvGestion"
+        Me.dgvGestion.ReadOnly = True
+        Me.dgvGestion.RowHeadersWidth = 51
+        Me.dgvGestion.RowTemplate.Height = 24
+        Me.dgvGestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvGestion.Size = New System.Drawing.Size(1309, 506)
+        Me.dgvGestion.TabIndex = 78
         '
         'Label4
         '
@@ -146,16 +160,6 @@ Partial Class jdMantenimientoCitas
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Mantenimiento de Citas"
         '
-        'dgvGestion
-        '
-        Me.dgvGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvGestion.Location = New System.Drawing.Point(14, 227)
-        Me.dgvGestion.Name = "dgvGestion"
-        Me.dgvGestion.RowHeadersWidth = 51
-        Me.dgvGestion.RowTemplate.Height = 24
-        Me.dgvGestion.Size = New System.Drawing.Size(1309, 506)
-        Me.dgvGestion.TabIndex = 78
-        '
         'jdMantenimientoCitas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -164,6 +168,7 @@ Partial Class jdMantenimientoCitas
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "jdMantenimientoCitas"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = ".: MANTENIMIENTO CITAS :."
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

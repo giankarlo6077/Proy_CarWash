@@ -453,26 +453,34 @@ Partial Class JdDetalleOrdenTrabajo
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(174, 37)
         Me.btnCancelar.TabIndex = 79
-        Me.btnCancelar.Text = "Cancelar Cita"
+        Me.btnCancelar.Text = "Cerrar"
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
         'dgvServicios
         '
+        Me.dgvServicios.AllowUserToAddRows = False
+        Me.dgvServicios.AllowUserToDeleteRows = False
         Me.dgvServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvServicios.Location = New System.Drawing.Point(12, 540)
         Me.dgvServicios.Name = "dgvServicios"
+        Me.dgvServicios.ReadOnly = True
         Me.dgvServicios.RowHeadersWidth = 51
         Me.dgvServicios.RowTemplate.Height = 24
+        Me.dgvServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvServicios.Size = New System.Drawing.Size(847, 148)
         Me.dgvServicios.TabIndex = 79
         '
         'dgvProductos
         '
+        Me.dgvProductos.AllowUserToAddRows = False
+        Me.dgvProductos.AllowUserToDeleteRows = False
         Me.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvProductos.Location = New System.Drawing.Point(12, 766)
         Me.dgvProductos.Name = "dgvProductos"
+        Me.dgvProductos.ReadOnly = True
         Me.dgvProductos.RowHeadersWidth = 51
         Me.dgvProductos.RowTemplate.Height = 24
+        Me.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvProductos.Size = New System.Drawing.Size(847, 148)
         Me.dgvProductos.TabIndex = 80
         '
@@ -495,6 +503,7 @@ Partial Class JdDetalleOrdenTrabajo
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "JdDetalleOrdenTrabajo"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = ".: DETALLE ORDEN DE TRABAJO :."
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

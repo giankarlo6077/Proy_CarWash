@@ -278,6 +278,7 @@ Partial Class jdGestionarTrabajador
         Me.Controls.Add(Me.Label2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "jdGestionarTrabajador"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Registrar trabajador"
         Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
