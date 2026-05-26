@@ -173,10 +173,10 @@
     <Compile Include="JdComprobanteVenta.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="JdGestionarCategoria.Designer.vb">
-      <DependentUpon>JdGestionarCategoria.vb</DependentUpon>
+    <Compile Include="Gestionar Proveedor-Producto.Designer.vb">
+      <DependentUpon>Gestionar Proveedor-Producto.vb</DependentUpon>
     </Compile>
-    <Compile Include="JdGestionarCategoria.vb">
+    <Compile Include="Gestionar Proveedor-Producto.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="JdMantenimientoProducto.Designer.vb">
@@ -353,8 +353,8 @@
     <EmbeddedResource Include="JdComprobanteVenta.resx">
       <DependentUpon>JdComprobanteVenta.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="JdGestionarCategoria.resx">
-      <DependentUpon>JdGestionarCategoria.vb</DependentUpon>
+    <EmbeddedResource Include="Gestionar Proveedor-Producto.resx">
+      <DependentUpon>Gestionar Proveedor-Producto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JdMantenimientoProducto.resx">
       <DependentUpon>JdMantenimientoProducto.vb</DependentUpon>
