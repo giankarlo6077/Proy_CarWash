@@ -239,6 +239,12 @@
     <Compile Include="jdInicioSesion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmEditarProveedor.Designer.vb">
+      <DependentUpon>frmEditarProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditarProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="JdMantenimientoProveedor.Designer.vb">
       <DependentUpon>JdMantenimientoProveedor.vb</DependentUpon>
     </Compile>

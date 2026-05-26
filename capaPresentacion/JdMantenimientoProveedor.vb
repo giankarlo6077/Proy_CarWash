@@ -159,69 +159,22 @@ Public Class JdMantenimientoProveedor
     ' ══════════════════════════════════════════════
 
     Private Sub btnEditar_Click(
-    sender As Object, e As EventArgs
-) Handles btnEditar.Click
+        sender As Object, e As EventArgs
+    ) Handles btnEditar.Click
 
         If _idProveedor = 0 Then
             MessageBox.Show("Seleccione un proveedor de la lista.",
-            "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
 
         Dim fila As DataRow = objProveedor.buscarXid(_idProveedor)
         If fila Is Nothing Then Exit Sub
 
-        Dim nombre As String = InputBox("Nombre del proveedor:",
-        "Editar Proveedor", fila("proveedor").ToString())
-        If nombre.Trim() = "" Then Exit Sub
-
-        Dim ruc As String = InputBox("RUC (11 dígitos):",
-        "Editar Proveedor", fila("ruc").ToString())
-        If ruc.Trim().Length <> 11 Then
-            MessageBox.Show("El RUC debe tener 11 dígitos.", "Aviso",
-            MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            Exit Sub
-        End If
-
-        Dim telefono As String = InputBox("Teléfono:",
-        "Editar Proveedor", fila("telefono").ToString())
-        If telefono.Trim() = "" Then Exit Sub
-
-        Dim correo As String = InputBox("Correo:",
-        "Editar Proveedor", fila("correo").ToString())
-        If correo.Trim() = "" Then Exit Sub
-
-        Dim direccion As String = InputBox("Dirección:",
-        "Editar Proveedor", fila("direccion").ToString())
-        If direccion.Trim() = "" Then Exit Sub
-
-        Dim contacto As String = InputBox("Nombre del contacto:",
-        "Editar Proveedor", fila("contacto").ToString())
-        If contacto.Trim() = "" Then Exit Sub
-
-        Try
-            objProveedor.modificarProveedor(
-            _idProveedor,
-            nombre.Trim(),
-            ruc.Trim(),
-            telefono.Trim(),
-            correo.Trim(),
-            direccion.Trim(),
-            contacto.Trim(),
-            True)
-
-            MessageBox.Show(
-            "Proveedor actualizado correctamente.",
-            "Éxito",
-            MessageBoxButtons.OK,
-            MessageBoxIcon.Information)
-
-            cargarGrilla()
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error",
-            MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
+        Using frm As New frmEditarProveedor(_idProveedor, fila)
+            frm.ShowDialog(Me)
+            If frm.Guardado Then cargarGrilla()
+        End Using
 
     End Sub
 

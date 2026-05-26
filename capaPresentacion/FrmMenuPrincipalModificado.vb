@@ -15,6 +15,16 @@
 
     Private Sub FrmMenuPrincipalModificado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MenuStrip1.Renderer = New ToolStripProfessionalRenderer(New MiTemaMenu())
+
+        Dim bmp As New Bitmap(20, 20)
+        Using g As Graphics = Graphics.FromImage(bmp)
+            g.Clear(Color.Transparent)
+            g.TextRenderingHint = Drawing.Text.TextRenderingHint.AntiAlias
+            Using fnt As New Font("Segoe UI Emoji", 10.0!)
+                g.DrawString("🚚", fnt, Brushes.Black, New RectangleF(-1, -2, 22, 22))
+            End Using
+        End Using
+        ProveedorToolStripMenuItem.Image = bmp
     End Sub
 
     Private Sub ProductoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductoToolStripMenuItem.Click
