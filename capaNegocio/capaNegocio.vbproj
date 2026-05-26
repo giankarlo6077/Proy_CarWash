@@ -77,6 +77,7 @@
     <Compile Include="clsCliente.vb" />
     <Compile Include="clsComprobante.vb" />
     <Compile Include="clsDescuento.vb" />
+    <Compile Include="clsEmpresa.vb" />
     <Compile Include="clsMarca.vb" />
     <Compile Include="clsModeloVehiculo.vb" />
     <Compile Include="clsProveedor.vb" />
@@ -84,6 +85,7 @@
     <Compile Include="clsTipoDescuento.vb" />
     <Compile Include="clsTipoProducto.vb" />
     <Compile Include="clsProducto.vb" />
+    <Compile Include="clsTipoTrabajador.vb" />
     <Compile Include="clsTipoVehiculo.vb" />
     <Compile Include="clsTrabajador.vb" />
     <Compile Include="clsVehiculo.vb" />

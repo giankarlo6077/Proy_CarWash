@@ -223,4 +223,538 @@ Public Class clsTrabajador
         End Try
         Return dt
     End Function
+
+    '================================================================
+    ' MÉTODO 10: LISTAR TRABAJADORES
+    '================================================================
+    Public Function listarTrabajadores() As DataTable
+
+        Dim dt As New DataTable()
+
+        Try
+
+            objConexion.conectar()
+
+            Dim strSQL As String =
+                "SELECT " &
+                "idTrabajador, " &
+                "trabajador, " &
+                "telefono, " &
+                "dni, " &
+                "sexo, " &
+                "correo, " &
+                "usuario, " &
+                "estado " &
+                "FROM trabajador " &
+                "ORDER BY trabajador ASC"
+
+            Dim da As New SqlDataAdapter(
+                strSQL,
+                objConexion.miConexion
+            )
+
+            da.Fill(dt)
+
+        Catch ex As Exception
+
+            Throw New Exception(
+                "Error al listar trabajadores: " &
+                ex.Message
+            )
+
+        Finally
+
+            objConexion.desconectar()
+
+        End Try
+
+        Return dt
+
+    End Function
+
+    '================================================================
+    ' MÉTODO 11: BUSCAR TRABAJADOR POR ID
+    '================================================================
+    Public Function buscarTrabajadorPorCodigo(
+        ByVal id As String
+    ) As DataTable
+
+        Dim dt As New DataTable()
+
+        Try
+
+            objConexion.conectar()
+
+            Dim strSQL As String =
+                "SELECT " &
+                "idTrabajador, " &
+                "trabajador, " &
+                "telefono, " &
+                "dni, " &
+                "sexo, " &
+                "correo, " &
+                "usuario, " &
+                "estado " &
+                "FROM trabajador " &
+                "WHERE idTrabajador LIKE '%' + @id + '%'"
+
+            Dim cmd As New SqlCommand(
+                strSQL,
+                objConexion.miConexion
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@id",
+                id
+            )
+
+            Dim da As New SqlDataAdapter(cmd)
+
+            da.Fill(dt)
+
+        Catch ex As Exception
+
+            Throw New Exception(
+                "Error al buscar trabajador: " &
+                ex.Message
+            )
+
+        Finally
+
+            objConexion.desconectar()
+
+        End Try
+
+        Return dt
+
+    End Function
+
+    '================================================================
+    ' MÉTODO 12: ELIMINAR TRABAJADOR
+    '================================================================
+    Public Sub eliminarTrabajador(
+        ByVal idTrabajador As Integer
+    )
+
+        Try
+
+            objConexion.conectar()
+
+            Dim strSQL As String =
+                "DELETE FROM trabajador " &
+                "WHERE idTrabajador = @id"
+
+            Dim cmd As New SqlCommand(
+                strSQL,
+                objConexion.miConexion
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@id",
+                idTrabajador
+            )
+
+            cmd.ExecuteNonQuery()
+
+        Catch ex As Exception
+
+            Throw New Exception(
+                "Error al eliminar trabajador: " &
+                ex.Message
+            )
+
+        Finally
+
+            objConexion.desconectar()
+
+        End Try
+
+    End Sub
+
+    Public Function obtenerTrabajadorXid(
+    ByVal id As Integer
+) As DataRow
+
+        Dim dt As New DataTable()
+
+        Try
+
+            objConexion.conectar()
+
+            Dim strSQL As String =
+                "SELECT * FROM trabajador " &
+                "WHERE idTrabajador = @id"
+
+            Dim cmd As New SqlCommand(
+                strSQL,
+                objConexion.miConexion
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@id",
+                id
+            )
+
+            Dim da As New SqlDataAdapter(cmd)
+
+            da.Fill(dt)
+
+            If dt.Rows.Count > 0 Then
+
+                Return dt.Rows(0)
+
+            End If
+
+        Catch ex As Exception
+
+            Throw New Exception(
+                "Error al obtener trabajador: " &
+                ex.Message
+            )
+
+        Finally
+
+            objConexion.desconectar()
+
+        End Try
+
+        Return Nothing
+
+    End Function
+
+    '================================================================
+    ' MÉTODO: DAR DE BAJA TRABAJADOR
+    '================================================================
+    Public Sub darBajaTrabajador(
+        ByVal id As Integer
+    )
+
+        Try
+
+            objConexion.conectar()
+
+            Dim strSQL As String =
+                "UPDATE trabajador " &
+                "SET estado = 0 " &
+                "WHERE idTrabajador = @id"
+
+            Dim cmd As New SqlCommand(
+                strSQL,
+                objConexion.miConexion
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@id",
+                id
+            )
+
+            cmd.ExecuteNonQuery()
+
+        Catch ex As Exception
+
+            Throw New Exception(
+                "Error al dar de baja trabajador: " &
+                ex.Message
+            )
+
+        Finally
+
+            objConexion.desconectar()
+
+        End Try
+
+    End Sub
+
+    '================================================================
+    ' MÉTODO: CAMBIAR ESTADO TRABAJADOR
+    '================================================================
+    Public Sub cambiarEstadoTrabajador(
+        ByVal id As Integer,
+        ByVal estado As Boolean
+    )
+
+        Try
+
+            objConexion.conectar()
+
+            Dim strSQL As String =
+                "UPDATE trabajador " &
+                "SET estado = @estado " &
+                "WHERE idTrabajador = @id"
+
+            Dim cmd As New SqlCommand(
+                strSQL,
+                objConexion.miConexion
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@estado",
+                estado
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@id",
+                id
+            )
+
+            cmd.ExecuteNonQuery()
+
+        Catch ex As Exception
+
+            Throw New Exception(
+                "Error al cambiar estado: " &
+                ex.Message
+            )
+
+        Finally
+
+            objConexion.desconectar()
+
+        End Try
+
+    End Sub
+
+    '================================================================
+    ' MÉTODO: REGISTRAR TRABAJADOR
+    '================================================================
+    Public Sub registrarTrabajador(
+        ByVal trabajador As String,
+        ByVal telefono As String,
+        ByVal dni As String,
+        ByVal sexo As String,
+        ByVal correo As String,
+        ByVal estado As Boolean,
+        ByVal idTipoTrabajador As Integer,
+        ByVal idDistrito As Integer
+    )
+
+        Try
+
+            objConexion.conectar()
+
+            Dim strSQL As String =
+                "INSERT INTO trabajador " &
+                "(trabajador, telefono, dni, sexo, correo, " &
+                "usuario, contraseña, estado, pregunta, respuesta, " &
+                "idTipoTrabajador, idDistrito) " &
+                "VALUES " &
+                "(@trabajador, @telefono, @dni, @sexo, @correo, " &
+                "'', '', @estado, '', '', " &
+                "@idTipoTrabajador, @idDistrito)"
+
+            Dim cmd As New SqlCommand(
+                strSQL,
+                objConexion.miConexion
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@trabajador",
+                trabajador
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@telefono",
+                telefono
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@dni",
+                dni
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@sexo",
+                sexo
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@correo",
+                correo
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@estado",
+                estado
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@idTipoTrabajador",
+                idTipoTrabajador
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@idDistrito",
+                idDistrito
+            )
+
+            cmd.ExecuteNonQuery()
+
+        Catch ex As Exception
+
+            Throw New Exception(
+                "Error al registrar trabajador: " &
+                ex.Message
+            )
+
+        Finally
+
+            objConexion.desconectar()
+
+        End Try
+
+    End Sub
+
+    '================================================================
+    ' MÉTODO: MODIFICAR TRABAJADOR
+    '================================================================
+    Public Sub modificarTrabajador(
+        ByVal idTrabajador As Integer,
+        ByVal trabajador As String,
+        ByVal telefono As String,
+        ByVal dni As String,
+        ByVal sexo As String,
+        ByVal correo As String,
+        ByVal estado As Boolean,
+        ByVal idTipoTrabajador As Integer,
+        ByVal idDistrito As Integer
+    )
+
+        Try
+
+            objConexion.conectar()
+
+            Dim strSQL As String =
+                "UPDATE trabajador SET " &
+                "trabajador = @trabajador, " &
+                "telefono = @telefono, " &
+                "dni = @dni, " &
+                "sexo = @sexo, " &
+                "correo = @correo, " &
+                "estado = @estado, " &
+                "idTipoTrabajador = @idTipoTrabajador, " &
+                "idDistrito = @idDistrito " &
+                "WHERE idTrabajador = @idTrabajador"
+
+            Dim cmd As New SqlCommand(
+                strSQL,
+                objConexion.miConexion
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@idTrabajador",
+                idTrabajador
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@trabajador",
+                trabajador
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@telefono",
+                telefono
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@dni",
+                dni
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@sexo",
+                sexo
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@correo",
+                correo
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@estado",
+                estado
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@idTipoTrabajador",
+                idTipoTrabajador
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@idDistrito",
+                idDistrito
+            )
+
+            cmd.ExecuteNonQuery()
+
+        Catch ex As Exception
+
+            Throw New Exception(
+                "Error al modificar trabajador: " &
+                ex.Message
+            )
+
+        Finally
+
+            objConexion.desconectar()
+
+        End Try
+
+    End Sub
+
+    Public Function existeDNI(
+    ByVal dni As String,
+    Optional ByVal idExcluir As Integer = 0
+) As Boolean
+
+        Dim existe As Boolean = False
+
+        Try
+
+            objConexion.conectar()
+
+            Dim strSQL As String =
+                "SELECT COUNT(*) " &
+                "FROM trabajador " &
+                "WHERE dni = @dni " &
+                "AND idTrabajador <> @id"
+
+            Dim cmd As New SqlCommand(
+                strSQL,
+                objConexion.miConexion
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@dni",
+                dni
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@id",
+                idExcluir
+            )
+
+            Dim cantidad As Integer =
+                Convert.ToInt32(
+                    cmd.ExecuteScalar()
+                )
+
+            existe = cantidad > 0
+
+        Catch ex As Exception
+
+            Throw New Exception(
+                ex.Message
+            )
+
+        Finally
+
+            objConexion.desconectar()
+
+        End Try
+
+        Return existe
+
+    End Function
+
 End Class
