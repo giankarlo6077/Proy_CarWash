@@ -36,10 +36,10 @@ Partial Class jdMantenimientoVehiculo
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(67, 56)
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(67, 49)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(342, 32)
+        Me.Label1.Size = New System.Drawing.Size(399, 34)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Mantenimiento Vehiculo"
         '
@@ -54,9 +54,9 @@ Partial Class jdMantenimientoVehiculo
         '
         Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
-        Me.btnBuscar.Location = New System.Drawing.Point(367, 124)
+        Me.btnBuscar.Location = New System.Drawing.Point(367, 117)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(276, 40)
+        Me.btnBuscar.Size = New System.Drawing.Size(211, 55)
         Me.btnBuscar.TabIndex = 2
         Me.btnBuscar.Text = "Buscar por placa"
         Me.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -65,11 +65,13 @@ Partial Class jdMantenimientoVehiculo
         'btnGestionarPersona
         '
         Me.btnGestionarPersona.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGestionarPersona.Location = New System.Drawing.Point(701, 130)
+        Me.btnGestionarPersona.Image = CType(resources.GetObject("btnGestionarPersona.Image"), System.Drawing.Image)
+        Me.btnGestionarPersona.Location = New System.Drawing.Point(751, 117)
         Me.btnGestionarPersona.Name = "btnGestionarPersona"
-        Me.btnGestionarPersona.Size = New System.Drawing.Size(274, 28)
+        Me.btnGestionarPersona.Size = New System.Drawing.Size(224, 55)
         Me.btnGestionarPersona.TabIndex = 3
         Me.btnGestionarPersona.Text = "Administrar Vehiculo"
+        Me.btnGestionarPersona.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnGestionarPersona.UseVisualStyleBackColor = True
         '
         'Panel1
@@ -108,6 +110,7 @@ Partial Class jdMantenimientoVehiculo
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "jdMantenimientoVehiculo"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "jdMantenimientoVehiculo"
         Me.Panel1.ResumeLayout(False)
         CType(Me.tblVehiculo, System.ComponentModel.ISupportInitialize).EndInit()

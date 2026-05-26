@@ -26,27 +26,27 @@ Partial Class jdGestionarServicio
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtPrecio = New System.Windows.Forms.TextBox()
+        Me.cboNombre = New System.Windows.Forms.ComboBox()
+        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.txtDuracion = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.cboTipoVehiculo = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtCodigo = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(303, 72)
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(282, 69)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(265, 32)
+        Me.Label1.Size = New System.Drawing.Size(305, 34)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Gestionar Servicio"
         '
@@ -62,64 +62,78 @@ Partial Class jdGestionarServicio
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.TextBox4)
+        Me.Panel1.Controls.Add(Me.txtPrecio)
+        Me.Panel1.Controls.Add(Me.cboNombre)
+        Me.Panel1.Controls.Add(Me.btnCancelar)
+        Me.Panel1.Controls.Add(Me.btnGuardar)
+        Me.Panel1.Controls.Add(Me.txtDuracion)
         Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.TextBox3)
         Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.TextBox2)
         Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.ComboBox1)
+        Me.Panel1.Controls.Add(Me.cboTipoVehiculo)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.txtCodigo)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Location = New System.Drawing.Point(74, 159)
+        Me.Panel1.Location = New System.Drawing.Point(59, 129)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(729, 355)
+        Me.Panel1.Size = New System.Drawing.Size(762, 396)
         Me.Panel1.TabIndex = 3
         '
-        'TextBox1
+        'txtPrecio
         '
-        Me.TextBox1.Location = New System.Drawing.Point(112, 21)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(127, 22)
-        Me.TextBox1.TabIndex = 3
+        Me.txtPrecio.Location = New System.Drawing.Point(106, 166)
+        Me.txtPrecio.Name = "txtPrecio"
+        Me.txtPrecio.Size = New System.Drawing.Size(198, 22)
+        Me.txtPrecio.TabIndex = 15
         '
-        'Label3
+        'cboNombre
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(272, 22)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(164, 22)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Tipo de vehiculo:"
+        Me.cboNombre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboNombre.FormattingEnabled = True
+        Me.cboNombre.Location = New System.Drawing.Point(106, 89)
+        Me.cboNombre.Name = "cboNombre"
+        Me.cboNombre.Size = New System.Drawing.Size(267, 24)
+        Me.cboNombre.TabIndex = 14
         '
-        'ComboBox1
+        'btnCancelar
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(443, 19)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(205, 24)
-        Me.ComboBox1.TabIndex = 5
+        Me.btnCancelar.BackColor = System.Drawing.SystemColors.Window
+        Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnCancelar.Location = New System.Drawing.Point(404, 281)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(105, 42)
+        Me.btnCancelar.TabIndex = 13
+        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.UseVisualStyleBackColor = False
         '
-        'Label4
+        'btnGuardar
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(21, 89)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(85, 22)
-        Me.Label4.TabIndex = 6
-        Me.Label4.Text = "Nombre:"
+        Me.btnGuardar.BackColor = System.Drawing.SystemColors.Window
+        Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardar.Location = New System.Drawing.Point(219, 281)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(105, 42)
+        Me.btnGuardar.TabIndex = 12
+        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.UseVisualStyleBackColor = False
         '
-        'TextBox2
+        'txtDuracion
         '
-        Me.TextBox2.Location = New System.Drawing.Point(112, 89)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(283, 22)
-        Me.TextBox2.TabIndex = 7
+        Me.txtDuracion.Location = New System.Drawing.Point(620, 167)
+        Me.txtDuracion.Name = "txtDuracion"
+        Me.txtDuracion.Size = New System.Drawing.Size(128, 22)
+        Me.txtDuracion.TabIndex = 11
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(331, 166)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(273, 22)
+        Me.Label6.TabIndex = 10
+        Me.Label6.Text = "Duracion Estimada (minutos):"
         '
         'Label5
         '
@@ -131,62 +145,52 @@ Partial Class jdGestionarServicio
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Precio:"
         '
-        'TextBox3
+        'Label4
         '
-        Me.TextBox3.Location = New System.Drawing.Point(112, 167)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(158, 22)
-        Me.TextBox3.TabIndex = 9
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(21, 89)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(85, 22)
+        Me.Label4.TabIndex = 6
+        Me.Label4.Text = "Nombre:"
         '
-        'Label6
+        'cboTipoVehiculo
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(311, 165)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(273, 22)
-        Me.Label6.TabIndex = 10
-        Me.Label6.Text = "Duracion Estimada (minutos):"
+        Me.cboTipoVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboTipoVehiculo.FormattingEnabled = True
+        Me.cboTipoVehiculo.Location = New System.Drawing.Point(442, 20)
+        Me.cboTipoVehiculo.Name = "cboTipoVehiculo"
+        Me.cboTipoVehiculo.Size = New System.Drawing.Size(205, 24)
+        Me.cboTipoVehiculo.TabIndex = 5
         '
-        'TextBox4
+        'Label3
         '
-        Me.TextBox4.Location = New System.Drawing.Point(590, 165)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(119, 22)
-        Me.TextBox4.TabIndex = 11
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(272, 22)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(164, 22)
+        Me.Label3.TabIndex = 4
+        Me.Label3.Text = "Tipo de vehiculo:"
         '
-        'Button1
+        'txtCodigo
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.Window
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(199, 281)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(105, 30)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "Guardar"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.SystemColors.Window
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Button2.Location = New System.Drawing.Point(389, 281)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(105, 30)
-        Me.Button2.TabIndex = 13
-        Me.Button2.Text = "Cancelar"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.txtCodigo.Location = New System.Drawing.Point(106, 22)
+        Me.txtCodigo.Name = "txtCodigo"
+        Me.txtCodigo.Size = New System.Drawing.Size(127, 22)
+        Me.txtCodigo.TabIndex = 3
         '
         'jdGestionarServicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(851, 563)
+        Me.ClientSize = New System.Drawing.Size(851, 609)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "jdGestionarServicio"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "jdGestionarServicio"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -198,15 +202,15 @@ Partial Class jdGestionarServicio
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cboTipoVehiculo As ComboBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtCodigo As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents btnGuardar As Button
+    Friend WithEvents txtDuracion As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnCancelar As Button
+    Friend WithEvents cboNombre As ComboBox
+    Friend WithEvents txtPrecio As TextBox
 End Class

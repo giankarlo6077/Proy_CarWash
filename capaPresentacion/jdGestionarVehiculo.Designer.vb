@@ -259,6 +259,7 @@ Partial Class jdGestionarVehiculo
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "jdGestionarVehiculo"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "jdGestionarVehiculo"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

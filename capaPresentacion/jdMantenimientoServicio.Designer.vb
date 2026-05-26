@@ -26,23 +26,23 @@ Partial Class jdMantenimientoServicio
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.cboOrdenar = New System.Windows.Forms.ComboBox()
+        Me.btnListar = New System.Windows.Forms.Button()
+        Me.btnNuevo = New System.Windows.Forms.Button()
+        Me.btnEditar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.txtBuscarServicios = New System.Windows.Forms.TextBox()
+        Me.cboTipoVehiculo = New System.Windows.Forms.ComboBox()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.tblServicios = New System.Windows.Forms.DataGridView()
         Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Placa = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DNI = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tblServicios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel3
@@ -56,10 +56,10 @@ Partial Class jdMantenimientoServicio
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(39, 60)
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(25, 60)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(375, 32)
+        Me.Label1.Size = New System.Drawing.Size(439, 34)
         Me.Label1.TabIndex = 33
         Me.Label1.Text = "Mantenimiento de Servicio"
         '
@@ -73,103 +73,110 @@ Partial Class jdMantenimientoServicio
         Me.Label2.TabIndex = 34
         Me.Label2.Text = "Ordenar por:"
         '
-        'ComboBox1
+        'cboOrdenar
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(793, 132)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(221, 24)
-        Me.ComboBox1.TabIndex = 35
+        Me.cboOrdenar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboOrdenar.FormattingEnabled = True
+        Me.cboOrdenar.Location = New System.Drawing.Point(793, 132)
+        Me.cboOrdenar.Name = "cboOrdenar"
+        Me.cboOrdenar.Size = New System.Drawing.Size(221, 24)
+        Me.cboOrdenar.TabIndex = 35
         '
-        'Button1
+        'btnListar
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(807, 181)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(182, 30)
-        Me.Button1.TabIndex = 36
-        Me.Button1.Text = "Listar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnListar.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.btnListar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnListar.Location = New System.Drawing.Point(807, 170)
+        Me.btnListar.Name = "btnListar"
+        Me.btnListar.Size = New System.Drawing.Size(182, 40)
+        Me.btnListar.TabIndex = 36
+        Me.btnListar.Text = "Listar"
+        Me.btnListar.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnNuevo
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(807, 357)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(182, 36)
-        Me.Button2.TabIndex = 37
-        Me.Button2.Text = "Nuevo Servicio"
-        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNuevo.Image = CType(resources.GetObject("btnNuevo.Image"), System.Drawing.Image)
+        Me.btnNuevo.Location = New System.Drawing.Point(793, 311)
+        Me.btnNuevo.Name = "btnNuevo"
+        Me.btnNuevo.Size = New System.Drawing.Size(207, 66)
+        Me.btnNuevo.TabIndex = 37
+        Me.btnNuevo.Text = "Nuevo Servicio"
+        Me.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnNuevo.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnEditar
         '
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(807, 421)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(182, 30)
-        Me.Button3.TabIndex = 38
-        Me.Button3.Text = "Editar"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEditar.Image = CType(resources.GetObject("btnEditar.Image"), System.Drawing.Image)
+        Me.btnEditar.Location = New System.Drawing.Point(793, 399)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(207, 65)
+        Me.btnEditar.TabIndex = 38
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnEditar.UseVisualStyleBackColor = True
         '
-        'Button4
+        'btnEliminar
         '
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(807, 485)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(182, 30)
-        Me.Button4.TabIndex = 39
-        Me.Button4.Text = "Eliminar"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminar.Image = CType(resources.GetObject("btnEliminar.Image"), System.Drawing.Image)
+        Me.btnEliminar.Location = New System.Drawing.Point(793, 494)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(207, 65)
+        Me.btnEliminar.TabIndex = 39
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(41, 145)
+        Me.Label3.Location = New System.Drawing.Point(41, 154)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(342, 22)
         Me.Label3.TabIndex = 40
         Me.Label3.Text = "Buscar por codigo o tipo de vehículo:"
         '
-        'TextBox1
+        'txtBuscarServicios
         '
-        Me.TextBox1.Location = New System.Drawing.Point(45, 188)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(369, 22)
-        Me.TextBox1.TabIndex = 41
+        Me.txtBuscarServicios.Location = New System.Drawing.Point(31, 188)
+        Me.txtBuscarServicios.Name = "txtBuscarServicios"
+        Me.txtBuscarServicios.Size = New System.Drawing.Size(383, 22)
+        Me.txtBuscarServicios.TabIndex = 41
         '
-        'ComboBox2
+        'cboTipoVehiculo
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(461, 186)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(177, 24)
-        Me.ComboBox2.TabIndex = 42
+        Me.cboTipoVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboTipoVehiculo.FormattingEnabled = True
+        Me.cboTipoVehiculo.Location = New System.Drawing.Point(461, 186)
+        Me.cboTipoVehiculo.Name = "cboTipoVehiculo"
+        Me.cboTipoVehiculo.Size = New System.Drawing.Size(177, 24)
+        Me.cboTipoVehiculo.TabIndex = 42
         '
-        'Button5
+        'btnBuscar
         '
-        Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
-        Me.Button5.Location = New System.Drawing.Point(663, 183)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(34, 33)
-        Me.Button5.TabIndex = 43
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
+        Me.btnBuscar.Location = New System.Drawing.Point(658, 177)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(44, 44)
+        Me.btnBuscar.TabIndex = 43
+        Me.btnBuscar.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'tblServicios
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.Placa, Me.DNI, Me.Column3, Me.Column4, Me.Column5})
-        Me.DataGridView1.Location = New System.Drawing.Point(31, 231)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersVisible = False
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(712, 396)
-        Me.DataGridView1.TabIndex = 44
+        Me.tblServicios.AllowUserToAddRows = False
+        Me.tblServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.tblServicios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.Placa, Me.DNI, Me.Column3, Me.Column4, Me.Column5})
+        Me.tblServicios.Location = New System.Drawing.Point(31, 231)
+        Me.tblServicios.Name = "tblServicios"
+        Me.tblServicios.RowHeadersVisible = False
+        Me.tblServicios.RowHeadersWidth = 51
+        Me.tblServicios.RowTemplate.Height = 24
+        Me.tblServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.tblServicios.Size = New System.Drawing.Size(712, 396)
+        Me.tblServicios.TabIndex = 44
         '
         'id
         '
@@ -218,23 +225,24 @@ Partial Class jdMantenimientoServicio
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1026, 689)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.tblServicios)
+        Me.Controls.Add(Me.btnBuscar)
+        Me.Controls.Add(Me.cboTipoVehiculo)
+        Me.Controls.Add(Me.txtBuscarServicios)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.btnEliminar)
+        Me.Controls.Add(Me.btnEditar)
+        Me.Controls.Add(Me.btnNuevo)
+        Me.Controls.Add(Me.btnListar)
+        Me.Controls.Add(Me.cboOrdenar)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel3)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "jdMantenimientoServicio"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "jdMantenimientoServicio"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tblServicios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -243,16 +251,16 @@ Partial Class jdMantenimientoServicio
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents cboOrdenar As ComboBox
+    Friend WithEvents btnListar As Button
+    Friend WithEvents btnNuevo As Button
+    Friend WithEvents btnEditar As Button
+    Friend WithEvents btnEliminar As Button
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents Button5 As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents txtBuscarServicios As TextBox
+    Friend WithEvents cboTipoVehiculo As ComboBox
+    Friend WithEvents btnBuscar As Button
+    Friend WithEvents tblServicios As DataGridView
     Friend WithEvents id As DataGridViewTextBoxColumn
     Friend WithEvents Placa As DataGridViewTextBoxColumn
     Friend WithEvents DNI As DataGridViewTextBoxColumn
