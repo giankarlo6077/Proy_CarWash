@@ -44,14 +44,17 @@ Partial Class JdMantenimientoProveedor
         '
         'btnBuscar
         '
-        Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnBuscar.BackColor = System.Drawing.Color.White
+        Me.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscar.ForeColor = System.Drawing.Color.White
+        Me.btnBuscar.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
         Me.btnBuscar.Location = New System.Drawing.Point(446, 73)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(151, 32)
         Me.btnBuscar.TabIndex = 57
         Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnBuscar.UseVisualStyleBackColor = False
         '
         'txtbuscador
@@ -74,9 +77,9 @@ Partial Class JdMantenimientoProveedor
         '
         'btnEditar
         '
-        Me.btnEditar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnEditar.BackColor = System.Drawing.Color.White
         Me.btnEditar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEditar.ForeColor = System.Drawing.Color.White
+        Me.btnEditar.ForeColor = System.Drawing.SystemColors.ControlText
         Me.btnEditar.Location = New System.Drawing.Point(172, 120)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(98, 37)
@@ -86,9 +89,9 @@ Partial Class JdMantenimientoProveedor
         '
         'btnCancelar
         '
-        Me.btnCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnCancelar.BackColor = System.Drawing.Color.White
         Me.btnCancelar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelar.ForeColor = System.Drawing.Color.White
+        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlText
         Me.btnCancelar.Location = New System.Drawing.Point(285, 120)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(118, 37)
@@ -98,14 +101,16 @@ Partial Class JdMantenimientoProveedor
         '
         'btnNuevo
         '
-        Me.btnNuevo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnNuevo.BackColor = System.Drawing.Color.White
         Me.btnNuevo.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNuevo.ForeColor = System.Drawing.Color.White
+        Me.btnNuevo.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnNuevo.Image = CType(resources.GetObject("btnNuevo.Image"), System.Drawing.Image)
         Me.btnNuevo.Location = New System.Drawing.Point(68, 120)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(98, 37)
         Me.btnNuevo.TabIndex = 75
         Me.btnNuevo.Text = "Nuevo"
+        Me.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnNuevo.UseVisualStyleBackColor = False
         '
         'JdMantenimientoProveedor
