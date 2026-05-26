@@ -76,7 +76,7 @@ Partial Class jdGestionarServicio
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Location = New System.Drawing.Point(59, 129)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(762, 396)
+        Me.Panel1.Size = New System.Drawing.Size(789, 396)
         Me.Panel1.TabIndex = 3
         '
         'txtPrecio
@@ -100,36 +100,40 @@ Partial Class jdGestionarServicio
         Me.btnCancelar.BackColor = System.Drawing.SystemColors.Window
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnCancelar.Location = New System.Drawing.Point(404, 281)
+        Me.btnCancelar.Image = CType(resources.GetObject("btnCancelar.Image"), System.Drawing.Image)
+        Me.btnCancelar.Location = New System.Drawing.Point(401, 271)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(105, 42)
+        Me.btnCancelar.Size = New System.Drawing.Size(190, 71)
         Me.btnCancelar.TabIndex = 13
         Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
         'btnGuardar
         '
         Me.btnGuardar.BackColor = System.Drawing.SystemColors.Window
         Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGuardar.Location = New System.Drawing.Point(219, 281)
+        Me.btnGuardar.Image = CType(resources.GetObject("btnGuardar.Image"), System.Drawing.Image)
+        Me.btnGuardar.Location = New System.Drawing.Point(167, 271)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(105, 42)
+        Me.btnGuardar.Size = New System.Drawing.Size(190, 71)
         Me.btnGuardar.TabIndex = 12
         Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnGuardar.UseVisualStyleBackColor = False
         '
         'txtDuracion
         '
-        Me.txtDuracion.Location = New System.Drawing.Point(620, 167)
+        Me.txtDuracion.Location = New System.Drawing.Point(633, 168)
         Me.txtDuracion.Name = "txtDuracion"
-        Me.txtDuracion.Size = New System.Drawing.Size(128, 22)
+        Me.txtDuracion.Size = New System.Drawing.Size(120, 22)
         Me.txtDuracion.TabIndex = 11
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(331, 166)
+        Me.Label6.Location = New System.Drawing.Point(336, 166)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(273, 22)
         Me.Label6.TabIndex = 10
@@ -185,7 +189,7 @@ Partial Class jdGestionarServicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(851, 609)
+        Me.ClientSize = New System.Drawing.Size(882, 609)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
