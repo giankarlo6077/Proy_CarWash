@@ -134,4 +134,10 @@
         Dim frmHistorialMant As New jdHistorialMantenimiento()
         frmHistorialMant.ShowDialog()
     End Sub
+
+    Private Sub ListaDeCitasPorEstadoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListaDeCitasPorEstadoToolStripMenuItem.Click
+        Dim frmBuscarCitasporEstado As New jdBuscarCitasporEstado()
+        frmBuscarCitasporEstado.ShowDialog()
+    End Sub
+
 End Class

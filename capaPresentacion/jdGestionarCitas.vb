@@ -3,9 +3,6 @@ Public Class jdGestionarCitas
     Dim objCita As New clsCita
     Private Sub jdGestionarCitas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            cmbVehiculo.DataSource = objCita.listarVehiculos
-            cmbVehiculo.DisplayMember = "placa"
-            cmbVehiculo.ValueMember = "idVehiculo"
             cmbTrabajador.DataSource = objCita.listarTrabajadores
             cmbTrabajador.DisplayMember = "trabajador"
             cmbTrabajador.ValueMember = "idTrabajador"
@@ -14,14 +11,6 @@ Public Class jdGestionarCitas
             dgvCitas.DataSource = objCita.listarCitas
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Vehiculo", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
-
-    Private Sub cmbVehiculo_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cmbVehiculo.SelectionChangeCommitted
-        Try
-            lblNombreCliente.Text = DirectCast(cmbVehiculo.SelectedItem, DataRowView)("Persona").ToString()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Venta", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -40,7 +29,7 @@ Public Class jdGestionarCitas
                                         hora,
                                         txtComentario.Text,
                                         dtpFechaRecojo.Value,
-                                        CInt(cmbVehiculo.SelectedValue),
+                                        objCita.buscarIDVehporPlaca(txtPlaca.Text),
                                         CInt(cmbTrabajador.SelectedValue)
                                     )
                 dgvCitas.DataSource = objCita.listarCitas
@@ -52,7 +41,9 @@ Public Class jdGestionarCitas
     End Sub
 
     Public Sub limpiarControles()
+        txtPlaca.Clear()
         txtComentario.Clear()
+        lblNombreCliente.Text = ""
     End Sub
 
     Private Sub dgvCitas_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCitas.CellClick
@@ -61,6 +52,21 @@ Public Class jdGestionarCitas
             Dim frmDetalle As New JdDetalleOrdenTrabajo(idCita)
             frmDetalle.ShowDialog()
             dgvCitas.DataSource = objCita.listarCitas()
+        End If
+    End Sub
+
+    Private Sub btnBuscarVehic_Click(sender As Object, e As EventArgs) Handles btnBuscarVehic.Click
+        If txtPlaca.Text.Trim() = "" Then
+            MessageBox.Show("Completar el campo por favor.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
+        Dim nombre As String = objCita.buscarPersonaPorPlaca(txtPlaca.Text.Trim())
+
+        If nombre = "" Then
+            MessageBox.Show("No se encontró ningún cliente con esa placa.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        Else
+            lblNombreCliente.Text = nombre
         End If
     End Sub
 

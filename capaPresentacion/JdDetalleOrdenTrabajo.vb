@@ -77,4 +77,12 @@ Public Class JdDetalleOrdenTrabajo
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Me.Close()
     End Sub
+
+    Private Sub btnAgregarServicio_Click(sender As Object, e As EventArgs) Handles btnAgregarServicio.Click
+
+    End Sub
+
+    Private Sub btnAgregarProducto_Click(sender As Object, e As EventArgs) Handles btnAgregarProducto.Click
+
+    End Sub
 End Class

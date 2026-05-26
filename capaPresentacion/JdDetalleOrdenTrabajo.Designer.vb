@@ -160,7 +160,7 @@ Partial Class JdDetalleOrdenTrabajo
         'cmbEstado
         '
         Me.cmbEstado.FormattingEnabled = True
-        Me.cmbEstado.Items.AddRange(New Object() {"Pendiente", "En Proceso", "Realizado"})
+        Me.cmbEstado.Items.AddRange(New Object() {"Pendiente", "En Proceso", "Realizado", "Cancelada"})
         Me.cmbEstado.Location = New System.Drawing.Point(633, 118)
         Me.cmbEstado.Name = "cmbEstado"
         Me.cmbEstado.Size = New System.Drawing.Size(178, 24)
@@ -394,9 +394,9 @@ Partial Class JdDetalleOrdenTrabajo
         Me.btnAgregarServicio.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnAgregarServicio.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAgregarServicio.ForeColor = System.Drawing.Color.White
-        Me.btnAgregarServicio.Location = New System.Drawing.Point(670, 694)
+        Me.btnAgregarServicio.Location = New System.Drawing.Point(618, 694)
         Me.btnAgregarServicio.Name = "btnAgregarServicio"
-        Me.btnAgregarServicio.Size = New System.Drawing.Size(174, 37)
+        Me.btnAgregarServicio.Size = New System.Drawing.Size(226, 37)
         Me.btnAgregarServicio.TabIndex = 74
         Me.btnAgregarServicio.Text = "Agregar Servicio"
         Me.btnAgregarServicio.UseVisualStyleBackColor = False
@@ -406,9 +406,9 @@ Partial Class JdDetalleOrdenTrabajo
         Me.btnAgregarProducto.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnAgregarProducto.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAgregarProducto.ForeColor = System.Drawing.Color.White
-        Me.btnAgregarProducto.Location = New System.Drawing.Point(670, 920)
+        Me.btnAgregarProducto.Location = New System.Drawing.Point(618, 920)
         Me.btnAgregarProducto.Name = "btnAgregarProducto"
-        Me.btnAgregarProducto.Size = New System.Drawing.Size(174, 37)
+        Me.btnAgregarProducto.Size = New System.Drawing.Size(226, 37)
         Me.btnAgregarProducto.TabIndex = 77
         Me.btnAgregarProducto.Text = "Agregar Producto"
         Me.btnAgregarProducto.UseVisualStyleBackColor = False

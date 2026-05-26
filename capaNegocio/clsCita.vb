@@ -23,21 +23,7 @@ Public Class clsCita
         End Try
     End Function
 
-    Public Function buscarporID(id As Integer) As DataTable
-        Dim strSQL As String = "SELECT * FROM cita WHERE idCita = " & id
-        Dim objConectar As New clsConectaBD()
-        Try
-            objConectar.conectar()
-            Dim da As New SqlDataAdapter(strSQL, objConectar.miConexion)
-            Dim dt As New DataTable()
-            da.Fill(dt)
-            Return dt
-        Catch ex As Exception
-            Throw New Exception("Error al listar Citas por ID: " & ex.Message)
-        Finally
-            objConectar.desconectar()
-        End Try
-    End Function
+
 
     Public Function buscarporEstado(estado As String) As DataTable
         Dim strSQL As String = "select * from cita where estado='" & estado & "'"
@@ -135,10 +121,29 @@ Public Class clsCita
     End Sub
 
 
-
     'listar vehículos con nombres de clientes
-    Public Function listarVehiculos() As DataTable
-        Dim strSQL As String = "select * from VEHICULO AS v INNER JOIN PERSONA AS p ON v.idCliente=p.idCliente order by placa asc"
+    Public Function buscarPersonaPorPlaca(placa As String) As String
+        Dim strSQL As String = "select p.persona from VEHICULO AS v INNER JOIN PERSONA AS p ON v.idCliente=p.idCliente  where v.placa= @placa"
+        Dim objConectar As New clsConectaBD()
+        Try
+            objConectar.conectar()
+            Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
+            cmd.Parameters.AddWithValue("@placa", placa)
+            Dim resultado = cmd.ExecuteScalar()
+            If resultado IsNot Nothing Then
+                Return resultado.ToString()
+            Else
+                Return ""
+            End If
+        Catch ex As Exception
+            Throw New Exception("Error al buscar persona: " & ex.Message)
+        Finally
+            objConectar.desconectar()
+        End Try
+    End Function
+
+    Public Function buscarClienteporPlaca(placa As String) As DataTable
+        Dim strSQL As String = "select * from VEHICULO AS v INNER JOIN PERSONA AS p ON v.idCliente=p.idCliente  where v.placa='" & placa & "'"
         Dim objConectar As New clsConectaBD()
         Try
             objConectar.conectar()
@@ -147,7 +152,7 @@ Public Class clsCita
             da.Fill(dt)
             Return dt
         Catch ex As Exception
-            Throw New Exception("Error al listar Vehiculos: " & ex.Message)
+            Throw New Exception("Error al listar Cliente por Placa: " & ex.Message)
         Finally
             objConectar.desconectar()
         End Try

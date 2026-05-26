@@ -43,6 +43,7 @@ Partial Class FrmMenuPrincipalModificado
         Me.REPORTESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ListaDeCitasPorEstadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -183,7 +184,7 @@ Partial Class FrmMenuPrincipalModificado
         '
         'REPORTESToolStripMenuItem
         '
-        Me.REPORTESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportesToolStripMenuItem1})
+        Me.REPORTESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportesToolStripMenuItem1, Me.ListaDeCitasPorEstadoToolStripMenuItem})
         Me.REPORTESToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.REPORTESToolStripMenuItem.Image = CType(resources.GetObject("REPORTESToolStripMenuItem.Image"), System.Drawing.Image)
         Me.REPORTESToolStripMenuItem.Name = "REPORTESToolStripMenuItem"
@@ -195,8 +196,8 @@ Partial Class FrmMenuPrincipalModificado
         '
         Me.ReportesToolStripMenuItem1.Image = CType(resources.GetObject("ReportesToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.ReportesToolStripMenuItem1.Name = "ReportesToolStripMenuItem1"
-        Me.ReportesToolStripMenuItem1.Size = New System.Drawing.Size(224, 32)
-        Me.ReportesToolStripMenuItem1.Text = "Reportes"
+        Me.ReportesToolStripMenuItem1.Size = New System.Drawing.Size(451, 32)
+        Me.ReportesToolStripMenuItem1.Text = "Reporte de Mantenimientos"
         '
         'PictureBox1
         '
@@ -210,6 +211,12 @@ Partial Class FrmMenuPrincipalModificado
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
+        '
+        'ListaDeCitasPorEstadoToolStripMenuItem
+        '
+        Me.ListaDeCitasPorEstadoToolStripMenuItem.Name = "ListaDeCitasPorEstadoToolStripMenuItem"
+        Me.ListaDeCitasPorEstadoToolStripMenuItem.Size = New System.Drawing.Size(451, 32)
+        Me.ListaDeCitasPorEstadoToolStripMenuItem.Text = "Lista de Citas por Estado"
         '
         'FrmMenuPrincipalModificado
         '
@@ -252,4 +259,5 @@ Partial Class FrmMenuPrincipalModificado
     Friend WithEvents UsuarioToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RolToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProveedorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ListaDeCitasPorEstadoToolStripMenuItem As ToolStripMenuItem
 End Class
