@@ -26,6 +26,7 @@ Public Class JdGestionarProducto
         tblProducto.Columns.Add("Precio", "Precio")
         tblProducto.Columns.Add("TipoProducto", "Tipo Producto")
         tblProducto.Columns.Add("Marca", "Marca")
+        tblProducto.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
     End Sub
 
     Public Sub listar(ByVal dato As String)
@@ -100,15 +101,42 @@ Public Class JdGestionarProducto
         If btnNuevo.Text = "Nuevo" Then
             btnNuevo.Text = "Guardar"
             limpiar()
+            ' Mostrar automáticamente el ID que tendrá el nuevo producto
+            Try
+                Dim obj As New capaNegocio.clsProducto()
+                txtId.Text = obj.generarCodigoProducto().ToString()
+            Catch ex As Exception
+                MessageBox.Show("Error al generar el código del producto: " & ex.Message)
+            End Try
         Else
+            ' Validaciones antes de registrar
+            If String.IsNullOrWhiteSpace(txtNombre.Text) Then
+                MessageBox.Show("Ingrese el nombre del producto")
+                Return
+            End If
+            If cboTipoProducto.SelectedIndex < 0 Then
+                MessageBox.Show("Seleccione el tipo de producto")
+                Return
+            End If
+            If cboMarcaProducto.SelectedIndex < 0 Then
+                MessageBox.Show("Seleccione la marca del producto")
+                Return
+            End If
+            Dim precio As Decimal
+            If Not Decimal.TryParse(txtPrecio.Text, precio) Then
+                MessageBox.Show("Ingrese un precio válido")
+                Return
+            End If
+
             btnNuevo.Text = "Nuevo"
             Try
                 Dim obj As New capaNegocio.clsProducto()
                 Dim id As Integer = obj.generarCodigoProducto()
                 Dim idMarca As Integer = Convert.ToInt32(cboMarcaProducto.SelectedValue)
                 Dim idTipo As Integer = Convert.ToInt32(cboTipoProducto.SelectedValue)
-                obj.registrarProducto(id, txtNombre.Text, Convert.ToInt32(spnStock.Value), chkVigencia.Checked, Convert.ToDecimal(txtPrecio.Text), idTipo, idMarca)
+                obj.registrarProducto(id, txtNombre.Text, Convert.ToInt32(spnStock.Value), chkVigencia.Checked, precio, idTipo, idMarca)
                 MessageBox.Show("PRODUCTO REGISTRADO")
+                limpiar()
             Catch ex As Exception
                 MessageBox.Show("Error al registrar: " & ex.Message)
             End Try
@@ -150,25 +178,6 @@ Public Class JdGestionarProducto
             MessageBox.Show("Error al dar de baja: " & ex.Message)
         End Try
         listar("")
-    End Sub
-
-    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        If String.IsNullOrWhiteSpace(txtId.Text) Then
-            MessageBox.Show("ESCOJA UN ID PARA ELIMINAR")
-            Return
-        End If
-        Dim respuesta = MessageBox.Show("¿Realmente quiere eliminar este producto?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-        If respuesta = DialogResult.Yes Then
-            Try
-                Dim obj As New capaNegocio.clsProducto()
-                obj.eliminarProducto(Convert.ToInt32(txtId.Text))
-                limpiar()
-                listar("")
-                MessageBox.Show("PRODUCTO ELIMINADO")
-            Catch ex As Exception
-                MessageBox.Show("Error al eliminar: " & ex.Message)
-            End Try
-        End If
     End Sub
 
     Private Sub btnTipoProducto_Click(sender As Object, e As EventArgs) Handles btnTipoProducto.Click

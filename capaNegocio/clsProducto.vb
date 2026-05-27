@@ -19,7 +19,7 @@ Public Class clsProducto
             " FROM producto pr" &
             " INNER JOIN marca_producto pm ON pm.idmarcaproducto = pr.idmarcaproducto" &
             " INNER JOIN tipo_producto tp ON tp.idtipoproducto = pr.idtipoproducto" &
-            " WHERE pr.idproducto = " & datoI & " OR pr.producto LIKE '%" & datoS & "%'" &
+            " WHERE pr.vigencia = 1 AND (pr.idproducto = " & datoI & " OR pr.producto LIKE '%" & datoS & "%')" &
             " ORDER BY 1"
         Dim objConectar As New clsConectaBD()
         Try
@@ -98,14 +98,19 @@ Public Class clsProducto
     Public Sub registrarProducto(ByVal id As Integer, ByVal nombre As String, ByVal stock As Integer,
                                   ByVal vigencia As Boolean, ByVal precio As Decimal,
                                   ByVal idTipoProducto As Integer, ByVal idMarcaProducto As Integer)
-        Dim estado As Integer = If(vigencia, 1, 0)
         Dim strSQL As String =
-            "INSERT INTO producto (idproducto, producto, stock, vigencia, precioactual, idmarcaproducto, idtipoproducto)" &
-            " VALUES (" & id & ", '" & nombre & "', " & stock & ", " & estado & ", " & precio & ", " & idMarcaProducto & ", " & idTipoProducto & ")"
+            "INSERT INTO producto (producto, stock, vigencia, precioactual, idmarcaproducto, idtipoproducto)" &
+            " VALUES (@producto, @stock, @vigencia, @precio, @idMarca, @idTipo)"
         Dim objConectar As New clsConectaBD()
         Try
             objConectar.conectar()
             Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
+            cmd.Parameters.AddWithValue("@producto", nombre)
+            cmd.Parameters.AddWithValue("@stock", stock)
+            cmd.Parameters.AddWithValue("@vigencia", vigencia)
+            cmd.Parameters.AddWithValue("@precio", precio)
+            cmd.Parameters.AddWithValue("@idMarca", idMarcaProducto)
+            cmd.Parameters.AddWithValue("@idTipo", idTipoProducto)
             cmd.ExecuteNonQuery()
         Catch ex As Exception
             Throw New Exception("Error al registrar producto: " & ex.Message)
@@ -117,17 +122,22 @@ Public Class clsProducto
     Public Sub modificarProducto(ByVal id As Integer, ByVal nombre As String, ByVal stock As Integer,
                                   ByVal vigencia As Boolean, ByVal precio As Decimal,
                                   ByVal idTipoProducto As Integer, ByVal idMarcaProducto As Integer)
-        Dim estado As Integer = If(vigencia, 1, 0)
         Dim strSQL As String =
-            "UPDATE producto SET producto = '" & nombre & "', stock = " & stock &
-            ", vigencia = " & estado & ", precioactual = " & precio &
-            ", idmarcaproducto = " & idMarcaProducto &
-            ", idtipoproducto = " & idTipoProducto &
-            " WHERE idproducto = " & id
+            "UPDATE producto SET producto = @producto, stock = @stock," &
+            " vigencia = @vigencia, precioactual = @precio," &
+            " idmarcaproducto = @idMarca, idtipoproducto = @idTipo" &
+            " WHERE idproducto = @id"
         Dim objConectar As New clsConectaBD()
         Try
             objConectar.conectar()
             Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
+            cmd.Parameters.AddWithValue("@producto", nombre)
+            cmd.Parameters.AddWithValue("@stock", stock)
+            cmd.Parameters.AddWithValue("@vigencia", vigencia)
+            cmd.Parameters.AddWithValue("@precio", precio)
+            cmd.Parameters.AddWithValue("@idMarca", idMarcaProducto)
+            cmd.Parameters.AddWithValue("@idTipo", idTipoProducto)
+            cmd.Parameters.AddWithValue("@id", id)
             cmd.ExecuteNonQuery()
         Catch ex As Exception
             Throw New Exception("Error al modificar producto: " & ex.Message)

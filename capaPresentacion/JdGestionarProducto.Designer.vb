@@ -46,7 +46,6 @@ Partial Class JdGestionarProducto
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.btnDarsebaja = New System.Windows.Forms.Button()
-        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnPapelera = New System.Windows.Forms.Button()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.jPanel3 = New System.Windows.Forms.Panel()
@@ -61,10 +60,10 @@ Partial Class JdGestionarProducto
         'lblTitulo
         '
         Me.lblTitulo.Font = New System.Drawing.Font("Verdana", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitulo.Location = New System.Drawing.Point(25, 9)
+        Me.lblTitulo.Location = New System.Drawing.Point(25, 12)
         Me.lblTitulo.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(364, 34)
+        Me.lblTitulo.Size = New System.Drawing.Size(450, 34)
         Me.lblTitulo.TabIndex = 0
         Me.lblTitulo.Text = "Mantenimiento de Producto"
         '
@@ -88,17 +87,17 @@ Partial Class JdGestionarProducto
         Me.jPanel1.Controls.Add(Me.lblMarca)
         Me.jPanel1.Controls.Add(Me.cboMarcaProducto)
         Me.jPanel1.Controls.Add(Me.btnMarca)
-        Me.jPanel1.Location = New System.Drawing.Point(9, 45)
+        Me.jPanel1.Location = New System.Drawing.Point(12, 50)
         Me.jPanel1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.jPanel1.Name = "jPanel1"
-        Me.jPanel1.Size = New System.Drawing.Size(553, 122)
+        Me.jPanel1.Size = New System.Drawing.Size(736, 145)
         Me.jPanel1.TabIndex = 1
         '
         'lblId
         '
         Me.lblId.AutoSize = True
         Me.lblId.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblId.Location = New System.Drawing.Point(7, 14)
+        Me.lblId.Location = New System.Drawing.Point(18, 21)
         Me.lblId.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblId.Name = "lblId"
         Me.lblId.Size = New System.Drawing.Size(26, 17)
@@ -107,10 +106,10 @@ Partial Class JdGestionarProducto
         '
         'txtId
         '
-        Me.txtId.Location = New System.Drawing.Point(45, 12)
+        Me.txtId.Location = New System.Drawing.Point(70, 18)
         Me.txtId.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.txtId.Name = "txtId"
-        Me.txtId.Size = New System.Drawing.Size(97, 20)
+        Me.txtId.Size = New System.Drawing.Size(120, 20)
         Me.txtId.TabIndex = 1
         '
         'btnBuscar
@@ -118,10 +117,10 @@ Partial Class JdGestionarProducto
         Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.ForeColor = System.Drawing.Color.White
-        Me.btnBuscar.Location = New System.Drawing.Point(150, 10)
+        Me.btnBuscar.Location = New System.Drawing.Point(205, 16)
         Me.btnBuscar.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(67, 22)
+        Me.btnBuscar.Size = New System.Drawing.Size(90, 26)
         Me.btnBuscar.TabIndex = 2
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = False
@@ -130,7 +129,7 @@ Partial Class JdGestionarProducto
         '
         Me.chkVigencia.AutoSize = True
         Me.chkVigencia.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkVigencia.Location = New System.Drawing.Point(240, 13)
+        Me.chkVigencia.Location = New System.Drawing.Point(330, 19)
         Me.chkVigencia.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.chkVigencia.Name = "chkVigencia"
         Me.chkVigencia.Size = New System.Drawing.Size(84, 21)
@@ -142,7 +141,7 @@ Partial Class JdGestionarProducto
         '
         Me.lblNombre.AutoSize = True
         Me.lblNombre.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombre.Location = New System.Drawing.Point(7, 47)
+        Me.lblNombre.Location = New System.Drawing.Point(18, 65)
         Me.lblNombre.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblNombre.Name = "lblNombre"
         Me.lblNombre.Size = New System.Drawing.Size(69, 17)
@@ -151,17 +150,17 @@ Partial Class JdGestionarProducto
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(67, 45)
+        Me.txtNombre.Location = New System.Drawing.Point(95, 62)
         Me.txtNombre.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(151, 20)
+        Me.txtNombre.Size = New System.Drawing.Size(200, 20)
         Me.txtNombre.TabIndex = 5
         '
         'lblStock
         '
         Me.lblStock.AutoSize = True
         Me.lblStock.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStock.Location = New System.Drawing.Point(240, 47)
+        Me.lblStock.Location = New System.Drawing.Point(315, 65)
         Me.lblStock.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblStock.Name = "lblStock"
         Me.lblStock.Size = New System.Drawing.Size(54, 17)
@@ -170,18 +169,18 @@ Partial Class JdGestionarProducto
         '
         'spnStock
         '
-        Me.spnStock.Location = New System.Drawing.Point(285, 45)
+        Me.spnStock.Location = New System.Drawing.Point(385, 62)
         Me.spnStock.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.spnStock.Maximum = New Decimal(New Integer() {1000000, 0, 0, 0})
         Me.spnStock.Name = "spnStock"
-        Me.spnStock.Size = New System.Drawing.Size(53, 20)
+        Me.spnStock.Size = New System.Drawing.Size(80, 20)
         Me.spnStock.TabIndex = 7
         '
         'lblPrecio
         '
         Me.lblPrecio.AutoSize = True
         Me.lblPrecio.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPrecio.Location = New System.Drawing.Point(349, 47)
+        Me.lblPrecio.Location = New System.Drawing.Point(485, 65)
         Me.lblPrecio.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblPrecio.Name = "lblPrecio"
         Me.lblPrecio.Size = New System.Drawing.Size(55, 17)
@@ -190,17 +189,17 @@ Partial Class JdGestionarProducto
         '
         'txtPrecio
         '
-        Me.txtPrecio.Location = New System.Drawing.Point(394, 45)
+        Me.txtPrecio.Location = New System.Drawing.Point(560, 62)
         Me.txtPrecio.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.txtPrecio.Name = "txtPrecio"
-        Me.txtPrecio.Size = New System.Drawing.Size(69, 20)
+        Me.txtPrecio.Size = New System.Drawing.Size(110, 20)
         Me.txtPrecio.TabIndex = 9
         '
         'lblTipoProducto
         '
         Me.lblTipoProducto.AutoSize = True
         Me.lblTipoProducto.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTipoProducto.Location = New System.Drawing.Point(7, 85)
+        Me.lblTipoProducto.Location = New System.Drawing.Point(18, 109)
         Me.lblTipoProducto.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblTipoProducto.Name = "lblTipoProducto"
         Me.lblTipoProducto.Size = New System.Drawing.Size(134, 17)
@@ -210,10 +209,10 @@ Partial Class JdGestionarProducto
         'cboTipoProducto
         '
         Me.cboTipoProducto.FormattingEnabled = True
-        Me.cboTipoProducto.Location = New System.Drawing.Point(109, 83)
+        Me.cboTipoProducto.Location = New System.Drawing.Point(160, 106)
         Me.cboTipoProducto.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.cboTipoProducto.Name = "cboTipoProducto"
-        Me.cboTipoProducto.Size = New System.Drawing.Size(163, 21)
+        Me.cboTipoProducto.Size = New System.Drawing.Size(170, 21)
         Me.cboTipoProducto.TabIndex = 11
         '
         'btnTipoProducto
@@ -221,10 +220,10 @@ Partial Class JdGestionarProducto
         Me.btnTipoProducto.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnTipoProducto.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTipoProducto.ForeColor = System.Drawing.Color.White
-        Me.btnTipoProducto.Location = New System.Drawing.Point(275, 82)
+        Me.btnTipoProducto.Location = New System.Drawing.Point(336, 106)
         Me.btnTipoProducto.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btnTipoProducto.Name = "btnTipoProducto"
-        Me.btnTipoProducto.Size = New System.Drawing.Size(24, 21)
+        Me.btnTipoProducto.Size = New System.Drawing.Size(30, 23)
         Me.btnTipoProducto.TabIndex = 12
         Me.btnTipoProducto.Text = "..."
         Me.btnTipoProducto.UseVisualStyleBackColor = False
@@ -233,7 +232,7 @@ Partial Class JdGestionarProducto
         '
         Me.lblMarca.AutoSize = True
         Me.lblMarca.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMarca.Location = New System.Drawing.Point(311, 85)
+        Me.lblMarca.Location = New System.Drawing.Point(430, 109)
         Me.lblMarca.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblMarca.Name = "lblMarca"
         Me.lblMarca.Size = New System.Drawing.Size(54, 17)
@@ -243,10 +242,10 @@ Partial Class JdGestionarProducto
         'cboMarcaProducto
         '
         Me.cboMarcaProducto.FormattingEnabled = True
-        Me.cboMarcaProducto.Location = New System.Drawing.Point(355, 83)
+        Me.cboMarcaProducto.Location = New System.Drawing.Point(490, 106)
         Me.cboMarcaProducto.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.cboMarcaProducto.Name = "cboMarcaProducto"
-        Me.cboMarcaProducto.Size = New System.Drawing.Size(136, 21)
+        Me.cboMarcaProducto.Size = New System.Drawing.Size(170, 21)
         Me.cboMarcaProducto.TabIndex = 14
         '
         'btnMarca
@@ -254,10 +253,10 @@ Partial Class JdGestionarProducto
         Me.btnMarca.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnMarca.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnMarca.ForeColor = System.Drawing.Color.White
-        Me.btnMarca.Location = New System.Drawing.Point(494, 82)
+        Me.btnMarca.Location = New System.Drawing.Point(663, 106)
         Me.btnMarca.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btnMarca.Name = "btnMarca"
-        Me.btnMarca.Size = New System.Drawing.Size(24, 21)
+        Me.btnMarca.Size = New System.Drawing.Size(30, 23)
         Me.btnMarca.TabIndex = 15
         Me.btnMarca.Text = "..."
         Me.btnMarca.UseVisualStyleBackColor = False
@@ -270,13 +269,12 @@ Partial Class JdGestionarProducto
         Me.jPanel2.Controls.Add(Me.btnModificar)
         Me.jPanel2.Controls.Add(Me.btnLimpiar)
         Me.jPanel2.Controls.Add(Me.btnDarsebaja)
-        Me.jPanel2.Controls.Add(Me.btnEliminar)
         Me.jPanel2.Controls.Add(Me.btnPapelera)
         Me.jPanel2.Controls.Add(Me.btnSalir)
-        Me.jPanel2.Location = New System.Drawing.Point(9, 175)
+        Me.jPanel2.Location = New System.Drawing.Point(18, 214)
         Me.jPanel2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.jPanel2.Name = "jPanel2"
-        Me.jPanel2.Size = New System.Drawing.Size(553, 46)
+        Me.jPanel2.Size = New System.Drawing.Size(736, 50)
         Me.jPanel2.TabIndex = 2
         '
         'btnNuevo
@@ -284,10 +282,10 @@ Partial Class JdGestionarProducto
         Me.btnNuevo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnNuevo.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNuevo.ForeColor = System.Drawing.Color.White
-        Me.btnNuevo.Location = New System.Drawing.Point(4, 8)
+        Me.btnNuevo.Location = New System.Drawing.Point(81, 10)
         Me.btnNuevo.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(67, 27)
+        Me.btnNuevo.Size = New System.Drawing.Size(80, 28)
         Me.btnNuevo.TabIndex = 0
         Me.btnNuevo.Text = "Nuevo"
         Me.btnNuevo.UseVisualStyleBackColor = False
@@ -297,10 +295,10 @@ Partial Class JdGestionarProducto
         Me.btnModificar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnModificar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnModificar.ForeColor = System.Drawing.Color.White
-        Me.btnModificar.Location = New System.Drawing.Point(72, 8)
+        Me.btnModificar.Location = New System.Drawing.Point(169, 10)
         Me.btnModificar.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(79, 27)
+        Me.btnModificar.Size = New System.Drawing.Size(95, 28)
         Me.btnModificar.TabIndex = 1
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.UseVisualStyleBackColor = False
@@ -310,10 +308,10 @@ Partial Class JdGestionarProducto
         Me.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnLimpiar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLimpiar.ForeColor = System.Drawing.Color.White
-        Me.btnLimpiar.Location = New System.Drawing.Point(153, 8)
+        Me.btnLimpiar.Location = New System.Drawing.Point(272, 10)
         Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(67, 27)
+        Me.btnLimpiar.Size = New System.Drawing.Size(80, 28)
         Me.btnLimpiar.TabIndex = 2
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = False
@@ -323,36 +321,23 @@ Partial Class JdGestionarProducto
         Me.btnDarsebaja.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnDarsebaja.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDarsebaja.ForeColor = System.Drawing.Color.White
-        Me.btnDarsebaja.Location = New System.Drawing.Point(223, 8)
+        Me.btnDarsebaja.Location = New System.Drawing.Point(360, 10)
         Me.btnDarsebaja.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btnDarsebaja.Name = "btnDarsebaja"
-        Me.btnDarsebaja.Size = New System.Drawing.Size(93, 27)
+        Me.btnDarsebaja.Size = New System.Drawing.Size(100, 28)
         Me.btnDarsebaja.TabIndex = 3
         Me.btnDarsebaja.Text = "Dar de Baja"
         Me.btnDarsebaja.UseVisualStyleBackColor = False
-        '
-        'btnEliminar
-        '
-        Me.btnEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnEliminar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEliminar.ForeColor = System.Drawing.Color.White
-        Me.btnEliminar.Location = New System.Drawing.Point(319, 8)
-        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(74, 27)
-        Me.btnEliminar.TabIndex = 4
-        Me.btnEliminar.Text = "Eliminar"
-        Me.btnEliminar.UseVisualStyleBackColor = False
         '
         'btnPapelera
         '
         Me.btnPapelera.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnPapelera.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPapelera.ForeColor = System.Drawing.Color.White
-        Me.btnPapelera.Location = New System.Drawing.Point(396, 8)
+        Me.btnPapelera.Location = New System.Drawing.Point(468, 10)
         Me.btnPapelera.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btnPapelera.Name = "btnPapelera"
-        Me.btnPapelera.Size = New System.Drawing.Size(86, 27)
+        Me.btnPapelera.Size = New System.Drawing.Size(90, 28)
         Me.btnPapelera.TabIndex = 5
         Me.btnPapelera.Text = "Papelera"
         Me.btnPapelera.UseVisualStyleBackColor = False
@@ -362,10 +347,10 @@ Partial Class JdGestionarProducto
         Me.btnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnSalir.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSalir.ForeColor = System.Drawing.Color.White
-        Me.btnSalir.Location = New System.Drawing.Point(484, 8)
+        Me.btnSalir.Location = New System.Drawing.Point(566, 10)
         Me.btnSalir.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(60, 27)
+        Me.btnSalir.Size = New System.Drawing.Size(70, 28)
         Me.btnSalir.TabIndex = 6
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = False
@@ -375,10 +360,10 @@ Partial Class JdGestionarProducto
         Me.jPanel3.BackColor = System.Drawing.Color.White
         Me.jPanel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.jPanel3.Controls.Add(Me.tblProducto)
-        Me.jPanel3.Location = New System.Drawing.Point(9, 227)
+        Me.jPanel3.Location = New System.Drawing.Point(12, 269)
         Me.jPanel3.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.jPanel3.Name = "jPanel3"
-        Me.jPanel3.Size = New System.Drawing.Size(553, 212)
+        Me.jPanel3.Size = New System.Drawing.Size(736, 250)
         Me.jPanel3.TabIndex = 3
         '
         'tblProducto
@@ -386,12 +371,12 @@ Partial Class JdGestionarProducto
         Me.tblProducto.AllowUserToAddRows = False
         Me.tblProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.tblProducto.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tblProducto.Location = New System.Drawing.Point(7, 8)
+        Me.tblProducto.Location = New System.Drawing.Point(8, 8)
         Me.tblProducto.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.tblProducto.Name = "tblProducto"
         Me.tblProducto.ReadOnly = True
         Me.tblProducto.RowHeadersWidth = 51
-        Me.tblProducto.Size = New System.Drawing.Size(534, 191)
+        Me.tblProducto.Size = New System.Drawing.Size(720, 234)
         Me.tblProducto.TabIndex = 0
         '
         'JdGestionarProducto
@@ -399,7 +384,7 @@ Partial Class JdGestionarProducto
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(570, 455)
+        Me.ClientSize = New System.Drawing.Size(760, 540)
         Me.Controls.Add(Me.jPanel3)
         Me.Controls.Add(Me.jPanel2)
         Me.Controls.Add(Me.jPanel1)
@@ -442,7 +427,6 @@ Partial Class JdGestionarProducto
     Friend WithEvents btnModificar As Button
     Friend WithEvents btnLimpiar As Button
     Friend WithEvents btnDarsebaja As Button
-    Friend WithEvents btnEliminar As Button
     Friend WithEvents btnPapelera As Button
     Friend WithEvents btnSalir As Button
     Friend WithEvents jPanel3 As Panel
