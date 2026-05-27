@@ -29,32 +29,34 @@ Partial Class jdMantenimientoVehiculo
         Me.btnGestionarPersona = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.tblVehiculo = New System.Windows.Forms.DataGridView()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.tblVehiculo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Verdana", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(67, 49)
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(301, 30)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(399, 34)
+        Me.Label1.Size = New System.Drawing.Size(466, 40)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Mantenimiento Vehiculo"
         '
         'txtbuscador
         '
-        Me.txtbuscador.Location = New System.Drawing.Point(73, 131)
+        Me.txtbuscador.Location = New System.Drawing.Point(73, 161)
         Me.txtbuscador.Name = "txtbuscador"
         Me.txtbuscador.Size = New System.Drawing.Size(288, 22)
         Me.txtbuscador.TabIndex = 1
         '
         'btnBuscar
         '
-        Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
-        Me.btnBuscar.Location = New System.Drawing.Point(367, 105)
+        Me.btnBuscar.Location = New System.Drawing.Point(367, 135)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(211, 70)
         Me.btnBuscar.TabIndex = 2
@@ -64,9 +66,9 @@ Partial Class jdMantenimientoVehiculo
         '
         'btnGestionarPersona
         '
-        Me.btnGestionarPersona.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGestionarPersona.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGestionarPersona.Image = CType(resources.GetObject("btnGestionarPersona.Image"), System.Drawing.Image)
-        Me.btnGestionarPersona.Location = New System.Drawing.Point(751, 105)
+        Me.btnGestionarPersona.Location = New System.Drawing.Point(751, 135)
         Me.btnGestionarPersona.Name = "btnGestionarPersona"
         Me.btnGestionarPersona.Size = New System.Drawing.Size(224, 70)
         Me.btnGestionarPersona.TabIndex = 3
@@ -77,7 +79,7 @@ Partial Class jdMantenimientoVehiculo
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.tblVehiculo)
-        Me.Panel1.Location = New System.Drawing.Point(73, 193)
+        Me.Panel1.Location = New System.Drawing.Point(73, 238)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(902, 409)
         Me.Panel1.TabIndex = 4
@@ -98,22 +100,35 @@ Partial Class jdMantenimientoVehiculo
         Me.tblVehiculo.Size = New System.Drawing.Size(865, 370)
         Me.tblVehiculo.TabIndex = 1
         '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.ForeColor = System.Drawing.Color.White
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1044, 100)
+        Me.Panel2.TabIndex = 5
+        '
         'jdMantenimientoVehiculo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1044, 662)
+        Me.ClientSize = New System.Drawing.Size(1044, 695)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnGestionarPersona)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.txtbuscador)
-        Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "jdMantenimientoVehiculo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "jdMantenimientoVehiculo"
         Me.Panel1.ResumeLayout(False)
         CType(Me.tblVehiculo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -125,4 +140,5 @@ Partial Class jdMantenimientoVehiculo
     Friend WithEvents btnGestionarPersona As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents tblVehiculo As DataGridView
+    Friend WithEvents Panel2 As Panel
 End Class

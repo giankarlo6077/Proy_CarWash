@@ -60,4 +60,8 @@ Public Class jdMantenimientoVehiculo
 
         Listar()
     End Sub
+
+    Private Sub txtbuscador_TextChanged(sender As Object, e As EventArgs) Handles txtbuscador.TextChanged
+
+    End Sub
 End Class
