@@ -42,7 +42,9 @@ Partial Class jdMantenimientoServicio
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.tblServicios, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel3
@@ -56,20 +58,20 @@ Partial Class jdMantenimientoServicio
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Verdana", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(25, 60)
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(264, 20)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(439, 34)
+        Me.Label1.Size = New System.Drawing.Size(528, 41)
         Me.Label1.TabIndex = 33
         Me.Label1.Text = "Mantenimiento de Servicio"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(789, 95)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(790, 113)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(124, 22)
+        Me.Label2.Size = New System.Drawing.Size(82, 16)
         Me.Label2.TabIndex = 34
         Me.Label2.Text = "Ordenar por:"
         '
@@ -79,13 +81,13 @@ Partial Class jdMantenimientoServicio
         Me.cboOrdenar.FormattingEnabled = True
         Me.cboOrdenar.Location = New System.Drawing.Point(793, 132)
         Me.cboOrdenar.Name = "cboOrdenar"
-        Me.cboOrdenar.Size = New System.Drawing.Size(221, 24)
+        Me.cboOrdenar.Size = New System.Drawing.Size(207, 24)
         Me.cboOrdenar.TabIndex = 35
         '
         'btnListar
         '
         Me.btnListar.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.btnListar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnListar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnListar.Location = New System.Drawing.Point(807, 170)
         Me.btnListar.Name = "btnListar"
         Me.btnListar.Size = New System.Drawing.Size(182, 40)
@@ -95,7 +97,7 @@ Partial Class jdMantenimientoServicio
         '
         'btnNuevo
         '
-        Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNuevo.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNuevo.Image = CType(resources.GetObject("btnNuevo.Image"), System.Drawing.Image)
         Me.btnNuevo.Location = New System.Drawing.Point(793, 311)
         Me.btnNuevo.Name = "btnNuevo"
@@ -107,7 +109,7 @@ Partial Class jdMantenimientoServicio
         '
         'btnEditar
         '
-        Me.btnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEditar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEditar.Image = CType(resources.GetObject("btnEditar.Image"), System.Drawing.Image)
         Me.btnEditar.Location = New System.Drawing.Point(793, 399)
         Me.btnEditar.Name = "btnEditar"
@@ -119,7 +121,7 @@ Partial Class jdMantenimientoServicio
         '
         'btnEliminar
         '
-        Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEliminar.Image = CType(resources.GetObject("btnEliminar.Image"), System.Drawing.Image)
         Me.btnEliminar.Location = New System.Drawing.Point(793, 494)
         Me.btnEliminar.Name = "btnEliminar"
@@ -132,10 +134,10 @@ Partial Class jdMantenimientoServicio
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(41, 154)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(28, 169)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(342, 22)
+        Me.Label3.Size = New System.Drawing.Size(228, 16)
         Me.Label3.TabIndex = 40
         Me.Label3.Text = "Buscar por codigo o tipo de vehículo:"
         '
@@ -167,10 +169,12 @@ Partial Class jdMantenimientoServicio
         'tblServicios
         '
         Me.tblServicios.AllowUserToAddRows = False
+        Me.tblServicios.AllowUserToDeleteRows = False
         Me.tblServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.tblServicios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.Placa, Me.DNI, Me.Column3, Me.Column4, Me.Column5})
         Me.tblServicios.Location = New System.Drawing.Point(31, 231)
         Me.tblServicios.Name = "tblServicios"
+        Me.tblServicios.ReadOnly = True
         Me.tblServicios.RowHeadersVisible = False
         Me.tblServicios.RowHeadersWidth = 51
         Me.tblServicios.RowTemplate.Height = 24
@@ -220,11 +224,23 @@ Partial Class jdMantenimientoServicio
         Me.Column5.MinimumWidth = 6
         Me.Column5.Name = "Column5"
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.ForeColor = System.Drawing.Color.White
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1026, 80)
+        Me.Panel1.TabIndex = 45
+        '
         'jdMantenimientoServicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1026, 689)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.tblServicios)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.cboTipoVehiculo)
@@ -236,13 +252,14 @@ Partial Class jdMantenimientoServicio
         Me.Controls.Add(Me.btnListar)
         Me.Controls.Add(Me.cboOrdenar)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel3)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "jdMantenimientoServicio"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "jdMantenimientoServicio"
         CType(Me.tblServicios, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -267,4 +284,5 @@ Partial Class jdMantenimientoServicio
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Panel1 As Panel
 End Class

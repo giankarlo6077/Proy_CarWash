@@ -37,26 +37,28 @@ Partial Class jdGestionarServicio
         Me.cboTipoVehiculo = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtCodigo = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Verdana", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(282, 69)
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(292, 18)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(305, 34)
+        Me.Label1.Size = New System.Drawing.Size(368, 41)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Gestionar Servicio"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(26, 22)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(27, 28)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(79, 22)
+        Me.Label2.Size = New System.Drawing.Size(54, 16)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Codigo:"
         '
@@ -76,14 +78,14 @@ Partial Class jdGestionarServicio
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Location = New System.Drawing.Point(59, 129)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(789, 396)
+        Me.Panel1.Size = New System.Drawing.Size(836, 402)
         Me.Panel1.TabIndex = 3
         '
         'txtPrecio
         '
-        Me.txtPrecio.Location = New System.Drawing.Point(106, 166)
+        Me.txtPrecio.Location = New System.Drawing.Point(106, 169)
         Me.txtPrecio.Name = "txtPrecio"
-        Me.txtPrecio.Size = New System.Drawing.Size(198, 22)
+        Me.txtPrecio.Size = New System.Drawing.Size(127, 22)
         Me.txtPrecio.TabIndex = 15
         '
         'cboNombre
@@ -92,18 +94,18 @@ Partial Class jdGestionarServicio
         Me.cboNombre.FormattingEnabled = True
         Me.cboNombre.Location = New System.Drawing.Point(106, 89)
         Me.cboNombre.Name = "cboNombre"
-        Me.cboNombre.Size = New System.Drawing.Size(267, 24)
+        Me.cboNombre.Size = New System.Drawing.Size(205, 24)
         Me.cboNombre.TabIndex = 14
         '
         'btnCancelar
         '
         Me.btnCancelar.BackColor = System.Drawing.SystemColors.Window
-        Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnCancelar.Image = CType(resources.GetObject("btnCancelar.Image"), System.Drawing.Image)
-        Me.btnCancelar.Location = New System.Drawing.Point(401, 271)
+        Me.btnCancelar.Location = New System.Drawing.Point(442, 271)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(190, 71)
+        Me.btnCancelar.Size = New System.Drawing.Size(196, 71)
         Me.btnCancelar.TabIndex = 13
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -112,9 +114,9 @@ Partial Class jdGestionarServicio
         'btnGuardar
         '
         Me.btnGuardar.BackColor = System.Drawing.SystemColors.Window
-        Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.Image = CType(resources.GetObject("btnGuardar.Image"), System.Drawing.Image)
-        Me.btnGuardar.Location = New System.Drawing.Point(167, 271)
+        Me.btnGuardar.Location = New System.Drawing.Point(194, 271)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(190, 71)
         Me.btnGuardar.TabIndex = 12
@@ -124,7 +126,7 @@ Partial Class jdGestionarServicio
         '
         'txtDuracion
         '
-        Me.txtDuracion.Location = New System.Drawing.Point(633, 168)
+        Me.txtDuracion.Location = New System.Drawing.Point(597, 169)
         Me.txtDuracion.Name = "txtDuracion"
         Me.txtDuracion.Size = New System.Drawing.Size(120, 22)
         Me.txtDuracion.TabIndex = 11
@@ -132,30 +134,30 @@ Partial Class jdGestionarServicio
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(336, 166)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(396, 172)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(273, 22)
+        Me.Label6.Size = New System.Drawing.Size(181, 16)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Duracion Estimada (minutos):"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(26, 167)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(27, 172)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(73, 22)
+        Me.Label5.Size = New System.Drawing.Size(49, 16)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Precio:"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(21, 89)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(27, 92)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(85, 22)
+        Me.Label4.Size = New System.Drawing.Size(59, 16)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Nombre:"
         '
@@ -163,7 +165,7 @@ Partial Class jdGestionarServicio
         '
         Me.cboTipoVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboTipoVehiculo.FormattingEnabled = True
-        Me.cboTipoVehiculo.Location = New System.Drawing.Point(442, 20)
+        Me.cboTipoVehiculo.Location = New System.Drawing.Point(512, 20)
         Me.cboTipoVehiculo.Name = "cboTipoVehiculo"
         Me.cboTipoVehiculo.Size = New System.Drawing.Size(205, 24)
         Me.cboTipoVehiculo.TabIndex = 5
@@ -171,10 +173,10 @@ Partial Class jdGestionarServicio
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(272, 22)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(396, 23)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(164, 22)
+        Me.Label3.Size = New System.Drawing.Size(110, 16)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Tipo de vehiculo:"
         '
@@ -185,21 +187,33 @@ Partial Class jdGestionarServicio
         Me.txtCodigo.Size = New System.Drawing.Size(127, 22)
         Me.txtCodigo.TabIndex = 3
         '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.ForeColor = System.Drawing.Color.White
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(939, 86)
+        Me.Panel2.TabIndex = 4
+        '
         'jdGestionarServicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(882, 609)
+        Me.ClientSize = New System.Drawing.Size(939, 584)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "jdGestionarServicio"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "jdGestionarServicio"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -217,4 +231,5 @@ Partial Class jdGestionarServicio
     Friend WithEvents btnCancelar As Button
     Friend WithEvents cboNombre As ComboBox
     Friend WithEvents txtPrecio As TextBox
+    Friend WithEvents Panel2 As Panel
 End Class

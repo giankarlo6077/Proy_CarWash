@@ -69,7 +69,7 @@ Partial Class jdGestionarUsuario
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Verdana", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(116, 9)
+        Me.Label1.Location = New System.Drawing.Point(189, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(747, 83)
         Me.Label1.TabIndex = 0
