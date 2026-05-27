@@ -140,4 +140,8 @@
         frmBuscarCitasporEstado.ShowDialog()
     End Sub
 
+    Private Sub HistorialDeVehiculosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HistorialDeVehiculosToolStripMenuItem.Click
+        Dim frmReporte As New jdReporteVehiculo()
+        frmReporte.ShowDialog()
+    End Sub
 End Class

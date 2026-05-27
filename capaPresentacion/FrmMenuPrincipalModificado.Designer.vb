@@ -42,8 +42,9 @@ Partial Class FrmMenuPrincipalModificado
         Me.RegistrarVentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.REPORTESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ListaDeCitasPorEstadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.HistorialDeVehiculosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -184,7 +185,7 @@ Partial Class FrmMenuPrincipalModificado
         '
         'REPORTESToolStripMenuItem
         '
-        Me.REPORTESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportesToolStripMenuItem1, Me.ListaDeCitasPorEstadoToolStripMenuItem})
+        Me.REPORTESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportesToolStripMenuItem1, Me.ListaDeCitasPorEstadoToolStripMenuItem, Me.HistorialDeVehiculosToolStripMenuItem})
         Me.REPORTESToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.REPORTESToolStripMenuItem.Image = CType(resources.GetObject("REPORTESToolStripMenuItem.Image"), System.Drawing.Image)
         Me.REPORTESToolStripMenuItem.Name = "REPORTESToolStripMenuItem"
@@ -199,6 +200,12 @@ Partial Class FrmMenuPrincipalModificado
         Me.ReportesToolStripMenuItem1.Size = New System.Drawing.Size(451, 32)
         Me.ReportesToolStripMenuItem1.Text = "Reporte de Mantenimientos"
         '
+        'ListaDeCitasPorEstadoToolStripMenuItem
+        '
+        Me.ListaDeCitasPorEstadoToolStripMenuItem.Name = "ListaDeCitasPorEstadoToolStripMenuItem"
+        Me.ListaDeCitasPorEstadoToolStripMenuItem.Size = New System.Drawing.Size(451, 32)
+        Me.ListaDeCitasPorEstadoToolStripMenuItem.Text = "Lista de Citas por Estado"
+        '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.White
@@ -212,11 +219,12 @@ Partial Class FrmMenuPrincipalModificado
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
-        'ListaDeCitasPorEstadoToolStripMenuItem
+        'HistorialDeVehiculosToolStripMenuItem
         '
-        Me.ListaDeCitasPorEstadoToolStripMenuItem.Name = "ListaDeCitasPorEstadoToolStripMenuItem"
-        Me.ListaDeCitasPorEstadoToolStripMenuItem.Size = New System.Drawing.Size(451, 32)
-        Me.ListaDeCitasPorEstadoToolStripMenuItem.Text = "Lista de Citas por Estado"
+        Me.HistorialDeVehiculosToolStripMenuItem.Image = CType(resources.GetObject("HistorialDeVehiculosToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.HistorialDeVehiculosToolStripMenuItem.Name = "HistorialDeVehiculosToolStripMenuItem"
+        Me.HistorialDeVehiculosToolStripMenuItem.Size = New System.Drawing.Size(451, 32)
+        Me.HistorialDeVehiculosToolStripMenuItem.Text = "Historial de Vehiculos"
         '
         'FrmMenuPrincipalModificado
         '
@@ -260,4 +268,5 @@ Partial Class FrmMenuPrincipalModificado
     Friend WithEvents RolToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProveedorToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ListaDeCitasPorEstadoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HistorialDeVehiculosToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -275,6 +275,12 @@
     <Compile Include="jdRecuperarContrasena.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="jdReporteVehiculo.Designer.vb">
+      <DependentUpon>jdReporteVehiculo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jdReporteVehiculo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="jdSeleccionarProducto.Designer.vb">
       <DependentUpon>jdSeleccionarProducto.vb</DependentUpon>
     </Compile>
@@ -413,6 +419,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="jdRecuperarContrasena.resx">
       <DependentUpon>jdRecuperarContrasena.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jdReporteVehiculo.resx">
+      <DependentUpon>jdReporteVehiculo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="jdSeleccionarProducto.resx">
       <DependentUpon>jdSeleccionarProducto.vb</DependentUpon>
