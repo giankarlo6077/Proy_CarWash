@@ -22,82 +22,17 @@ Partial Class jdSeleccionarServicio
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnSeleccionar = New System.Windows.Forms.Button()
-        Me.tblServicios = New System.Windows.Forms.TableLayoutPanel()
-        Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.dgvSelecServicios = New System.Windows.Forms.DataGridView()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnCancelar = New System.Windows.Forms.Button()
+        CType(Me.dgvSelecServicios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.btnSeleccionar)
-        Me.Panel1.Controls.Add(Me.tblServicios)
-        Me.Panel1.Controls.Add(Me.btnBuscar)
-        Me.Panel1.Controls.Add(Me.ComboBox1)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(12, 12)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1185, 579)
-        Me.Panel1.TabIndex = 0
-        '
-        'btnSeleccionar
-        '
-        Me.btnSeleccionar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnSeleccionar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSeleccionar.ForeColor = System.Drawing.Color.White
-        Me.btnSeleccionar.Location = New System.Drawing.Point(955, 518)
-        Me.btnSeleccionar.Name = "btnSeleccionar"
-        Me.btnSeleccionar.Size = New System.Drawing.Size(170, 37)
-        Me.btnSeleccionar.TabIndex = 74
-        Me.btnSeleccionar.Text = "Seleccionar"
-        Me.btnSeleccionar.UseVisualStyleBackColor = False
-        '
-        'tblServicios
-        '
-        Me.tblServicios.ColumnCount = 2
-        Me.tblServicios.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.tblServicios.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.tblServicios.Location = New System.Drawing.Point(37, 182)
-        Me.tblServicios.Name = "tblServicios"
-        Me.tblServicios.RowCount = 2
-        Me.tblServicios.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.tblServicios.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.tblServicios.Size = New System.Drawing.Size(1088, 305)
-        Me.tblServicios.TabIndex = 73
-        '
-        'btnBuscar
-        '
-        Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscar.ForeColor = System.Drawing.Color.White
-        Me.btnBuscar.Location = New System.Drawing.Point(983, 101)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(142, 37)
-        Me.btnBuscar.TabIndex = 72
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = False
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(191, 109)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(529, 24)
-        Me.ComboBox1.TabIndex = 6
-        '
-        'Label2
-        '
-        Me.Label2.Location = New System.Drawing.Point(34, 112)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(151, 21)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Tipo de Vehiculo:"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label1
         '
@@ -109,25 +44,95 @@ Partial Class jdSeleccionarServicio
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Seleccionar Servicios"
         '
+        'dgvSelecServicios
+        '
+        Me.dgvSelecServicios.AllowUserToAddRows = False
+        Me.dgvSelecServicios.AllowUserToDeleteRows = False
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvSelecServicios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        Me.dgvSelecServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvSelecServicios.DefaultCellStyle = DataGridViewCellStyle5
+        Me.dgvSelecServicios.Location = New System.Drawing.Point(37, 169)
+        Me.dgvSelecServicios.Name = "dgvSelecServicios"
+        Me.dgvSelecServicios.ReadOnly = True
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvSelecServicios.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        Me.dgvSelecServicios.RowHeadersWidth = 51
+        Me.dgvSelecServicios.RowTemplate.Height = 24
+        Me.dgvSelecServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvSelecServicios.Size = New System.Drawing.Size(657, 386)
+        Me.dgvSelecServicios.TabIndex = 80
+        '
+        'Label3
+        '
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(32, 102)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(454, 30)
+        Me.Label3.TabIndex = 81
+        Me.Label3.Text = "Seleccione el servicio que desea agregar:"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.btnCancelar)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.dgvSelecServicios)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Location = New System.Drawing.Point(12, 12)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(733, 662)
+        Me.Panel1.TabIndex = 0
+        '
+        'btnCancelar
+        '
+        Me.btnCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnCancelar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelar.ForeColor = System.Drawing.Color.White
+        Me.btnCancelar.Location = New System.Drawing.Point(326, 593)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(174, 37)
+        Me.btnCancelar.TabIndex = 83
+        Me.btnCancelar.Text = "Cerrar"
+        Me.btnCancelar.UseVisualStyleBackColor = False
+        '
         'jdSeleccionarServicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1209, 608)
+        Me.ClientSize = New System.Drawing.Size(761, 701)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "jdSeleccionarServicio"
         Me.Text = "jdSeleccionarServicio"
+        CType(Me.dgvSelecServicios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents btnBuscar As Button
-    Friend WithEvents btnSeleccionar As Button
-    Friend WithEvents tblServicios As TableLayoutPanel
+    Friend WithEvents dgvSelecServicios As DataGridView
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents btnCancelar As Button
 End Class

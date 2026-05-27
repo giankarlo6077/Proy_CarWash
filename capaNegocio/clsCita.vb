@@ -24,7 +24,6 @@ Public Class clsCita
     End Function
 
 
-
     Public Function buscarporEstado(estado As String) As DataTable
         Dim strSQL As String = "select * from cita where estado='" & estado & "'"
         Dim objConectar As New clsConectaBD()
@@ -270,7 +269,7 @@ Public Class clsCita
 
     Public Function cargarProductosdelaCita(idCita As Integer) As DataTable
         Dim strSQL As String = "
-        SELECT c.idCita, pr.producto, pm.cantidad, pm.precio
+        SELECT pr.idProducto, pr.producto, pm.precio
         FROM CITA AS c  
         INNER JOIN PRODUCTO_MANTENIMIENTO AS pm ON c.idCita = pm.idCita
         INNER JOIN PRODUCTO AS pr ON pm.idProducto = pr.idProducto
@@ -295,7 +294,7 @@ Public Class clsCita
 
     Public Function cargarServiciosdelaCita(idCita As Integer) As DataTable
         Dim strSQL As String = "
-            select c.idCita,ser.Servicio from CITA AS c  
+            select ser.idServicio,ser.Servicio from CITA AS c  
             INNER JOIN DETALLE_CITA AS dc ON c.idCita=dc.idCita
             INNER JOIN SERVICIO AS ser ON dc.idServicio=ser.idServicio
             where c.idCita = @idCita"
@@ -317,5 +316,39 @@ Public Class clsCita
         Return dt
     End Function
 
+    Public Function listarProductos() As DataTable
+        Dim strSQL As String = "select pr.idProducto,pr.producto,pr.stock,pr.precioActual as precio,mp.marcaProducto,tp.TipoProducto from PRODUCTO AS pr
+                                INNER JOIN MARCA_PRODUCTO AS mp ON pr.idMarcaProducto=mp.idMarcaProducto
+                                INNER JOIN TIPO_PRODUCTO AS tp ON pr.idTipoProducto=tp.idTipoProducto
+                                where vigencia= 1 order by pr.producto asc"
+        Dim objConectar As New clsConectaBD()
+        Try
+            objConectar.conectar()
+            Dim da As New SqlDataAdapter(strSQL, objConectar.miConexion)
+            Dim dt As New DataTable()
+            da.Fill(dt)
+            Return dt
+        Catch ex As Exception
+            Throw New Exception("Error al listar Citas: " & ex.Message)
+        Finally
+            objConectar.desconectar()
+        End Try
+    End Function
+
+    Public Function listarServicios() As DataTable
+        Dim strSQL As String = "select idServicio,Servicio,duracion from SERVICIO where estado= 1 order by SERVICIO asc"
+        Dim objConectar As New clsConectaBD()
+        Try
+            objConectar.conectar()
+            Dim da As New SqlDataAdapter(strSQL, objConectar.miConexion)
+            Dim dt As New DataTable()
+            da.Fill(dt)
+            Return dt
+        Catch ex As Exception
+            Throw New Exception("Error al listar Citas: " & ex.Message)
+        Finally
+            objConectar.desconectar()
+        End Try
+    End Function
 
 End Class

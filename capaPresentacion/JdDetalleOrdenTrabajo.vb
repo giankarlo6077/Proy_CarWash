@@ -4,6 +4,8 @@ Imports capaNegocio
 Public Class JdDetalleOrdenTrabajo
     Dim objCita As New clsCita
     Private _idCita As Integer
+    Private dtServicios As New DataTable()
+    Private dtProductos As New DataTable()
 
     Public Sub New(idCita As Integer)
         InitializeComponent()
@@ -32,8 +34,15 @@ Public Class JdDetalleOrdenTrabajo
             lblAno.Text = fila("anoFabricacion").ToString()
             lblCliente.Text = fila("cliente").ToString()
             lblTelefono.Text = fila("telefono").ToString()
-            dgvProductos.DataSource = objCita.cargarProductosdelaCita(_idCita)
-            dgvServicios.DataSource = objCita.cargarServiciosdelaCita(_idCita)
+
+            dtServicios = objCita.cargarServiciosdelaCita(_idCita)
+            dgvServicios.DataSource = dtServicios
+            dgvServicios.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells)
+
+            dtProductos = objCita.cargarProductosdelaCita(_idCita)
+            dgvProductos.DataSource = dtProductos
+            dgvProductos.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells)
+
         Else
             MessageBox.Show("No se encontró la cita.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
@@ -79,10 +88,31 @@ Public Class JdDetalleOrdenTrabajo
     End Sub
 
     Private Sub btnAgregarServicio_Click(sender As Object, e As EventArgs) Handles btnAgregarServicio.Click
+        Dim frmServicio As New jdSeleccionarServicio()
+        frmServicio.ShowDialog()
 
+        If frmServicio.ServicioSeleccionado IsNot Nothing Then
+            Dim fila As DataRow = frmServicio.ServicioSeleccionado
+
+            Dim dr As DataRow = dtServicios.NewRow()
+            dr("idServicio") = fila("idServicio")
+            dr("servicio") = fila("servicio")
+            dtServicios.Rows.Add(dr)
+        End If
     End Sub
 
     Private Sub btnAgregarProducto_Click(sender As Object, e As EventArgs) Handles btnAgregarProducto.Click
+        Dim frmProducto As New jdSeleccionarProducto()
+        frmProducto.ShowDialog()
 
+        If frmProducto.ProductoSeleccionado IsNot Nothing Then
+            Dim fila As DataRow = frmProducto.ProductoSeleccionado
+
+            Dim dr As DataRow = dtProductos.NewRow()
+            dr("idProducto") = fila("idProducto")
+            dr("producto") = fila("producto")
+            dr("precio") = fila("precio")
+            dtProductos.Rows.Add(dr)
+        End If
     End Sub
 End Class

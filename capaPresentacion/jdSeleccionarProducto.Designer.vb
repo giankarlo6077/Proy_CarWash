@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class jdSeleccionarProducto
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,18 +20,92 @@ Partial Class jdSeleccionarProducto
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.dgvSelecProduct = New System.Windows.Forms.DataGridView()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel1.SuspendLayout()
+        CType(Me.dgvSelecProduct, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.btnCancelar)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.dgvSelecProduct)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Location = New System.Drawing.Point(12, 19)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1185, 662)
+        Me.Panel1.TabIndex = 1
+        '
+        'btnCancelar
+        '
+        Me.btnCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnCancelar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelar.ForeColor = System.Drawing.Color.White
+        Me.btnCancelar.Location = New System.Drawing.Point(507, 592)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(174, 37)
+        Me.btnCancelar.TabIndex = 83
+        Me.btnCancelar.Text = "Cerrar"
+        Me.btnCancelar.UseVisualStyleBackColor = False
+        '
+        'Label3
+        '
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(32, 102)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(454, 30)
+        Me.Label3.TabIndex = 81
+        Me.Label3.Text = "Seleccione el producto que desea agregar:"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'dgvSelecProduct
+        '
+        Me.dgvSelecProduct.AllowUserToAddRows = False
+        Me.dgvSelecProduct.AllowUserToDeleteRows = False
+        Me.dgvSelecProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvSelecProduct.Location = New System.Drawing.Point(37, 169)
+        Me.dgvSelecProduct.Name = "dgvSelecProduct"
+        Me.dgvSelecProduct.ReadOnly = True
+        Me.dgvSelecProduct.RowHeadersWidth = 51
+        Me.dgvSelecProduct.RowTemplate.Height = 24
+        Me.dgvSelecProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvSelecProduct.Size = New System.Drawing.Size(1105, 386)
+        Me.dgvSelecProduct.TabIndex = 80
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 16.2!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Location = New System.Drawing.Point(31, 30)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(366, 34)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Seleccionar Productos"
         '
         'jdSeleccionarProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1209, 608)
+        Me.ClientSize = New System.Drawing.Size(1209, 701)
+        Me.Controls.Add(Me.Panel1)
         Me.Name = "jdSeleccionarProducto"
         Me.Text = "jdSeleccionarProducto"
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.dgvSelecProduct, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
+
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents btnCancelar As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents dgvSelecProduct As DataGridView
+    Friend WithEvents Label1 As Label
 End Class
