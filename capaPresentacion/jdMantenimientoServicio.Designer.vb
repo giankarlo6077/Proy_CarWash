@@ -36,12 +36,6 @@ Partial Class jdMantenimientoServicio
         Me.cboTipoVehiculo = New System.Windows.Forms.ComboBox()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.tblServicios = New System.Windows.Forms.DataGridView()
-        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Placa = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DNI = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.tblServicios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -61,7 +55,7 @@ Partial Class jdMantenimientoServicio
         Me.Label1.Font = New System.Drawing.Font("Verdana", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(264, 20)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(528, 41)
+        Me.Label1.Size = New System.Drawing.Size(509, 40)
         Me.Label1.TabIndex = 33
         Me.Label1.Text = "Mantenimiento de Servicio"
         '
@@ -171,7 +165,6 @@ Partial Class jdMantenimientoServicio
         Me.tblServicios.AllowUserToAddRows = False
         Me.tblServicios.AllowUserToDeleteRows = False
         Me.tblServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.tblServicios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.Placa, Me.DNI, Me.Column3, Me.Column4, Me.Column5})
         Me.tblServicios.Location = New System.Drawing.Point(31, 231)
         Me.tblServicios.Name = "tblServicios"
         Me.tblServicios.ReadOnly = True
@@ -181,48 +174,6 @@ Partial Class jdMantenimientoServicio
         Me.tblServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.tblServicios.Size = New System.Drawing.Size(712, 396)
         Me.tblServicios.TabIndex = 44
-        '
-        'id
-        '
-        Me.id.HeaderText = "ID"
-        Me.id.MinimumWidth = 6
-        Me.id.Name = "id"
-        Me.id.Width = 125
-        '
-        'Placa
-        '
-        Me.Placa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Placa.HeaderText = "Servicio"
-        Me.Placa.MinimumWidth = 6
-        Me.Placa.Name = "Placa"
-        '
-        'DNI
-        '
-        Me.DNI.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DNI.HeaderText = "Precio Actual"
-        Me.DNI.MinimumWidth = 6
-        Me.DNI.Name = "DNI"
-        '
-        'Column3
-        '
-        Me.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column3.HeaderText = "Duracion"
-        Me.Column3.MinimumWidth = 6
-        Me.Column3.Name = "Column3"
-        '
-        'Column4
-        '
-        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column4.HeaderText = "Tipo de vehículo"
-        Me.Column4.MinimumWidth = 6
-        Me.Column4.Name = "Column4"
-        '
-        'Column5
-        '
-        Me.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column5.HeaderText = "Estado"
-        Me.Column5.MinimumWidth = 6
-        Me.Column5.Name = "Column5"
         '
         'Panel1
         '
@@ -278,11 +229,5 @@ Partial Class jdMantenimientoServicio
     Friend WithEvents cboTipoVehiculo As ComboBox
     Friend WithEvents btnBuscar As Button
     Friend WithEvents tblServicios As DataGridView
-    Friend WithEvents id As DataGridViewTextBoxColumn
-    Friend WithEvents Placa As DataGridViewTextBoxColumn
-    Friend WithEvents DNI As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Panel1 As Panel
 End Class

@@ -90,11 +90,10 @@ Partial Class jdGestionarServicio
         '
         'cboNombre
         '
-        Me.cboNombre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboNombre.FormattingEnabled = True
         Me.cboNombre.Location = New System.Drawing.Point(106, 89)
         Me.cboNombre.Name = "cboNombre"
-        Me.cboNombre.Size = New System.Drawing.Size(205, 24)
+        Me.cboNombre.Size = New System.Drawing.Size(241, 24)
         Me.cboNombre.TabIndex = 14
         '
         'btnCancelar
