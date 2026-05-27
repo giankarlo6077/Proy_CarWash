@@ -46,9 +46,9 @@ Partial Class jdGestionarServicio
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Verdana", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(292, 18)
+        Me.Label1.Location = New System.Drawing.Point(251, 23)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(368, 41)
+        Me.Label1.Size = New System.Drawing.Size(354, 40)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Gestionar Servicio"
         '
@@ -76,9 +76,9 @@ Partial Class jdGestionarServicio
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.txtCodigo)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Location = New System.Drawing.Point(59, 129)
+        Me.Panel1.Location = New System.Drawing.Point(39, 109)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(836, 402)
+        Me.Panel1.Size = New System.Drawing.Size(785, 356)
         Me.Panel1.TabIndex = 3
         '
         'txtPrecio
@@ -103,7 +103,7 @@ Partial Class jdGestionarServicio
         Me.btnCancelar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnCancelar.Image = CType(resources.GetObject("btnCancelar.Image"), System.Drawing.Image)
-        Me.btnCancelar.Location = New System.Drawing.Point(442, 271)
+        Me.btnCancelar.Location = New System.Drawing.Point(438, 257)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(196, 71)
         Me.btnCancelar.TabIndex = 13
@@ -116,7 +116,7 @@ Partial Class jdGestionarServicio
         Me.btnGuardar.BackColor = System.Drawing.SystemColors.Window
         Me.btnGuardar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.Image = CType(resources.GetObject("btnGuardar.Image"), System.Drawing.Image)
-        Me.btnGuardar.Location = New System.Drawing.Point(194, 271)
+        Me.btnGuardar.Location = New System.Drawing.Point(176, 257)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(190, 71)
         Me.btnGuardar.TabIndex = 12
@@ -195,14 +195,14 @@ Partial Class jdGestionarServicio
         Me.Panel2.ForeColor = System.Drawing.Color.White
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(939, 86)
+        Me.Panel2.Size = New System.Drawing.Size(857, 86)
         Me.Panel2.TabIndex = 4
         '
         'jdGestionarServicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(939, 584)
+        Me.ClientSize = New System.Drawing.Size(857, 477)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
