@@ -164,63 +164,32 @@ Public Class clsEmpresa
     '========================================
     ' REGISTRAR EMPRESA
     '========================================
-    Public Sub registrarEmpresa(
-        ByVal razonSocial As String,
-        ByVal ruc As String,
-        ByVal idCliente As Integer
-    )
-
+    Public Sub registrarEmpresa(razonSocial As String, ruc As String, idCliente As Integer)
         Dim strSQL As String =
-            "INSERT INTO EMPRESA(" &
-            "razonSocial, " &
-            "ruc, " &
-            "idCliente) " &
-            "VALUES(" &
-            "@razonSocial, " &
-            "@ruc, " &
-            "@idCliente)"
+        "INSERT INTO EMPRESA(" &
+        "razonSocial, " &
+        "ruc, " &
+        "idCliente) " &
+        "VALUES(" &
+        "@razonSocial, " &
+        "@ruc, " &
+        "@idCliente)"
 
         Dim objConectar As New clsConectaBD()
-
         Try
-
             objConectar.conectar()
-
-            Dim cmd As New SqlCommand(
-                strSQL,
-                objConectar.miConexion
-            )
-
-            cmd.Parameters.AddWithValue(
-                "@razonSocial",
-                razonSocial
-            )
-
-            cmd.Parameters.AddWithValue(
-                "@ruc",
-                ruc
-            )
-
-            cmd.Parameters.AddWithValue(
-                "@idCliente",
-                idCliente
-            )
-
+            Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
+            cmd.Parameters.Add("@razonSocial", SqlDbType.VarChar).Value = razonSocial
+            cmd.Parameters.Add("@ruc", SqlDbType.Char, 11).Value = ruc
+            cmd.Parameters.Add("@idCliente", SqlDbType.Int).Value = idCliente
             cmd.ExecuteNonQuery()
 
         Catch ex As Exception
-
-            Throw New Exception(
-                "Error al registrar empresa: " &
-                ex.Message
-            )
+            Throw New Exception("Error al registrar empresa: " & ex.Message)
 
         Finally
-
             objConectar.desconectar()
-
         End Try
-
     End Sub
 
     '========================================

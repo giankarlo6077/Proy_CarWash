@@ -55,7 +55,7 @@ Public Class clsRol
         End Try
     End Function
 
-    Public Sub registrarRol(id As Integer, nombre As String, est As String, desc As String)
+    Public Sub registrarRol(id As Integer, nombre As String, est As Boolean, desc As String)
         Dim strSQL As String = "INSERT INTO rol VALUES(" & id & ", '" & nombre & "', '" & desc & "', '" & est & "')"
         Dim objConectar As New clsConectaBD()
         Try
@@ -69,16 +69,20 @@ Public Class clsRol
         End Try
     End Sub
 
-    Public Sub modificarRol(id As Integer, nombre As String, est As String, desc As String)
-        Dim strSQL As String = "UPDATE rol SET " &
-                               "rol = '" & nombre & "', " &
-                               "descripcion = '" & desc & "' " &
-                               "estado = '" & est & "' " &
-                               "WHERE idrol = " & id
+    Public Sub modificarRol(id As Integer, nombre As String, desc As String, est As Boolean)
+        Dim strSQL As String = "UPDATE ROL SET " &
+                           "rol = @nombre, " &
+                           "descripcion = @desc, " &
+                           "estado = @estado " &
+                           "WHERE idRol = @id"
         Dim objConectar As New clsConectaBD()
         Try
             objConectar.conectar()
             Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
+            cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = nombre
+            cmd.Parameters.Add("@desc", SqlDbType.VarChar).Value = desc
+            cmd.Parameters.Add("@estado", SqlDbType.Bit).Value = est
+            cmd.Parameters.Add("@id", SqlDbType.Int).Value = id
             cmd.ExecuteNonQuery()
         Catch ex As Exception
             Throw New Exception("Error al modificar rol: " & ex.Message)
