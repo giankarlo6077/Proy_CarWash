@@ -46,7 +46,6 @@ Partial Class FrmMenuPrincipalModificado
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.HistorialDeVehiculosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductosMasVendidosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ComprobantesPorClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -187,7 +186,7 @@ Partial Class FrmMenuPrincipalModificado
         '
         'REPORTESToolStripMenuItem
         '
-        Me.REPORTESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportesToolStripMenuItem1, Me.ListaDeCitasPorEstadoToolStripMenuItem, Me.HistorialDeVehiculosToolStripMenuItem, Me.ProductosMasVendidosToolStripMenuItem, Me.ComprobantesPorClienteToolStripMenuItem})
+        Me.REPORTESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportesToolStripMenuItem1, Me.ListaDeCitasPorEstadoToolStripMenuItem, Me.HistorialDeVehiculosToolStripMenuItem, Me.ProductosMasVendidosToolStripMenuItem})
         Me.REPORTESToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.REPORTESToolStripMenuItem.Image = CType(resources.GetObject("REPORTESToolStripMenuItem.Image"), System.Drawing.Image)
         Me.REPORTESToolStripMenuItem.Name = "REPORTESToolStripMenuItem"
@@ -234,12 +233,6 @@ Partial Class FrmMenuPrincipalModificado
         Me.ProductosMasVendidosToolStripMenuItem.Size = New System.Drawing.Size(451, 32)
         Me.ProductosMasVendidosToolStripMenuItem.Text = "Productos Más Vendidos"
         '
-        'ComprobantesPorClienteToolStripMenuItem
-        '
-        Me.ComprobantesPorClienteToolStripMenuItem.Name = "ComprobantesPorClienteToolStripMenuItem"
-        Me.ComprobantesPorClienteToolStripMenuItem.Size = New System.Drawing.Size(451, 32)
-        Me.ComprobantesPorClienteToolStripMenuItem.Text = "Lista de Comprobantes por Cliente"
-        '
         'FrmMenuPrincipalModificado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -284,5 +277,4 @@ Partial Class FrmMenuPrincipalModificado
     Friend WithEvents ProveedorToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ListaDeCitasPorEstadoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HistorialDeVehiculosToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ComprobantesPorClienteToolStripMenuItem As ToolStripMenuItem
 End Class

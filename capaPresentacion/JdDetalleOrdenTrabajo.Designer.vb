@@ -107,12 +107,12 @@ Partial Class JdDetalleOrdenTrabajo
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Location = New System.Drawing.Point(12, 59)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(847, 177)
+        Me.Panel1.Size = New System.Drawing.Size(847, 261)
         Me.Panel1.TabIndex = 3
         '
         'txtComentario
         '
-        Me.txtComentario.Location = New System.Drawing.Point(483, 94)
+        Me.txtComentario.Location = New System.Drawing.Point(475, 165)
         Me.txtComentario.Multiline = True
         Me.txtComentario.Name = "txtComentario"
         Me.txtComentario.Size = New System.Drawing.Size(336, 75)
@@ -120,7 +120,7 @@ Partial Class JdDetalleOrdenTrabajo
         '
         'Label11
         '
-        Me.Label11.Location = New System.Drawing.Point(369, 94)
+        Me.Label11.Location = New System.Drawing.Point(356, 165)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(113, 21)
         Me.Label11.TabIndex = 92
@@ -129,7 +129,7 @@ Partial Class JdDetalleOrdenTrabajo
         '
         'Label12
         '
-        Me.Label12.Location = New System.Drawing.Point(21, 135)
+        Me.Label12.Location = New System.Drawing.Point(21, 165)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(179, 24)
         Me.Label12.TabIndex = 91
@@ -139,14 +139,14 @@ Partial Class JdDetalleOrdenTrabajo
         'cmbTrabajador
         '
         Me.cmbTrabajador.FormattingEnabled = True
-        Me.cmbTrabajador.Location = New System.Drawing.Point(206, 135)
+        Me.cmbTrabajador.Location = New System.Drawing.Point(206, 165)
         Me.cmbTrabajador.Name = "cmbTrabajador"
         Me.cmbTrabajador.Size = New System.Drawing.Size(136, 24)
         Me.cmbTrabajador.TabIndex = 90
         '
         'Label10
         '
-        Me.Label10.Location = New System.Drawing.Point(535, 62)
+        Me.Label10.Location = New System.Drawing.Point(561, 122)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(66, 21)
         Me.Label10.TabIndex = 89
@@ -157,21 +157,21 @@ Partial Class JdDetalleOrdenTrabajo
         '
         Me.cmbEstado.FormattingEnabled = True
         Me.cmbEstado.Items.AddRange(New Object() {"Pendiente", "En Proceso", "Realizado", "Cancelada"})
-        Me.cmbEstado.Location = New System.Drawing.Point(607, 58)
+        Me.cmbEstado.Location = New System.Drawing.Point(633, 118)
         Me.cmbEstado.Name = "cmbEstado"
         Me.cmbEstado.Size = New System.Drawing.Size(178, 24)
         Me.cmbEstado.TabIndex = 88
         '
         'dtpFechaRecojo
         '
-        Me.dtpFechaRecojo.Location = New System.Drawing.Point(166, 91)
+        Me.dtpFechaRecojo.Location = New System.Drawing.Point(166, 121)
         Me.dtpFechaRecojo.Name = "dtpFechaRecojo"
         Me.dtpFechaRecojo.Size = New System.Drawing.Size(176, 22)
         Me.dtpFechaRecojo.TabIndex = 87
         '
         'Label9
         '
-        Me.Label9.Location = New System.Drawing.Point(21, 91)
+        Me.Label9.Location = New System.Drawing.Point(21, 121)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(139, 21)
         Me.Label9.TabIndex = 85
@@ -181,7 +181,7 @@ Partial Class JdDetalleOrdenTrabajo
         'lblHora
         '
         Me.lblHora.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblHora.Location = New System.Drawing.Point(346, 57)
+        Me.lblHora.Location = New System.Drawing.Point(475, 69)
         Me.lblHora.Name = "lblHora"
         Me.lblHora.Size = New System.Drawing.Size(136, 21)
         Me.lblHora.TabIndex = 84
@@ -189,7 +189,7 @@ Partial Class JdDetalleOrdenTrabajo
         '
         'Label8
         '
-        Me.Label8.Location = New System.Drawing.Point(274, 58)
+        Me.Label8.Location = New System.Drawing.Point(403, 70)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(66, 21)
         Me.Label8.TabIndex = 83
@@ -199,7 +199,7 @@ Partial Class JdDetalleOrdenTrabajo
         'lblFecha
         '
         Me.lblFecha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblFecha.Location = New System.Drawing.Point(93, 57)
+        Me.lblFecha.Location = New System.Drawing.Point(206, 70)
         Me.lblFecha.Name = "lblFecha"
         Me.lblFecha.Size = New System.Drawing.Size(136, 21)
         Me.lblFecha.TabIndex = 82
@@ -207,7 +207,7 @@ Partial Class JdDetalleOrdenTrabajo
         '
         'Label5
         '
-        Me.Label5.Location = New System.Drawing.Point(21, 57)
+        Me.Label5.Location = New System.Drawing.Point(134, 70)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(66, 21)
         Me.Label5.TabIndex = 81
@@ -246,7 +246,7 @@ Partial Class JdDetalleOrdenTrabajo
         Me.Panel2.Controls.Add(Me.Label22)
         Me.Panel2.Controls.Add(Me.Label23)
         Me.Panel2.Controls.Add(Me.Label24)
-        Me.Panel2.Location = New System.Drawing.Point(12, 242)
+        Me.Panel2.Location = New System.Drawing.Point(12, 331)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(847, 168)
         Me.Panel2.TabIndex = 4
@@ -362,7 +362,7 @@ Partial Class JdDetalleOrdenTrabajo
         'Label26
         '
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(30, 416)
+        Me.Label26.Location = New System.Drawing.Point(30, 507)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(238, 30)
         Me.Label26.TabIndex = 5
@@ -374,7 +374,7 @@ Partial Class JdDetalleOrdenTrabajo
         Me.btnAgregarServicio.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnAgregarServicio.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAgregarServicio.ForeColor = System.Drawing.Color.White
-        Me.btnAgregarServicio.Location = New System.Drawing.Point(618, 603)
+        Me.btnAgregarServicio.Location = New System.Drawing.Point(618, 694)
         Me.btnAgregarServicio.Name = "btnAgregarServicio"
         Me.btnAgregarServicio.Size = New System.Drawing.Size(226, 37)
         Me.btnAgregarServicio.TabIndex = 74
@@ -386,7 +386,7 @@ Partial Class JdDetalleOrdenTrabajo
         Me.btnAgregarProducto.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnAgregarProducto.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAgregarProducto.ForeColor = System.Drawing.Color.White
-        Me.btnAgregarProducto.Location = New System.Drawing.Point(633, 827)
+        Me.btnAgregarProducto.Location = New System.Drawing.Point(618, 920)
         Me.btnAgregarProducto.Name = "btnAgregarProducto"
         Me.btnAgregarProducto.Size = New System.Drawing.Size(226, 37)
         Me.btnAgregarProducto.TabIndex = 77
@@ -396,7 +396,7 @@ Partial Class JdDetalleOrdenTrabajo
         'Label27
         '
         Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(16, 640)
+        Me.Label27.Location = New System.Drawing.Point(16, 731)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(349, 30)
         Me.Label27.TabIndex = 75
@@ -407,7 +407,7 @@ Partial Class JdDetalleOrdenTrabajo
         '
         Me.Panel3.Controls.Add(Me.btnGuardar)
         Me.Panel3.Controls.Add(Me.btnCancelar)
-        Me.Panel3.Location = New System.Drawing.Point(85, 870)
+        Me.Panel3.Location = New System.Drawing.Point(101, 982)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(696, 61)
         Me.Panel3.TabIndex = 78
@@ -441,7 +441,7 @@ Partial Class JdDetalleOrdenTrabajo
         Me.dgvServicios.AllowUserToAddRows = False
         Me.dgvServicios.AllowUserToDeleteRows = False
         Me.dgvServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvServicios.Location = New System.Drawing.Point(12, 449)
+        Me.dgvServicios.Location = New System.Drawing.Point(12, 540)
         Me.dgvServicios.Name = "dgvServicios"
         Me.dgvServicios.ReadOnly = True
         Me.dgvServicios.RowHeadersWidth = 51
@@ -455,7 +455,7 @@ Partial Class JdDetalleOrdenTrabajo
         Me.dgvProductos.AllowUserToAddRows = False
         Me.dgvProductos.AllowUserToDeleteRows = False
         Me.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvProductos.Location = New System.Drawing.Point(12, 673)
+        Me.dgvProductos.Location = New System.Drawing.Point(12, 766)
         Me.dgvProductos.Name = "dgvProductos"
         Me.dgvProductos.ReadOnly = True
         Me.dgvProductos.RowHeadersWidth = 51
@@ -469,7 +469,7 @@ Partial Class JdDetalleOrdenTrabajo
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(875, 933)
+        Me.ClientSize = New System.Drawing.Size(875, 1055)
         Me.Controls.Add(Me.dgvProductos)
         Me.Controls.Add(Me.dgvServicios)
         Me.Controls.Add(Me.Panel3)

@@ -457,7 +457,7 @@ Public Class clsCita
     End Function
 
     Public Sub registrarProductoparaCita(cantidad As Integer, precio As Double, idCita As Integer, idProducto As Integer)
-        Dim strSQL As String = "INSERT INTO PRODUCTO_MANTENIMIENTO (cantidad, precio, idCita, idProducto)
+        Dim strSQL As String = "INSERT INTO PRODUCTO_MANTENIMIENTO (cantidad, precio, idCita, idProducto) 
                             VALUES (@cantidad, @precio, @idCita, @idProducto)"
         Dim objConectar As New clsConectaBD()
         Try
@@ -474,60 +474,5 @@ Public Class clsCita
             objConectar.desconectar()
         End Try
     End Sub
-
-    Public Function citaTieneServiciosYProductos(idCita As Integer) As Boolean
-        Dim objConectar As New clsConectaBD()
-        Try
-            objConectar.conectar()
-            Dim cmdSvc As New SqlCommand(
-                "SELECT COUNT(*) FROM DETALLE_CITA WHERE idCita = @idCita",
-                objConectar.miConexion)
-            cmdSvc.Parameters.AddWithValue("@idCita", idCita)
-            Dim countSvc As Integer = Convert.ToInt32(cmdSvc.ExecuteScalar())
-
-            Dim cmdPrd As New SqlCommand(
-                "SELECT COUNT(*) FROM PRODUCTO_MANTENIMIENTO WHERE idCita = @idCita",
-                objConectar.miConexion)
-            cmdPrd.Parameters.AddWithValue("@idCita", idCita)
-            Dim countPrd As Integer = Convert.ToInt32(cmdPrd.ExecuteScalar())
-
-            Return countSvc > 0 AndAlso countPrd > 0
-        Catch ex As Exception
-            Return False
-        Finally
-            objConectar.desconectar()
-        End Try
-    End Function
-
-    Public Function obtenerDetallesComprobanteCita(idCita As Integer) As List(Of Object())
-        Dim resultado As New List(Of Object())()
-        Dim objConectar As New clsConectaBD()
-        Try
-            objConectar.conectar()
-
-            Dim cmdPrd As New SqlCommand(
-                "SELECT pr.producto, pm.cantidad, pm.precio
-                 FROM PRODUCTO_MANTENIMIENTO pm
-                 INNER JOIN PRODUCTO pr ON pm.idProducto = pr.idProducto
-                 WHERE pm.idCita = @idCita",
-                objConectar.miConexion)
-            cmdPrd.Parameters.AddWithValue("@idCita", idCita)
-            Dim drPrd As SqlDataReader = cmdPrd.ExecuteReader()
-            While drPrd.Read()
-                resultado.Add(New Object() {
-                    drPrd("producto").ToString(),
-                    Convert.ToInt32(drPrd("cantidad")),
-                    Convert.ToDouble(drPrd("precio"))
-                })
-            End While
-            drPrd.Close()
-
-        Catch ex As Exception
-            Throw New Exception("Error al obtener productos para comprobante: " & ex.Message)
-        Finally
-            objConectar.desconectar()
-        End Try
-        Return resultado
-    End Function
 
 End Class

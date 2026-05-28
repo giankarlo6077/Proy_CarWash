@@ -16,7 +16,7 @@ Public Class clsConectaBD
                 cn.Open()
             End If
         Catch ex As Exception
-            Throw New Exception("Error al conectar a BD: " & ex.Message)
+            Throw New Exception("Error al conectar a BD")
         End Try
     End Sub
 
