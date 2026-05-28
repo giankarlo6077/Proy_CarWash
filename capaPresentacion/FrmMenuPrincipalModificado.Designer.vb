@@ -45,6 +45,7 @@ Partial Class FrmMenuPrincipalModificado
         Me.ListaDeCitasPorEstadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.HistorialDeVehiculosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProductosMasVendidosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -185,7 +186,7 @@ Partial Class FrmMenuPrincipalModificado
         '
         'REPORTESToolStripMenuItem
         '
-        Me.REPORTESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportesToolStripMenuItem1, Me.ListaDeCitasPorEstadoToolStripMenuItem, Me.HistorialDeVehiculosToolStripMenuItem})
+        Me.REPORTESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportesToolStripMenuItem1, Me.ListaDeCitasPorEstadoToolStripMenuItem, Me.HistorialDeVehiculosToolStripMenuItem, Me.ProductosMasVendidosToolStripMenuItem})
         Me.REPORTESToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.REPORTESToolStripMenuItem.Image = CType(resources.GetObject("REPORTESToolStripMenuItem.Image"), System.Drawing.Image)
         Me.REPORTESToolStripMenuItem.Name = "REPORTESToolStripMenuItem"
@@ -226,6 +227,12 @@ Partial Class FrmMenuPrincipalModificado
         Me.HistorialDeVehiculosToolStripMenuItem.Size = New System.Drawing.Size(451, 32)
         Me.HistorialDeVehiculosToolStripMenuItem.Text = "Historial de Vehiculos"
         '
+        'ProductosMasVendidosToolStripMenuItem
+        '
+        Me.ProductosMasVendidosToolStripMenuItem.Name = "ProductosMasVendidosToolStripMenuItem"
+        Me.ProductosMasVendidosToolStripMenuItem.Size = New System.Drawing.Size(451, 32)
+        Me.ProductosMasVendidosToolStripMenuItem.Text = "Productos Más Vendidos"
+        '
         'FrmMenuPrincipalModificado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -256,6 +263,7 @@ Partial Class FrmMenuPrincipalModificado
     Friend WithEvents RegistrarCitasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RegistrarVentasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportesToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ProductosMasVendidosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents MANTENIMIENTOToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DescuentosToolStripMenuItem As ToolStripMenuItem

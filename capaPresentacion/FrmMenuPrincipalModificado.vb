@@ -144,4 +144,10 @@
         Dim frmReporte As New jdReporteVehiculo()
         frmReporte.ShowDialog()
     End Sub
+
+    Private Sub ProductosMasVendidosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductosMasVendidosToolStripMenuItem.Click
+        Dim frm As New jdReporteProductosVendidos()
+        frm.StartPosition = FormStartPosition.CenterParent
+        frm.ShowDialog(Me)
+    End Sub
 End Class

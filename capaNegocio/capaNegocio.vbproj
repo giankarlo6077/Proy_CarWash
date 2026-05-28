@@ -83,6 +83,7 @@
     <Compile Include="clsModeloVehiculo.vb" />
     <Compile Include="clsPersona.vb" />
     <Compile Include="clsProveedor.vb" />
+    <Compile Include="clsReporteProducto.vb" />
     <Compile Include="clsReporteVehiculo.vb" />
     <Compile Include="clsRol.vb" />
     <Compile Include="clsServicio.vb" />

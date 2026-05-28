@@ -275,6 +275,12 @@
     <Compile Include="jdRecuperarContrasena.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="jdReporteProductosVendidos.Designer.vb">
+      <DependentUpon>jdReporteProductosVendidos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jdReporteProductosVendidos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="jdReporteVehiculo.Designer.vb">
       <DependentUpon>jdReporteVehiculo.vb</DependentUpon>
     </Compile>
