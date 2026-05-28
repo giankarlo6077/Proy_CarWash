@@ -49,6 +49,56 @@ Public Class clsCliente
         Return dt
     End Function
 
+    Public Function registrarClienteEmpresa(
+    ruc As String,
+    direccion As String,
+    correo As String,
+    telefono As String,
+    idDistrito As Integer
+    ) As Integer
+
+        Dim strSQL As String =
+        "INSERT INTO CLIENTE(" &
+        "tipoCliente, " &
+        "fechaRegistro, " &
+        "direccion, " &
+        "correo, " &
+        "telefono, " &
+        "idTipoDocumento, " &
+        "idDistrito, " &
+        "numDocumento, " &
+        "estado) " &
+        "VALUES(" &
+        "'Empresa', " &
+        "@fecha, " &
+        "@direccion, " &
+        "@correo, " &
+        "@telefono, " &
+        "2, " &  ' idTipoDocumento = 2 (RUC)
+        "@idDistrito, " &
+        "@ruc, " &
+        "1); " &
+        "SELECT SCOPE_IDENTITY()"
+
+        Dim objConectar As New clsConectaBD()
+        Try
+            objConectar.conectar()
+            Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
+            cmd.Parameters.Add("@fecha", SqlDbType.Date).Value = Date.Today
+            cmd.Parameters.Add("@direccion", SqlDbType.VarChar).Value = If(direccion = "", DBNull.Value, direccion)
+            cmd.Parameters.Add("@correo", SqlDbType.VarChar).Value = If(correo = "", DBNull.Value, correo)
+            cmd.Parameters.Add("@telefono", SqlDbType.VarChar).Value = If(telefono = "", DBNull.Value, telefono)
+            cmd.Parameters.Add("@idDistrito", SqlDbType.Int).Value = idDistrito
+            cmd.Parameters.Add("@ruc", SqlDbType.VarChar, 11).Value = ruc
+            Return Convert.ToInt32(cmd.ExecuteScalar())
+
+        Catch ex As Exception
+            Throw New Exception("Error al registrar cliente empresa: " & ex.Message)
+
+        Finally
+            objConectar.desconectar()
+        End Try
+    End Function
     Public Function generarCodigoCliente() As Integer
         Dim codigo As Integer = 0
         Try

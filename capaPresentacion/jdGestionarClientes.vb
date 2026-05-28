@@ -6,21 +6,26 @@ Public Class jdGestionarClientes
     End Sub
 
     Private Sub cargarTiposDocumento()
-        Dim objCliente As New clsCliente()
         Try
-            Dim dt As DataTable = objCliente.listarTiposDocumento()
+            cboTipoDoc.DataSource = Nothing
+            cboTipoDoc.Items.Clear()
+            Dim dt As New DataTable()
+            dt.Columns.Add("idtipodocumento", GetType(Integer))
+            dt.Columns.Add("tipodocumento", GetType(String))
+            dt.Rows.Add(1, "DNI")
             cboTipoDoc.DataSource = dt
             cboTipoDoc.DisplayMember = "tipodocumento"
             cboTipoDoc.ValueMember = "idtipodocumento"
+            cboTipoDoc.SelectedIndex = 0
         Catch ex As Exception
-            MessageBox.Show("Error al cargar tipos de documento: " & ex.Message)
+            MessageBox.Show("Error al asignar el tipo de documento: " & ex.Message)
         End Try
     End Sub
 
 
-    Private Sub btnPersonaNatural_Click(sender As Object, e As EventArgs) Handles btnPersonaNatural.Click
+    Private Sub btnModificarPersona_Click(sender As Object, e As EventArgs) Handles btnModificarPersona.Click
         limpiarCampos()
-        Dim frm As New jdMantenimientoCliente()
+        Dim frm As New jdModificarPersona()
         frm.ShowDialog()
     End Sub
 
@@ -32,7 +37,7 @@ Public Class jdGestionarClientes
         End If
         Dim objPersona As New clsPersona()
         Try
-            Dim dt As DataTable = objPersona.buscarPersona(txtDoc.Text.Trim())
+            Dim dt As DataTable = objPersona.buscarPersonaRapida(txtDoc.Text.Trim())
             If dt.Rows.Count > 0 Then
                 txtNombreAp.Text = dt.Rows(0)("persona").ToString()
                 txtCorreo.Text = dt.Rows(0)("correo").ToString()
@@ -52,30 +57,32 @@ Public Class jdGestionarClientes
             MessageBox.Show("Ingrese un RUC.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
+
         Dim objEmpresa As New clsEmpresa()
         Try
             Dim dt As DataTable = objEmpresa.buscarEmpresaRUC(txtRUC.Text.Trim())
+
             If dt.Rows.Count > 0 Then
-                txtRazonSocial.Text = dt.Rows(0)("razonsocial").ToString()
-                txtCorreo.Text = dt.Rows(0)("correo").ToString()
-                txtTelefono.Text = dt.Rows(0)("telefono").ToString()
-                txtNombreAp.Text = ""
+                txtRazonSocial.Text = dt.Rows(0)("razonSocial").ToString()
             Else
                 MessageBox.Show("No se encontró la empresa.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                limpiarCampos()
+                txtRazonSocial.Text = ""
             End If
+
         Catch ex As Exception
-            MessageBox.Show("Error al buscar empresa: " & ex.Message)
+            MessageBox.Show("Error al buscar empresa: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
-    Private Sub btnNuevoCliente_Click(sender As Object, e As EventArgs) Handles btnNuevoCliente.Click
-        Dim frm As New jdGestionarPersona()
+    Private Sub btnNuevoPersona_Click(sender As Object, e As EventArgs) Handles btnNuevaPersona.Click
+        limpiarCampos()
+        Dim frm As New jdRegistrarPersona()
         frm.ShowDialog()
     End Sub
 
     Private Sub btnNuevaEmpresa_Click(sender As Object, e As EventArgs) Handles btnNuevaEmpresa.Click
-        Dim frm As New jdGestionarEmpresa()
+        limpiarCampos()
+        Dim frm As New jdRegistrarEmpresa()
         frm.ShowDialog()
     End Sub
 
@@ -88,7 +95,14 @@ Public Class jdGestionarClientes
         txtTelefono.Clear()
     End Sub
 
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
-
+    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+        limpiarCampos()
     End Sub
+
+    Private Sub btnModificarEmpresa_Click(sender As Object, e As EventArgs) Handles btnModificarEmpresa.Click
+        limpiarCampos()
+        Dim frm As New jdGestionarEmpresa()
+        frm.ShowDialog()
+    End Sub
+
 End Class

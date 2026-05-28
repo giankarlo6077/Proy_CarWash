@@ -9,6 +9,7 @@ Public Class jdGestionarRol
         cargarListView()
         desactivarControles()
         btnGuardar.Text = "Guardar"
+        txtIdRol.Enabled = False
     End Sub
     Private Sub desactivarControles()
         txtIdRol.Enabled = False
@@ -72,14 +73,15 @@ Public Class jdGestionarRol
     End Sub
 
     Private Sub lvwRoles_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lvRoles.SelectedIndexChanged
+        txtIdRol.Enabled = False
         If lvRoles.SelectedItems.Count > 0 Then
             Dim item As ListViewItem = lvRoles.SelectedItems(0)
 
             txtIdRol.Text = item.SubItems(0).Text
             txtNombreRol.Text = item.SubItems(1).Text
-            txtDescripcion.Text = item.SubItems(2).Text
+            txtDescripcion.Text = item.SubItems(3).Text
 
-            If item.SubItems(3).Text = "Activo" Then
+            If item.SubItems(2).Text = "True" Then
                 cboEstado.SelectedIndex = 0
             Else
                 cboEstado.SelectedIndex = 1
@@ -97,66 +99,47 @@ Public Class jdGestionarRol
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        If btnGuardar.Text = "Actualizar" Then
-            If txtNombreRol.Text.Trim() = "" Then
-                MessageBox.Show("Ingrese el nombre del rol.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                Exit Sub
-            End If
-            If cboEstado.SelectedIndex = -1 Then
-                MessageBox.Show("Seleccione un estado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                Exit Sub
-            End If
-
-            Dim objRol As New clsRol()
-            Try
-                Dim idRol As Integer = Convert.ToInt32(txtIdRol.Text)
-                Dim estado As Integer = If(cboEstado.Text = "Activo", 1, 0)
-
-                objRol.modificarRol(
-                idRol,
-                txtNombreRol.Text.Trim(),
-                txtDescripcion.Text.Trim(),
-                estado
-            )
-
-                MessageBox.Show("Rol actualizado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                limpiarCampos()
-                cargarIdRol()
-                cargarListView()
-                btnGuardar.Text = "Guardar"
-            Catch ex As Exception
-                MessageBox.Show("Error al actualizar rol: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End Try
-
-        ElseIf btnGuardar.Text = "Guardar" Then
-            If txtNombreRol.Text.Trim() = "" Then
-                MessageBox.Show("Ingrese el nombre del rol.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                Exit Sub
-            End If
-            If cboEstado.SelectedIndex = -1 Then
-                MessageBox.Show("Seleccione un estado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                Exit Sub
-            End If
-
-            Dim objRol As New clsRol()
-            Try
-                Dim estado As Integer = If(cboEstado.Text = "Activo", 1, 0)
-
-                objRol.registrarRol(
-                Convert.ToInt32(txtIdRol.Text),
-                txtNombreRol.Text.Trim(),
-                txtDescripcion.Text.Trim(),
-                estado
-            )
-
-                MessageBox.Show("Rol guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                limpiarCampos()
-                cargarIdRol()
-                cargarListView()
-            Catch ex As Exception
-                MessageBox.Show("Error al guardar rol: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End Try
+        ' Validaciones comunes
+        If txtNombreRol.Text.Trim() = "" Then
+            MessageBox.Show("Ingrese el nombre del rol.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
         End If
+        If cboEstado.SelectedIndex = -1 Then
+            MessageBox.Show("Seleccione un estado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
+        Dim objRol As New clsRol()
+        Dim estado As Boolean = (cboEstado.SelectedIndex = 0) ' 0=Activo=True
+
+        Try
+            If btnGuardar.Text = "Actualizar" Then
+                objRol.modificarRol(
+                CInt(txtIdRol.Text),
+                txtNombreRol.Text.Trim(),
+                txtDescripcion.Text.Trim(),
+                estado
+            )
+                MessageBox.Show("Rol actualizado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            ElseIf btnGuardar.Text = "Guardar" Then
+                objRol.registrarRol(
+                CInt(txtIdRol.Text),
+                txtNombreRol.Text.Trim(),
+                estado,
+                txtDescripcion.Text.Trim()
+            )
+                MessageBox.Show("Rol guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+
+            limpiarCampos()
+            cargarIdRol()
+            cargarListView()
+            btnGuardar.Text = "Guardar"
+
+        Catch ex As Exception
+            MessageBox.Show("Error al guardar rol: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click

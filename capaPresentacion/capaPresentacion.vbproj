@@ -113,10 +113,16 @@
     <Compile Include="jdGestionarDescuento.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="jdGestionarPersona.Designer.vb">
-      <DependentUpon>jdGestionarPersona.vb</DependentUpon>
+    <Compile Include="jdModificarPersona.Designer.vb">
+      <DependentUpon>jdModificarPersona.vb</DependentUpon>
     </Compile>
-    <Compile Include="jdGestionarPersona.vb">
+    <Compile Include="jdModificarPersona.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jdRegistrarPersona.Designer.vb">
+      <DependentUpon>jdRegistrarPersona.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jdRegistrarPersona.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="jdGestionarRol.Designer.vb">
@@ -143,12 +149,6 @@
     <Compile Include="jdGestionarVehiculo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="jdGestionCliente.Designer.vb">
-      <DependentUpon>jdGestionCliente.vb</DependentUpon>
-    </Compile>
-    <Compile Include="jdGestionCliente.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="jdHistorialMantenimiento.Designer.vb">
       <DependentUpon>jdHistorialMantenimiento.vb</DependentUpon>
     </Compile>
@@ -159,12 +159,6 @@
       <DependentUpon>jdBuscarCitasporEstado.vb</DependentUpon>
     </Compile>
     <Compile Include="jdBuscarCitasporEstado.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="jdMantenimientoCliente.Designer.vb">
-      <DependentUpon>jdMantenimientoCliente.vb</DependentUpon>
-    </Compile>
-    <Compile Include="jdMantenimientoCliente.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="JdComprobanteVenta.Designer.vb">
@@ -275,6 +269,12 @@
     <Compile Include="jdRecuperarContrasena.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="jdRegistrarEmpresa.Designer.vb">
+      <DependentUpon>jdRegistrarEmpresa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jdRegistrarEmpresa.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="jdReporteProductosVendidos.Designer.vb">
       <DependentUpon>jdReporteProductosVendidos.vb</DependentUpon>
     </Compile>
@@ -348,8 +348,14 @@
     <EmbeddedResource Include="jdGestionarDescuento.resx">
       <DependentUpon>jdGestionarDescuento.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="jdGestionarPersona.resx">
-      <DependentUpon>jdGestionarPersona.vb</DependentUpon>
+    <EmbeddedResource Include="jdModificarPersona.resx">
+      <DependentUpon>jdModificarPersona.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jdRegistrarEmpresa.resx">
+      <DependentUpon>jdRegistrarEmpresa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jdRegistrarPersona.resx">
+      <DependentUpon>jdRegistrarPersona.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="jdGestionarRol.resx">
       <DependentUpon>jdGestionarRol.vb</DependentUpon>
@@ -363,17 +369,11 @@
     <EmbeddedResource Include="jdGestionarVehiculo.resx">
       <DependentUpon>jdGestionarVehiculo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="jdGestionCliente.resx">
-      <DependentUpon>jdGestionCliente.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="jdHistorialMantenimiento.resx">
       <DependentUpon>jdHistorialMantenimiento.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="jdBuscarCitasporEstado.resx">
       <DependentUpon>jdBuscarCitasporEstado.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="jdMantenimientoCliente.resx">
-      <DependentUpon>jdMantenimientoCliente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JdComprobanteVenta.resx">
       <DependentUpon>JdComprobanteVenta.vb</DependentUpon>

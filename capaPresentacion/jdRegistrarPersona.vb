@@ -1,6 +1,6 @@
 ﻿Imports capaNegocio
 
-Public Class jdGestionarPersona
+Public Class jdRegistrarPersona
 
     Private Sub jdGestionarPersona_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         dtpFecha.Value = Date.Now
@@ -190,11 +190,6 @@ Public Class jdGestionarPersona
                 limpiarCampos()
                 cargarListView()
                 btnNuevo.Text = "Nuevo"
-
-
-
-
-
             Catch ex As Exception
                 MessageBox.Show("Error al registrar: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
