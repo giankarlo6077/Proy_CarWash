@@ -22,7 +22,6 @@ Public Class JdDetalleOrdenTrabajo
 
         If fila IsNot Nothing Then
             lblidCita.Text = fila("idCita").ToString()
-            txtidCita.Text = fila("idCita").ToString()
             lblFecha.Text = CDate(fila("fecha")).ToString("dd/MM/yyyy")
             lblHora.Text = fila("hora").ToString()
             dtpFechaRecojo.Text = CDate(fila("fechaRecojo")).ToString("dd/MM/yyyy")
@@ -62,7 +61,7 @@ Public Class JdDetalleOrdenTrabajo
             End If
 
             ' Recoger datos del formulario
-            Dim id As Integer = CInt(txtidCita.Text)
+            Dim id As Integer = CInt(lblidCita.Text)
             Dim fec As Date = Date.ParseExact(lblFecha.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture)
             Dim hor As Date = Date.ParseExact(lblHora.Text, "HH:mm:ss", CultureInfo.InvariantCulture)
             Dim estado As String = cmbEstado.SelectedItem.ToString()
@@ -73,6 +72,60 @@ Public Class JdDetalleOrdenTrabajo
 
             ' Llamar al método
             objCita.modificarCita(id, fec, hor, estado, coment, fechRec, idVeh, idTrab)
+
+            Dim idCita As Integer = CInt(lblidCita.Text)
+
+            Dim idTipoVehiculo As Integer = objCita.obtenerIdTipoVehiculo(idCita)
+
+            ' ─── ELIMINAR SERVICIOS Y PRODUCTOS ANTERIORES ───────────────
+            Try
+                objCita.eliminarServiciosdeCita(idCita)
+                objCita.eliminarProductosdeCita(idCita)
+            Catch ex As Exception
+                MsgBox("Error al limpiar registros anteriores: " & ex.Message)
+                Exit Sub
+            End Try
+
+            ' ─── GUARDAR SERVICIOS ───────────────────────────────────────
+            Try
+                For Each fila As DataGridViewRow In dgvServicios.Rows
+                    If fila.IsNewRow Then Continue For
+                    Dim idServicio As Integer = CInt(fila.Cells("idServicio").Value)
+                    Dim precioVenta As Double = objCita.obtenerPrecioServicio(idServicio, idTipoVehiculo)
+
+                    If precioVenta = 0 Then
+                        MessageBox.Show("Este servicio no está disponible para el tipo de vehículo de esta cita. POR FAVOR ELIJA OTRO. ",
+                                        "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                        Continue For
+                    End If
+
+                    objCita.registrarServicioparaCita(precioVenta, idCita, idTipoVehiculo, idServicio)
+                Next
+                MsgBox("Servicios guardados OK")
+            Catch ex As Exception
+                MsgBox("Error en SERVICIOS: " & ex.Message)
+            End Try
+
+            ' ─── GUARDAR PRODUCTOS ───────────────────────────────────────
+            Try
+                ' Calcular cantidad correctamente
+                Dim cantidadTotal As Integer = 0
+                For Each fila As DataGridViewRow In dgvProductos.Rows
+                    If Not fila.IsNewRow Then cantidadTotal += 1
+                Next
+
+                For Each fila As DataGridViewRow In dgvProductos.Rows
+                    If fila.IsNewRow Then Continue For
+
+                    Dim idProducto As Integer = CInt(fila.Cells("idProducto").Value)
+                    Dim precio As Double = CDbl(fila.Cells("precio").Value)
+
+                    objCita.registrarProductoparaCita(cantidadTotal, precio, idCita, idProducto)
+                Next
+                MsgBox("Productos guardados OK")
+            Catch ex As Exception
+                MsgBox("Error en PRODUCTOS: " & ex.Message)
+            End Try
 
             MessageBox.Show("Cita actualizada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.Close()
@@ -94,6 +147,19 @@ Public Class JdDetalleOrdenTrabajo
         If frmServicio.ServicioSeleccionado IsNot Nothing Then
             Dim fila As DataRow = frmServicio.ServicioSeleccionado
 
+            ' Validar si el servicio existe en TARIFARIO para este tipo de vehículo
+            Dim idCita As Integer = CInt(lblidCita.Text)
+            Dim idTipoVehiculo As Integer = objCita.obtenerIdTipoVehiculo(idCita)
+            Dim idServicio As Integer = CInt(fila("idServicio"))
+            Dim precio As Double = objCita.obtenerPrecioServicio(idServicio, idTipoVehiculo)
+
+            If precio = 0 Then
+                MessageBox.Show("Este servicio no está disponible para el tipo de vehículo de esta cita.",
+                            "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Return  ' ← no agrega la fila al dgvServicios y termina aquí
+            End If
+
+            ' Si el precio es válido, agrega normalmente
             Dim dr As DataRow = dtServicios.NewRow()
             dr("idServicio") = fila("idServicio")
             dr("servicio") = fila("servicio")

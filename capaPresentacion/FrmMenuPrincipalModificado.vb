@@ -150,4 +150,12 @@
         frm.StartPosition = FormStartPosition.CenterParent
         frm.ShowDialog(Me)
     End Sub
+
+    Private Sub TrabajadoresPorTipoDeTrabajadorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TrabajadoresPorTipoDeTrabajadorToolStripMenuItem.Click
+
+        Dim frm As New jdConsultaTrabajadorTipo()
+
+        frm.ShowDialog()
+
+    End Sub
 End Class

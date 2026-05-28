@@ -10,7 +10,8 @@ Public Class jdHistorialMantenimiento
             dgvMantenimientos.DataSource = dtProducto
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Citas", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MsgBox("Ingresar el nro Documento correcto" & ex.Message)
         End Try
     End Sub
+
 End Class
