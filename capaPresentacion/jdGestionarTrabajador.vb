@@ -10,7 +10,7 @@ Public Class jdGestionarTrabajador
 
     '========================================
     ' LOAD
-    '========================================
+    '=======================================
     Private Sub jdGestionarTrabajador_Load(
         sender As Object,
         e As EventArgs
@@ -361,22 +361,6 @@ Public Class jdGestionarTrabajador
     End Sub
 
     '========================================
-    ' ABRIR GESTIONAR TIPO
-    '========================================
-    Private Sub btnGestionarTipo_Click(
-        sender As Object,
-        e As EventArgs
-    ) 
-
-        Dim frm As New jdGestionarTipoTrabajador()
-
-        frm.ShowDialog()
-
-        cargarTipoTrabajador()
-
-    End Sub
-
-    '========================================
     ' LIMPIAR
     '========================================
     Private Sub btnLimpiar_Click(
@@ -427,5 +411,13 @@ Public Class jdGestionarTrabajador
 
     Private Sub cboTipoTrabajador_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboTipoTrabajador.SelectedIndexChanged
 
+    End Sub
+
+    Private Sub btnGestionar_Click(sender As Object, e As EventArgs) Handles btnGestionar.Click
+        Dim frm As New jdGestionarTipoTrabajador()
+
+        frm.ShowDialog()
+
+        cargarTipoTrabajador()
     End Sub
 End Class

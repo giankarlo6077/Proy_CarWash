@@ -22,6 +22,8 @@ Partial Class jdGestionarProovedor
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(jdGestionarProovedor))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnLimpiar = New System.Windows.Forms.Button()
@@ -46,11 +48,11 @@ Partial Class jdGestionarProovedor
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txtBuscarProveedor = New System.Windows.Forms.TextBox()
-        Me.btnNuevo = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.btnNuevo = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -81,29 +83,31 @@ Partial Class jdGestionarProovedor
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Location = New System.Drawing.Point(39, 498)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(984, 285)
+        Me.Panel2.Size = New System.Drawing.Size(984, 295)
         Me.Panel2.TabIndex = 65
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnLimpiar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLimpiar.ForeColor = System.Drawing.Color.White
-        Me.btnLimpiar.Location = New System.Drawing.Point(640, 220)
+        Me.btnLimpiar.BackColor = System.Drawing.Color.White
+        Me.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLimpiar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLimpiar.ForeColor = System.Drawing.Color.Black
+        Me.btnLimpiar.Location = New System.Drawing.Point(701, 223)
         Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(98, 37)
+        Me.btnLimpiar.Size = New System.Drawing.Size(113, 37)
         Me.btnLimpiar.TabIndex = 73
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = False
         '
         'btnCancelar
         '
-        Me.btnCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnCancelar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelar.ForeColor = System.Drawing.Color.White
-        Me.btnCancelar.Location = New System.Drawing.Point(536, 220)
+        Me.btnCancelar.BackColor = System.Drawing.Color.White
+        Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancelar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelar.ForeColor = System.Drawing.Color.Black
+        Me.btnCancelar.Location = New System.Drawing.Point(572, 223)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(98, 37)
+        Me.btnCancelar.Size = New System.Drawing.Size(113, 37)
         Me.btnCancelar.TabIndex = 70
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
@@ -111,11 +115,12 @@ Partial Class jdGestionarProovedor
         'btnRegistrar
         '
         Me.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnRegistrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRegistrar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRegistrar.ForeColor = System.Drawing.Color.White
-        Me.btnRegistrar.Location = New System.Drawing.Point(224, 220)
+        Me.btnRegistrar.Location = New System.Drawing.Point(181, 223)
         Me.btnRegistrar.Name = "btnRegistrar"
-        Me.btnRegistrar.Size = New System.Drawing.Size(98, 37)
+        Me.btnRegistrar.Size = New System.Drawing.Size(113, 37)
         Me.btnRegistrar.TabIndex = 70
         Me.btnRegistrar.Text = "Registrar"
         Me.btnRegistrar.UseVisualStyleBackColor = False
@@ -123,38 +128,42 @@ Partial Class jdGestionarProovedor
         'btnEliminar
         '
         Me.btnEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnEliminar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEliminar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEliminar.ForeColor = System.Drawing.Color.White
-        Me.btnEliminar.Location = New System.Drawing.Point(432, 220)
+        Me.btnEliminar.Location = New System.Drawing.Point(442, 223)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(98, 37)
+        Me.btnEliminar.Size = New System.Drawing.Size(113, 37)
         Me.btnEliminar.TabIndex = 71
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = False
         '
         'cboEstado
         '
+        Me.cboEstado.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboEstado.FormattingEnabled = True
-        Me.cboEstado.Location = New System.Drawing.Point(658, 153)
+        Me.cboEstado.Location = New System.Drawing.Point(658, 158)
         Me.cboEstado.Name = "cboEstado"
-        Me.cboEstado.Size = New System.Drawing.Size(130, 24)
+        Me.cboEstado.Size = New System.Drawing.Size(130, 26)
         Me.cboEstado.TabIndex = 65
         '
         'txtContacto
         '
-        Me.txtContacto.Location = New System.Drawing.Point(658, 112)
+        Me.txtContacto.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtContacto.Location = New System.Drawing.Point(658, 117)
         Me.txtContacto.Name = "txtContacto"
-        Me.txtContacto.Size = New System.Drawing.Size(232, 22)
+        Me.txtContacto.Size = New System.Drawing.Size(232, 26)
         Me.txtContacto.TabIndex = 62
         '
         'btnEditar
         '
         Me.btnEditar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnEditar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEditar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEditar.ForeColor = System.Drawing.Color.White
-        Me.btnEditar.Location = New System.Drawing.Point(328, 220)
+        Me.btnEditar.Location = New System.Drawing.Point(313, 223)
         Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(98, 37)
+        Me.btnEditar.Size = New System.Drawing.Size(113, 37)
         Me.btnEditar.TabIndex = 72
         Me.btnEditar.Text = "Editar"
         Me.btnEditar.UseVisualStyleBackColor = False
@@ -162,138 +171,140 @@ Partial Class jdGestionarProovedor
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(516, 153)
+        Me.Label10.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(585, 164)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(50, 16)
+        Me.Label10.Size = New System.Drawing.Size(59, 18)
         Me.Label10.TabIndex = 61
         Me.Label10.Text = "Estado"
         '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(181, 112)
+        Me.txtTelefono.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTelefono.Location = New System.Drawing.Point(181, 117)
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(232, 22)
+        Me.txtTelefono.Size = New System.Drawing.Size(232, 26)
         Me.txtTelefono.TabIndex = 62
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(516, 112)
+        Me.Label9.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(483, 117)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(131, 16)
+        Me.Label9.Size = New System.Drawing.Size(162, 18)
         Me.Label9.TabIndex = 61
         Me.Label9.Text = "Persona de contacto"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(55, 112)
+        Me.Label5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(85, 121)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(61, 16)
+        Me.Label5.Size = New System.Drawing.Size(70, 18)
         Me.Label5.TabIndex = 61
         Me.Label5.Text = "Teléfono"
         '
         'txtDireccion
         '
-        Me.txtDireccion.Location = New System.Drawing.Point(658, 68)
+        Me.txtDireccion.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDireccion.Location = New System.Drawing.Point(658, 73)
         Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(232, 22)
+        Me.txtDireccion.Size = New System.Drawing.Size(232, 26)
         Me.txtDireccion.TabIndex = 62
         '
         'txtRUC
         '
-        Me.txtRUC.Location = New System.Drawing.Point(181, 68)
+        Me.txtRUC.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRUC.Location = New System.Drawing.Point(181, 73)
         Me.txtRUC.Name = "txtRUC"
-        Me.txtRUC.Size = New System.Drawing.Size(232, 22)
+        Me.txtRUC.Size = New System.Drawing.Size(232, 26)
         Me.txtRUC.TabIndex = 62
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(516, 68)
+        Me.Label7.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(569, 73)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(64, 16)
+        Me.Label7.Size = New System.Drawing.Size(75, 18)
         Me.Label7.TabIndex = 61
         Me.Label7.Text = "Dirección"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(55, 68)
+        Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(115, 77)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(36, 16)
+        Me.Label4.Size = New System.Drawing.Size(40, 18)
         Me.Label4.TabIndex = 61
         Me.Label4.Text = "RUC"
         '
         'txtCorreo
         '
-        Me.txtCorreo.Location = New System.Drawing.Point(658, 27)
+        Me.txtCorreo.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCorreo.Location = New System.Drawing.Point(658, 32)
         Me.txtCorreo.Name = "txtCorreo"
-        Me.txtCorreo.Size = New System.Drawing.Size(232, 22)
+        Me.txtCorreo.Size = New System.Drawing.Size(232, 26)
         Me.txtCorreo.TabIndex = 62
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(516, 27)
+        Me.Label6.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(585, 32)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(48, 16)
+        Me.Label6.Size = New System.Drawing.Size(60, 18)
         Me.Label6.TabIndex = 61
         Me.Label6.Text = "Correo"
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(181, 27)
+        Me.txtNombre.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombre.Location = New System.Drawing.Point(181, 32)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(232, 22)
+        Me.txtNombre.Size = New System.Drawing.Size(232, 26)
         Me.txtNombre.TabIndex = 62
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(55, 27)
+        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(87, 32)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(56, 16)
+        Me.Label3.Size = New System.Drawing.Size(68, 18)
         Me.Label3.TabIndex = 61
         Me.Label3.Text = "Nombre"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(35, 463)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(209, 20)
+        Me.Label1.Size = New System.Drawing.Size(229, 18)
         Me.Label1.TabIndex = 61
         Me.Label1.Text = "Datos del nuevo proveedor"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(600, 143)
+        Me.Label11.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(523, 143)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(115, 16)
+        Me.Label11.Size = New System.Drawing.Size(141, 18)
         Me.Label11.TabIndex = 61
         Me.Label11.Text = "Buscar proovedor"
         '
         'txtBuscarProveedor
         '
+        Me.txtBuscarProveedor.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBuscarProveedor.Location = New System.Drawing.Point(721, 140)
         Me.txtBuscarProveedor.Name = "txtBuscarProveedor"
-        Me.txtBuscarProveedor.Size = New System.Drawing.Size(302, 22)
+        Me.txtBuscarProveedor.Size = New System.Drawing.Size(302, 26)
         Me.txtBuscarProveedor.TabIndex = 62
-        '
-        'btnNuevo
-        '
-        Me.btnNuevo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnNuevo.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNuevo.ForeColor = System.Drawing.Color.White
-        Me.btnNuevo.Location = New System.Drawing.Point(39, 132)
-        Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(98, 37)
-        Me.btnNuevo.TabIndex = 73
-        Me.btnNuevo.Text = "Nuevo"
-        Me.btnNuevo.UseVisualStyleBackColor = False
         '
         'Label12
         '
@@ -305,7 +316,23 @@ Partial Class jdGestionarProovedor
         '
         'DataGridView1
         '
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.Location = New System.Drawing.Point(42, 185)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
@@ -316,7 +343,7 @@ Partial Class jdGestionarProovedor
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.ForeColor = System.Drawing.Color.White
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -324,21 +351,34 @@ Partial Class jdGestionarProovedor
         Me.Panel1.Size = New System.Drawing.Size(1060, 100)
         Me.Panel1.TabIndex = 76
         '
-        'Label2
+        'Label8
         '
-        Me.Label2.Font = New System.Drawing.Font("Verdana", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(153, 9)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(747, 83)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "GESTIONAR PROVEEDORES"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label8.Font = New System.Drawing.Font("Verdana", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(286, 24)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(489, 58)
+        Me.Label8.TabIndex = 77
+        Me.Label8.Text = "GESTIONAR PROVEEDORES"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'btnNuevo
+        '
+        Me.btnNuevo.BackColor = System.Drawing.Color.White
+        Me.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNuevo.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNuevo.ForeColor = System.Drawing.Color.Black
+        Me.btnNuevo.Location = New System.Drawing.Point(39, 132)
+        Me.btnNuevo.Name = "btnNuevo"
+        Me.btnNuevo.Size = New System.Drawing.Size(113, 37)
+        Me.btnNuevo.TabIndex = 73
+        Me.btnNuevo.Text = "Nuevo"
+        Me.btnNuevo.UseVisualStyleBackColor = False
         '
         'jdGestionarProovedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1060, 825)
+        Me.ClientSize = New System.Drawing.Size(1060, 835)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label12)
@@ -379,12 +419,12 @@ Partial Class jdGestionarProovedor
     Friend WithEvents cboEstado As ComboBox
     Friend WithEvents btnEliminar As Button
     Friend WithEvents btnEditar As Button
-    Friend WithEvents btnNuevo As Button
     Friend WithEvents btnCancelar As Button
     Friend WithEvents btnRegistrar As Button
     Friend WithEvents Label12 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents btnLimpiar As Button
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label2 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents btnNuevo As Button
 End Class

@@ -106,7 +106,7 @@ Public Class jdMantenimientoTrabajador
 
     '========================================
     ' LOAD
-    '========================================
+    '====================================
     Private Sub jdMantenimientoTrabajador_Load(
         sender As Object,
         e As EventArgs

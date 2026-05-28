@@ -7,6 +7,24 @@ Public Class jdGestionarEmpresa
     Dim idEmpresaSeleccionado As Integer = 0
 
     '========================================
+    ' LOAD
+    '========================================
+    Private Sub jdGestionarEmpresa_Load(
+        sender As Object,
+        e As EventArgs
+    ) Handles MyBase.Load
+
+        listar()
+
+        limpiar()
+
+        btnModificar.Enabled = False
+
+        btnEliminar.Enabled = False
+
+    End Sub
+
+    '========================================
     ' LISTAR EMPRESAS
     '========================================
     Sub listar()
@@ -16,22 +34,22 @@ Public Class jdGestionarEmpresa
             dgvEmpresa.DataSource =
                 objEmpresa.listarEmpresa()
 
-            ' Validar columnas
-            If dgvEmpresa.Columns.Count >= 3 Then
+            If dgvEmpresa.Columns.Count >= 4 Then
 
-                ' Ocultar ID
+                ' Ocultar ID Empresa
                 dgvEmpresa.Columns(0).Visible = False
 
-                ' Encabezados
                 dgvEmpresa.Columns(1).HeaderText =
-                    "Razón Social"
+                    "ID Cliente"
 
                 dgvEmpresa.Columns(2).HeaderText =
+                    "Razón Social"
+
+                dgvEmpresa.Columns(3).HeaderText =
                     "RUC"
 
             End If
 
-            ' Configuración visual
             dgvEmpresa.AutoSizeColumnsMode =
                 DataGridViewAutoSizeColumnsMode.Fill
 
@@ -62,21 +80,25 @@ Public Class jdGestionarEmpresa
     End Sub
 
     '========================================
-    ' LIMPIAR CAMPOS
+    ' LIMPIAR
     '========================================
     Sub limpiar()
 
         txtEmpresa.Clear()
+
         txtRazonSocial.Clear()
+
         txtRUC.Clear()
 
         idEmpresaSeleccionado = 0
 
         deshabilitarCampos()
 
-        btnRegistrar.Enabled = False
-
         dgvEmpresa.ClearSelection()
+
+        btnModificar.Enabled = False
+
+        btnEliminar.Enabled = False
 
     End Sub
 
@@ -86,6 +108,7 @@ Public Class jdGestionarEmpresa
     Sub habilitarCampos()
 
         txtRazonSocial.Enabled = True
+
         txtRUC.Enabled = True
 
     End Sub
@@ -96,6 +119,7 @@ Public Class jdGestionarEmpresa
     Sub deshabilitarCampos()
 
         txtRazonSocial.Enabled = False
+
         txtRUC.Enabled = False
 
     End Sub
@@ -108,10 +132,7 @@ Public Class jdGestionarEmpresa
         If txtRazonSocial.Text.Trim = "" Then
 
             MessageBox.Show(
-                "Ingrese razón social",
-                "Validación",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Warning
+                "Ingrese razón social"
             )
 
             txtRazonSocial.Focus()
@@ -123,10 +144,7 @@ Public Class jdGestionarEmpresa
         If txtRUC.Text.Trim = "" Then
 
             MessageBox.Show(
-                "Ingrese RUC",
-                "Validación",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Warning
+                "Ingrese RUC"
             )
 
             txtRUC.Focus()
@@ -138,10 +156,7 @@ Public Class jdGestionarEmpresa
         If Not IsNumeric(txtRUC.Text) Then
 
             MessageBox.Show(
-                "El RUC debe contener números",
-                "Validación",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Warning
+                "El RUC debe ser numérico"
             )
 
             txtRUC.Focus()
@@ -153,10 +168,7 @@ Public Class jdGestionarEmpresa
         If txtRUC.TextLength <> 11 Then
 
             MessageBox.Show(
-                "El RUC debe tener 11 dígitos",
-                "Validación",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Warning
+                "El RUC debe tener 11 dígitos"
             )
 
             txtRUC.Focus()
@@ -170,76 +182,83 @@ Public Class jdGestionarEmpresa
     End Function
 
     '========================================
-    ' LOAD
+    ' BUSCAR EMPRESA
     '========================================
-    Private Sub jdGestionarEmpresa_Load(
+    Private Sub txtEmpresa_TextChanged(
         sender As Object,
         e As EventArgs
-    ) Handles MyBase.Load
-
-        listar()
-
-        deshabilitarCampos()
-
-        btnRegistrar.Enabled = False
-
-    End Sub
-
-    '========================================
-    ' NUEVO
-    '========================================
-    Private Sub btnNuevo_Click(
-        sender As Object,
-        e As EventArgs
-    ) Handles btnNuevo.Click
-
-        limpiar()
-
-        habilitarCampos()
-
-        btnRegistrar.Enabled = True
-
-        txtRazonSocial.Focus()
-
-    End Sub
-
-    '========================================
-    ' REGISTRAR
-    '========================================
-    Private Sub btnRegistrar_Click(
-        sender As Object,
-        e As EventArgs
-    ) Handles btnRegistrar.Click
-
-        If validarCampos() = False Then
-            Exit Sub
-        End If
+    ) Handles txtEmpresa.TextChanged
 
         Try
 
-            objEmpresa.registrarEmpresa(
-                txtRazonSocial.Text.Trim,
-                txtRUC.Text.Trim
-            )
+            dgvEmpresa.DataSource =
+                objEmpresa.buscarEmpresa(
+                    txtEmpresa.Text.Trim
+                )
 
-            MessageBox.Show(
-                "Empresa registrada correctamente",
-                "Sistema",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            )
+            If dgvEmpresa.Columns.Count >= 4 Then
 
-            listar()
+                dgvEmpresa.Columns(0).Visible = False
 
-            limpiar()
+                dgvEmpresa.Columns(1).HeaderText =
+                    "ID Cliente"
+
+                dgvEmpresa.Columns(2).HeaderText =
+                    "Razón Social"
+
+                dgvEmpresa.Columns(3).HeaderText =
+                    "RUC"
+
+            End If
 
         Catch ex As Exception
 
             MessageBox.Show(
-                ex.Message,
-                "Error",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Error
+                ex.Message
+            )
+
+        End Try
+
+    End Sub
+
+    '========================================
+    ' SELECCIONAR FILA
+    '========================================
+    Private Sub dgvEmpresa_CellClick(
+        sender As Object,
+        e As DataGridViewCellEventArgs
+    ) Handles dgvEmpresa.CellClick
+
+        Try
+
+            If e.RowIndex >= 0 Then
+
+                habilitarCampos()
+
+                btnModificar.Enabled = True
+
+                btnEliminar.Enabled = True
+
+                idEmpresaSeleccionado =
+                    CInt(
+                        dgvEmpresa.Rows(e.RowIndex).
+                        Cells(0).Value
+                    )
+
+                txtRazonSocial.Text =
+                    dgvEmpresa.Rows(e.RowIndex).
+                    Cells(2).Value.ToString()
+
+                txtRUC.Text =
+                    dgvEmpresa.Rows(e.RowIndex).
+                    Cells(3).Value.ToString()
+
+            End If
+
+        Catch ex As Exception
+
+            MessageBox.Show(
+                "Error al seleccionar empresa"
             )
 
         End Try
@@ -257,10 +276,7 @@ Public Class jdGestionarEmpresa
         If idEmpresaSeleccionado = 0 Then
 
             MessageBox.Show(
-                "Seleccione una empresa",
-                "Sistema",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Warning
+                "Seleccione una empresa"
             )
 
             Exit Sub
@@ -280,10 +296,7 @@ Public Class jdGestionarEmpresa
             )
 
             MessageBox.Show(
-                "Empresa modificada correctamente",
-                "Sistema",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
+                "Empresa modificada correctamente"
             )
 
             listar()
@@ -293,10 +306,7 @@ Public Class jdGestionarEmpresa
         Catch ex As Exception
 
             MessageBox.Show(
-                ex.Message,
-                "Error",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Error
+                ex.Message
             )
 
         End Try
@@ -314,10 +324,7 @@ Public Class jdGestionarEmpresa
         If idEmpresaSeleccionado = 0 Then
 
             MessageBox.Show(
-                "Seleccione una empresa",
-                "Sistema",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Warning
+                "Seleccione una empresa"
             )
 
             Exit Sub
@@ -330,7 +337,7 @@ Public Class jdGestionarEmpresa
 
             rpta = MessageBox.Show(
                 "¿Desea eliminar la empresa?",
-                "Confirmar",
+                "Sistema",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question
             )
@@ -342,10 +349,7 @@ Public Class jdGestionarEmpresa
                 )
 
                 MessageBox.Show(
-                    "Empresa eliminada correctamente",
-                    "Sistema",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information
+                    "Empresa eliminada correctamente"
                 )
 
                 listar()
@@ -357,100 +361,7 @@ Public Class jdGestionarEmpresa
         Catch ex As Exception
 
             MessageBox.Show(
-                ex.Message,
-                "Error",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Error
-            )
-
-        End Try
-
-    End Sub
-
-    '========================================
-    ' BUSCAR
-    '========================================
-    Private Sub txtEmpresa_TextChanged(
-        sender As Object,
-        e As EventArgs
-    ) Handles txtEmpresa.TextChanged
-
-        Try
-
-            dgvEmpresa.DataSource =
-                objEmpresa.buscarEmpresa(
-                    txtEmpresa.Text.Trim
-                )
-
-            ' Configurar columnas
-            If dgvEmpresa.Columns.Count >= 3 Then
-
-                dgvEmpresa.Columns(0).Visible = False
-
-                dgvEmpresa.Columns(1).HeaderText =
-                    "Razón Social"
-
-                dgvEmpresa.Columns(2).HeaderText =
-                    "RUC"
-
-            End If
-
-        Catch ex As Exception
-
-            MessageBox.Show(
-                ex.Message,
-                "Error",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Error
-            )
-
-        End Try
-
-    End Sub
-
-    '========================================
-    ' SELECCIONAR FILA
-    '========================================
-    Private Sub dgvEmpresa_CellClick(
-        sender As Object,
-        e As DataGridViewCellEventArgs
-    ) Handles dgvEmpresa.CellClick
-
-        Try
-
-            If e.RowIndex >= 0 Then
-
-                If dgvEmpresa.Rows.Count > 0 Then
-
-                    habilitarCampos()
-
-                    btnRegistrar.Enabled = False
-
-                    idEmpresaSeleccionado =
-                        CInt(
-                            dgvEmpresa.Rows(e.RowIndex).
-                            Cells(0).Value
-                        )
-
-                    txtRazonSocial.Text =
-                        dgvEmpresa.Rows(e.RowIndex).
-                        Cells(1).Value.ToString()
-
-                    txtRUC.Text =
-                        dgvEmpresa.Rows(e.RowIndex).
-                        Cells(2).Value.ToString()
-
-                End If
-
-            End If
-
-        Catch ex As Exception
-
-            MessageBox.Show(
-                "Error al seleccionar fila",
-                "Sistema",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Warning
+                ex.Message
             )
 
         End Try

@@ -22,6 +22,8 @@ Partial Class jdGestionarTipoTrabajador
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(jdGestionarTipoTrabajador))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtTipoTrabajador = New System.Windows.Forms.TextBox()
@@ -42,17 +44,19 @@ Partial Class jdGestionarTipoTrabajador
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(54, 172)
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(54, 198)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(119, 16)
+        Me.Label1.Size = New System.Drawing.Size(145, 18)
         Me.Label1.TabIndex = 51
         Me.Label1.Text = "Tipo de trabajador"
         '
         'txtTipoTrabajador
         '
-        Me.txtTipoTrabajador.Location = New System.Drawing.Point(57, 205)
+        Me.txtTipoTrabajador.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTipoTrabajador.Location = New System.Drawing.Point(57, 225)
         Me.txtTipoTrabajador.Name = "txtTipoTrabajador"
-        Me.txtTipoTrabajador.Size = New System.Drawing.Size(223, 22)
+        Me.txtTipoTrabajador.Size = New System.Drawing.Size(223, 26)
         Me.txtTipoTrabajador.TabIndex = 52
         '
         'Label20
@@ -66,9 +70,10 @@ Partial Class jdGestionarTipoTrabajador
         'btnRegistrar
         '
         Me.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnRegistrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRegistrar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRegistrar.ForeColor = System.Drawing.Color.White
-        Me.btnRegistrar.Location = New System.Drawing.Point(441, 139)
+        Me.btnRegistrar.Location = New System.Drawing.Point(331, 143)
         Me.btnRegistrar.Name = "btnRegistrar"
         Me.btnRegistrar.Size = New System.Drawing.Size(107, 33)
         Me.btnRegistrar.TabIndex = 71
@@ -77,10 +82,11 @@ Partial Class jdGestionarTipoTrabajador
         '
         'btnNuevo
         '
-        Me.btnNuevo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnNuevo.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNuevo.ForeColor = System.Drawing.Color.White
-        Me.btnNuevo.Location = New System.Drawing.Point(331, 139)
+        Me.btnNuevo.BackColor = System.Drawing.Color.White
+        Me.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNuevo.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNuevo.ForeColor = System.Drawing.Color.Black
+        Me.btnNuevo.Location = New System.Drawing.Point(57, 143)
         Me.btnNuevo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(100, 33)
@@ -90,10 +96,11 @@ Partial Class jdGestionarTipoTrabajador
         '
         'btnSalir
         '
-        Me.btnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnSalir.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSalir.ForeColor = System.Drawing.Color.White
-        Me.btnSalir.Location = New System.Drawing.Point(556, 215)
+        Me.btnSalir.BackColor = System.Drawing.Color.White
+        Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSalir.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalir.ForeColor = System.Drawing.Color.Black
+        Me.btnSalir.Location = New System.Drawing.Point(522, 198)
         Me.btnSalir.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(115, 33)
@@ -103,10 +110,11 @@ Partial Class jdGestionarTipoTrabajador
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnLimpiar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLimpiar.ForeColor = System.Drawing.Color.White
-        Me.btnLimpiar.Location = New System.Drawing.Point(441, 215)
+        Me.btnLimpiar.BackColor = System.Drawing.Color.White
+        Me.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLimpiar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLimpiar.ForeColor = System.Drawing.Color.Black
+        Me.btnLimpiar.Location = New System.Drawing.Point(394, 198)
         Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(107, 33)
@@ -117,9 +125,10 @@ Partial Class jdGestionarTipoTrabajador
         'btnModificar
         '
         Me.btnModificar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnModificar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnModificar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnModificar.ForeColor = System.Drawing.Color.White
-        Me.btnModificar.Location = New System.Drawing.Point(556, 139)
+        Me.btnModificar.Location = New System.Drawing.Point(454, 143)
         Me.btnModificar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(115, 35)
@@ -130,9 +139,10 @@ Partial Class jdGestionarTipoTrabajador
         'btnEliminar
         '
         Me.btnEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnEliminar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEliminar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEliminar.ForeColor = System.Drawing.Color.White
-        Me.btnEliminar.Location = New System.Drawing.Point(331, 215)
+        Me.btnEliminar.Location = New System.Drawing.Point(584, 143)
         Me.btnEliminar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(100, 33)
@@ -144,7 +154,23 @@ Partial Class jdGestionarTipoTrabajador
         '
         Me.dgvTipoTrabajador.AllowUserToAddRows = False
         Me.dgvTipoTrabajador.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvTipoTrabajador.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvTipoTrabajador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvTipoTrabajador.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvTipoTrabajador.Location = New System.Drawing.Point(57, 308)
         Me.dgvTipoTrabajador.MultiSelect = False
         Me.dgvTipoTrabajador.Name = "dgvTipoTrabajador"
@@ -168,7 +194,7 @@ Partial Class jdGestionarTipoTrabajador
         '
         'Label2
         '
-        Me.Label2.Font = New System.Drawing.Font("Verdana", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Verdana", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(50, 9)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(610, 83)

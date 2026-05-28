@@ -11,6 +11,7 @@ Public Class clsEmpresa
         Dim strSQL As String =
             "SELECT " &
             "idEmpresa, " &
+            "idCliente, " &
             "razonSocial, " &
             "ruc " &
             "FROM EMPRESA " &
@@ -57,7 +58,7 @@ Public Class clsEmpresa
 
         Dim strSQL As String =
             "SELECT * FROM EMPRESA " &
-            "WHERE idEmpresa = " & id
+            "WHERE idEmpresa = @id"
 
         Dim objConectar As New clsConectaBD()
 
@@ -65,10 +66,17 @@ Public Class clsEmpresa
 
             objConectar.conectar()
 
-            Dim da As New SqlDataAdapter(
+            Dim cmd As New SqlCommand(
                 strSQL,
                 objConectar.miConexion
             )
+
+            cmd.Parameters.AddWithValue(
+                "@id",
+                id
+            )
+
+            Dim da As New SqlDataAdapter(cmd)
 
             Dim dt As New DataTable()
 
@@ -107,11 +115,11 @@ Public Class clsEmpresa
         Dim strSQL As String =
             "SELECT " &
             "idEmpresa, " &
+            "idCliente, " &
             "razonSocial, " &
             "ruc " &
             "FROM EMPRESA " &
-            "WHERE razonSocial LIKE '%" &
-            nombre & "%' " &
+            "WHERE razonSocial LIKE @nombre " &
             "ORDER BY razonSocial ASC"
 
         Dim objConectar As New clsConectaBD()
@@ -120,10 +128,17 @@ Public Class clsEmpresa
 
             objConectar.conectar()
 
-            Dim da As New SqlDataAdapter(
+            Dim cmd As New SqlCommand(
                 strSQL,
                 objConectar.miConexion
             )
+
+            cmd.Parameters.AddWithValue(
+                "@nombre",
+                "%" & nombre & "%"
+            )
+
+            Dim da As New SqlDataAdapter(cmd)
 
             Dim dt As New DataTable()
 
@@ -151,16 +166,19 @@ Public Class clsEmpresa
     '========================================
     Public Sub registrarEmpresa(
         ByVal razonSocial As String,
-        ByVal ruc As String
+        ByVal ruc As String,
+        ByVal idCliente As Integer
     )
 
         Dim strSQL As String =
             "INSERT INTO EMPRESA(" &
             "razonSocial, " &
-            "ruc) " &
+            "ruc, " &
+            "idCliente) " &
             "VALUES(" &
-            "'" & razonSocial & "', " &
-            "'" & ruc & "')"
+            "@razonSocial, " &
+            "@ruc, " &
+            "@idCliente)"
 
         Dim objConectar As New clsConectaBD()
 
@@ -171,6 +189,21 @@ Public Class clsEmpresa
             Dim cmd As New SqlCommand(
                 strSQL,
                 objConectar.miConexion
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@razonSocial",
+                razonSocial
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@ruc",
+                ruc
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@idCliente",
+                idCliente
             )
 
             cmd.ExecuteNonQuery()
@@ -201,9 +234,9 @@ Public Class clsEmpresa
 
         Dim strSQL As String =
             "UPDATE EMPRESA SET " &
-            "razonSocial = '" & razonSocial & "', " &
-            "ruc = '" & ruc & "' " &
-            "WHERE idEmpresa = " & idEmpresa
+            "razonSocial = @razonSocial, " &
+            "ruc = @ruc " &
+            "WHERE idEmpresa = @idEmpresa"
 
         Dim objConectar As New clsConectaBD()
 
@@ -214,6 +247,21 @@ Public Class clsEmpresa
             Dim cmd As New SqlCommand(
                 strSQL,
                 objConectar.miConexion
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@razonSocial",
+                razonSocial
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@ruc",
+                ruc
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@idEmpresa",
+                idEmpresa
             )
 
             cmd.ExecuteNonQuery()
@@ -242,7 +290,7 @@ Public Class clsEmpresa
 
         Dim strSQL As String =
             "DELETE FROM EMPRESA " &
-            "WHERE idEmpresa = " & idEmpresa
+            "WHERE idEmpresa = @idEmpresa"
 
         Dim objConectar As New clsConectaBD()
 
@@ -253,6 +301,11 @@ Public Class clsEmpresa
             Dim cmd As New SqlCommand(
                 strSQL,
                 objConectar.miConexion
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@idEmpresa",
+                idEmpresa
             )
 
             cmd.ExecuteNonQuery()
@@ -272,19 +325,54 @@ Public Class clsEmpresa
 
     End Sub
 
-    Public Function buscarEmpresaRUC(ruc As String) As DataTable
-        Dim strSQL As String = "SELECT * FROM empresa WHERE idempresa = '" & ruc & "'"
+    '========================================
+    ' BUSCAR EMPRESA POR RUC
+    '========================================
+    Public Function buscarEmpresaRUC(
+        ByVal ruc As String
+    ) As DataTable
+
+        Dim strSQL As String =
+            "SELECT * FROM EMPRESA " &
+            "WHERE ruc = @ruc"
+
         Dim objConectar As New clsConectaBD()
+
         Try
+
             objConectar.conectar()
-            Dim da As New SqlDataAdapter(strSQL, objConectar.miConexion)
+
+            Dim cmd As New SqlCommand(
+                strSQL,
+                objConectar.miConexion
+            )
+
+            cmd.Parameters.AddWithValue(
+                "@ruc",
+                ruc
+            )
+
+            Dim da As New SqlDataAdapter(cmd)
+
             Dim dt As New DataTable()
+
             da.Fill(dt)
+
             Return dt
+
         Catch ex As Exception
-            Throw New Exception("Error al buscar Empresa: " & ex.Message)
+
+            Throw New Exception(
+                "Error al buscar empresa: " &
+                ex.Message
+            )
+
         Finally
+
             objConectar.desconectar()
+
         End Try
+
     End Function
+
 End Class

@@ -11,7 +11,7 @@ Public Class jdGestionarTipoTrabajador
         dgvTipoTrabajador.DataSource =
             objTipoTrabajador.listarTipoTrabajador()
 
-        ' Ocultar ID
+        ' Oultar ID
         dgvTipoTrabajador.Columns(0).Visible = False
 
         ' Nombre de columnas
@@ -250,4 +250,7 @@ Public Class jdGestionarTipoTrabajador
 
     End Sub
 
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
 End Class

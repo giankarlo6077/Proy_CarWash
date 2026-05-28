@@ -22,6 +22,8 @@ Partial Class jdMantenimientoTrabajador
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(jdMantenimientoTrabajador))
         Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -39,26 +41,29 @@ Partial Class jdMantenimientoTrabajador
         '
         'txtBuscar
         '
-        Me.txtBuscar.Location = New System.Drawing.Point(188, 140)
+        Me.txtBuscar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBuscar.Location = New System.Drawing.Point(233, 142)
         Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(181, 22)
+        Me.txtBuscar.Size = New System.Drawing.Size(307, 26)
         Me.txtBuscar.TabIndex = 54
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(46, 143)
+        Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(46, 145)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(121, 16)
+        Me.Label2.Size = New System.Drawing.Size(151, 18)
         Me.Label2.TabIndex = 53
         Me.Label2.Text = "Buscar por nombre"
         '
         'btnBuscar
         '
-        Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscar.ForeColor = System.Drawing.Color.White
-        Me.btnBuscar.Location = New System.Drawing.Point(375, 132)
+        Me.btnBuscar.BackColor = System.Drawing.Color.White
+        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscar.ForeColor = System.Drawing.Color.Black
+        Me.btnBuscar.Location = New System.Drawing.Point(563, 135)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(98, 37)
         Me.btnBuscar.TabIndex = 70
@@ -67,12 +72,13 @@ Partial Class jdMantenimientoTrabajador
         '
         'btnCerrar
         '
-        Me.btnCerrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnCerrar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCerrar.ForeColor = System.Drawing.Color.White
-        Me.btnCerrar.Location = New System.Drawing.Point(694, 404)
+        Me.btnCerrar.BackColor = System.Drawing.Color.White
+        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCerrar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCerrar.ForeColor = System.Drawing.Color.Black
+        Me.btnCerrar.Location = New System.Drawing.Point(696, 467)
         Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(98, 37)
+        Me.btnCerrar.Size = New System.Drawing.Size(131, 37)
         Me.btnCerrar.TabIndex = 71
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = False
@@ -80,11 +86,12 @@ Partial Class jdMantenimientoTrabajador
         'btnNuevo
         '
         Me.btnNuevo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnNuevo.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNuevo.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNuevo.ForeColor = System.Drawing.Color.White
-        Me.btnNuevo.Location = New System.Drawing.Point(694, 266)
+        Me.btnNuevo.Location = New System.Drawing.Point(696, 266)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(98, 37)
+        Me.btnNuevo.Size = New System.Drawing.Size(131, 37)
         Me.btnNuevo.TabIndex = 72
         Me.btnNuevo.Text = "Nuevo"
         Me.btnNuevo.UseVisualStyleBackColor = False
@@ -92,11 +99,12 @@ Partial Class jdMantenimientoTrabajador
         'btnEditar
         '
         Me.btnEditar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnEditar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEditar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEditar.ForeColor = System.Drawing.Color.White
-        Me.btnEditar.Location = New System.Drawing.Point(694, 309)
+        Me.btnEditar.Location = New System.Drawing.Point(696, 320)
         Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(98, 37)
+        Me.btnEditar.Size = New System.Drawing.Size(131, 37)
         Me.btnEditar.TabIndex = 71
         Me.btnEditar.Text = "Editar"
         Me.btnEditar.UseVisualStyleBackColor = False
@@ -104,8 +112,24 @@ Partial Class jdMantenimientoTrabajador
         'dgvTrabajador
         '
         Me.dgvTrabajador.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvTrabajador.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvTrabajador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvTrabajador.Location = New System.Drawing.Point(49, 184)
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvTrabajador.DefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvTrabajador.Location = New System.Drawing.Point(51, 199)
         Me.dgvTrabajador.Name = "dgvTrabajador"
         Me.dgvTrabajador.RowHeadersWidth = 51
         Me.dgvTrabajador.RowTemplate.Height = 24
@@ -121,12 +145,12 @@ Partial Class jdMantenimientoTrabajador
         Me.Panel1.ForeColor = System.Drawing.Color.White
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(822, 100)
+        Me.Panel1.Size = New System.Drawing.Size(861, 100)
         Me.Panel1.TabIndex = 74
         '
         'Label1
         '
-        Me.Label1.Font = New System.Drawing.Font("Verdana", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(45, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(747, 83)
@@ -137,11 +161,12 @@ Partial Class jdMantenimientoTrabajador
         'btnDarBaja
         '
         Me.btnDarBaja.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnDarBaja.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDarBaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDarBaja.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDarBaja.ForeColor = System.Drawing.Color.White
-        Me.btnDarBaja.Location = New System.Drawing.Point(694, 352)
+        Me.btnDarBaja.Location = New System.Drawing.Point(696, 373)
         Me.btnDarBaja.Name = "btnDarBaja"
-        Me.btnDarBaja.Size = New System.Drawing.Size(98, 46)
+        Me.btnDarBaja.Size = New System.Drawing.Size(131, 74)
         Me.btnDarBaja.TabIndex = 71
         Me.btnDarBaja.Text = "Dar de baja"
         Me.btnDarBaja.UseVisualStyleBackColor = False
@@ -150,7 +175,7 @@ Partial Class jdMantenimientoTrabajador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(822, 561)
+        Me.ClientSize = New System.Drawing.Size(861, 572)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.dgvTrabajador)
         Me.Controls.Add(Me.btnEditar)
