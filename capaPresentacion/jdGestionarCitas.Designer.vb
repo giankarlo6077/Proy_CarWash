@@ -26,6 +26,7 @@ Partial Class jdGestionarCitas
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.txtPlaca = New System.Windows.Forms.TextBox()
         Me.btnBuscarVehic = New System.Windows.Forms.Button()
+        Me.btnGenComprobante = New System.Windows.Forms.Button()
         Me.dgvCitas = New System.Windows.Forms.DataGridView()
         Me.lblNombreCliente = New System.Windows.Forms.Label()
         Me.dtpFechaRecojo = New System.Windows.Forms.DateTimePicker()
@@ -52,6 +53,7 @@ Partial Class jdGestionarCitas
         '
         Me.Panel1.Controls.Add(Me.txtPlaca)
         Me.Panel1.Controls.Add(Me.btnBuscarVehic)
+        Me.Panel1.Controls.Add(Me.btnGenComprobante)
         Me.Panel1.Controls.Add(Me.dgvCitas)
         Me.Panel1.Controls.Add(Me.lblNombreCliente)
         Me.Panel1.Controls.Add(Me.dtpFechaRecojo)
@@ -151,6 +153,19 @@ Partial Class jdGestionarCitas
         Me.btnGenerarCita.TabIndex = 73
         Me.btnGenerarCita.Text = "Generar Cita"
         Me.btnGenerarCita.UseVisualStyleBackColor = False
+        '
+        'btnGenComprobante
+        '
+        Me.btnGenComprobante.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnGenComprobante.Enabled = False
+        Me.btnGenComprobante.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGenComprobante.ForeColor = System.Drawing.Color.White
+        Me.btnGenComprobante.Location = New System.Drawing.Point(644, 375)
+        Me.btnGenComprobante.Name = "btnGenComprobante"
+        Me.btnGenComprobante.Size = New System.Drawing.Size(220, 37)
+        Me.btnGenComprobante.TabIndex = 74
+        Me.btnGenComprobante.Text = "Generar Comprobante"
+        Me.btnGenComprobante.UseVisualStyleBackColor = False
         '
         'txtComentario
         '
@@ -297,4 +312,5 @@ Partial Class jdGestionarCitas
     Friend WithEvents dgvCitas As DataGridView
     Friend WithEvents btnBuscarVehic As Button
     Friend WithEvents txtPlaca As TextBox
+    Friend WithEvents btnGenComprobante As Button
 End Class

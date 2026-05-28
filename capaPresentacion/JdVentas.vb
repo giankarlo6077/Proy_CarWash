@@ -302,7 +302,7 @@ Public Class JdVentas
         ' ── Armar parámetros ──────────────────────────
         Dim numComprobante As String = txtNumeroVenta.Text.Trim()
         Dim tipoComprobante As String = cboTipoComprobante.SelectedItem.ToString()
-        Dim nombreCliente As String = dgvCliente.SelectedRows(0).Cells(0).Value.ToString()
+        Dim nombreCliente As String = dgvCliente.SelectedRows(0).Cells(1).Value.ToString()
 
         ' ── Construir lista de detalles ───────────────
         Dim listaDetalles As New List(Of Object())

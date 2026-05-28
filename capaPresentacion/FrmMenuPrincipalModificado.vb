@@ -127,7 +127,9 @@
 
     Private Sub RegistrarCitasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrarCitasToolStripMenuItem.Click
         Dim frmGestionarCitas As New jdGestionarCitas()
-        frmGestionarCitas.ShowDialog()
+        frmGestionarCitas.trabajadorSesion = trabajadorSesion
+        frmGestionarCitas.StartPosition = FormStartPosition.CenterParent
+        frmGestionarCitas.ShowDialog(Me)
     End Sub
 
     Private Sub ReportesToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ReportesToolStripMenuItem1.Click

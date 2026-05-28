@@ -6,6 +6,8 @@ Public Class ComprobanteVenta
 
     Private objComprobante As New clsComprobante()
 
+    Private _yaGuardado As Boolean = False
+
     ' Datos que un formulario de Ventas/Citas puede enviar antes de mostrar el comprobante
     Private datosPendientes As Boolean = False
     Private clientePend As String = ""
@@ -93,6 +95,12 @@ Public Class ComprobanteVenta
                     DataGridView1.Rows.Add(d(0), cant, precio, (cant * precio).ToString("0.00"))
                 Next
             End If
+        End If
+
+        ' Bloquear tipo de servicio cuando viene predeterminado desde otro formulario
+        Dim tsp As String = tipoServicioPend.Trim().ToLower()
+        If tsp = "venta" OrElse tsp = "cita" Then
+            cbxTipoServicio.Enabled = False
         End If
 
         calcularTotales()
@@ -318,13 +326,25 @@ Public Class ComprobanteVenta
     End Function
 
     ' ─────────────────────────────────────────────
-    '  GUARDAR COMPROBANTE
+    '  GUARDAR / MODIFICAR COMPROBANTE
     ' ─────────────────────────────────────────────
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+        If _yaGuardado Then
+            activarModoEdicion()
+            Return
+        End If
+
         If Not validar() Then Return
 
+        Dim confirmar As DialogResult = MessageBox.Show(
+            "¿Desea guardar el comprobante?",
+            "Confirmar guardado",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question)
+
+        If confirmar = DialogResult.No Then Return
+
         Try
-            ' Recopilar detalles de la grilla
             Dim detalles As New List(Of Object())()
             For Each fila As DataGridViewRow In DataGridView1.Rows
                 If fila.IsNewRow Then Continue For
@@ -345,24 +365,61 @@ Public Class ComprobanteVenta
             MessageBox.Show("Comprobante registrado correctamente.", "Éxito",
                             MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-            ' Bloquear todos los controles editables — solo exportar queda activo
-            btnGuardar.Enabled = False
-            btnExporJPG.Enabled = True
-            btnExportarPdf.Enabled = True
-
-            cbxEstado.Enabled = False
-            cbxMedioPago.Enabled = False
-            cbxTipoServicio.Enabled = False
-            txtMonto.Enabled = False
-            txtMonto.BackColor = System.Drawing.SystemColors.Control
-            DataGridView1.ReadOnly = True
-            DataGridView1.AllowUserToAddRows = False
-            DataGridView1.AllowUserToDeleteRows = False
+            activarModoVisualizacion()
 
         Catch ex As Exception
             MessageBox.Show("Error al guardar el comprobante: " & ex.Message,
                             "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub activarModoVisualizacion()
+        _yaGuardado = True
+        btnGuardar.Text = "Modificar Comprobante"
+        btnExporJPG.Enabled = True
+        btnExportarPdf.Enabled = True
+        cbxEstado.Enabled = False
+        cbxMedioPago.Enabled = False
+        cbxTipoServicio.Enabled = False
+        txtMonto.Enabled = False
+        txtMonto.BackColor = System.Drawing.SystemColors.Control
+        DataGridView1.ReadOnly = True
+        DataGridView1.AllowUserToAddRows = False
+        DataGridView1.AllowUserToDeleteRows = False
+    End Sub
+
+    Private Sub activarModoEdicion()
+        Dim aviso As DialogResult = MessageBox.Show(
+            "Se generará un nuevo número de comprobante con los productos actualizados." & vbCrLf &
+            "¿Desea continuar con la modificación?",
+            "Modificar comprobante",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question)
+
+        If aviso = DialogResult.No Then Return
+
+        _yaGuardado = False
+        btnGuardar.Text = "Guardar Comprobante"
+        btnExporJPG.Enabled = False
+        btnExportarPdf.Enabled = False
+        cbxEstado.Enabled = True
+        cbxMedioPago.Enabled = True
+        ' cbxTipoServicio sólo se reactiva si no fue bloqueado por origen
+        Dim tspEdit As String = tipoServicioPend.Trim().ToLower()
+        If tspEdit <> "venta" AndAlso tspEdit <> "cita" Then
+            cbxTipoServicio.Enabled = True
+        End If
+        Dim esEfectivo As Boolean = (cbxMedioPago.Text.Trim().ToLower() = "efectivo")
+        txtMonto.Enabled = esEfectivo
+        txtMonto.BackColor = If(esEfectivo,
+                                System.Drawing.SystemColors.Window,
+                                System.Drawing.SystemColors.Control)
+        DataGridView1.ReadOnly = False
+        DataGridView1.AllowUserToAddRows = True
+        DataGridView1.AllowUserToDeleteRows = True
+
+        ' Generar nuevo número de comprobante para el comprobante modificado
+        generarNumComprobante()
     End Sub
 
     ' ─────────────────────────────────────────────

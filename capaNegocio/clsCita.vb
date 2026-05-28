@@ -296,9 +296,31 @@ Public Class clsCita
         Return dt
     End Function
 
+    Public Function cargarServiciosConPreciodelaCita(idCita As Integer) As DataTable
+        Dim strSQL As String = "
+            SELECT ser.Servicio, dc.precioVenta, 1 AS cantidad
+            FROM DETALLE_CITA dc
+            INNER JOIN SERVICIO ser ON dc.idServicio = ser.idServicio
+            WHERE dc.idCita = @idCita"
+        Dim objConectar As New clsConectaBD()
+        Dim dt As New DataTable()
+        Try
+            objConectar.conectar()
+            Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
+            cmd.Parameters.AddWithValue("@idCita", idCita)
+            Dim da As New SqlDataAdapter(cmd)
+            da.Fill(dt)
+        Catch ex As Exception
+            Throw New Exception("Error al cargar servicios con precio de la cita: " & ex.Message)
+        Finally
+            objConectar.desconectar()
+        End Try
+        Return dt
+    End Function
+
     Public Function cargarServiciosdelaCita(idCita As Integer) As DataTable
         Dim strSQL As String = "
-            select ser.idServicio,ser.Servicio from CITA AS c  
+            select ser.idServicio,ser.Servicio from CITA AS c
             INNER JOIN DETALLE_CITA AS dc ON c.idCita=dc.idCita
             INNER JOIN SERVICIO AS ser ON dc.idServicio=ser.idServicio
             where c.idCita = @idCita"
