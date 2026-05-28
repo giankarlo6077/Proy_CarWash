@@ -38,7 +38,7 @@ Partial Class JdMantenimientoProveedor
         Me.Label8.Font = New System.Drawing.Font("Verdana", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(49, 19)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(445, 42)
+        Me.Label8.Size = New System.Drawing.Size(464, 42)
         Me.Label8.TabIndex = 55
         Me.Label8.Text = "Mantenimiento Proveedor"
         '
@@ -94,7 +94,7 @@ Partial Class JdMantenimientoProveedor
         Me.btnDarDeBaja.ForeColor = System.Drawing.SystemColors.ControlText
         Me.btnDarDeBaja.Location = New System.Drawing.Point(329, 120)
         Me.btnDarDeBaja.Name = "btnDarDeBaja"
-        Me.btnDarDeBaja.Size = New System.Drawing.Size(118, 37)
+        Me.btnDarDeBaja.Size = New System.Drawing.Size(124, 37)
         Me.btnDarDeBaja.TabIndex = 74
         Me.btnDarDeBaja.Text = "Dar de baja"
         Me.btnDarDeBaja.UseVisualStyleBackColor = False
@@ -107,7 +107,7 @@ Partial Class JdMantenimientoProveedor
         Me.btnNuevo.Image = CType(resources.GetObject("btnNuevo.Image"), System.Drawing.Image)
         Me.btnNuevo.Location = New System.Drawing.Point(68, 120)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(124, 37)
+        Me.btnNuevo.Size = New System.Drawing.Size(139, 37)
         Me.btnNuevo.TabIndex = 75
         Me.btnNuevo.Text = "  Nuevo"
         Me.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText

@@ -32,7 +32,6 @@ Partial Class JdVentas
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtFecha = New System.Windows.Forms.TextBox()
         Me.txtHora = New System.Windows.Forms.TextBox()
-        Me.cboCliente = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.cboTipoComprobante = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -42,30 +41,33 @@ Partial Class JdVentas
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtTotal = New System.Windows.Forms.TextBox()
         Me.btnGenerarComprobante = New System.Windows.Forms.Button()
+        Me.txtCliente = New System.Windows.Forms.TextBox()
+        Me.dgvCliente = New System.Windows.Forms.DataGridView()
         CType(Me.dgvDetalle, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label8
         '
         Me.Label8.Font = New System.Drawing.Font("Verdana", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(56, 9)
+        Me.Label8.Location = New System.Drawing.Point(20, 10)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(328, 42)
+        Me.Label8.Size = New System.Drawing.Size(380, 40)
         Me.Label8.TabIndex = 52
         Me.Label8.Text = "Gestion de Ventas"
         '
         'Label9
         '
         Me.Label9.BackColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(59, 51)
+        Me.Label9.Location = New System.Drawing.Point(20, 56)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(707, 10)
+        Me.Label9.Size = New System.Drawing.Size(780, 4)
         Me.Label9.TabIndex = 53
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(71, 90)
+        Me.Label1.Location = New System.Drawing.Point(20, 82)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(141, 16)
         Me.Label1.TabIndex = 54
@@ -73,15 +75,15 @@ Partial Class JdVentas
         '
         'txtNumeroVenta
         '
-        Me.txtNumeroVenta.Location = New System.Drawing.Point(219, 90)
+        Me.txtNumeroVenta.Location = New System.Drawing.Point(180, 78)
         Me.txtNumeroVenta.Name = "txtNumeroVenta"
-        Me.txtNumeroVenta.Size = New System.Drawing.Size(177, 22)
+        Me.txtNumeroVenta.Size = New System.Drawing.Size(200, 22)
         Me.txtNumeroVenta.TabIndex = 55
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(74, 134)
+        Me.Label2.Location = New System.Drawing.Point(20, 128)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(66, 16)
         Me.Label2.TabIndex = 56
@@ -90,7 +92,7 @@ Partial Class JdVentas
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(402, 92)
+        Me.Label3.Location = New System.Drawing.Point(400, 82)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(55, 16)
         Me.Label3.TabIndex = 57
@@ -99,7 +101,7 @@ Partial Class JdVentas
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(595, 90)
+        Me.Label4.Location = New System.Drawing.Point(610, 82)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(49, 16)
         Me.Label4.TabIndex = 58
@@ -107,30 +109,22 @@ Partial Class JdVentas
         '
         'txtFecha
         '
-        Me.txtFecha.Location = New System.Drawing.Point(463, 89)
+        Me.txtFecha.Location = New System.Drawing.Point(455, 78)
         Me.txtFecha.Name = "txtFecha"
-        Me.txtFecha.Size = New System.Drawing.Size(126, 22)
+        Me.txtFecha.Size = New System.Drawing.Size(140, 22)
         Me.txtFecha.TabIndex = 59
         '
         'txtHora
         '
-        Me.txtHora.Location = New System.Drawing.Point(650, 90)
+        Me.txtHora.Location = New System.Drawing.Point(660, 78)
         Me.txtHora.Name = "txtHora"
-        Me.txtHora.Size = New System.Drawing.Size(100, 22)
+        Me.txtHora.Size = New System.Drawing.Size(140, 22)
         Me.txtHora.TabIndex = 60
-        '
-        'cboCliente
-        '
-        Me.cboCliente.FormattingEnabled = True
-        Me.cboCliente.Location = New System.Drawing.Point(146, 126)
-        Me.cboCliente.Name = "cboCliente"
-        Me.cboCliente.Size = New System.Drawing.Size(250, 24)
-        Me.cboCliente.TabIndex = 61
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(409, 129)
+        Me.Label5.Location = New System.Drawing.Point(386, 128)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(171, 16)
         Me.Label5.TabIndex = 62
@@ -139,85 +133,113 @@ Partial Class JdVentas
         'cboTipoComprobante
         '
         Me.cboTipoComprobante.FormattingEnabled = True
-        Me.cboTipoComprobante.Location = New System.Drawing.Point(586, 121)
+        Me.cboTipoComprobante.Location = New System.Drawing.Point(582, 124)
         Me.cboTipoComprobante.Name = "cboTipoComprobante"
-        Me.cboTipoComprobante.Size = New System.Drawing.Size(164, 24)
+        Me.cboTipoComprobante.Size = New System.Drawing.Size(216, 24)
         Me.cboTipoComprobante.TabIndex = 63
         '
         'Label6
         '
         Me.Label6.BackColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(59, 162)
+        Me.Label6.Location = New System.Drawing.Point(23, 332)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(707, 10)
+        Me.Label6.Size = New System.Drawing.Size(779, 13)
         Me.Label6.TabIndex = 64
         '
         'btnEliminar
         '
         Me.btnEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnEliminar.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEliminar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEliminar.ForeColor = System.Drawing.Color.White
-        Me.btnEliminar.Location = New System.Drawing.Point(428, 185)
+        Me.btnEliminar.Location = New System.Drawing.Point(241, 348)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(130, 34)
+        Me.btnEliminar.Size = New System.Drawing.Size(160, 36)
         Me.btnEliminar.TabIndex = 68
-        Me.btnEliminar.Text = "ELIMINAR "
+        Me.btnEliminar.Text = "Eliminar Producto"
         Me.btnEliminar.UseVisualStyleBackColor = False
         '
         'btnAgregar
         '
         Me.btnAgregar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnAgregar.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAgregar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAgregar.ForeColor = System.Drawing.Color.White
-        Me.btnAgregar.Location = New System.Drawing.Point(266, 185)
+        Me.btnAgregar.Location = New System.Drawing.Point(23, 348)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(118, 34)
+        Me.btnAgregar.Size = New System.Drawing.Size(201, 36)
         Me.btnAgregar.TabIndex = 69
-        Me.btnAgregar.Text = "AGREGAR"
+        Me.btnAgregar.Text = "Agregar Producto"
         Me.btnAgregar.UseVisualStyleBackColor = False
         '
         'dgvDetalle
         '
         Me.dgvDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDetalle.Location = New System.Drawing.Point(62, 238)
+        Me.dgvDetalle.Location = New System.Drawing.Point(23, 398)
         Me.dgvDetalle.Name = "dgvDetalle"
         Me.dgvDetalle.RowHeadersWidth = 51
-        Me.dgvDetalle.RowTemplate.Height = 24
-        Me.dgvDetalle.Size = New System.Drawing.Size(704, 209)
+        Me.dgvDetalle.RowTemplate.Height = 26
+        Me.dgvDetalle.Size = New System.Drawing.Size(780, 220)
         Me.dgvDetalle.TabIndex = 70
         '
         'Label7
         '
-        Me.Label7.Location = New System.Drawing.Point(606, 485)
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(583, 632)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(54, 23)
+        Me.Label7.Size = New System.Drawing.Size(78, 20)
         Me.Label7.TabIndex = 71
         Me.Label7.Text = "TOTAL:"
         '
         'txtTotal
         '
-        Me.txtTotal.Location = New System.Drawing.Point(666, 482)
+        Me.txtTotal.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTotal.Location = New System.Drawing.Point(663, 628)
         Me.txtTotal.Name = "txtTotal"
-        Me.txtTotal.Size = New System.Drawing.Size(100, 22)
+        Me.txtTotal.Size = New System.Drawing.Size(140, 28)
         Me.txtTotal.TabIndex = 72
         '
         'btnGenerarComprobante
         '
         Me.btnGenerarComprobante.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnGenerarComprobante.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnGenerarComprobante.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGenerarComprobante.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGenerarComprobante.ForeColor = System.Drawing.Color.White
-        Me.btnGenerarComprobante.Location = New System.Drawing.Point(266, 519)
+        Me.btnGenerarComprobante.Location = New System.Drawing.Point(243, 668)
         Me.btnGenerarComprobante.Name = "btnGenerarComprobante"
-        Me.btnGenerarComprobante.Size = New System.Drawing.Size(292, 34)
+        Me.btnGenerarComprobante.Size = New System.Drawing.Size(340, 38)
         Me.btnGenerarComprobante.TabIndex = 73
         Me.btnGenerarComprobante.Text = "GENERAR COMPROBANTE"
         Me.btnGenerarComprobante.UseVisualStyleBackColor = False
+        '
+        'txtCliente
+        '
+        Me.txtCliente.Location = New System.Drawing.Point(93, 121)
+        Me.txtCliente.Name = "txtCliente"
+        Me.txtCliente.Size = New System.Drawing.Size(287, 22)
+        Me.txtCliente.TabIndex = 75
+        '
+        'dgvCliente
+        '
+        Me.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvCliente.Location = New System.Drawing.Point(23, 154)
+        Me.dgvCliente.Name = "dgvCliente"
+        Me.dgvCliente.RowHeadersWidth = 51
+        Me.dgvCliente.RowTemplate.Height = 24
+        Me.dgvCliente.Size = New System.Drawing.Size(779, 175)
+        Me.dgvCliente.TabIndex = 76
         '
         'JdVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(794, 565)
+        Me.ClientSize = New System.Drawing.Size(820, 717)
+        Me.Controls.Add(Me.dgvCliente)
+        Me.Controls.Add(Me.txtCliente)
         Me.Controls.Add(Me.btnGenerarComprobante)
         Me.Controls.Add(Me.txtTotal)
         Me.Controls.Add(Me.Label7)
@@ -227,7 +249,6 @@ Partial Class JdVentas
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.cboTipoComprobante)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.cboCliente)
         Me.Controls.Add(Me.txtHora)
         Me.Controls.Add(Me.txtFecha)
         Me.Controls.Add(Me.Label4)
@@ -241,6 +262,7 @@ Partial Class JdVentas
         Me.Name = "JdVentas"
         Me.Text = "Gestion de Ventas"
         CType(Me.dgvDetalle, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -255,7 +277,6 @@ Partial Class JdVentas
     Friend WithEvents Label4 As Label
     Friend WithEvents txtFecha As TextBox
     Friend WithEvents txtHora As TextBox
-    Friend WithEvents cboCliente As ComboBox
     Friend WithEvents Label5 As Label
     Friend WithEvents cboTipoComprobante As ComboBox
     Friend WithEvents Label6 As Label
@@ -265,4 +286,6 @@ Partial Class JdVentas
     Friend WithEvents Label7 As Label
     Friend WithEvents txtTotal As TextBox
     Friend WithEvents btnGenerarComprobante As Button
+    Friend WithEvents txtCliente As TextBox
+    Friend WithEvents dgvCliente As DataGridView
 End Class

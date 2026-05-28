@@ -204,24 +204,58 @@ Public Class clsCliente
         Return dt
     End Function
 
+    Public Function listarClientesConTipo() As DataTable
+        Dim dt As New DataTable()
+        Try
+            objConectar.abrirconexion()
+            ' Personas: siempre tienen registro en cliente (se registran juntos en transacción)
+            ' Empresas: se registran solo en la tabla empresa, sin registro en cliente
+            Dim strSQL As String =
+                "SELECT 'Persona' AS tipo, p.persona AS cliente " &
+                "FROM persona p INNER JOIN cliente c ON c.idcliente = p.idcliente " &
+                "UNION ALL " &
+                "SELECT 'Empresa' AS tipo, e.razonsocial AS cliente " &
+                "FROM empresa e " &
+                "ORDER BY tipo, cliente"
+            Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
+            Dim da As New SqlDataAdapter(cmd)
+            da.Fill(dt)
+        Catch ex As Exception
+            Throw New Exception("Error al listar clientes con tipo --> " & ex.Message)
+        Finally
+            objConectar.cerrarconexion()
+        End Try
+        Return dt
+    End Function
+
     Public Function obtenerNumeroDocumento(nombre As String) As String
         Dim nroDocumento As String = ""
         Try
             objConectar.abrirconexion()
-            Dim strSQL As String = "SELECT cli.numdocumento AS nroDocumento " &
-                                   "FROM cliente cli " &
-                                   "INNER JOIN tipo_documento tp ON tp.idtipodocumento = cli.idtipodocumento " &
-                                   "LEFT JOIN persona per ON cli.idcliente = per.idcliente " &
-                                   "LEFT JOIN empresa emp ON emp.idempresa = cli.idrepresentante " &
-                                   "WHERE per.persona = @nombre OR emp.razonsocial = @nombre"
 
-            Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
-            cmd.Parameters.AddWithValue("@nombre", nombre)
-
-            Dim resultado As Object = cmd.ExecuteScalar()
-            If resultado IsNot Nothing AndAlso Not DBNull.Value.Equals(resultado) Then
-                nroDocumento = resultado.ToString()
+            ' Primero buscar en personas (cliente con persona asociada)
+            Dim strPersona As String =
+                "SELECT cli.numdocumento FROM cliente cli " &
+                "INNER JOIN persona per ON per.idcliente = cli.idcliente " &
+                "WHERE per.persona = @nombre"
+            Dim cmdPersona As New SqlCommand(strPersona, objConectar.miConexion)
+            cmdPersona.Parameters.AddWithValue("@nombre", nombre)
+            Dim res1 As Object = cmdPersona.ExecuteScalar()
+            If res1 IsNot Nothing AndAlso Not DBNull.Value.Equals(res1) Then
+                nroDocumento = res1.ToString()
+                Return nroDocumento
             End If
+
+            ' Si no se encontró, buscar RUC directamente en empresa
+            Dim strEmpresa As String =
+                "SELECT COALESCE(ruc, '') FROM empresa WHERE razonsocial = @nombre"
+            Dim cmdEmpresa As New SqlCommand(strEmpresa, objConectar.miConexion)
+            cmdEmpresa.Parameters.AddWithValue("@nombre", nombre)
+            Dim res2 As Object = cmdEmpresa.ExecuteScalar()
+            If res2 IsNot Nothing AndAlso Not DBNull.Value.Equals(res2) Then
+                nroDocumento = res2.ToString()
+            End If
+
         Catch ex As Exception
             Throw New Exception("Error al obtener numero de documento del cliente -> " & ex.Message)
         Finally

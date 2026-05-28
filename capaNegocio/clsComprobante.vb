@@ -106,23 +106,28 @@ Public Class clsComprobante
     '  MOSTRAR NUEVO NÚMERO DE COMPROBANTE
     ' ─────────────────────────────────────────────
     Public Function mostrarNuevoNumeroComprobante(tipoComprobante As String) As String
-        ' SQL Server equivalente al split_part + LPAD de PostgreSQL
-        strSQL = "SELECT LEFT(MAX(numcomprobante), CHARINDEX('-', MAX(numcomprobante)) - 1) + '-' + " &
-                 "RIGHT('00000000' + CAST(CAST(RIGHT(MAX(numcomprobante), " &
-                 "LEN(MAX(numcomprobante)) - CHARINDEX('-', MAX(numcomprobante))) AS INT) + 1 AS VARCHAR), 8) " &
-                 "AS siguiente_num_comprobante " &
+        Dim prefijo As String = If(tipoComprobante.ToLower() = "factura", "F001", "B001")
+        ' Extrae la parte numérica del número de comprobante y hace MAX entero real
+        ' para evitar que la comparación lexicográfica de VARCHAR devuelva un resultado incorrecto.
+        strSQL = "SELECT ISNULL(MAX(CAST(SUBSTRING(numcomprobante, " &
+                 "CHARINDEX('-', numcomprobante) + 1, LEN(numcomprobante)) AS INT)), 0) + 1 " &
+                 "AS siguiente " &
                  "FROM comprobante_venta " &
-                 "WHERE tipocomprobante = @tipoComprobante"
+                 "WHERE tipocomprobante = @tipoComprobante " &
+                 "AND numcomprobante LIKE @prefijo + '-%'"
         Try
             objConectar.conectar()
             Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
             cmd.Parameters.AddWithValue("@tipoComprobante", tipoComprobante)
+            cmd.Parameters.AddWithValue("@prefijo", prefijo)
             dr = cmd.ExecuteReader()
-            While dr.Read()
-                Dim num As String = dr("siguiente_num_comprobante")?.ToString()
-                Return If(num, "")
-            End While
-            Return ""
+
+            If dr.Read() AndAlso Not IsDBNull(dr("siguiente")) Then
+                Dim siguiente As Integer = Convert.ToInt32(dr("siguiente"))
+                Return prefijo & "-" & siguiente.ToString().PadLeft(8, "0"c)
+            End If
+
+            Return prefijo & "-00000001"
         Catch ex As Exception
             Throw New Exception("Error al obtener numero de comprobante -> " & ex.Message)
         Finally

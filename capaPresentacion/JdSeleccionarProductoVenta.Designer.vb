@@ -26,12 +26,12 @@ Partial Class JdSeleccionarProductoVenta
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.cboTipoProducto = New System.Windows.Forms.ComboBox()
         Me.dgvProductos = New System.Windows.Forms.DataGridView()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.nudCantidad = New System.Windows.Forms.NumericUpDown()
         Me.btnSeleccionar = New System.Windows.Forms.Button()
+        Me.btnCerrar = New System.Windows.Forms.Button()
         CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudCantidad, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -41,7 +41,7 @@ Partial Class JdSeleccionarProductoVenta
         Me.Label8.Font = New System.Drawing.Font("Verdana", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(52, 9)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(373, 42)
+        Me.Label8.Size = New System.Drawing.Size(414, 42)
         Me.Label8.TabIndex = 53
         Me.Label8.Text = "Seleccionar Productos"
         '
@@ -61,19 +61,6 @@ Partial Class JdSeleccionarProductoVenta
         Me.Label1.Size = New System.Drawing.Size(114, 16)
         Me.Label1.TabIndex = 55
         Me.Label1.Text = "Tipo de Producto:"
-        '
-        'btnBuscar
-        '
-        Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnBuscar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscar.ForeColor = System.Drawing.Color.White
-        Me.btnBuscar.Location = New System.Drawing.Point(632, 73)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(130, 34)
-        Me.btnBuscar.TabIndex = 69
-        Me.btnBuscar.Text = "BUSCAR"
-        Me.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
-        Me.btnBuscar.UseVisualStyleBackColor = False
         '
         'cboTipoProducto
         '
@@ -96,7 +83,7 @@ Partial Class JdSeleccionarProductoVenta
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(58, 402)
+        Me.Label2.Location = New System.Drawing.Point(55, 386)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(79, 16)
         Me.Label2.TabIndex = 72
@@ -104,34 +91,49 @@ Partial Class JdSeleccionarProductoVenta
         '
         'nudCantidad
         '
-        Me.nudCantidad.Location = New System.Drawing.Point(143, 400)
+        Me.nudCantidad.Enabled = False
+        Me.nudCantidad.Location = New System.Drawing.Point(140, 380)
+        Me.nudCantidad.Minimum = 0
         Me.nudCantidad.Name = "nudCantidad"
         Me.nudCantidad.Size = New System.Drawing.Size(120, 22)
         Me.nudCantidad.TabIndex = 73
+        Me.nudCantidad.Value = 0
         '
         'btnSeleccionar
         '
         Me.btnSeleccionar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnSeleccionar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSeleccionar.ForeColor = System.Drawing.Color.White
-        Me.btnSeleccionar.Location = New System.Drawing.Point(591, 388)
+        Me.btnSeleccionar.Location = New System.Drawing.Point(412, 388)
         Me.btnSeleccionar.Name = "btnSeleccionar"
-        Me.btnSeleccionar.Size = New System.Drawing.Size(171, 34)
+        Me.btnSeleccionar.Size = New System.Drawing.Size(168, 34)
         Me.btnSeleccionar.TabIndex = 74
         Me.btnSeleccionar.Text = "SELECCIONAR"
         Me.btnSeleccionar.UseVisualStyleBackColor = False
+        '
+        'btnCerrar
+        '
+        Me.btnCerrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnCerrar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCerrar.ForeColor = System.Drawing.Color.White
+        Me.btnCerrar.Location = New System.Drawing.Point(592, 388)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(168, 34)
+        Me.btnCerrar.TabIndex = 75
+        Me.btnCerrar.Text = "CERRAR"
+        Me.btnCerrar.UseVisualStyleBackColor = False
         '
         'JdSeleccionarProductoVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.btnSeleccionar)
         Me.Controls.Add(Me.nudCantidad)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.dgvProductos)
         Me.Controls.Add(Me.cboTipoProducto)
-        Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
@@ -148,10 +150,10 @@ Partial Class JdSeleccionarProductoVenta
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents btnBuscar As Button
     Friend WithEvents cboTipoProducto As ComboBox
     Friend WithEvents dgvProductos As DataGridView
     Friend WithEvents Label2 As Label
     Friend WithEvents nudCantidad As NumericUpDown
     Friend WithEvents btnSeleccionar As Button
+    Friend WithEvents btnCerrar As Button
 End Class
