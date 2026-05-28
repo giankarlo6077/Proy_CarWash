@@ -73,7 +73,7 @@ Partial Class jdGestionarTipoTrabajador
         Me.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRegistrar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRegistrar.ForeColor = System.Drawing.Color.White
-        Me.btnRegistrar.Location = New System.Drawing.Point(331, 143)
+        Me.btnRegistrar.Location = New System.Drawing.Point(333, 160)
         Me.btnRegistrar.Name = "btnRegistrar"
         Me.btnRegistrar.Size = New System.Drawing.Size(107, 33)
         Me.btnRegistrar.TabIndex = 71
@@ -100,7 +100,7 @@ Partial Class jdGestionarTipoTrabajador
         Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSalir.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSalir.ForeColor = System.Drawing.Color.Black
-        Me.btnSalir.Location = New System.Drawing.Point(522, 198)
+        Me.btnSalir.Location = New System.Drawing.Point(524, 215)
         Me.btnSalir.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(115, 33)
@@ -114,7 +114,7 @@ Partial Class jdGestionarTipoTrabajador
         Me.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLimpiar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLimpiar.ForeColor = System.Drawing.Color.Black
-        Me.btnLimpiar.Location = New System.Drawing.Point(394, 198)
+        Me.btnLimpiar.Location = New System.Drawing.Point(396, 215)
         Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(107, 33)
@@ -128,7 +128,7 @@ Partial Class jdGestionarTipoTrabajador
         Me.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnModificar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnModificar.ForeColor = System.Drawing.Color.White
-        Me.btnModificar.Location = New System.Drawing.Point(454, 143)
+        Me.btnModificar.Location = New System.Drawing.Point(456, 160)
         Me.btnModificar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(115, 35)
@@ -142,7 +142,7 @@ Partial Class jdGestionarTipoTrabajador
         Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEliminar.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEliminar.ForeColor = System.Drawing.Color.White
-        Me.btnEliminar.Location = New System.Drawing.Point(584, 143)
+        Me.btnEliminar.Location = New System.Drawing.Point(586, 160)
         Me.btnEliminar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(100, 33)
@@ -153,6 +153,7 @@ Partial Class jdGestionarTipoTrabajador
         'dgvTipoTrabajador
         '
         Me.dgvTipoTrabajador.AllowUserToAddRows = False
+        Me.dgvTipoTrabajador.AllowUserToDeleteRows = False
         Me.dgvTipoTrabajador.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
@@ -189,7 +190,7 @@ Partial Class jdGestionarTipoTrabajador
         Me.Panel1.ForeColor = System.Drawing.Color.White
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(719, 100)
+        Me.Panel1.Size = New System.Drawing.Size(731, 100)
         Me.Panel1.TabIndex = 78
         '
         'Label2
@@ -206,7 +207,7 @@ Partial Class jdGestionarTipoTrabajador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(719, 576)
+        Me.ClientSize = New System.Drawing.Size(731, 587)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.dgvTipoTrabajador)
         Me.Controls.Add(Me.btnEliminar)

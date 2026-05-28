@@ -89,6 +89,12 @@
     <Compile Include="jdAcercaDe.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="jdConsultaTrabajadorTipo.Designer.vb">
+      <DependentUpon>jdConsultaTrabajadorTipo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jdConsultaTrabajadorTipo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="JdDetalleOrdenTrabajo.Designer.vb">
       <DependentUpon>JdDetalleOrdenTrabajo.vb</DependentUpon>
     </Compile>
@@ -335,6 +341,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="jdAcercaDe.resx">
       <DependentUpon>jdAcercaDe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jdConsultaTrabajadorTipo.resx">
+      <DependentUpon>jdConsultaTrabajadorTipo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JdDetalleOrdenTrabajo.resx">
       <DependentUpon>JdDetalleOrdenTrabajo.vb</DependentUpon>
