@@ -32,6 +32,7 @@ Partial Class jdGestionarCitas
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.btnGenerarCita = New System.Windows.Forms.Button()
+        Me.btnGenerarComprobante = New System.Windows.Forms.Button()
         Me.txtComentario = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -58,6 +59,7 @@ Partial Class jdGestionarCitas
         Me.Panel1.Controls.Add(Me.Label14)
         Me.Panel1.Controls.Add(Me.Label13)
         Me.Panel1.Controls.Add(Me.btnGenerarCita)
+        Me.Panel1.Controls.Add(Me.btnGenerarComprobante)
         Me.Panel1.Controls.Add(Me.txtComentario)
         Me.Panel1.Controls.Add(Me.Label10)
         Me.Panel1.Controls.Add(Me.Label9)
@@ -151,6 +153,19 @@ Partial Class jdGestionarCitas
         Me.btnGenerarCita.TabIndex = 73
         Me.btnGenerarCita.Text = "Generar Cita"
         Me.btnGenerarCita.UseVisualStyleBackColor = False
+        '
+        'btnGenerarComprobante
+        '
+        Me.btnGenerarComprobante.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnGenerarComprobante.Enabled = False
+        Me.btnGenerarComprobante.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGenerarComprobante.ForeColor = System.Drawing.Color.White
+        Me.btnGenerarComprobante.Location = New System.Drawing.Point(654, 375)
+        Me.btnGenerarComprobante.Name = "btnGenerarComprobante"
+        Me.btnGenerarComprobante.Size = New System.Drawing.Size(219, 37)
+        Me.btnGenerarComprobante.TabIndex = 74
+        Me.btnGenerarComprobante.Text = "Generar Comprobante"
+        Me.btnGenerarComprobante.UseVisualStyleBackColor = False
         '
         'txtComentario
         '
@@ -290,6 +305,7 @@ Partial Class jdGestionarCitas
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents btnGenerarCita As Button
+    Friend WithEvents btnGenerarComprobante As Button
     Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents dtpFechaRecojo As DateTimePicker

@@ -287,6 +287,12 @@
     <Compile Include="jdReporteVehiculo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="jdReporteComprobantePorCliente.Designer.vb">
+      <DependentUpon>jdReporteComprobantePorCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jdReporteComprobantePorCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="jdSeleccionarProducto.Designer.vb">
       <DependentUpon>jdSeleccionarProducto.vb</DependentUpon>
     </Compile>

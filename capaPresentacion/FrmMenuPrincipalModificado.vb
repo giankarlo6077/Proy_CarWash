@@ -150,4 +150,10 @@
         frm.StartPosition = FormStartPosition.CenterParent
         frm.ShowDialog(Me)
     End Sub
+
+    Private Sub ComprobantesPorClienteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ComprobantesPorClienteToolStripMenuItem.Click
+        Dim frm As New jdReporteComprobantePorCliente()
+        frm.StartPosition = FormStartPosition.CenterParent
+        frm.ShowDialog(Me)
+    End Sub
 End Class
