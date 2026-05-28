@@ -38,8 +38,6 @@ Partial Class JdDetalleOrdenTrabajo
         Me.Label8 = New System.Windows.Forms.Label()
         Me.lblFecha = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtidCita = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -105,8 +103,6 @@ Partial Class JdDetalleOrdenTrabajo
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.lblFecha)
         Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.txtidCita)
-        Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label14)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Location = New System.Drawing.Point(12, 59)
@@ -185,7 +181,7 @@ Partial Class JdDetalleOrdenTrabajo
         'lblHora
         '
         Me.lblHora.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblHora.Location = New System.Drawing.Point(675, 68)
+        Me.lblHora.Location = New System.Drawing.Point(475, 69)
         Me.lblHora.Name = "lblHora"
         Me.lblHora.Size = New System.Drawing.Size(136, 21)
         Me.lblHora.TabIndex = 84
@@ -193,7 +189,7 @@ Partial Class JdDetalleOrdenTrabajo
         '
         'Label8
         '
-        Me.Label8.Location = New System.Drawing.Point(603, 69)
+        Me.Label8.Location = New System.Drawing.Point(403, 70)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(66, 21)
         Me.Label8.TabIndex = 83
@@ -203,7 +199,7 @@ Partial Class JdDetalleOrdenTrabajo
         'lblFecha
         '
         Me.lblFecha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblFecha.Location = New System.Drawing.Point(420, 69)
+        Me.lblFecha.Location = New System.Drawing.Point(206, 70)
         Me.lblFecha.Name = "lblFecha"
         Me.lblFecha.Size = New System.Drawing.Size(136, 21)
         Me.lblFecha.TabIndex = 82
@@ -211,28 +207,12 @@ Partial Class JdDetalleOrdenTrabajo
         '
         'Label5
         '
-        Me.Label5.Location = New System.Drawing.Point(348, 69)
+        Me.Label5.Location = New System.Drawing.Point(134, 70)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(66, 21)
         Me.Label5.TabIndex = 81
         Me.Label5.Text = "FECHA:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'txtidCita
-        '
-        Me.txtidCita.Location = New System.Drawing.Point(93, 68)
-        Me.txtidCita.Name = "txtidCita"
-        Me.txtidCita.Size = New System.Drawing.Size(249, 22)
-        Me.txtidCita.TabIndex = 80
-        '
-        'Label4
-        '
-        Me.Label4.Location = New System.Drawing.Point(21, 69)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(66, 21)
-        Me.Label4.TabIndex = 79
-        Me.Label4.Text = "N° CITA:"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label14
         '
@@ -282,30 +262,30 @@ Partial Class JdDetalleOrdenTrabajo
         '
         'Label17
         '
-        Me.Label17.Location = New System.Drawing.Point(420, 123)
+        Me.Label17.Location = New System.Drawing.Point(413, 123)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(90, 21)
+        Me.Label17.Size = New System.Drawing.Size(97, 21)
         Me.Label17.TabIndex = 97
         Me.Label17.Text = "TELEFONO:"
-        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'lblCliente
         '
         Me.lblCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblCliente.Location = New System.Drawing.Point(149, 122)
+        Me.lblCliente.Location = New System.Drawing.Point(149, 114)
         Me.lblCliente.Name = "lblCliente"
-        Me.lblCliente.Size = New System.Drawing.Size(236, 21)
+        Me.lblCliente.Size = New System.Drawing.Size(236, 41)
         Me.lblCliente.TabIndex = 96
         Me.lblCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label15
         '
-        Me.Label15.Location = New System.Drawing.Point(77, 123)
+        Me.Label15.Location = New System.Drawing.Point(70, 123)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(66, 21)
+        Me.Label15.Size = New System.Drawing.Size(73, 21)
         Me.Label15.TabIndex = 95
         Me.Label15.Text = "CLIENTE:"
-        Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'lblPlaca
         '
@@ -327,12 +307,12 @@ Partial Class JdDetalleOrdenTrabajo
         '
         'Label19
         '
-        Me.Label19.Location = New System.Drawing.Point(564, 69)
+        Me.Label19.Location = New System.Drawing.Point(557, 69)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(88, 21)
+        Me.Label19.Size = New System.Drawing.Size(95, 21)
         Me.Label19.TabIndex = 83
         Me.Label19.Text = "AÑO FAB:"
-        Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'lblModelo
         '
@@ -345,21 +325,21 @@ Partial Class JdDetalleOrdenTrabajo
         '
         'Label21
         '
-        Me.Label21.Location = New System.Drawing.Point(277, 69)
+        Me.Label21.Location = New System.Drawing.Point(270, 69)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(137, 21)
+        Me.Label21.Size = New System.Drawing.Size(144, 21)
         Me.Label21.TabIndex = 81
         Me.Label21.Text = "MARCA / MODELO:"
-        Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label22
         '
-        Me.Label22.Location = New System.Drawing.Point(21, 69)
+        Me.Label22.Location = New System.Drawing.Point(14, 69)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(66, 21)
+        Me.Label22.Size = New System.Drawing.Size(73, 21)
         Me.Label22.TabIndex = 79
         Me.Label22.Text = "PLACA:"
-        Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label23
         '
@@ -521,8 +501,6 @@ Partial Class JdDetalleOrdenTrabajo
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label3 As Label
     Friend WithEvents Label14 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents txtidCita As TextBox
     Friend WithEvents lblHora As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents lblFecha As Label
