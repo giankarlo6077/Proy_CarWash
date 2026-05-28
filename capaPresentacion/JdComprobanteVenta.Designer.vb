@@ -329,7 +329,7 @@ Partial Class ComprobanteVenta
         '
         'txtTrabajador
         '
-        Me.txtTrabajador.Location = New System.Drawing.Point(88, 167)
+        Me.txtTrabajador.Location = New System.Drawing.Point(85, 168)
         Me.txtTrabajador.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtTrabajador.Name = "txtTrabajador"
         Me.txtTrabajador.Size = New System.Drawing.Size(325, 22)

@@ -11,7 +11,7 @@ Public Class clsComprobante
 
     ' ─────────────────────────────────────────────
     '  LISTAR MEDIO DE PAGO
-    ' ─────────────────────────────────────────────
+    ' ────────────────────────────────────────────
     Public Function listarMedioPago() As DataTable
         strSQL = "SELECT mediopago FROM medio_pago"
         Dim dt As New DataTable()

@@ -65,7 +65,7 @@ Partial Class JdSeleccionarProductoVenta
         'cboTipoProducto
         '
         Me.cboTipoProducto.FormattingEnabled = True
-        Me.cboTipoProducto.Location = New System.Drawing.Point(179, 81)
+        Me.cboTipoProducto.Location = New System.Drawing.Point(175, 76)
         Me.cboTipoProducto.Name = "cboTipoProducto"
         Me.cboTipoProducto.Size = New System.Drawing.Size(447, 24)
         Me.cboTipoProducto.TabIndex = 70
@@ -93,11 +93,9 @@ Partial Class JdSeleccionarProductoVenta
         '
         Me.nudCantidad.Enabled = False
         Me.nudCantidad.Location = New System.Drawing.Point(140, 380)
-        Me.nudCantidad.Minimum = 0
         Me.nudCantidad.Name = "nudCantidad"
         Me.nudCantidad.Size = New System.Drawing.Size(120, 22)
         Me.nudCantidad.TabIndex = 73
-        Me.nudCantidad.Value = 0
         '
         'btnSeleccionar
         '

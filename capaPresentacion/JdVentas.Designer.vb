@@ -218,7 +218,7 @@ Partial Class JdVentas
         '
         'txtCliente
         '
-        Me.txtCliente.Location = New System.Drawing.Point(93, 121)
+        Me.txtCliente.Location = New System.Drawing.Point(92, 122)
         Me.txtCliente.Name = "txtCliente"
         Me.txtCliente.Size = New System.Drawing.Size(287, 22)
         Me.txtCliente.TabIndex = 75
