@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class jdGestionarClientes
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,15 +20,16 @@ Partial Class jdGestionarClientes
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(jdGestionarClientes))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnNuevoCliente = New System.Windows.Forms.Button()
+        Me.btnNuevaPersona = New System.Windows.Forms.Button()
         Me.btnNuevaEmpresa = New System.Windows.Forms.Button()
-        Me.btnPersonaNatural = New System.Windows.Forms.Button()
+        Me.btnModificarPersona = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnModificarEmpresa = New System.Windows.Forms.Button()
         Me.btnBuscarPer = New System.Windows.Forms.Button()
         Me.btnBuscarEm = New System.Windows.Forms.Button()
         Me.txtRazonSocial = New System.Windows.Forms.TextBox()
@@ -47,6 +48,7 @@ Partial Class jdGestionarClientes
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -75,41 +77,44 @@ Partial Class jdGestionarClientes
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Administra los clientes registrados"
         '
-        'btnNuevoCliente
+        'btnNuevaPersona
         '
-        Me.btnNuevoCliente.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNuevoCliente.ForeColor = System.Drawing.Color.Black
-        Me.btnNuevoCliente.Location = New System.Drawing.Point(373, 27)
-        Me.btnNuevoCliente.Name = "btnNuevoCliente"
-        Me.btnNuevoCliente.Size = New System.Drawing.Size(115, 23)
-        Me.btnNuevoCliente.TabIndex = 2
-        Me.btnNuevoCliente.Text = "Nuevo Cliente"
-        Me.btnNuevoCliente.UseVisualStyleBackColor = True
+        Me.btnNuevaPersona.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNuevaPersona.ForeColor = System.Drawing.Color.Black
+        Me.btnNuevaPersona.Location = New System.Drawing.Point(403, 27)
+        Me.btnNuevaPersona.Name = "btnNuevaPersona"
+        Me.btnNuevaPersona.Size = New System.Drawing.Size(125, 23)
+        Me.btnNuevaPersona.TabIndex = 2
+        Me.btnNuevaPersona.Text = "Nueva Persona"
+        Me.btnNuevaPersona.UseVisualStyleBackColor = True
         '
         'btnNuevaEmpresa
         '
         Me.btnNuevaEmpresa.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNuevaEmpresa.ForeColor = System.Drawing.Color.Black
-        Me.btnNuevaEmpresa.Location = New System.Drawing.Point(494, 27)
+        Me.btnNuevaEmpresa.Location = New System.Drawing.Point(534, 27)
         Me.btnNuevaEmpresa.Name = "btnNuevaEmpresa"
-        Me.btnNuevaEmpresa.Size = New System.Drawing.Size(123, 23)
+        Me.btnNuevaEmpresa.Size = New System.Drawing.Size(125, 23)
         Me.btnNuevaEmpresa.TabIndex = 3
         Me.btnNuevaEmpresa.Text = "Nueva Empresa"
         Me.btnNuevaEmpresa.UseVisualStyleBackColor = True
         '
-        'btnPersonaNatural
+        'btnModificarPersona
         '
-        Me.btnPersonaNatural.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPersonaNatural.Location = New System.Drawing.Point(15, 56)
-        Me.btnPersonaNatural.Name = "btnPersonaNatural"
-        Me.btnPersonaNatural.Size = New System.Drawing.Size(127, 23)
-        Me.btnPersonaNatural.TabIndex = 4
-        Me.btnPersonaNatural.Text = "Modificar"
-        Me.btnPersonaNatural.UseVisualStyleBackColor = True
+        Me.btnModificarPersona.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModificarPersona.ForeColor = System.Drawing.Color.Black
+        Me.btnModificarPersona.Location = New System.Drawing.Point(6, 188)
+        Me.btnModificarPersona.Name = "btnModificarPersona"
+        Me.btnModificarPersona.Size = New System.Drawing.Size(309, 23)
+        Me.btnModificarPersona.TabIndex = 4
+        Me.btnModificarPersona.Text = "Modificar Persona"
+        Me.btnModificarPersona.UseVisualStyleBackColor = True
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.btnModificarEmpresa)
         Me.Panel1.Controls.Add(Me.btnBuscarPer)
+        Me.Panel1.Controls.Add(Me.btnModificarPersona)
         Me.Panel1.Controls.Add(Me.btnBuscarEm)
         Me.Panel1.Controls.Add(Me.txtRazonSocial)
         Me.Panel1.Controls.Add(Me.Label10)
@@ -127,10 +132,21 @@ Partial Class jdGestionarClientes
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel1.Location = New System.Drawing.Point(12, 99)
+        Me.Panel1.Location = New System.Drawing.Point(12, 86)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(602, 193)
+        Me.Panel1.Size = New System.Drawing.Size(647, 220)
         Me.Panel1.TabIndex = 6
+        '
+        'btnModificarEmpresa
+        '
+        Me.btnModificarEmpresa.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModificarEmpresa.ForeColor = System.Drawing.Color.Black
+        Me.btnModificarEmpresa.Location = New System.Drawing.Point(331, 188)
+        Me.btnModificarEmpresa.Name = "btnModificarEmpresa"
+        Me.btnModificarEmpresa.Size = New System.Drawing.Size(309, 23)
+        Me.btnModificarEmpresa.TabIndex = 19
+        Me.btnModificarEmpresa.Text = "Modificar Empresa"
+        Me.btnModificarEmpresa.UseVisualStyleBackColor = True
         '
         'btnBuscarPer
         '
@@ -147,7 +163,7 @@ Partial Class jdGestionarClientes
         '
         Me.btnBuscarEm.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnBuscarEm.ForeColor = System.Drawing.Color.White
-        Me.btnBuscarEm.Location = New System.Drawing.Point(521, 50)
+        Me.btnBuscarEm.Location = New System.Drawing.Point(567, 52)
         Me.btnBuscarEm.Name = "btnBuscarEm"
         Me.btnBuscarEm.Size = New System.Drawing.Size(73, 23)
         Me.btnBuscarEm.TabIndex = 16
@@ -158,7 +174,7 @@ Partial Class jdGestionarClientes
         '
         Me.txtRazonSocial.Location = New System.Drawing.Point(331, 106)
         Me.txtRazonSocial.Name = "txtRazonSocial"
-        Me.txtRazonSocial.Size = New System.Drawing.Size(263, 21)
+        Me.txtRazonSocial.Size = New System.Drawing.Size(309, 21)
         Me.txtRazonSocial.TabIndex = 15
         '
         'Label10
@@ -174,7 +190,7 @@ Partial Class jdGestionarClientes
         '
         Me.txtRUC.Location = New System.Drawing.Point(331, 52)
         Me.txtRUC.Name = "txtRUC"
-        Me.txtRUC.Size = New System.Drawing.Size(184, 21)
+        Me.txtRUC.Size = New System.Drawing.Size(230, 21)
         Me.txtRUC.TabIndex = 13
         '
         'Label9
@@ -282,24 +298,35 @@ Partial Class jdGestionarClientes
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.btnNuevoCliente)
+        Me.Panel2.Controls.Add(Me.btnNuevaPersona)
         Me.Panel2.Controls.Add(Me.btnNuevaEmpresa)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.ForeColor = System.Drawing.Color.White
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(621, 81)
+        Me.Panel2.Size = New System.Drawing.Size(671, 81)
         Me.Panel2.TabIndex = 80
+        '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnLimpiar.ForeColor = System.Drawing.Color.White
+        Me.btnLimpiar.Location = New System.Drawing.Point(513, 324)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(146, 23)
+        Me.btnLimpiar.TabIndex = 81
+        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = False
         '
         'jdGestionarClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(621, 304)
+        Me.ClientSize = New System.Drawing.Size(671, 356)
+        Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.btnPersonaNatural)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel2)
@@ -317,9 +344,9 @@ Partial Class jdGestionarClientes
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents btnNuevoCliente As Button
+    Friend WithEvents btnNuevaPersona As Button
     Friend WithEvents btnNuevaEmpresa As Button
-    Friend WithEvents btnPersonaNatural As Button
+    Friend WithEvents btnModificarPersona As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
@@ -339,4 +366,6 @@ Partial Class jdGestionarClientes
     Friend WithEvents txtRUC As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents btnLimpiar As Button
+    Friend WithEvents btnModificarEmpresa As Button
 End Class

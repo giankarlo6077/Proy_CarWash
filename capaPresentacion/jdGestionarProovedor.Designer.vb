@@ -294,9 +294,9 @@ Partial Class jdGestionarProovedor
         Me.Label11.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(523, 143)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(141, 18)
+        Me.Label11.Size = New System.Drawing.Size(140, 18)
         Me.Label11.TabIndex = 61
-        Me.Label11.Text = "Buscar proovedor"
+        Me.Label11.Text = "Buscar proveedor"
         '
         'txtBuscarProveedor
         '
@@ -354,9 +354,9 @@ Partial Class jdGestionarProovedor
         'Label8
         '
         Me.Label8.Font = New System.Drawing.Font("Verdana", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(286, 24)
+        Me.Label8.Location = New System.Drawing.Point(218, 20)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(489, 58)
+        Me.Label8.Size = New System.Drawing.Size(610, 58)
         Me.Label8.TabIndex = 77
         Me.Label8.Text = "GESTIONAR PROVEEDORES"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter

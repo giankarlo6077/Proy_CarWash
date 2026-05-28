@@ -475,4 +475,34 @@ Public Class clsCita
         End Try
     End Sub
 
+    Public Sub eliminarServiciosdeCita(idCita As Integer)
+        Dim strSQL As String = "DELETE FROM DETALLE_CITA WHERE idCita = @idCita"
+        Dim objConectar As New clsConectaBD()
+        Try
+            objConectar.conectar()
+            Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
+            cmd.Parameters.Add("@idCita", SqlDbType.Int).Value = idCita
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+            Throw New Exception("Error al eliminar servicios: " & ex.Message)
+        Finally
+            objConectar.desconectar()
+        End Try
+    End Sub
+
+    Public Sub eliminarProductosdeCita(idCita As Integer)
+        Dim strSQL As String = "DELETE FROM PRODUCTO_MANTENIMIENTO WHERE idCita = @idCita"
+        Dim objConectar As New clsConectaBD()
+        Try
+            objConectar.conectar()
+            Dim cmd As New SqlCommand(strSQL, objConectar.miConexion)
+            cmd.Parameters.Add("@idCita", SqlDbType.Int).Value = idCita
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+            Throw New Exception("Error al eliminar productos: " & ex.Message)
+        Finally
+            objConectar.desconectar()
+        End Try
+    End Sub
+
 End Class

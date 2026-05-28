@@ -77,6 +77,15 @@ Public Class JdDetalleOrdenTrabajo
 
             Dim idTipoVehiculo As Integer = objCita.obtenerIdTipoVehiculo(idCita)
 
+            ' ─── ELIMINAR SERVICIOS Y PRODUCTOS ANTERIORES ───────────────
+            Try
+                objCita.eliminarServiciosdeCita(idCita)
+                objCita.eliminarProductosdeCita(idCita)
+            Catch ex As Exception
+                MsgBox("Error al limpiar registros anteriores: " & ex.Message)
+                Exit Sub
+            End Try
+
             ' ─── GUARDAR SERVICIOS ───────────────────────────────────────
             Try
                 For Each fila As DataGridViewRow In dgvServicios.Rows

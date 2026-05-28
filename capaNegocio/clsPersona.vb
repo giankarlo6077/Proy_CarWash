@@ -26,6 +26,38 @@ Public Class clsPersona
         End Try
     End Function
 
+    Public Function listarPersonaMo() As DataTable
+        Dim strSQL As String =
+        "SELECT " &
+        "cl.idCliente, " &
+        "pe.persona AS persona, " &
+        "pe.sexo, " &
+        "cl.numDocumento, " &
+        "cl.direccion, " &
+        "cl.correo, " &
+        "cl.telefono, " &
+        "pe.fechaNacimiento " &
+        "FROM PERSONA pe " &
+        "INNER JOIN CLIENTE cl ON cl.idCliente = pe.idCliente " &
+        "ORDER BY pe.persona ASC"
+
+        Dim objConectar As New clsConectaBD()
+        Dim dt As New DataTable()
+
+        Try
+            objConectar.conectar()
+            Dim da As New SqlDataAdapter(strSQL, objConectar.miConexion)
+            da.Fill(dt)
+            Return dt
+
+        Catch ex As Exception
+            Throw New Exception("Error al listar personas: " & ex.Message)
+
+        Finally
+            objConectar.desconectar()
+        End Try
+    End Function
+
     Public Function generarIdPersona() As Integer
         Dim strSQL As String = "SELECT COALESCE(MAX(idpersona) + 1, 1) AS cant FROM persona"
         Dim objConectar As New clsConectaBD()
@@ -40,16 +72,37 @@ Public Class clsPersona
         End Try
     End Function
 
-    Public Function buscarPersona(nombre As String) As DataTable
-        Dim strSQL As String = "SELECT pe.idcliente, pe.persona, pe.sexo, cl.direccion, cl.correo " &
-                               "FROM persona pe " &
-                               "INNER JOIN cliente cl ON cl.idcliente = pe.idcliente " &
-                               "WHERE pe.persona LIKE '%" & nombre & "%'"
+    Public Function buscarPersonaRapida(nombre As String) As DataTable
+        Dim strSQL As String = "SELECT pe.idCliente, pe.persona, cl.correo,cl.telefono " &
+                           "FROM PERSONA pe " &
+                           "INNER JOIN CLIENTE cl ON cl.idCliente = pe.idCliente " &
+                           "WHERE cl.numDocumento LIKE @txtDoc"
         Dim objConectar As New clsConectaBD()
+        Dim dt As New DataTable()
         Try
             objConectar.conectar()
             Dim da As New SqlDataAdapter(strSQL, objConectar.miConexion)
-            Dim dt As New DataTable()
+            da.SelectCommand.Parameters.Add("@txtDoc", SqlDbType.VarChar).Value = "%" & nombre & "%"
+            da.Fill(dt)
+            Return dt
+        Catch ex As Exception
+            Throw New Exception("Error al buscar Persona: " & ex.Message)
+        Finally
+            objConectar.desconectar()
+        End Try
+    End Function
+
+    Public Function buscarPersona(nombre As String) As DataTable
+        Dim strSQL As String = "SELECT pe.idCliente, pe.Personavarchar, pe.sexo, cl.direccion, cl.correo " &
+                           "FROM PERSONA pe " &
+                           "INNER JOIN CLIENTE cl ON cl.idCliente = pe.idCliente " &
+                           "WHERE pe.Personavarchar LIKE @nombre"
+        Dim objConectar As New clsConectaBD()
+        Dim dt As New DataTable()
+        Try
+            objConectar.conectar()
+            Dim da As New SqlDataAdapter(strSQL, objConectar.miConexion)
+            da.SelectCommand.Parameters.Add("@nombre", SqlDbType.VarChar).Value = "%" & nombre & "%"
             da.Fill(dt)
             Return dt
         Catch ex As Exception
@@ -91,19 +144,50 @@ Public Class clsPersona
         End Try
     End Sub
 
-    Public Sub modificarPersona(idCli As Integer, nombre As String, dir As String, cor As String, tel As String, sx As String, idDis As Integer, fechaNac As Date)
+    Public Sub modificarPersona(idCli As Integer, nombre As String, dir As String, dni As String, cor As String, tel As String, sx As String, idDis As Integer, fechaNac As Date)
         Dim objConectar As New clsConectaBD()
         objConectar.conectar()
         Dim trans As SqlTransaction = objConectar.miConexion.BeginTransaction()
+
         Try
-            Dim cmd1 As New SqlCommand("UPDATE cliente SET direccion = '" & dir & "', correo = '" & cor & "', telefono = '" & tel & "', iddistrito = " & idDis & " WHERE idcliente = " & idCli, objConectar.miConexion, trans)
+            Dim cmd1 As New SqlCommand(
+            "UPDATE CLIENTE SET " &
+            "numDocumento = @dni, " &
+            "direccion    = @dir, " &
+            "correo       = @cor, " &
+            "telefono     = @tel, " &
+            "idDistrito   = @idDis " &
+            "WHERE idCliente = @idCli",
+            objConectar.miConexion, trans
+        )
+            cmd1.Parameters.Add("@dni", SqlDbType.VarChar).Value = dni
+            cmd1.Parameters.Add("@dir", SqlDbType.VarChar).Value = dir
+            cmd1.Parameters.Add("@cor", SqlDbType.VarChar).Value = cor
+            cmd1.Parameters.Add("@tel", SqlDbType.VarChar).Value = tel
+            cmd1.Parameters.Add("@idDis", SqlDbType.Int).Value = idDis
+            cmd1.Parameters.Add("@idCli", SqlDbType.Int).Value = idCli
             cmd1.ExecuteNonQuery()
-            Dim cmd2 As New SqlCommand("UPDATE persona SET persona = '" & nombre & "', sexo = '" & sx & "', fechanacimiento = '" & fechaNac & "' WHERE idcliente = " & idCli, objConectar.miConexion, trans)
+
+            Dim cmd2 As New SqlCommand(
+            "UPDATE PERSONA SET " &
+            "Personavarchar  = @nombre, " &
+            "sexo            = @sx, " &
+            "fechaNacimiento = @fechaNac " &
+            "WHERE idCliente = @idCli",
+            objConectar.miConexion, trans
+        )
+            cmd2.Parameters.Add("@nombre", SqlDbType.VarChar).Value = nombre
+            cmd2.Parameters.Add("@sx", SqlDbType.Char, 1).Value = sx
+            cmd2.Parameters.Add("@fechaNac", SqlDbType.Date).Value = fechaNac
+            cmd2.Parameters.Add("@idCli", SqlDbType.Int).Value = idCli
             cmd2.ExecuteNonQuery()
+
             trans.Commit()
+
         Catch ex As Exception
             trans.Rollback()
             Throw New Exception("Error al modificar Persona: " & ex.Message)
+
         Finally
             objConectar.desconectar()
         End Try
@@ -113,15 +197,51 @@ Public Class clsPersona
         Dim objConectar As New clsConectaBD()
         objConectar.conectar()
         Dim trans As SqlTransaction = objConectar.miConexion.BeginTransaction()
+
         Try
-            Dim cmd1 As New SqlCommand("DELETE FROM persona WHERE idcliente = " & idCli, objConectar.miConexion, trans)
+            ' 1. Eliminar descuentos de comprobantes
+            Dim cmd1 As New SqlCommand(
+            "DELETE FROM DESCUENTO_COMPROBANTE WHERE idComprobante IN " &
+            "(SELECT idComprobante FROM COMPROBANTE_VENTA WHERE idCliente = @idCli)",
+            objConectar.miConexion, trans)
+            cmd1.Parameters.Add("@idCli", SqlDbType.Int).Value = idCli
             cmd1.ExecuteNonQuery()
-            Dim cmd2 As New SqlCommand("DELETE FROM cliente WHERE idcliente = " & idCli, objConectar.miConexion, trans)
+
+            ' 2. Eliminar detalle de ventas
+            Dim cmd2 As New SqlCommand(
+            "DELETE FROM DETALLE_VENTA WHERE idComprobante IN " &
+            "(SELECT idComprobante FROM COMPROBANTE_VENTA WHERE idCliente = @idCli)",
+            objConectar.miConexion, trans)
+            cmd2.Parameters.Add("@idCli", SqlDbType.Int).Value = idCli
             cmd2.ExecuteNonQuery()
+
+            ' 3. Eliminar comprobantes
+            Dim cmd3 As New SqlCommand(
+            "DELETE FROM COMPROBANTE_VENTA WHERE idCliente = @idCli",
+            objConectar.miConexion, trans)
+            cmd3.Parameters.Add("@idCli", SqlDbType.Int).Value = idCli
+            cmd3.ExecuteNonQuery()
+
+            ' 4. Eliminar persona
+            Dim cmd4 As New SqlCommand(
+            "DELETE FROM PERSONA WHERE idCliente = @idCli",
+            objConectar.miConexion, trans)
+            cmd4.Parameters.Add("@idCli", SqlDbType.Int).Value = idCli
+            cmd4.ExecuteNonQuery()
+
+            ' 5. Eliminar cliente
+            Dim cmd5 As New SqlCommand(
+            "DELETE FROM CLIENTE WHERE idCliente = @idCli",
+            objConectar.miConexion, trans)
+            cmd5.Parameters.Add("@idCli", SqlDbType.Int).Value = idCli
+            cmd5.ExecuteNonQuery()
+
             trans.Commit()
+
         Catch ex As Exception
             trans.Rollback()
             Throw New Exception("Error al eliminar Persona: " & ex.Message)
+
         Finally
             objConectar.desconectar()
         End Try

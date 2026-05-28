@@ -122,6 +122,8 @@ Partial Class jdGestionarEmpresa
         '
         'dgvEmpresa
         '
+        Me.dgvEmpresa.AllowUserToAddRows = False
+        Me.dgvEmpresa.AllowUserToDeleteRows = False
         Me.dgvEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
@@ -133,6 +135,7 @@ Partial Class jdGestionarEmpresa
         Me.dgvEmpresa.DefaultCellStyle = DataGridViewCellStyle1
         Me.dgvEmpresa.Location = New System.Drawing.Point(29, 390)
         Me.dgvEmpresa.Name = "dgvEmpresa"
+        Me.dgvEmpresa.ReadOnly = True
         Me.dgvEmpresa.RowHeadersWidth = 51
         Me.dgvEmpresa.RowTemplate.Height = 24
         Me.dgvEmpresa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect

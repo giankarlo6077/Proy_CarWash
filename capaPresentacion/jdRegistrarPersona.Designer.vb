@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class jdGestionarPersona
+Partial Class jdRegistrarPersona
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,7 +22,7 @@ Partial Class jdGestionarPersona
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(jdGestionarPersona))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(jdRegistrarPersona))
         Me.txtCorreo = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtDNI = New System.Windows.Forms.TextBox()
@@ -61,7 +61,7 @@ Partial Class jdGestionarPersona
         '
         'txtCorreo
         '
-        Me.txtCorreo.Location = New System.Drawing.Point(445, 147)
+        Me.txtCorreo.Location = New System.Drawing.Point(445, 96)
         Me.txtCorreo.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.txtCorreo.Name = "txtCorreo"
         Me.txtCorreo.Size = New System.Drawing.Size(160, 21)
@@ -70,7 +70,7 @@ Partial Class jdGestionarPersona
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(441, 131)
+        Me.Label10.Location = New System.Drawing.Point(441, 80)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(51, 13)
@@ -106,7 +106,7 @@ Partial Class jdGestionarPersona
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(204, 131)
+        Me.Label8.Location = New System.Drawing.Point(601, 130)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(143, 13)
@@ -152,7 +152,7 @@ Partial Class jdGestionarPersona
         '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(612, 148)
+        Me.txtTelefono.Location = New System.Drawing.Point(612, 97)
         Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(160, 21)
@@ -171,7 +171,7 @@ Partial Class jdGestionarPersona
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(608, 132)
+        Me.Label4.Location = New System.Drawing.Point(608, 81)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(64, 13)
@@ -255,7 +255,7 @@ Partial Class jdGestionarPersona
         'cboProvincia
         '
         Me.cboProvincia.FormattingEnabled = True
-        Me.cboProvincia.Location = New System.Drawing.Point(612, 96)
+        Me.cboProvincia.Location = New System.Drawing.Point(191, 147)
         Me.cboProvincia.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cboProvincia.Name = "cboProvincia"
         Me.cboProvincia.Size = New System.Drawing.Size(160, 21)
@@ -264,7 +264,7 @@ Partial Class jdGestionarPersona
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(608, 80)
+        Me.Label13.Location = New System.Drawing.Point(187, 131)
         Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(68, 13)
@@ -274,7 +274,7 @@ Partial Class jdGestionarPersona
         'cboDistrito
         '
         Me.cboDistrito.FormattingEnabled = True
-        Me.cboDistrito.Location = New System.Drawing.Point(445, 96)
+        Me.cboDistrito.Location = New System.Drawing.Point(371, 147)
         Me.cboDistrito.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cboDistrito.Name = "cboDistrito"
         Me.cboDistrito.Size = New System.Drawing.Size(160, 21)
@@ -283,7 +283,7 @@ Partial Class jdGestionarPersona
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(441, 80)
+        Me.Label12.Location = New System.Drawing.Point(367, 131)
         Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(55, 13)
@@ -293,7 +293,7 @@ Partial Class jdGestionarPersona
         'dtpFechaNac
         '
         Me.dtpFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaNac.Location = New System.Drawing.Point(208, 148)
+        Me.dtpFechaNac.Location = New System.Drawing.Point(605, 147)
         Me.dtpFechaNac.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.dtpFechaNac.Name = "dtpFechaNac"
         Me.dtpFechaNac.Size = New System.Drawing.Size(167, 21)
@@ -406,7 +406,7 @@ Partial Class jdGestionarPersona
         Me.Panel3.Size = New System.Drawing.Size(835, 82)
         Me.Panel3.TabIndex = 84
         '
-        'jdGestionarPersona
+        'jdRegistrarPersona
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -424,9 +424,9 @@ Partial Class jdGestionarPersona
         Me.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.Name = "jdGestionarPersona"
+        Me.Name = "jdRegistrarPersona"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Gestionar Persona"
+        Me.Text = "Registrar Persona"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel3.ResumeLayout(False)
